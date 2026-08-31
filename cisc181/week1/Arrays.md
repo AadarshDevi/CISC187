@@ -66,6 +66,10 @@ N values moved and the new value added at the start.
 Unlike adding values to the start of an array, adding values to the end of the array will not shift any values. a new
 value will simply be added to the end of the array.
 
+**_No of Step:_** 1
+
+Adding a value to the end of an array takes 1 step.
+
 ### Deleting at the start of the Array
 
 ### Deleting at the end of the Array
