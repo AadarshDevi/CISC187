@@ -38,6 +38,12 @@ Size of an int (bytes): 4
 
 ### Reading
 
+When reading a value from an array, there is only 1 step. This is because there is only 1 operation to read a value
+from an array.
+```c++
+std::cout << "Value at index 0: " << array[0] << "\n";
+```
+
 ### Searching for Invalid Value
 
 ### Insertion at the start of the Array
