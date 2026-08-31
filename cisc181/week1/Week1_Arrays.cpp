@@ -15,12 +15,9 @@ int main() {
 
 	std::cout << "Address of array: " << array << "\n";
 
-	int* ptr;
-	std::cout << "Address of Pointer: " << ptr << "\n";
-	std::cout << "Value of Pointer: " << *ptr << "\n";
-	ptr = &array[0];
-	std::cout << "Address of Pointer (A): " << ptr << "\n";
-	std::cout << "Value of Pointer (A): " << *ptr << "\n";
+	int* ptr = &array[0];
+
+	std::cout << "Address of array: " << ptr << "\n";
 }
 
 /*
