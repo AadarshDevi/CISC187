@@ -57,6 +57,9 @@ to the next index giving space from the new value.
 
 ### Insertion at the end of the Array
 
+Unlike adding values to the start of an array, adding values to the end of the array will not shift any values. a new
+value will simply be added to the end of the array.
+
 ### Deleting at the start of the Array
 
 ### Deleting at the end of the Array
