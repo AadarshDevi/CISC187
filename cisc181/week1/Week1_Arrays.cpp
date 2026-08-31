@@ -23,4 +23,5 @@ int main() {
 /*
  * Array in C++: https://www.geeksforgeeks.org/cpp/cpp-arrays/
  * Size of int: https://www.geeksforgeeks.org/cpp/cpp-sizeof-operator/
+ * Pointers and References: https://www.geeksforgeeks.org/cpp/pointers-and-references-in-c/
  */
