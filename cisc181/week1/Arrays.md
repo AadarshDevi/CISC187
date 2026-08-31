@@ -55,6 +55,12 @@ When adding a value at the start of the array, the values in the array have to s
 the array would not be overwritten. the last value moves to the next index. then from right to left, each value moves
 to the next index giving space from the new value.
 
+If the array has n values, there will be:
+
+**_No of Step:_** N + 1
+
+N values moved and the new value added at the start.
+
 ### Insertion at the end of the Array
 
 Unlike adding values to the start of an array, adding values to the end of the array will not shift any values. a new
