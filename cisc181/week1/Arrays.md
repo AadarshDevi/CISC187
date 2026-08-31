@@ -36,7 +36,8 @@ Size of an int (bytes): 4
 
 ## 3. Theoretical Steps for Operations on Arrays
 
-### Reading
+The array used in the examples below is an `int array[100]` with a size of `100`.
+
 ### 3.1 Reading
 
 When reading a value from an array, there is only 1 step. This is because there is only 1 operation to read a value
