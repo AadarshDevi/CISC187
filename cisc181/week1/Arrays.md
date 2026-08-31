@@ -1,0 +1,49 @@
+# Week 1: Data Structure – Arrays
+
+## Table of Contents
+1. [Creating an Array](#creating-an-array)
+2. [Size of an Element](#size-of-an-element)
+3. [Theoretical Steps for Operations on Arrays](#theoretical-steps-for-operations-on-arrays)
+   1. [Reading](#reading)
+   2. [Searching for Invalid Value](#searching-for-invalid-value)
+   3. [Insertion at the start of the Array](#insertion-at-the-start-of-the-array)
+   4. [Insertion at the end of the Array](#insertion-at-the-end-of-the-array)
+   5. [Deleting at the start of the Array](#deleting-at-the-start-of-the-array)
+   6. [Deleting at the end of the Array](#deleting-at-the-end-of-the-array)
+
+## Creating an Array
+
+An array in C++ is created starting with the data type. Here I am using `int`. It is then followed by the identifier
+and then by square brackets containing the length of the array. Below is an int array with a size of 100.
+```c++
+const int ARRAY_LENGTH = 100;
+
+// data_type identifier[array_length]
+int array[ARRAY_LENGTH];
+```
+
+## Size of an Element
+
+In an array, all the elements have the same size because they are the same datatype. in my array, the datatype is
+an `int`. The size of an int in C++ is 4 bytes.
+
+```c++
+std::cout << "Size of an int (bytes): " << sizeof(array[0]) << "\n";
+```
+```terminaloutput
+Size of an int (bytes): 4
+```
+
+## Theoretical Steps for Operations on Arrays
+
+### Reading
+
+### Searching for Invalid Value
+
+### Insertion at the start of the Array
+
+### Insertion at the end of the Array
+
+### Deleting at the start of the Array
+
+### Deleting at the end of the Array
