@@ -56,6 +56,8 @@ in the array, the:
 
 **_No of Step:_** N
 
+If the array is sorted, based on the search algorithm, the no of steps can vary.
+
 ### 3.3 Insertion at the start of the Array
 
 When adding a value at the start of the array, the values in the array have to shift to the next index so any data in
