@@ -90,3 +90,8 @@ moved to a lower index. So this makes the:
 There were n values in the array. 1 value was deleted leaving N - 1 values that need to be shifted.
 
 ### 3.6 Deleting at the end of the Array
+
+Deleting values at the end of the array will not interfere with the other values. Values before the deleted value
+will not be affected. This makes the steps need to delete values at the end:
+
+**_No of Step:_** 1
