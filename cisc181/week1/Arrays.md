@@ -1,15 +1,15 @@
 # Week 1: Data Structure – Arrays
 
 ## Table of Contents
-1. [Creating an Array](#creating-an-array)
-2. [Size of an Element](#size-of-an-element)
-3. [Theoretical Steps for Operations on Arrays](#theoretical-steps-for-operations-on-arrays)
-   1. [Reading](#reading)
-   2. [Searching for Invalid Value](#searching-for-invalid-value)
-   3. [Insertion at the start of the Array](#insertion-at-the-start-of-the-array)
-   4. [Insertion at the end of the Array](#insertion-at-the-end-of-the-array)
-   5. [Deleting at the start of the Array](#deleting-at-the-start-of-the-array)
-   6. [Deleting at the end of the Array](#deleting-at-the-end-of-the-array)
+1. [Creating an Array](#1-creating-an-array)
+2. [Size of an Element](#2-size-of-an-element)
+3. [Theoretical Steps for Operations on Arrays](#3-theoretical-steps-for-operations-on-arrays)
+   1. [Reading](#31-reading)
+   2. [Searching for Invalid Value](#32-searching-for-invalid-value)
+   3. [Insertion at the start of the Array](#33-insertion-at-the-start-of-the-array)
+   4. [Insertion at the end of the Array](#34-insertion-at-the-end-of-the-array)
+   5. [Deleting at the start of the Array](#35-deleting-at-the-start-of-the-array)
+   6. [Deleting at the end of the Array](#36-deleting-at-the-end-of-the-array)
 
 ## Creating an Array
 
