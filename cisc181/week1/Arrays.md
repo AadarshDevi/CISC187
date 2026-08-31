@@ -54,7 +54,7 @@ std::cout << "Value at index 0: " << array[0] << "\n";
 ### 3.3 Insertion at the start of the Array
 
 When adding a value at the start of the array, the values in the array have to shift to the next index so any data in
-the array would not be overwritten. the last value moves to the next index. then from right to left, each value moves
+the array would not be overwritten. The last value moves to the next index. Then from right to left, each value moves
 to the next index giving space from the new value.
 
 If the array has n values, there will be:
