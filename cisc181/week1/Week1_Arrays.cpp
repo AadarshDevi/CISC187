@@ -4,8 +4,11 @@
 
 int main() {
 
+	// length of array
+	const int ARRAY_LENGTH = 100;
+
 	// create an array containing 100 ints
-	int array[100];
+	int array[ARRAY_LENGTH];
 
 	// size of an int in C++
 	std::cout << "Size of an int (bytes): " << sizeof(array[0]) << "\n";
