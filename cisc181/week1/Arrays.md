@@ -81,4 +81,12 @@ Adding a value to the end of an array takes 1 step.
 
 ### 3.5 Deleting at the start of the Array
 
+Just like adding a value at the start of an array moves the values, deleting values at the start of the array will
+move the values to a lower index. By deleting at the start, all the values after the deleted value will have to be
+moved to a lower index. So this makes the:
+
+**_No of Step:_** N - 1
+
+There were n values in the array. 1 value was deleted leaving N - 1 values that need to be shifted.
+
 ### 3.6 Deleting at the end of the Array
