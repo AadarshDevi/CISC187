@@ -95,3 +95,37 @@ Deleting values at the end of the array will not interfere with the other values
 will not be affected. This makes the number of steps needed to delete values at the end:
 
 **_No of Step:_** 1
+
+## 4. Searching an Array for "apples"
+
+To find all instances of "apples" in an array, it would normally take:
+
+**_No of Steps:_** N
+
+This is because the array has to be iterated completely to find all instances.
+
+If the array is sorted, a searching algorithm can reduce the number of steps needed to find all instances of "apples".
+
+## 5. Address of an Array
+
+To get the address of an array, print the object to the output.
+
+```c++
+std::cout << "Address of array: " << array << "\n";
+```
+```terminaloutput
+Address of array: 0xf0b87ff730
+```
+
+But when we are programming, we would need the address of the array. So a way to get it is to use pointers.
+
+```c++
+const int ARRAY_LENGTH = 100;
+int array[ARRAY_LENGTH];
+
+// ptr stores address of &array
+int* ptr = &array[0];
+
+// print address of array
+std::cout << "Address of Array: " << ptr << "\n";
+```
