@@ -24,7 +24,7 @@ int array[ARRAY_LENGTH];
 
 ## 2. Size of an Element
 
-In an array, all the elements have the same size because they are the same datatype. in my array, the datatype is
+In an array, all the elements have the same size because they are the same datatype. In my array, the datatype is
 an `int`. The size of an int in C++ is 4 bytes.
 
 ```c++
