@@ -12,6 +12,15 @@ int main() {
 
 	// size of an int in C++
 	std::cout << "Size of an int (bytes): " << sizeof(array[0]) << "\n";
+
+	std::cout << "Address of array: " << array << "\n";
+
+	int* ptr;
+	std::cout << "Address of Pointer: " << ptr << "\n";
+	std::cout << "Value of Pointer: " << *ptr << "\n";
+	ptr = &array[0];
+	std::cout << "Address of Pointer (A): " << ptr << "\n";
+	std::cout << "Value of Pointer (A): " << *ptr << "\n";
 }
 
 /*
