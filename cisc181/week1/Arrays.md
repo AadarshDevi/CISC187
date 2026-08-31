@@ -51,6 +51,11 @@ std::cout << "Value at index 0: " << array[0] << "\n";
 
 ### 3.2 Searching for Invalid Value
 
+Unsorted values in an array mean that the array has to be iterated on to find the value. If the value is not present
+in the array, the:
+
+**_No of Step:_** N
+
 ### 3.3 Insertion at the start of the Array
 
 When adding a value at the start of the array, the values in the array have to shift to the next index so any data in
