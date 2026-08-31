@@ -40,6 +40,9 @@ Size of an int (bytes): 4
 
 When reading a value from an array, there is only 1 step. This is because there is only 1 operation to read a value
 from an array.
+
+**_No of Step:_** 1
+
 ```c++
 std::cout << "Value at index 0: " << array[0] << "\n";
 ```
