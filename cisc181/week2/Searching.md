@@ -24,6 +24,12 @@ int linear_search(int search_num, std::vector<int> &vec) {
 ```
 
 
+```terminaloutput
+Number 2 @ index 0.
+Number 18 @ index -1.
+Number 13 @ index 6.
+```
+
 ## Sources
 
 1. [C++ Vectors](https://www.w3schools.com/cpp/cpp_vectors.asp) - Working with C++ Vectors
