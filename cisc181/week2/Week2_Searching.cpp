@@ -16,6 +16,17 @@ int main() {
     }
     std::cout << "\n\n";
 
+    int search_num = 2;
+    int search_num_i = linear_search(search_num, vec);
+    print_search(search_num, search_num_i);
+
+    search_num = 18;
+    search_num_i = linear_search(search_num, vec);
+    print_search(search_num, search_num_i);
+
+    search_num = 13;
+    search_num_i = linear_search(search_num, vec);
+    print_search(search_num, search_num_i);
 
     return 0;
 }
