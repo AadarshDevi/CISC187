@@ -11,7 +11,7 @@ int main() {
     const int ARRAY_SIZE = 100'000;
     int arr[ARRAY_SIZE];
 
-    // set initial values
+    // populate array
     for (int i = 0; i < ARRAY_SIZE; i++) {
         arr[i] = i;
     }
