@@ -64,10 +64,8 @@ before the middle data, the data in the latter section of the array is ignored. 
 the former section of the array is ignored. This will continue to reduce the searchable array. If the value is found, it
 will return the index of the item. if it doesn't find the value, it returns -1, value not found.
 
-```terminaloutput
-Best Case: O(1)
-Average Case: O(log N)
-```
+$$ \text{Base Case: } O (1)$$
+$$ \text{Average of Worst Case: } O (log{N})$$
 
 The array will have the data:
 
