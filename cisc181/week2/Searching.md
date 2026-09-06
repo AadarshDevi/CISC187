@@ -24,7 +24,7 @@ Searching the vector is linear, just like it's name.
 ```c++
 int linear_search(int search_num, std::vector<int> &vec) {
     for (int i = 0; i < vec.size(); i++) {
-        if (vec[i] == search_num) {
+        if (vec.at(i) == search_num) {
             return i;
         }
     }
