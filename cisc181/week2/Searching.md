@@ -162,13 +162,12 @@ $$k = \log_2{N} \quad \because{\text{ Derived previously}} $$
 $$k = \log_2{100,000}$$
 $$k \approx 16.6096404744 $$
 
-I round it up because we have an iteration or not. So the maximum number of iterations on a dataset with 10,000 elements
-is
+I round it up because we have an iteration or not. So the maximum number of iterations on a dataset with 100,000
 elements is
 
 $$k \approx 17 $$
 
-##
+## Searching
 
 ## Sources
 
@@ -183,4 +182,4 @@ $$k \approx 17 $$
    Learning the Time Complexity of Binary Search?
 6. [Binary Search time complexity || O (log n) Mathematical Proof by SWE HQ](https://www.youtube.com/watch?v=lv6RPAFP_UU) -
    Video proofing the time complexity of binary search is `O(log(n))`
-7. Google Gemini - LaTeX
+7. Google Gemini - LaTeX Syntax
