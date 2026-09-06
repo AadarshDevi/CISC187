@@ -71,4 +71,4 @@ Average Case: O(log N)
    simulator and how does Linear Search work.
 4. [Binary Search by GeeksForGeeks](https://www.geeksforgeeks.org/dsa/binary-search/) - How to write Binary Search
 5. [Time and Space Complexity Analysis of Binary Search Algorithm by GeeksForGeeks](https://www.geeksforgeeks.org/dsa/complexity-analysis-of-binary-search/) -
-   What is the Time Complexity of Binary Search why is it?
+   Learning the Time Complexity of Binary Search?
