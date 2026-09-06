@@ -74,11 +74,8 @@ const int ARRAY_SIZE = 7;
 int arr[ARRAY_SIZE] = {2, 4, 6, 8, 10, 12, 13};
 ```
 
-Each iteration of binary search reduces the searchable indices of the array by half.
-
-I am trying to understand time complexity so the explanation is below code output.
-
-and the code for Binary Search:
+Each iteration of binary search reduces the searchable indices of the array by half. I am trying to understand time
+complexity so the explanation is below code output. The code for Binary Search:
 
 ```c++
 // *arr used instead of arr so the data in arr will not be duplicated in memeory
