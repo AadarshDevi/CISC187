@@ -162,3 +162,5 @@ $$O (\log{n})$$
 4. [Binary Search by GeeksForGeeks](https://www.geeksforgeeks.org/dsa/binary-search/) - How to write Binary Search
 5. [Time and Space Complexity Analysis of Binary Search Algorithm by GeeksForGeeks](https://www.geeksforgeeks.org/dsa/complexity-analysis-of-binary-search/) -
    Learning the Time Complexity of Binary Search?
+6. [Binary Search time complexity || O (log n) Mathematical Proof by SWE HQ](https://www.youtube.com/watch?v=lv6RPAFP_UU) -
+   Video proofing the time complexity of binary search is `O(log(n))`
