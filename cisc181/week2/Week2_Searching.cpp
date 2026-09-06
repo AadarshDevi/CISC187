@@ -3,6 +3,8 @@
 
 int linear_search(int search_num, std::vector<int> &vec);
 
+int binary_search(int search_num, std::vector<int> &vec);
+
 void print_search(int search_num_i, int search_num_i1);
 
 int main() {
@@ -43,6 +45,10 @@ int main() {
     search_num = 13;
 
     return 0;
+}
+
+int binary_search(int search_num, std::vector<int> &vec) {
+    return -1;
 }
 
 int linear_search(int search_num, std::vector<int> &vec) {
