@@ -7,6 +7,17 @@
 A linear search is a search algorithm where the entire array is searched from the first item to the last one after
 another. The first item in the array will have a time complexity of `O(1)`. The rest of the items will have a time
 complexity of `O(N)`.
+```c++
+int linear_search(int search_num, std::vector<int> &vec) {
+    for (int i = 0; i < vec.size(); i++) {
+        if (vec[i] == search_num) {
+            return i;
+        }
+    }
+    return -1;
+}
+```
+
 
 ## Sources
 
