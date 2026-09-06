@@ -62,8 +62,6 @@ before the middle data, the data in the latter section of the array is ignored. 
 the former section of the array is ignored. This will continue to reduce the searchable array. If the value is found, it
 will return the index of the item. if it doesn't find the value, it returns -1, value not found.
 
-Each iteration of binary search reduces the searchable indices of the array by half.
-
 ```terminaloutput
 Best Case: O(1)
 Average Case: O(log N)
@@ -75,6 +73,10 @@ The array will have the data:
 const int ARRAY_SIZE = 7;
 int arr[ARRAY_SIZE] = {2, 4, 6, 8, 10, 12, 13};
 ```
+
+Each iteration of binary search reduces the searchable indices of the array by half.
+
+I am trying to understand time complexity so the explanation is below code output.
 
 and the code for Binary Search:
 
@@ -109,6 +111,45 @@ Number 2 @ index 0.
 Number 18 @ index -1.
 Number 13 @ index 6.
 ```
+
+> [!NOTE]
+> I had a hard time understanding time complexity. The math below helped me understand it better. I used a video that
+did math proof for time complexity of binary search.
+
+> [Source 6](#sources)
+
+Here with the help of **_Source #6_**, I am going to try my best to explain the Time Complexity of Binary Search.
+
+At the start we have the entire dataset. The dataset has n values. When we iterate through the dataset, we reduce the
+dataset by half.
+
+So our array holds 7 values, Number of values:
+
+$$N = 7$$
+
+In each iteration, we reduce the dataset by half
+
+$$\frac{n}{2} = \frac{n}{2^{1}}$$
+$$\frac{n}{4} = \frac{n}{2^{2}}$$
+$$...$$
+
+This dataset will be reduced by half till the range of the dataset is 1. We are reducing the dataset by powers of 2. Let
+the number of iterations be _k_.
+
+$$\frac{n}{2^{k}} = 1$$
+
+We do math
+
+$$n = 2^{k}$$
+
+because we are using a base of 2, our log will have the same base.
+
+$$\log_2{n} = log_2{2^{k}}$$
+$$\log_2{n} = k$$
+$$\because{\log_2{2}} = 1$$
+
+This is why the time complexity of Binary Search is
+$$O (\log{n})$$
 
 ## Sources
 
