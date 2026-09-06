@@ -5,8 +5,9 @@
 
 ## Table of Contents
 
-1. Linear Search
-2. Binary Search
+1. [Linear Search](#linear-search)
+2. [Binary Search](#binary-search)
+3. [Binary search on a Large DataSet](#binary-search-on-a-large-dataset)
 
 ## Linear Search
 
