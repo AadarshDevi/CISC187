@@ -109,7 +109,8 @@ Number 13 @ index 6.
 
 ## Sources
 
-1. [C++ Vectors by W3Schools](https://www.w3schools.com/cpp/cpp_vectors.asp) - Working with C++ Vectors
+1. [C++ Pass Structures to a Function](https://www.w3schools.com/cpp/cpp_function_structures.asp) - How to send arrays
+   as arguments to a function
 2. [Linear Search Algorithm by GeeksForGeeks](https://www.geeksforgeeks.org/dsa/linear-search/) - Used for learning
    about it's time complexity.
 3. [DSA Linear Search by W3Schools](https://www.w3schools.com/dsa/dsa_algo_linearsearch.php) - Used for the search
