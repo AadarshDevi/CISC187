@@ -60,12 +60,15 @@ int binary_search(int search_num, int *arr, const int ARRAY_SIZE) {
     int end_i = ARRAY_SIZE - 1;
     int mid_i = -1;
     int mid_num = -1;
+    int iterations = 0;
 
     while (start_i <= end_i) {
+        iterations++;
         mid_i = (start_i + end_i) / 2;
         mid_num = arr[mid_i];
 
         if (search_num == mid_num) {
+            std::cout << "Iterations: " << iterations << "\n";
             return mid_i;
         }
 
@@ -75,6 +78,7 @@ int binary_search(int search_num, int *arr, const int ARRAY_SIZE) {
             start_i = mid_i + 1;
         }
     }
+    std::cout << "Iterations: " << iterations << "\n";
     return -1;
 }
 
