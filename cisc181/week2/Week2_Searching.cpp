@@ -6,8 +6,6 @@ int linear_search(int search_num, std::vector<int> &vec);
 void print_search(int search_num_i, int search_num_i1);
 
 int main() {
-    std::cout << "Hello World!\n";
-
     std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
 
     return 0;
