@@ -145,6 +145,30 @@ $$\log_2{n} = k \quad \because{\log_2{2}} = 1$$
 This is why the time complexity of Binary Search is
 $$O (\log{n})$$
 
+## Binary search on a Large DataSet
+
+We need to find the maximum iterations that can be done on a sorted dataset with 10,000 elements.
+
+So, let
+$$N = 10,000 \text{ elements}$$
+
+and
+
+$$k = \text{The number of iterations}$$
+
+so the max number of iterations needed for this dataset is
+
+$$k = \log_2{N} \quad \because{\text{ Derived previously}} $$
+$$k = \log_2{10,000}$$
+$$k \approx 13.2877123795 $$
+
+I round it up because we have an iteration or not. So the maximum number of iterations on a dataset with 10,000 elements
+is
+
+$$k \approx 14 $$
+
+##
+
 ## Sources
 
 1. [C++ Pass Structures to a Function](https://www.w3schools.com/cpp/cpp_function_structures.asp) - How to send arrays
