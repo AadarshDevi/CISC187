@@ -52,6 +52,11 @@ Number 13 @ index 6.
 Binary Search is a searching algorithm with a time complexity of `O(log(n))`. It is usually used on data that is sorted.
 Binary Search doesn't search each item in the vector, instead it takes chunks of data and checks it.
 
+It starts by getting the middle value in the array and checks if the value there is the value needed. If the value is
+before the middle data, the data in the latter section of the array is ignored. If the data is after the middle value,
+the former section of the array is ignored. This will continue to reduce the searchable array. If the value is found, it
+will return the index of the item. if it doesn't find the value, it returns -1, value not found.
+
 ```terminaloutput
 Best Case: O(1)
 Average Case: O(log N)
