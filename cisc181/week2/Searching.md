@@ -32,8 +32,8 @@ int linear_search(int search_num, std::vector<int> &vec) {
 }
 ```
 
-When we try to find `2`, we see that the index for it is 0, the first item. this gives the time complexity `O(1)`. For
-the numbers 18 and 13, the indices are -1 and 6. Number 13 is the last item on the vector so its complexity is `O(N)`
+When we try to find 2, we see that the index for it is 0, the first item. this gives the time complexity `O(1)`. For the
+numbers 18 and 13, the indices are -1 and 6. Number 13 is the last item on the vector so its complexity is `O(N)`
 while the number 18 doesn't appear in the vector. So the index for 18 is -1, number not found.
 
 ```terminaloutput
