@@ -56,6 +56,28 @@ int main() {
 }
 
 int binary_search(int search_num, std::vector<int> &vec) {
+    int start_i = 0;
+    int end_i = vec.size() - 1;
+    int mid_i = start_i + ((start_i + end_i) / 2);
+
+    while (start_i < end_i) {
+        int start_num = vec[start_i];
+        int end_num = vec[end_i];
+        int mid_num = vec[mid_i];
+
+        std::cout << "s:m:e - " << start_num << ":" << mid_num << ":" << end_num << "\n";
+
+        if (search_num > mid_num) {
+            start_i = mid_i + 1;
+        } else if (search_num < mid_num) {
+            end_i = mid_i - 1;
+        } else if (search_num == mid_num) {
+            return mid_i;
+        }
+
+        mid_i = start_i + (start_i + end_i) / 2;
+    }
+    std::cout << "i: " << mid_i << "\n";
     return -1;
 }
 
