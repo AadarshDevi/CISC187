@@ -42,6 +42,13 @@ Number 18 @ index -1.
 Number 13 @ index 6.
 ```
 
+## Binary Search
+
+```terminaloutput
+Best Case: O(1)
+Average Case: O(log N)
+```
+
 ## Sources
 
 1. [C++ Vectors](https://www.w3schools.com/cpp/cpp_vectors.asp) - Working with C++ Vectors
