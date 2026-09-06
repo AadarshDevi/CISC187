@@ -142,8 +142,7 @@ $$n = 2^{k}$$
 because we are using a base of 2, our log will have the same base.
 
 $$\log_2{n} = log_2{2^{k}}$$
-$$\log_2{n} = k$$
-$$\because{\log_2{2}} = 1$$
+$$\log_2{n} = k \quad \because{\log_2{2}} = 1$$
 
 This is why the time complexity of Binary Search is
 $$O (\log{n})$$
