@@ -19,7 +19,7 @@ int main() {
     }
     std::cout << "\n\n";
 
-    int search_num = 2;
+    int search_num = 8;
     int search_num_i = linear_search(search_num, arr, ARRAY_SIZE);
     print_search(search_num, search_num_i);
 
