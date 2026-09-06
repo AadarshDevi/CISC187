@@ -63,6 +63,13 @@ Best Case: O(1)
 Average Case: O(log N)
 ```
 
+
+```terminaloutput
+Number 2 @ index 0.
+Number 18 @ index -1.
+Number 13 @ index 6.
+```
+
 ## Sources
 
 1. [C++ Vectors by W3Schools](https://www.w3schools.com/cpp/cpp_vectors.asp) - Working with C++ Vectors
