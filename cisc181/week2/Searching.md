@@ -173,6 +173,20 @@ $$k \approx 17 $$
 
 ## Searching
 
+Below I am creating an int array with 100,000 values. They will be sorted and there will not be multiple values of the
+same number.
+
+```c++
+// create array
+const int ARRAY_SIZE = 100'000;
+int arr[ARRAY_SIZE];
+
+// populate array
+for (int i = 0; i < ARRAY_SIZE; i++) {
+    arr[i] = i;
+}
+```
+
 ## Sources
 
 1. [C++ Pass Structures to a Function](https://www.w3schools.com/cpp/cpp_function_structures.asp) - How to send arrays
