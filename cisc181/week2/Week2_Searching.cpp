@@ -1,20 +1,21 @@
 #include <iostream>
 #include <vector>
 
-int linear_search(int search_num, std::vector<int> &vec);
+int linear_search(int search_num, int &vec);
 
-int binary_search(int search_num, std::vector<int> &vec);
+int binary_search(int search_num, int &vec);
 
 void print_search(int search_num_i, int search_num_i1);
 
 int main() {
-    std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
+    const int ARRAY_SIZE = 7;
+    int vec[ARRAY_SIZE] = {2, 4, 6, 8, 10, 12, 13};
 
     // Linear Search
     std::cout << "Linear Search\n";
     std::cout << "-----------------------\n";
     std::cout << "vector:";
-    for (int i = 0; i < vec.size(); i++) {
+    for (int i = 0; i < ARRAY_SIZE; i++) {
         std::cout << " " << vec[i];
     }
     std::cout << "\n\n";
@@ -35,8 +36,8 @@ int main() {
     std::cout << "\n\nBinary Search\n";
     std::cout << "-----------------------\n";
     std::cout << "vector:";
-    for (int i = 0; i < vec.size(); i++) {
-        std::cout << " " << vec.at(i);
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        std::cout << " " << vec[i];
     }
     std::cout << "\n\n";
 
@@ -55,15 +56,15 @@ int main() {
     return 0;
 }
 
-int binary_search(int search_num, std::vector<int> &vec) {
+int binary_search(int search_num, int &vec, const int ARRAY_SIZE) {
     int start_i = 0;
-    int end_i = vec.size() - 1;
+    int end_i = ARRAY_SIZE - 1;
     int mid_i = -1;
     int mid_num = -1;
 
     while (start_i <= end_i) {
         mid_i = (start_i + end_i) / 2;
-        mid_num = vec.at(mid_i);
+        mid_num = vec[mid_i];
 
         if (search_num == mid_num) {
             return mid_i;
@@ -78,9 +79,9 @@ int binary_search(int search_num, std::vector<int> &vec) {
     return -1;
 }
 
-int linear_search(int search_num, std::vector<int> &vec) {
-    for (int i = 0; i < vec.size(); i++) {
-        if (vec.at(i) == search_num) {
+int linear_search(int search_num, int &vec, const int ARRAY_SIZE) {
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        if (vec[i] == search_num) {
             return i;
         }
     }
