@@ -32,7 +32,7 @@ int main() {
     print_search(search_num, search_num_i);
 
     // Binary Search
-    std::cout << "Binary Search\n";
+    std::cout << "\n\nBinary Search\n";
     std::cout << "-----------------------\n";
     std::cout << "vector:";
     for (int i = 0; i < vec.size(); i++) {
