@@ -22,6 +22,7 @@ std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
 Searching the vector is linear, just like it's name.
 
 ```c++
+// &vec used instead of vec so the data in vec will not be duplicated in memeory
 int linear_search(int search_num, std::vector<int> &vec) {
     for (int i = 0; i < vec.size(); i++) {
         if (vec.at(i) == search_num) {
