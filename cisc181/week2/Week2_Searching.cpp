@@ -16,10 +16,6 @@ int main() {
         arr[i] = i;
     }
 
-    for (int i = 0; i < ARRAY_SIZE; i++) {
-        print_search(arr[i], i);
-    }
-
     return 0;
 }
 
