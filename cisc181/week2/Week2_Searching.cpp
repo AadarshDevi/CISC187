@@ -36,7 +36,7 @@ int main() {
     std::cout << "-----------------------\n";
     std::cout << "vector:";
     for (int i = 0; i < vec.size(); i++) {
-        std::cout << " " << vec[i];
+        std::cout << " " << vec.at(i);
     }
     std::cout << "\n\n";
 
@@ -83,7 +83,7 @@ int binary_search(int search_num, std::vector<int> &vec) {
 
 int linear_search(int search_num, std::vector<int> &vec) {
     for (int i = 0; i < vec.size(); i++) {
-        if (vec[i] == search_num) {
+        if (vec.at(i) == search_num) {
             return i;
         }
     }
