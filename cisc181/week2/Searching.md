@@ -13,13 +13,14 @@ Best Case: O(1)
 Average Case: O(N)
 ```
 
-The vector will have the data:
+The array will have the data:
 
 ```c++
-std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
+const int ARRAY_SIZE = 7;
+int arr[ARRAY_SIZE] = {2, 4, 6, 8, 10, 12, 13};
 ```
 
-Searching the vector is linear, just like it's name.
+Searching the array is linear, just like it's name.
 
 ```c++
 // &vec used instead of vec so the data in vec will not be duplicated in memeory
@@ -34,8 +35,8 @@ int linear_search(int search_num, std::vector<int> &vec) {
 ```
 
 When we try to find 2, we see that the index for it is 0, the first item. this gives the time complexity `O(1)`. For the
-numbers 18 and 13, the indices are -1 and 6. Number 13 is the last item on the vector so its complexity is `O(N)`
-while the number 18 doesn't appear in the vector. So the index for 18 is -1, number not found.
+numbers 18 and 13, the indices are -1 and 6. Number 13 is the last item on the array so its complexity is `O(N)`
+while the number 18 doesn't appear in the array. So the index for 18 is -1, number not found.
 
 For the number 2, the algorithm will check the first item and see that it is the value needed. So it will give the index
 of the value 2, 0. For 18, It will loop through every item till the end. Since it didn't find the value 18, it will
@@ -51,25 +52,28 @@ Number 13 @ index 6.
 ## Binary Search
 
 Binary Search is a searching algorithm with a time complexity of `O(log(n))`. It is usually used on data that is sorted.
-Binary Search doesn't search each item in the vector, instead it takes chunks of data and checks it.
+Binary Search doesn't search each item in the array, instead it takes chunks of data and checks it.
 
 It starts by getting the middle value in the array and checks if the value there is the value needed. If the value is
 before the middle data, the data in the latter section of the array is ignored. If the data is after the middle value,
 the former section of the array is ignored. This will continue to reduce the searchable array. If the value is found, it
 will return the index of the item. if it doesn't find the value, it returns -1, value not found.
 
+Each iteration of binary search reduces the searchable indices of the array by half.
+
 ```terminaloutput
 Best Case: O(1)
 Average Case: O(log N)
 ```
 
-The vector will have the data:
+The array will have the data:
 
 ```c++
-std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
+const int ARRAY_SIZE = 7;
+int arr[ARRAY_SIZE] = {2, 4, 6, 8, 10, 12, 13};
 ```
 
-and Binary Search:
+and the code for Binary Search:
 
 ```c++
 // &vec used instead of vec so the data in vec will not be duplicated in memeory
