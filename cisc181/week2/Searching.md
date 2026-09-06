@@ -8,6 +8,11 @@ A linear search is a search algorithm where the entire array is searched from th
 another. The first item in the array will have a time complexity of `O(1)`. The rest of the items will have a time
 complexity of `O(N)`.
 
+```terminaloutput
+Best Case: O(1)
+Average Case: O(N)
+```
+
 The vector will have the data:
 
 ```c++
