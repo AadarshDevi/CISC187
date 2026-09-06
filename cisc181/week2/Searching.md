@@ -182,3 +182,4 @@ $$k \approx 14 $$
    Learning the Time Complexity of Binary Search?
 6. [Binary Search time complexity || O (log n) Mathematical Proof by SWE HQ](https://www.youtube.com/watch?v=lv6RPAFP_UU) -
    Video proofing the time complexity of binary search is `O(log(n))`
+7. Google Gemini - LaTeX
