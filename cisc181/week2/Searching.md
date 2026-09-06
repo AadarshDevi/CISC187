@@ -150,7 +150,7 @@ $$O (\log{n})$$
 We need to find the maximum iterations that can be done on a sorted dataset with 10,000 elements.
 
 So, let
-$$N = 10,000 \text{ elements}$$
+$$N = 100,000 \text{ elements}$$
 
 and
 
@@ -161,6 +161,7 @@ so the max number of iterations needed for this dataset is
 $$k = \log_2{N} \quad \because{\text{ Derived previously}} $$
 $$k = \log_2{10,000}$$
 $$k \approx 13.2877123795 $$
+$$k = \log_2{100,000}$$
 
 I round it up because we have an iteration or not. So the maximum number of iterations on a dataset with 10,000 elements
 is
