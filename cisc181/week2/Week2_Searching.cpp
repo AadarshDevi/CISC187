@@ -8,6 +8,7 @@ void print_search(int search_num_i, int search_num_i1);
 int main() {
     std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
 
+    // Linear Search
     std::cout << "Linear Search\n";
     std::cout << "-----------------------\n";
     std::cout << "vector:";
