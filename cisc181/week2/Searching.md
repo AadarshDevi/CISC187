@@ -2,6 +2,9 @@
 
 ## Table of Contents
 
+1. Linear Search
+2. Binary Search
+
 ## Linear Search
 
 A linear search is a search algorithm where the entire array is searched from the first item to the last one after
