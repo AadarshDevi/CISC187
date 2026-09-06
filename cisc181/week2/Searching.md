@@ -1,5 +1,8 @@
 # Week 2 - Searching
 
+> [!NOTE]
+> This is a long lab doc.
+
 ## Table of Contents
 
 1. Linear Search
