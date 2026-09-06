@@ -135,11 +135,9 @@ the number of iterations be _k_.
 
 $$\frac{n}{2^{k}} = 1$$
 
-We do math
-
 $$n = 2^{k}$$
 
-because we are using a base of 2, our log will have the same base.
+because we are using a base of 2, our log will have the same base so we can get the number of iterations.
 
 $$\log_2{n} = log_2{2^{k}}$$
 $$\log_2{n} = k \quad \because{\log_2{2}} = 1$$
