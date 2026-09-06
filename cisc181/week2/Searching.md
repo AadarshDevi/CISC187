@@ -63,6 +63,12 @@ Best Case: O(1)
 Average Case: O(log N)
 ```
 
+The vector will have the data:
+
+```c++
+std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
+```
+
 
 ```terminaloutput
 Number 2 @ index 0.
