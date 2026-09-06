@@ -51,8 +51,11 @@ Average Case: O(log N)
 
 ## Sources
 
-1. [C++ Vectors](https://www.w3schools.com/cpp/cpp_vectors.asp) - Working with C++ Vectors
-2. [Linear Search Algorithm](https://www.geeksforgeeks.org/dsa/linear-search/) - Used for learning about it's time
-   complexity.
-3. [DSA Linear Search](https://www.w3schools.com/dsa/dsa_algo_linearsearch.php) - Used for the search simulator and how
-   does Linear Search work.
+1. [C++ Vectors by W3Schools](https://www.w3schools.com/cpp/cpp_vectors.asp) - Working with C++ Vectors
+2. [Linear Search Algorithm by GeeksForGeeks](https://www.geeksforgeeks.org/dsa/linear-search/) - Used for learning
+   about it's time complexity.
+3. [DSA Linear Search by W3Schools](https://www.w3schools.com/dsa/dsa_algo_linearsearch.php) - Used for the search
+   simulator and how does Linear Search work.
+4. [Binary Search by GeeksForGeeks](https://www.geeksforgeeks.org/dsa/binary-search/) - How to write Binary Search
+5. [Time and Space Complexity Analysis of Binary Search Algorithm by GeeksForGeeks](https://www.geeksforgeeks.org/dsa/complexity-analysis-of-binary-search/) -
+   What is the Time Complexity of Binary Search why is it?
