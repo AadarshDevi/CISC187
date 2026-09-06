@@ -69,6 +69,33 @@ The vector will have the data:
 std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
 ```
 
+and Binary Search:
+
+```c++
+// &vec used instead of vec so the data in vec will not be duplicated in memeory
+int binary_search(int search_num, std::vector<int> &vec) {
+    int start_i = 0;
+    int end_i = vec.size() - 1;
+    int mid_i = -1;
+    int mid_num = -1;
+
+    while (start_i <= end_i) {
+        mid_i = (start_i + end_i) / 2;
+        mid_num = vec.at(mid_i);
+
+        if (search_num == mid_num) {
+            return mid_i;
+        }
+
+        if (search_num < mid_num) {
+            end_i = mid_i - 1;
+        } else if (search_num > mid_num) {
+            start_i = mid_i + 1;
+        }
+    }
+    return -1;
+}
+```
 
 ```terminaloutput
 Number 2 @ index 0.
