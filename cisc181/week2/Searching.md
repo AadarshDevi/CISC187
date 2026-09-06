@@ -187,6 +187,16 @@ for (int i = 0; i < ARRAY_SIZE; i++) {
 }
 ```
 
+Now we have a modified implementation of the Linear Search before:
+
+```c++
+```
+
+Now we have a modified implementation of the Binary Search before:
+
+```c++
+```
+
 ## Sources
 
 1. [C++ Pass Structures to a Function](https://www.w3schools.com/cpp/cpp_function_structures.asp) - How to send arrays
