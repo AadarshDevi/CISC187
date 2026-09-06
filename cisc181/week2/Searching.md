@@ -36,6 +36,11 @@ When we try to find 2, we see that the index for it is 0, the first item. this g
 numbers 18 and 13, the indices are -1 and 6. Number 13 is the last item on the vector so its complexity is `O(N)`
 while the number 18 doesn't appear in the vector. So the index for 18 is -1, number not found.
 
+For the number 2, the algorithm will check the first item and see that it is the value needed. So it will give the index
+of the value 2, 0. For 18, It will loop through every item till the end. Since it didn't find the value 18, it will
+return -1, item/value not found. for the value 13, the algorithm will go through every single item till the last where
+it will find it.
+
 ```terminaloutput
 Number 2 @ index 0.
 Number 18 @ index -1.
