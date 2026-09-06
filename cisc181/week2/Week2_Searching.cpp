@@ -41,8 +41,16 @@ int main() {
     std::cout << "\n\n";
 
     search_num = 2;
+    search_num_i = binary_search(search_num, vec);
+    print_search(search_num, search_num_i);
+
     search_num = 18;
+    search_num_i = binary_search(search_num, vec);
+    print_search(search_num, search_num_i);
+
     search_num = 13;
+    search_num_i = binary_search(search_num, vec);
+    print_search(search_num, search_num_i);
 
     return 0;
 }
