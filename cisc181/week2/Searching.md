@@ -14,6 +14,8 @@ The vector will have the data:
 std::vector<int> vec = {2, 4, 6, 8, 10, 12, 13};
 ```
 
+Searching the vector is linear, just like it's name.
+
 ```c++
 int linear_search(int search_num, std::vector<int> &vec) {
     for (int i = 0; i < vec.size(); i++) {
