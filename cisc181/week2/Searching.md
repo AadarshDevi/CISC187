@@ -23,10 +23,10 @@ int arr[ARRAY_SIZE] = {2, 4, 6, 8, 10, 12, 13};
 Searching the array is linear, just like it's name.
 
 ```c++
-// &vec used instead of vec so the data in vec will not be duplicated in memeory
-int linear_search(int search_num, std::vector<int> &vec) {
-    for (int i = 0; i < vec.size(); i++) {
-        if (vec.at(i) == search_num) {
+// *arr used instead of arr so the data in arr will not be duplicated in memeory
+int linear_search(int search_num, int *arr, const int ARRAY_SIZE) {
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        if (arr[i] == search_num) {
             return i;
         }
     }
@@ -76,16 +76,16 @@ int arr[ARRAY_SIZE] = {2, 4, 6, 8, 10, 12, 13};
 and the code for Binary Search:
 
 ```c++
-// &vec used instead of vec so the data in vec will not be duplicated in memeory
-int binary_search(int search_num, std::vector<int> &vec) {
+// *arr used instead of arr so the data in arr will not be duplicated in memeory
+int binary_search(int search_num, int *arr, const int ARRAY_SIZE) {
     int start_i = 0;
-    int end_i = vec.size() - 1;
+    int end_i = ARRAY_SIZE - 1;
     int mid_i = -1;
     int mid_num = -1;
 
     while (start_i <= end_i) {
         mid_i = (start_i + end_i) / 2;
-        mid_num = vec.at(mid_i);
+        mid_num = arr[mid_i];
 
         if (search_num == mid_num) {
             return mid_i;
