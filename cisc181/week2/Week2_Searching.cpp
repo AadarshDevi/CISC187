@@ -29,6 +29,19 @@ int main() {
     search_num_i = linear_search(search_num, vec);
     print_search(search_num, search_num_i);
 
+    // Binary Search
+    std::cout << "Binary Search\n";
+    std::cout << "-----------------------\n";
+    std::cout << "vector:";
+    for (int i = 0; i < vec.size(); i++) {
+        std::cout << " " << vec[i];
+    }
+    std::cout << "\n\n";
+
+    search_num = 2;
+    search_num = 18;
+    search_num = 13;
+
     return 0;
 }
 
