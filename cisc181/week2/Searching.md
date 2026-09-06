@@ -18,6 +18,8 @@ complexity of `O(N)`.
 $$ \text{Base Case: } O (1)$$
 $$ \text{Average of Worst Case: } O (N)$$
 
+To find element 8, we will iterate through the array 4 times.
+![linear search.png](linear%20search.png)
 The array will have the data:
 
 ```c++
@@ -67,6 +69,8 @@ will return the index of the item. if it doesn't find the value, it returns -1, 
 $$ \text{Base Case: } O (1)$$
 $$ \text{Average of Worst Case: } O (log{N})$$
 
+To find element 8, we will iterate through the array 3 times.
+![binary search.png](binary%20search.png)
 The array will have the data:
 
 ```c++
