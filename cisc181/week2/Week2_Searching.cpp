@@ -26,6 +26,7 @@ int main() {
             << " with iterations: " << comparisons
             << "\n";
 
+    comparisons = 0;
     num_i = binary_search(num, arr, ARRAY_SIZE, &comparisons);
     std::cout
             << "Binary Search: " << num
