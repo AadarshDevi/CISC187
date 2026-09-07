@@ -1,6 +1,8 @@
 #include <iostream>
 
 int linear_search(int search_num, int *arr, int ARRAY_SIZE, int *comparisons);
+int linear_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons);
+
 
 int main() {
     // create array
@@ -42,7 +44,7 @@ int binary_search(int search_num, int *arr, const int ARRAY_SIZE) {
     return -1;
 }
 
-int linear_search(int search_num, int *arr, int ARRAY_SIZE, int *comparisons) {
+int linear_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons) {
     for (int i = 0; i < ARRAY_SIZE; i++) {
         (*comparisons)++;
         if (arr[i] == search_num) {
