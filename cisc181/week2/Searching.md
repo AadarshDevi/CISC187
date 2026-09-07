@@ -203,7 +203,9 @@ $$k \approx 17 $$
 ## Searching
 
 Below I am creating an int array with 100,000 values. They will be sorted and there will not be multiple values of the
-same number.
+same number. The array has the range:
+
+$$Range_{array} = [1, 100,000]$$
 
 ```c++
 // create array
