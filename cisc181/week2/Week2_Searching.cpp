@@ -14,10 +14,12 @@ int main() {
         arr[i - 1] = i;
     }
 
+    // vars needed to search for vars
     int num = 1;
     int comparisons = 0;
     int num_i = 0;
 
+    // search array
     num_i = linear_search(num, arr, ARRAY_SIZE, &comparisons);
     std::cout << "Linear Search: " << num
             << " at index: " << num_i
