@@ -2,7 +2,13 @@
 
 int linear_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons);
 
+int linear_search(int search_num, int *arr, const int ARRAY_SIZE);
+
 int binary_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons);
+
+int binary_search(int search_num, int *arr, const int ARRAY_SIZE);
+
+void print_search(int num, int num_index);
 
 int main() {
     // create array
