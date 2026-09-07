@@ -297,6 +297,20 @@ Below is a table for the numbers searched, the iterations it took and if the val
 | 100,000 |  Yes  |  100,000   | 99999 |        End        |
 | 103,302 |  No   |     17     |  -1   |   Out of Range    |
 
+### Analysis
+
+1. Linear Search has worst-case time complexity of `O(N)` because it has to go through every single item in the array.
+   so if the value is at the end of the array, the entire array has to be searched. The searchable dataset will remain
+   constant, and it will not change. So the search will have to go through all the values.
+2. Binary Search has worst-case time complexity of `O(log(N))` because at each iteration, half of the searchable dataset
+   becomes searchable. This reduction of the dataset give it, it's time complexity.
+3. Binary Search needs a sorted dataset because binary search use values and compares them with the middle value.
+   Because the dataset it ordered, the binary search will know that if a value is lower than the middle val, it can
+   logically deduce that the upper half of the dataset will never contain the data. If the data is unsorted, binary
+   search will think that the value is below when in reality it is above the middle value. This defeats the purpose of
+   using binary search because linear search (between linear and binary search) would be a better option. Binary search
+   is efficient when the data is sorted and linear search can be used regardless if the data is sorted or not.
+
 ## Sources
 
 1. [C++ Pass Structures to a Function](https://www.w3schools.com/cpp/cpp_function_structures.asp) - How to send arrays
