@@ -19,8 +19,17 @@ int main() {
     int num_i = linear_search(num, arr, ARRAY_SIZE, &comparisons);
     std::cout << "Linear Search: " << num << " at index: " << num_i << " with iterations: " << comparisons << "\n";
 
-    int num_i_binary_search = binary_search(num, arr, ARRAY_SIZE, &comparisons);
-    std::cout << "Binary Search: " << num << " at index: " << num_i_binary_search << " with iterations: " << comparisons
+    num_i = linear_search(num, arr, ARRAY_SIZE, &comparisons);
+    std::cout << "Linear Search: " << num
+            << " at index: " << num_i
+            << " with iterations: " << comparisons
+            << "\n";
+
+    num_i = binary_search(num, arr, ARRAY_SIZE, &comparisons);
+    std::cout
+            << "Binary Search: " << num
+            << " at index: " << num_i
+            << " with iterations: " << comparisons
             << "\n";
 
     return 0;
