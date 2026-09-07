@@ -8,6 +8,10 @@
 1. [Linear Search](#linear-search)
 2. [Binary Search](#binary-search)
 3. [Binary search on a Large DataSet](#binary-search-on-a-large-dataset)
+4. [Searching Dataset](#searching-dataset)
+    1. [Linear Search Table](#table-for-linear-search)
+    2. [Binary Search Table](#table-for-binary-search)
+5.
 
 ## Linear Search
 
