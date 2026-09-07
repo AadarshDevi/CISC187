@@ -14,6 +14,9 @@ int main() {
         arr[i - 1] = i;
     }
 
+    int num = 1;
+    int comparisons = 0;
+
     return 0;
 }
 
