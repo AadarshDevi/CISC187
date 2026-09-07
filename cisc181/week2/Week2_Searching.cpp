@@ -15,7 +15,7 @@ int main() {
     }
 
     // vars needed to search for vars
-    int num = 1;
+    int num = 103'302;
     int comparisons = 0;
     int num_i = 0;
 
