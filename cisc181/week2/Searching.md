@@ -317,10 +317,13 @@ becomes searchable. This reduction of the dataset give it, it's time complexity.
 
 Binary Search needs a sorted dataset because binary search use values and compares them with the middle value. Because
 the dataset it ordered, the binary search will know that if a value is lower than the middle val, it can logically
-deduce that the upper half of the dataset will never contain the data. If the data is unsorted, binary search will think
-that the value is below when in reality it is above the middle value. This defeats the purpose of using binary search
-because linear search (between linear and binary search) would be a better option. Binary search is efficient when the
-data is sorted and linear search can be used regardless if the data is sorted or not.
+deduce that the upper half of the dataset will never contain the data.
+
+If the data is unsorted, binary search will think that the value is below when in reality it is above the middle value.
+
+This defeats the purpose of using binary search because linear search (between linear and binary search) would be a
+better option. Binary search is efficient when the data is sorted and linear search can be used regardless if the data
+is sorted or not.
 
 ## Sources
 
