@@ -121,6 +121,16 @@ int linear_search(int search_num, int *arr, const int ARRAY_SIZE, int *compariso
     return -1;
 }
 
+int linear_search(int search_num, int *arr, const int ARRAY_SIZE) {
+    int comparisons = 0;
+    return linear_search(search_num, arr, ARRAY_SIZE, &comparisons);
+}
+
+int binary_search(int search_num, int *arr, const int ARRAY_SIZE) {
+    int comparisons = 0;
+    return binary_search(search_num, arr, ARRAY_SIZE, &comparisons);
+}
+
 void print_search(int num, int num_index) {
     std::cout << "Number " << num << " @ index " << num_index << ".\n";
 }
