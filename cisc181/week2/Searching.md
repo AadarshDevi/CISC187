@@ -56,6 +56,35 @@ Number 18 @ index -1.
 Number 13 @ index 6.
 ```
 
+When we start a linear search, it goes through every single item in the array. When we do linear search on an array with
+1 item, the best case it `O(1)` and the iterations is 1.
+
+$$N=1 \quad \because{\text{No of items in array}}$$
+$$k=1 \quad \because{\text{No of iterations to find the number}}$$
+
+Let's change it
+
+$$N=10 \quad \because{\text{No of items in array}}$$
+$$k=10 \quad \because{\text{No of iterations (worst case) to find the number}}$$
+
+So when we increase the number of items in the array, the longer it will take linear search to find it. The dataset
+expands each iteration.
+
+$$N=1 \quad \because{\text{1 item}}$$
+$$k=1 \quad \because{\text{1 comparison}}$$
+
+$$N=2 \quad \because{\text{2 item}}$$
+$$k=2 \quad \because{\text{2 comparisons}}$$
+
+$$...$$
+
+$$N \quad \because{\text{N item}}$$
+$$k=N \quad \because{\text{N comparisons}}$$
+
+So linear search has a time complexity of
+
+$$O (N)$$
+
 ## Binary Search
 
 Binary Search is a searching algorithm with a time complexity of `O(log(n))`. It is usually used on data that is sorted.
