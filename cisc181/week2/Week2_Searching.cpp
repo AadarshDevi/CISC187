@@ -1,8 +1,8 @@
 #include <iostream>
 
-int linear_search(int search_num, int *arr, int ARRAY_SIZE, int *comparisons);
 int linear_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons);
 
+int binary_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons);
 
 int main() {
     // create array
@@ -17,30 +17,25 @@ int main() {
     return 0;
 }
 
-int binary_search(int search_num, int *arr, const int ARRAY_SIZE) {
+int binary_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons) {
     int start_i = 0;
     int end_i = ARRAY_SIZE - 1;
     int mid_i = -1;
     int mid_num = -1;
-    int iterations = 0;
 
     while (start_i <= end_i) {
-        iterations++;
         mid_i = (start_i + end_i) / 2;
         mid_num = arr[mid_i];
 
+        (*comparisons)++;
         if (search_num == mid_num) {
-            std::cout << "Iterations: " << iterations << "\n";
             return mid_i;
-        }
-
-        if (search_num < mid_num) {
+        } else if (search_num < mid_num) {
             end_i = mid_i - 1;
         } else if (search_num > mid_num) {
             start_i = mid_i + 1;
         }
     }
-    std::cout << "Iterations: " << iterations << "\n";
     return -1;
 }
 
