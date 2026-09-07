@@ -218,7 +218,16 @@ for (int i = 1; i <= ARRAY_SIZE; i++) {
 }
 ```
 
-Now we have a modified implementation of the Linear Search before:
+Next are the variables needed to make the search algorithms work properly.
+
+```c++
+// vars needed to search for vars
+int num = 1;
+int comparisons = 0;
+int num_i = 0;
+```
+
+Now we have a modified implementation of the Linear Search from before:
 
 ```c++
 int linear_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons) {
