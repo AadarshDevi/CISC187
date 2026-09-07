@@ -46,8 +46,9 @@ int binary_search(int search_num, int *arr, const int ARRAY_SIZE) {
     return -1;
 }
 
-int linear_search(int search_num, int *arr, const int ARRAY_SIZE) {
+int linear_search(int search_num, int *arr, int ARRAY_SIZE, int *iterations) {
     for (int i = 0; i < ARRAY_SIZE; i++) {
+        (*iterations)++;
         if (arr[i] == search_num) {
             return i;
         }
