@@ -213,8 +213,8 @@ const int ARRAY_SIZE = 100'000;
 int arr[ARRAY_SIZE];
 
 // populate array
-for (int i = 0; i < ARRAY_SIZE; i++) {
-    arr[i] = i;
+for (int i = 1; i <= ARRAY_SIZE; i++) {
+    arr[i - 1] = i;
 }
 ```
 
