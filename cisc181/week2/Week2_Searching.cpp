@@ -28,24 +28,31 @@ int main() {
 
     search_num = 8;
     search_num_i = linear_search(search_num, arr, ARRAY_SIZE);
+    std::cout << "Linear Search -> ";
+    print_search(search_num, search_num_i);
     search_num_i = binary_search(search_num, arr, ARRAY_SIZE);
-
+    std::cout << "Binary Search -> ";
     print_search(search_num, search_num_i);
-    print_search(search_num, search_num_i);
+    std::cout << "\n";
 
     search_num = 13;
     search_num_i = linear_search(search_num, arr, ARRAY_SIZE);
+    std::cout << "Linear Search -> ";
+    print_search(search_num, search_num_i);
+    std::cout << "Binary Search -> ";
     search_num_i = binary_search(search_num, arr, ARRAY_SIZE);
+    print_search(search_num, search_num_i);
+    std::cout << "\n";
 
-    print_search(search_num, search_num_i);
-    print_search(search_num, search_num_i);
 
     search_num = 18;
     search_num_i = linear_search(search_num, arr, ARRAY_SIZE);
+    std::cout << "Linear Search -> ";
+    print_search(search_num, search_num_i);
     search_num_i = binary_search(search_num, arr, ARRAY_SIZE);
-
+    std::cout << "Binary Search -> ";
     print_search(search_num, search_num_i);
-    print_search(search_num, search_num_i);
+    std::cout << "\n";
 
     // create array
     const int ARRAY_SIZE_2 = 100'000;
