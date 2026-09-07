@@ -58,12 +58,12 @@ int main() {
 
 
     // create array
-    const int ARRAY_SIZE = 100'000;
-    int arr[ARRAY_SIZE];
+    const int ARRAY_SIZE_2 = 100'000;
+    int arr_2[ARRAY_SIZE];
 
     // populate array
-    for (int i = 1; i <= ARRAY_SIZE; i++) {
-        arr[i - 1] = i;
+    for (int i = 1; i <= ARRAY_SIZE_2; i++) {
+        arr_2[i - 1] = i;
     }
 
     // vars needed to search for vars
@@ -72,14 +72,14 @@ int main() {
     int num_i = 0;
 
     // search array
-    num_i = linear_search(num, arr, ARRAY_SIZE, &comparisons);
+    num_i = linear_search(num, arr_2, ARRAY_SIZE_2, &comparisons);
     std::cout << "Linear Search: " << num
             << " at index: " << num_i
             << " with iterations: " << comparisons
             << "\n";
 
     comparisons = 0;
-    num_i = binary_search(num, arr, ARRAY_SIZE, &comparisons);
+    num_i = binary_search(num, arr_2, ARRAY_SIZE_2, &comparisons);
     std::cout
             << "Binary Search: " << num
             << " at index: " << num_i
