@@ -221,9 +221,30 @@ Now we have a modified implementation of the Linear Search before:
 ```c++
 ```
 
-Now we have a modified implementation of the Binary Search before:
+Now we have a modified implementation of the Binary Search from before:
 
 ```c++
+int binary_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons) {
+    int start_i = 0;
+    int end_i = ARRAY_SIZE - 1;
+    int mid_i = -1;
+    int mid_num = -1;
+
+    while (start_i <= end_i) {
+        mid_i = (start_i + end_i) / 2;
+        mid_num = arr[mid_i];
+
+        (*comparisons)++;
+        if (search_num == mid_num) {
+            return mid_i;
+        } else if (search_num < mid_num) {
+            end_i = mid_i - 1;
+        } else if (search_num > mid_num) {
+            start_i = mid_i + 1;
+        }
+    }
+    return -1;
+}
 ```
 
 ## Sources
