@@ -56,7 +56,7 @@ int main() {
 
     // create array
     const int ARRAY_SIZE_2 = 100'000;
-    int arr_2[ARRAY_SIZE];
+    int arr_2[ARRAY_SIZE_2];
 
     // populate array
     for (int i = 1; i <= ARRAY_SIZE_2; i++) {
