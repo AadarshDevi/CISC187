@@ -219,6 +219,15 @@ for (int i = 0; i < ARRAY_SIZE; i++) {
 Now we have a modified implementation of the Linear Search before:
 
 ```c++
+int linear_search(int search_num, int *arr, const int ARRAY_SIZE, int *comparisons) {
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        (*comparisons)++;
+        if (arr[i] == search_num) {
+            return i;
+        }
+    }
+    return -1;
+}
 ```
 
 Now we have a modified implementation of the Binary Search from before:
