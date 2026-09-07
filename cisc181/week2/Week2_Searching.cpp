@@ -15,7 +15,7 @@ int main() {
     int arr[ARRAY_SIZE] = {2, 4, 6, 8, 10, 12, 13};
 
     // Linear Search
-    std::cout << "Linear Search\n";
+    std::cout << "Searching\n";
     std::cout << "-----------------------\n";
     std::cout << "array:";
     for (int i = 0; i < ARRAY_SIZE; i++) {
