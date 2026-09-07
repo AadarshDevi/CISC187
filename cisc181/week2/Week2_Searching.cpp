@@ -10,7 +10,7 @@ int main() {
     int arr[ARRAY_SIZE];
 
     // populate array
-    for (int i = 1; i < ARRAY_SIZE; i++) {
+    for (int i = 1; i <= ARRAY_SIZE; i++) {
         arr[i - 1] = i;
     }
 
