@@ -23,39 +23,29 @@ int main() {
     }
     std::cout << "\n\n";
 
-    int search_num = 8;
-    int search_num_i = linear_search(search_num, arr, ARRAY_SIZE);
-    print_search(search_num, search_num_i);
+    int search_num = -1;
+    int search_num_i = -1;
 
-    search_num = 18;
+    search_num = 8;
     search_num_i = linear_search(search_num, arr, ARRAY_SIZE);
+    search_num_i = binary_search(search_num, arr, ARRAY_SIZE);
+
+    print_search(search_num, search_num_i);
     print_search(search_num, search_num_i);
 
     search_num = 13;
     search_num_i = linear_search(search_num, arr, ARRAY_SIZE);
-    print_search(search_num, search_num_i);
-
-    // Binary Search
-    std::cout << "\n\nBinary Search\n";
-    std::cout << "-----------------------\n";
-    std::cout << "array:";
-    for (int i = 0; i < ARRAY_SIZE; i++) {
-        std::cout << " " << arr[i];
-    }
-    std::cout << "\n\n";
-
-    search_num = 2;
     search_num_i = binary_search(search_num, arr, ARRAY_SIZE);
+
+    print_search(search_num, search_num_i);
     print_search(search_num, search_num_i);
 
     search_num = 18;
+    search_num_i = linear_search(search_num, arr, ARRAY_SIZE);
     search_num_i = binary_search(search_num, arr, ARRAY_SIZE);
-    print_search(search_num, search_num_i);
 
-    search_num = 13;
-    search_num_i = binary_search(search_num, arr, ARRAY_SIZE);
     print_search(search_num, search_num_i);
-
+    print_search(search_num, search_num_i);
 
     // create array
     const int ARRAY_SIZE_2 = 100'000;
