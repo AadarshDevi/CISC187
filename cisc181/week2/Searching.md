@@ -256,6 +256,31 @@ int binary_search(int search_num, int *arr, const int ARRAY_SIZE, int *compariso
 }
 ```
 
+Using the output in the format below to find iterations and index of the number.
+
+```terminaloutput
+Linear Search: 103302 at index: -1 with iterations: 100000
+Binary Search: 103302 at index: -1 with iterations: 17
+```
+
+Below is a table for the numbers searched, the iterations it took and if the values were found.
+
+### Table for Linear Search
+
+| Number  | Found | Iterations | Index | Part of the Array |
+|:-------:|:-----:|:----------:|:-----:|:-----------------:|
+|    1    |  Yes  |     1      |   0   |     Beginning     |
+| 100,000 |  Yes  |  100,000   | 99999 |        End        |
+| 103,302 |  No   |  100,000   |       |   Out of Range    |
+
+### Table for Binary Search
+
+| Number  | Found | Iterations | Index | Part of the Array |
+|:-------:|:-----:|:----------:|:-----:|:-----------------:|
+|    1    |  Yes  |     16     |   0   |     Beginning     |
+| 100,000 |  Yes  |  100,000   | 99999 |        End        |
+| 103,302 |  No   |     17     |  -1   |   Out of Range    |
+
 ## Sources
 
 1. [C++ Pass Structures to a Function](https://www.w3schools.com/cpp/cpp_function_structures.asp) - How to send arrays
