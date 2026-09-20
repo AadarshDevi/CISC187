@@ -2,6 +2,14 @@
 
 ## Table of Contents
 
+1. [Linear Complexity](#linear-complexity)
+2. [Quadratic Complexity](#quadratic-complexity)
+3. [Analyzing Multiple Sequential Loops](#analyzing-multiple-sequential-loops)
+4. [Multiple Constant-Time Operations](#multiple-constant-time-operations)
+5. [Analyzing Nested Iteration](#analyzing-nested-iteration)
+6. [Analysis & Reflection](#analysis--reflection)
+7. [Resources](#resources)
+
 ## Linear Complexity
 
 $$ \text{Let: } \quad k = \text{No of Steps to sort some Data} $$
