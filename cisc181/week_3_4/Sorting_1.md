@@ -76,6 +76,16 @@ So this leaves:
 
 $$O (N)$$
 
+TL:DR;
+
+1. Base Comparisons: 16
+2. Comparisons for each item: 4
+3. Linear Graph
+4. Big-O Notation ignores:
+    1. constants
+    2. constant multipliers
+    3. non highest degrees of a function/algorithm
+
 ## Quadratic Complexity
 
 ## Analyzing Multiple Sequential Loops
