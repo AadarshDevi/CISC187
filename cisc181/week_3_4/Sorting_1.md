@@ -70,7 +70,7 @@ So based on that information:
 
 $$4N + 16$$
 $$4N \quad\because{\text{16 is a constant}}$$
-$$N \quad\because{\text{4 is a constant}}$$
+$$N \quad\because{\text{4 is a constant multiplier}}$$
 
 So this leaves:
 
