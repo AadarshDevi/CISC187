@@ -88,6 +88,48 @@ TL:DR;
 
 ## Quadratic Complexity
 
+The algorithm given has the given time complexity:
+
+$$2N^2$$
+
+First, the $N^2$ tells us that the equations is quadratic. Using the "**Rules of Big O Notations**" we see below that
+
+$$2N^2 \to N^2 \quad\because{\text{2 is a constant multiplier}}$$
+
+When the dataset increases aka becomes very large, the constants and constant multiplier will be less useful.
+
+So below is a table for the number of items and the number of comparisons needed to sort it when the algorithm
+is $ N^2 $.
+
+| $ N $ | 0 | 1 | 2 | 3 | $ ... $ | 8  | 9  | 10  |
+|:-----:|:-:|:-:|:-:|:-:|:-------:|:--:|:--:|:---:|
+| $ k $ | 0 | 0 | 4 | 9 | $ ... $ | 64 | 81 | 100 |
+
+It's a quadratic equation. Then $ 2N^2 $ will be twice that of $ N^2 $.
+
+| $ N $ | 0 | 1 | 2 | 3  | $ ... $ |  8  |  9  | 10  |
+|:-----:|:-:|:-:|:-:|:--:|:-------:|:---:|:---:|:---:|
+| $ k $ | 0 | 0 | 8 | 18 | $ ... $ | 128 | 192 | 200 |
+
+An example using Bubble Sort: each element will go through each and every item till all the items are sorted.
+
+$$ N=10 $$
+
+$$ \text{iteration 1:} \quad k = 10 $$
+$$ \text{iteration 2:} \quad k = 10 $$
+$$ ... $$
+$$ \text{iteration 9:} \quad k = 10 $$
+$$ \text{iteration 10:} \quad k = 10 $$
+
+so
+
+$$ k = N^2 $$
+
+The behavior of the algorithm will follow a quadratic curve as the number of elements increase. This means the larget
+$ N $ is, the longer it will take to sort.
+
+Both $ N^2 $ and $ 2N^2 $ follow the behavior of the quadratic equation.
+
 ## Analyzing Multiple Sequential Loops
 
 ## Multiple Constant-Time Operations
