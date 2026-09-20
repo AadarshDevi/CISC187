@@ -25,13 +25,13 @@ $$N (1) = 0 \text{ and } N (2) = 1$$
 So, we compare them (to check if they are sorted using Bubble Sort). And after we compare each one of them, there will 9
 comparisons. Below are the comparisons
 
-| Comparison |     k     |
-|:----------:|:---------:|
-| $$0 > 1$$  | $$k = 1$$ |
-| $$1 > 2$$  | $$k = 2$$ |
-|  $$...$$   |           |
-| $$7 > 8$$  | $$k = 8$$ |
-| $$8 > 9$$  | $$k = 9$$ |
+| Comparison |    k    |
+|:----------:|:-------:|
+|  $0 > 1$   | $k = 1$ |
+|  $1 > 2$   | $k = 2$ |
+|   $...$    |  $...$  |
+|  $7 > 8$   | $k = 8$ |
+|  $8 > 9$   | $k = 9$ |
 
 So the number of comparisons needed for a sorted array
 
