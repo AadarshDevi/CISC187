@@ -145,3 +145,7 @@ Both $ N^2 $ and $ 2N^2 $ follow the behavior of the quadratic equation.
 ## Analyzing Nested Iteration
 
 ## Analysis & Reflection
+
+## Resources
+
+1. [Big O Notations](https://www.geeksforgeeks.org/dsa/analysis-algorithms-big-o-analysis/) - GeeksForGeeks
