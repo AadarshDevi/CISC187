@@ -63,8 +63,8 @@ $$4N + 16$$
 There will be at least 16 comparisons even when the array is empty. For each item added, the number of comparisons will
 increase by 4.
 
-Apart from the math, Big-O notations ignores numbers as explained in "**Sorting Algorithms > Selection Sort >Efficiency
-of Selection Sort**". Big-O notation also takes the highest degree in the function.
+Apart from the math, Big-O notations ignores numbers as explained in "**Sorting Algorithms > Selection Sort > Efficiency
+of Selection Sort**". Big-O notation only takes the highest degree in the function.
 
 So based on that information:
 
