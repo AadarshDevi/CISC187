@@ -159,6 +159,61 @@ def double_then_sum(array)
 end
 ```
 
+Let's go through the pseudocode line by line.
+
+Our input is an int array `int array[]` with a length $N$.
+
+```
+def double_then_sum(array)
+    doubled_array = []
+```
+
+We are going through each item and doubling it. then we are writing it to `doubled_array` using the same index in
+`array`.
+
+```
+array.each do |number|
+   doubled_array << number * 2
+end
+```
+
+rewritten for _my understanding_.
+
+```java
+for (int i = 0; i < array.length; i++) {
+    doubled_array[i] = 2 * array[i]
+}
+```
+
+The time complexity for this loop is $O (N)$ because we are going through $N$ item.
+
+Next we are summing all the doubled values.
+
+```
+sum = 0
+
+doubled_array.each do |number|
+   sum += number
+end
+```
+
+The time complexity for this is also $O (N)$ because we are going through the $N$ items but here it is in
+`doubled_array`.
+
+So, the double loop has time complexity of $N$. So does the sum loop.
+
+$$N + N = 2N$$
+
+With this info, the time complexity derived:
+
+$$N + N = 2N = N \quad\because{\text{ Constant Multipliers ignored}}$$
+
+So, the time complexity for the pseudocode is
+$$O (N)$$
+
+If anyone was wondering why it is $O (N)$, it is because both for loops fun sequentially. If they were inside each other
+(nested for loops) then the time complexity would've been $O (N^2)$ but here they are not.
+
 ## Multiple Constant-Time Operations
 
 ## Analyzing Nested Iteration
