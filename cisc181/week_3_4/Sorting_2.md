@@ -21,8 +21,8 @@ $$N-2$$
 $$...$$
 $$1$$
 
-Each item will be compared to the rest of the array so $(N-I)$ where $I$ is the index of the item. The time complexity
-will be:
+Each item will be compared to the rest of the array so $(N-I)$ where $I$ is the number of remaining items in the array.
+The time complexity will be:
 
 $$
 N \times (N-I)=N^2 -NI
