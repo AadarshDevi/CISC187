@@ -332,6 +332,22 @@ Let's say that there are 2 sequential for loops, both loops are going through $N
 But the number of steps needed will remain the same. Both $N$ and $2N$ explain that the algorithm has a linear time
 complexity. Adding an item to the dataset will increase the number of steps needed to $N$.
 
+### The difference between O (N) and O (N²) growth
+
+In $O (N)$ each item is accessed and processed once. But in $O (N^2)$, each item is processed $N$ times. Which results
+in $O (N^2)$.
+
+A single loop will access and use an item one time so $N$ items, $N$ steps, which means $O (N)$.
+
+A nested loop (2 loops in this case) will access each item $N$ times. $N$ items and each item used $N$ times. So we
+get $O (N^2)$.
+
+$O (N)$ is a linear time complexity while $O (N^2)$ is quadratic time complexity.
+
+### Why sequential loops and nested loops can result in different time complexities
+
+### Why understanding time complexity becomes increasingly important as the size of a dataset grows
+
 ## Resources
 
 1. [Big O Notations](https://www.geeksforgeeks.org/dsa/analysis-algorithms-big-o-analysis/) - GeeksForGeeks
