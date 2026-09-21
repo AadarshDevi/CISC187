@@ -322,6 +322,16 @@ the loop will have N items to loop.
 
 ## Analysis & Reflection
 
+### Why constants are normally ignored in Big-O notation
+
+Explained in the book: "**Searching and Big O Notations > Big O Notations**". It is the number of steps needed that
+determine the efficiency. A loop goes through $N$ item which means it has $N$ steps to complete in order to do search,
+sort, etc.
+
+Let's say that there are 2 sequential for loops, both loops are going through $N$ items. Which would make the time $2N$.
+But the number of steps needed will remain the same. Both $N$ and $2N$ explain that the algorithm has a linear time
+complexity. Adding an item to the dataset will increase the number of steps needed to $N$.
+
 ## Resources
 
 1. [Big O Notations](https://www.geeksforgeeks.org/dsa/analysis-algorithms-big-o-analysis/) - GeeksForGeeks
