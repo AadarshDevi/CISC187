@@ -36,3 +36,22 @@ int main() {
     // how much sorted?
     std::cout << "There are " << unsortedElements << " elements that are unsorted";
 }
+
+/*
+ * Broken
+ */
+void selectionSort(int *array, int ARRAY_SIZE) {
+    for (int i = 0; i < ARRAY_SIZE - 1; i++) {
+        int currentI = i;
+        int newI = i + 1;
+        for (int j = i + 1; j < ARRAY_SIZE; j++) {
+            if (array[newI] < array[currentI]) {
+                newI = j;
+            }
+        }
+
+        int temp = array[currentI];
+        array[currentI] = array[newI];
+        array[newI] = temp;
+    }
+}
