@@ -139,7 +139,7 @@ Both $N^2$ and $2N^2$ follow the behavior of the quadratic equation.
 
 ## Analyzing Multiple Sequential Loops
 
-We are given psuedocode below.
+We are given pseudocode below.
 
 ```
 def double_then_sum(array)
