@@ -139,6 +139,26 @@ Both $N^2$ and $2N^2$ follow the behavior of the quadratic equation.
 
 ## Analyzing Multiple Sequential Loops
 
+We are given psuedocode below.
+
+```
+def double_then_sum(array)
+    doubled_array = []
+
+    array.each do |number|
+        doubled_array << number * 2
+    end
+
+    sum = 0
+
+    doubled_array.each do |number|
+        sum += number
+    end
+
+    return sum
+end
+```
+
 ## Multiple Constant-Time Operations
 
 ## Analyzing Nested Iteration
