@@ -16,6 +16,12 @@ int main() {
         array[i] = i + 1;
     }
 
+    // print array
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << "\n";
+
     // unsort array
     std::random_device rd;
     std::mt19937 gen(rd());
