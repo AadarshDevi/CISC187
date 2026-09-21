@@ -216,6 +216,60 @@ If anyone was wondering why it is $O (N)$, it is because both for loops fun sequ
 
 ## Multiple Constant-Time Operations
 
+We are given the below pseudocode.
+
+```
+def multiple_cases(array)
+    array.each do |string|
+        puts string.upcase
+        puts string.downcase
+        puts string.capitalize
+    end
+end
+```
+
+Rewritten for my convenience.
+
+```java
+for (int i = 0; i < array.length; i++) {
+    IO.println(array[i].toUpperCase());
+    IO.println(array[i].toLowerCase());
+    // capitalize the string - code not important
+}
+```
+
+Here we are looping through an array of strings and, we are doing string operations before we print it out to the
+terminal. Because there is only 1 loop running in the function, we are doing one operation after another, the time
+complexity for this would be $O (N)$. Below is the breakdown:
+
+looping through each item so
+
+$$
+k = N
+$$
+
+$$
+1 \text{ loop} = 1 \text{ iteration}
+$$
+$$
+N \text{ loop} = k \text{ iterations}
+$$
+
+Even though each string goes through 3 different string operations, they are happening in the same iteration of the
+loop. If they were in 3 different iterations it would be the same except instead of $N$, it will be $3N$, which is still
+the same $O (N)$.
+
+If the time complexity is based on the operations:
+
+$$
+1 \text{ item} = 3 \text{ operations}
+$$
+$$
+N \text{ items} = 3 \text{ operations}
+$$
+
+So it will be as the other example $N+N+N=3N =O (3N)=O (N)$.
+
 ## Analyzing Nested Iteration
 
 ## Analysis & Reflection
