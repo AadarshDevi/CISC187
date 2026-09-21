@@ -346,6 +346,14 @@ $O (N)$ is a linear time complexity while $O (N^2)$ is quadratic time complexity
 
 ### Why sequential loops and nested loops can result in different time complexities
 
+Sequential loops are single loops one after another. Unlike a single loop which has $N$ time, sequential loops will
+have $CN$ time, where $C$ is the number of sequential loops. The steps needed to access the items is one time. One time
+to get and use. So $O (N)$.
+
+Unlike sequential loops, nested loops (2 loops here for example) access and uses each item many times. Each item is used
+with all the other items in the dataset. Each item is accessed $N$ times. For each item, it is used $N$ times for $N$
+items. So if there is a larger dataset, it will have a bigger $N$ which means it will take ven longer. So $O (N^2)$.
+
 ### Why understanding time complexity becomes increasingly important as the size of a dataset grows
 
 ## Resources
