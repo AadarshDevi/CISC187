@@ -1,5 +1,8 @@
 # Week 3/4 - Sorting II
 
+> [!NOTE]
+> This file is empty, but there is some code in: [AdaptiveSearch.cpp](AdaptiveSorting.cpp);
+
 ## Table of Contents
 
 ## Part A — Adaptive Sorting Selection
