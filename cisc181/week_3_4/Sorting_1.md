@@ -356,6 +356,12 @@ items. So if there is a larger dataset, it will have a bigger $N$ which means it
 
 ### Why understanding time complexity becomes increasingly important as the size of a dataset grows
 
+In a small dataset, many algorithms will work very fast. But when the dataset starts to increase, the algorithms used
+for the smaller dataset will take longer. This will result in a longer processing time for the algorithms. No one wants
+to be near a computer waiting for the results or worry about getting the right data. If anything goes wrong in the
+computation, it will be fixed but, then it will have to go through the entire process which will take the same time.
+When multiple fixes happen to the algorithm, it will take a long time for stuff to happen.
+
 ## Resources
 
 1. [Big O Notations](https://www.geeksforgeeks.org/dsa/analysis-algorithms-big-o-analysis/) - GeeksForGeeks
