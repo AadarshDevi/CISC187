@@ -1,7 +1,7 @@
 # Week 3/4 - Sorting II
 
 > [!NOTE]
-> This file is empty, but there is some code in: [AdaptiveSearch.cpp](AdaptiveSorting.cpp);
+> This file is empty, but there is some code in: [AdaptiveSearch.cpp](AdaptiveSorting.cpp). The code is documented.
 
 ## Table of Contents
 
