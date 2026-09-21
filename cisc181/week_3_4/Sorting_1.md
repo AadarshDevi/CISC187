@@ -272,6 +272,54 @@ So it will be as the other example $N+N+N=3N =O (3N)=O (N)$.
 
 ## Analyzing Nested Iteration
 
+We are given the below pseudocode.
+
+```
+def every_other(array)
+    array.each_with_index do |number, index|
+        if index.even?
+            array.each do |other_number|
+                puts number + other_number
+            end
+        end
+    end
+end
+```
+
+rewritten for my understanding.
+
+Lets breakdown the pseudocode.
+
+```
+array.each_with_index do |number, index|
+   ...
+end
+```
+
+First the outer loop is running. It is running through each item so, it's time complexity would be $O (N)$.
+
+The if condition runs for half of the items because it will run the inner loop only if the outer index is even. The
+complexity for this is $N/2$.
+
+The inner loop inside the condition is running for each item and, it is printing it to the terminal. So its time
+complexity is $O (N)$. But because it is run for half of the items in the array, time complexity is $O (N/2)$.
+
+So the pseudocode has nested loops which means:
+
+$$
+\frac{N}{2} \times N = \frac{N^2}{2} = N^2 \quad\because{\text{ Big-O Notation Rule}}
+$$
+
+So the time complexity for the pseudocode given is
+
+$$
+O (N^2)
+$$
+
+If the condition was present or not, the item in the array will still go through the two loops. The conditional being
+present only lets half of the items to go to the loop which means $N/2$ items go to the inner loop. If it isn't present,
+the loop will have N items to loop.
+
 ## Analysis & Reflection
 
 ## Resources
