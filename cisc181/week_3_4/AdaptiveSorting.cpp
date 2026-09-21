@@ -34,7 +34,19 @@ int main() {
     }
 
     // how much sorted?
-    std::cout << "There are " << unsortedElements << " elements that are unsorted";
+    std::cout << "There are " << unsortedElements << " elements that are unsorted\n\n";
+
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << "\n";
+
+    selectionSort(array, ARRAY_SIZE);
+
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << "\n";
 }
 
 /*
