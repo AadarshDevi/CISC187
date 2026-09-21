@@ -13,6 +13,23 @@ In Insertion Sort, there is a sorted pile (usually the left side of the array) a
 item is compared to the rest of the items in the dataset. It will get the lowest value it finds and switches the values
 in the two indices. It will then continue on till it sorts the dataset.
 
+So if the dataset has $N$ items, the first item will have $N-1$ comparisons, the second item will have $N-2$
+comparisons.
+
+$$N-1$$
+$$N-2$$
+$$...$$
+$$1$$
+
+Each item will be compared to the rest of the array so $(N-I)$ where $I$ is the index of the item. The time complexity
+will be:
+
+$$
+N \times (N-I)=N^2 -NI
+$$
+
+Since Big-O Notation ignores terms that are not the highest degree, in this case $NI$, the time complexity is $O (N^2)$.
+
 ## Changing the Starting Position of Insertion Sort
 
 ## Improving a Search Algorithm
