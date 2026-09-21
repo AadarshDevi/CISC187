@@ -9,6 +9,10 @@
 
 ## Average-Case Analysis of Insertion Sort
 
+In Insertion Sort, there is a sorted pile (usually the left side of the array) and the unsorted array (right side). Each
+item is compared to the rest of the items in the dataset. It will get the lowest value it finds and switches the values
+in the two indices. It will then continue on till it sorts the dataset.
+
 ## Changing the Starting Position of Insertion Sort
 
 ## Improving a Search Algorithm
