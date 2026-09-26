@@ -6,6 +6,8 @@
 #include <iostream>
 #include <ostream>
 
+void selectionSort(int *array, int ARRAY_SIZE);
+
 int main() {
     // create array
     const int ARRAY_SIZE = 50;
