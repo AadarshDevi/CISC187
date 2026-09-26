@@ -32,6 +32,8 @@ Since Big-O Notation ignores terms that are not the highest degree, in this case
 
 ## Changing the Starting Position of Insertion Sort
 
+The position when changing insertion sort
+
 ## Improving a Search Algorithm
 
 ## Analysis & Reflection
