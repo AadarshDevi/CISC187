@@ -18,8 +18,8 @@ private:
     const int DEFAULT_SIZE = 11;
     int table_size = DEFAULT_SIZE;
     std::vector<Record> hash_table;
-    float DEFAULT_GROWING_FACTOR = 0.75;
-    float growing_factor = DEFAULT_GROWING_FACTOR;
+    float DEFAULT_GROWING_THRESHOLD = 0.75;
+    float growing_threshold = DEFAULT_GROWING_THRESHOLD;
     int element_count = 0;
 
 public:
