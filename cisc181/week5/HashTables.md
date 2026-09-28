@@ -178,6 +178,46 @@ public:
 };
 ```
 
+### Testing
+
+Testing this class was how those pointer and address problems were fixed. Below is the test suite.
+
+```c++
+int main() {
+    HashTable hash_table(10);
+
+    Record record1{.key = 555223, .value = "Student_C"};
+    hash_table.add(record1);
+
+    Record record2{.key = 555980, .value = "Student_G"};
+    hash_table.add(record2);
+
+    Record record3{.key = 555000, .value = "Student_A"};
+    hash_table.add(record3);
+
+    Record record4{.key = 555890, .value = "Student_L"};
+    hash_table.add(record4);
+
+    hash_table.printData();
+
+    hash_table.remove(555890);
+
+    hash_table.printData();
+
+    hash_table.remove(record1);
+
+    hash_table.printData();
+
+    Record *record5 = hash_table.get(555890);
+    std::cout << "\nPrinting Record: " << record5 << "\n";
+
+    Record *record6 = hash_table.get(555980);
+    std::cout << "\nPrinting Record: " << record6->value << "\n";
+
+    std::cout << "\n";
+    return 0;
+}
+```
 
 ## Resources
 
