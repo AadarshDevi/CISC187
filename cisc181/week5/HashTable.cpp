@@ -160,8 +160,10 @@ public:
             if (!hash_table.at(i).has_value()) {
                 continue;
             }
-            std::cout << "i = " << i << ": ";
-            std::cout << hash_table.at(i).value().value << "\t";
+            std::cout << "calculated_index = " << hashFunction(hash_table.at(i).value().key) << "\t";
+            std::cout << "actual_index = " << i << "\t";
+            std::cout << "(key : value) >> " << hash_table.at(i).value().key << " : ";
+            std::cout << "" << hash_table.at(i).value().value;
             std::cout << "\n";
         }
     }
