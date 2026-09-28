@@ -10,6 +10,8 @@
     - Analysis
 2. Part II
 3. Part III
+    1. Class HashTable
+    2. Testing Class
 4. Part IV
 5. Part V
 
