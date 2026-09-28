@@ -38,11 +38,32 @@ having the same index in the table.
 
 Create a hash function that takes an int as the key and does digit sum and gets the table index.
 
+1. Input: Key (int), Table Size (int)
+2. Process: Digital Sum, Index
+3. Output: Index (int)
+
 ```c++
-int hasFunction(int key, int tableSize) {
-    
+int hashFunction(int key, int tableSize) {
+    int digit_sum = 0;
+    for (int i = 0; i < INT_MAX; i++) {
+        int digit = key % 10; // get last digit
+        digit_sum += digit; // add to sum
+        key = key / 10; // remove the last digit which is now 0
+        if (key == 0) break; // escapes if key = 0
+    }
+    return digit_sum % tableSize; // index = digital_sum % table_size
 }
 ```
+
+It is not a while loop because if the function fails, there will be a hard loop exit. Below are the outputs for the keys
+using the hashFunction and manually calculating the index.
+
+|  Key   | Manual Calculation | Hash Function |
+|:------:|:------------------:|:-------------:|
+| 555223 |         2          |       2       |
+| 555980 |         2          |       2       | 
+| 555000 |         5          |       5       |
+| 555890 |         2          |       2       |
 
 ## Resources
 
@@ -53,4 +74,64 @@ int hasFunction(int key, int tableSize) {
    Visual How
 4. Linear Probing: [L-6.4: Linear Probing in Hashing with example](https://www.youtube.com/watch?v=ZEyPqqRTO00) - Gate
    Smashers
-5. 
+
+## Extra
+
+### Hashing Function
+
+#### Version 1: Too Complicated
+
+I had no idea what I was doing. I somehow got it working for the test cases but it isn't the best.
+
+```c++
+int hashFunction(int key, int tableSize) {
+    int lastNum = 0;
+    int sum = 0;
+    int remainder = -1;
+    int value = 0;
+    int digit = 0;
+    // std::cout << lastNum << '\n';
+    for (int i = 1; i < 10; i++) {
+        // if (
+        //     (remainder == lastNum) &&
+        //     (value == digit)) {
+        //     break;
+        // }
+
+        remainder = (key % (int) pow(10, i));
+        std::cout << "rem: " << remainder;
+
+        value = remainder - lastNum;
+        std::cout << ", val: " << value;
+
+        digit = value / pow(10, i - 1);
+        std::cout << ", digit: " << digit;
+
+        lastNum = remainder;
+        std::cout << ", last: " << lastNum << '\n';
+
+        sum += digit;
+    }
+    std::cout << "Sum: " << sum << "\n\n";
+
+    return 0;
+}
+```
+
+#### Version 2: Better
+
+I was talking to my dad, who told me that my way was too complicated and forced my to figure out an easier way to get
+the digits from the key.
+
+```c++
+int hashFunction(int key, int tableSize) {
+    int digit_sum = 0;
+    for (int i = 0; i < INT_MAX; i++) {
+        int digit = key % 10; // get last digit
+        digit_sum += digit; // add to sum
+        key = key / 10; // remove the last digit which is now 0
+        if (key == 0) break; // escapes if key = 0
+    }
+    return digit_sum % tableSize; // index = digital_sum % table_size
+}
+```
