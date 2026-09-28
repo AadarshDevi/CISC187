@@ -87,6 +87,7 @@ HashTable class should be able to the below operations on the Records:
 6. Vector of
    Vectors: [Vector of Vectors in C++ STL with Examples](https://www.geeksforgeeks.org/cpp/vector-of-vectors-in-c-stl-with-examples/) -
    GeeksForGeeks
+7. Vector Operations: [Vector in C++ STL](https://www.geeksforgeeks.org/cpp/vector-in-cpp-stl/) - GeeksForGeeks
 
 ## Extra
 
