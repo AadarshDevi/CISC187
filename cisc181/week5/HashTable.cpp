@@ -71,13 +71,7 @@ public:
         // probe for new index
         for (int i = 1; i < table_size; i++) {
             // new index
-            int shifted_index = index + i;
-
-            // index wrapped if shifted_index <= table size
-            if (shifted_index >= table_size) shifted_index -= table_size;
-
-            // calculate new index
-            int actual_index = shifted_index % table_size;
+            int actual_index = (index + i) % table_size;
             //std::cout << "Actual Index: " << actual_index << "\t\t\t";
 
             // check if the new index is occupied
@@ -101,14 +95,8 @@ public:
         }
 
         for (int i = 1; i < table_size; i++) {
-            // new index
-            int shifted_index = index + i;
-
-            // index wrapped if shifted_index <= table size
-            if (shifted_index >= table_size) shifted_index -= table_size;
-
             // calculate new index
-            int actual_index = shifted_index % table_size;
+            int actual_index = (index + i) % table_size;
 
             // check if the new index is occupied
             if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == key) {
@@ -130,13 +118,7 @@ public:
 
         for (int i = 1; i < table_size; i++) {
             // new index
-            int shifted_index = index + i;
-
-            // index wrapped if shifted_index <= table size
-            if (shifted_index >= table_size) shifted_index -= table_size;
-
-            // calculate new index
-            int actual_index = shifted_index % table_size;
+            int actual_index = (index + i) % table_size;
 
             // check if the new index is occupied
             if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == key) {
