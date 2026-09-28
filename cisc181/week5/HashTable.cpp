@@ -52,43 +52,43 @@ public:
     }
 
     bool add(Record record) {
-        const int index = hashFunction(record.key); // get table_index
-        hash_table->at(index).push_back(record); // place record in the vector with the table_index
+        // const int index = hashFunction(record.key); // get table_index
+        // hash_table->at(index).push_back(record); // place record in the vector with the table_index
         return true;
     }
 
     Record *get(int key) {
-        const int index = hashFunction(key);
-        std::vector<Record> &record_vector = hash_table->at(index);
-        for (int i = 0; i < record_vector.size(); i++) {
-            if (record_vector[i].key == key) {
-                return &record_vector[i];
-            }
-        }
+        // const int index = hashFunction(key);
+        // std::vector<Record> &record_vector = hash_table->at(index);
+        // for (int i = 0; i < record_vector.size(); i++) {
+        //     if (record_vector[i].key == key) {
+        //         return &record_vector[i];
+        //     }
+        // }
         return nullptr;
     }
 
     bool remove(int key) {
-        const int index = hashFunction(key);
-        std::vector<Record> &record_vector = hash_table->at(index);
-        for (int i = 0; i < record_vector.size(); i++) {
-            if (record_vector[i].key == key) {
-                record_vector.erase(record_vector.begin() + i);
-                return true;
-            }
-        }
+        // const int index = hashFunction(key);
+        // std::vector<Record> &record_vector = hash_table->at(index);
+        // for (int i = 0; i < record_vector.size(); i++) {
+        //     if (record_vector[i].key == key) {
+        //         record_vector.erase(record_vector.begin() + i);
+        //         return true;
+        //     }
+        // }
         return false;
     }
 
     bool remove(Record record) {
-        const int index = hashFunction(record.key);
-        std::vector<Record> &record_vector = hash_table->at(index);
-        for (int i = 0; i < record_vector.size(); i++) {
-            if (record_vector[i].key == record.key) {
-                record_vector.erase(record_vector.begin() + i);
-                return true;
-            }
-        }
+        // const int index = hashFunction(record.key);
+        // std::vector<Record> &record_vector = hash_table->at(index);
+        // for (int i = 0; i < record_vector.size(); i++) {
+        //     if (record_vector[i].key == record.key) {
+        //         record_vector.erase(record_vector.begin() + i);
+        //         return true;
+        //     }
+        // }
         return false;
     }
 
