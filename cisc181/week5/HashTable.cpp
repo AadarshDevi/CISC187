@@ -46,21 +46,17 @@ public:
     }
 
     bool add(Record record) {
-        // if object doesn't exist
-        if (&record == nullptr) return false;
-
         const int index = hashFunction(record.key); // get table_index
-        std::cout << index << "\t";
         hash_table->at(index).push_back(record); // place record in the vector with the table_index
         return true;
     }
 
     Record *get(int key) {
         const int index = hashFunction(key);
-        std::vector<Record> record_vector = hash_table->at(index);
-        for (Record record: record_vector) {
-            if (key == record.key) {
-                return &record;
+        std::vector<Record> &record_vector = hash_table->at(index);
+        for (int i = 0; i < record_vector.size(); i++) {
+            if (record_vector[i].key == key) {
+                return &record_vector[i];
             }
         }
         return nullptr;
@@ -68,7 +64,7 @@ public:
 
     bool remove(int key) {
         const int index = hashFunction(key);
-        std::vector<Record> record_vector = hash_table->at(index);
+        std::vector<Record> &record_vector = hash_table->at(index);
         for (int i = 0; i < record_vector.size(); i++) {
             if (record_vector[i].key == key) {
                 record_vector.erase(record_vector.begin() + i);
@@ -80,7 +76,7 @@ public:
 
     bool remove(Record record) {
         const int index = hashFunction(record.key);
-        std::vector<Record> record_vector = hash_table->at(index);
+        std::vector<Record> &record_vector = hash_table->at(index);
         for (int i = 0; i < record_vector.size(); i++) {
             if (record_vector[i].key == record.key) {
                 record_vector.erase(record_vector.begin() + i);
@@ -91,8 +87,11 @@ public:
     }
 
     void printData() {
+        std::cout << "\nPrinting Data:\n";
         for (int i = 0; i < table_size; i++) {
             std::vector<Record> record_vector = hash_table->at(i);
+            if (record_vector.empty()) continue;
+            std::cout << "i = " << hashFunction(record_vector.at(0).key) << ": ";
             for (Record record: record_vector) {
                 std::cout << record.value << "\t";
             }
@@ -104,13 +103,8 @@ public:
 int main() {
     HashTable hash_table(10);
 
-    // std::cout << "Hash: " << hash_table.hashFunction(555223) << "\n";
-    // std::cout << "Hash: " << hash_table.hashFunction(555980) << "\n";
-    // std::cout << "Hash: " << hash_table.hashFunction(555000) << "\n";
-    // std::cout << "Hash: " << hash_table.hashFunction(555890) << "\n";
-
     Record record1{.key = 555223, .value = "Student_C"};
-    std::cout << "Success: " << hash_table.add(record1) << "\n";
+    hash_table.add(record1);
 
     Record record2{.key = 555980, .value = "Student_G"};
     hash_table.add(record2);
