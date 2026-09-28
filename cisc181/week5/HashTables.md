@@ -148,3 +148,20 @@ int hashFunction(int key, int tableSize) {
     return digit_sum % tableSize; // index = digital_sum % table_size
 }
 ```
+
+#### Version 2.1: Class-ified
+
+Changed the header to be suitable for HashTable class.
+
+```c++
+int hashFunction(int key) {
+   int digit_sum = 0;
+   for (int i = 0; i < INT_MAX; i++) {
+      int digit = key % 10; // get last digit
+      digit_sum += digit; // add to sum
+      key = key / 10; // remove the last digit which is now 0
+      if (key == 0) break; // escapes if key = 0
+   }
+   return digit_sum % table_size; // index = digital_sum % table_size
+}
+```
