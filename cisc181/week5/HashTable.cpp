@@ -68,6 +68,30 @@ public:
         return nullptr;
     }
 
+    bool remove(int key) {
+        const int index = hashFunction(key);
+        std::vector<Record> record_vector = hash_table->at(index);
+        for (int i = 0; i < record_vector.size(); i++) {
+            if (record_vector[i].key == key) {
+                record_vector.erase(record_vector.begin() + i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool remove(Record record) {
+        const int index = hashFunction(record.key);
+        std::vector<Record> record_vector = hash_table->at(index);
+        for (int i = 0; i < record_vector.size(); i++) {
+            if (record_vector[i].key == record.key) {
+                record_vector.erase(record_vector.begin() + i);
+                return true;
+            }
+        }
+        return false;
+    }
+
     int getSize() {
         return table_size;
     }
