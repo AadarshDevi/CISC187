@@ -508,6 +508,51 @@ simpler because of the small dataset, if it were big, it would take a long time 
 
 ## Part 6 - Searching with Linear Probing
 
+I had a get method for searching and was modified to use clustering to stop going through all t=data in hashtable. I
+simplified some statements too.
+
+```c++
+ Record *get(int key) {
+     const int index = hashFunction(key);
+
+     if (hash_table.at(index).has_value() && hash_table.at(index).value().key == key) {
+         std::cout << "Actual Index: " << index << "\n";
+         return &hash_table.at(index).value();
+     }
+
+     for (int i = 1; i < table_size; i++) {
+         // calculate new index
+         int actual_index = (index + i) % table_size;
+
+         // check if the new index is occupied
+         if (!hash_table.at(actual_index).has_value()) {
+             return nullptr;
+         }
+
+         if (hash_table.at(actual_index).value().key == key) {
+             std::cout << "Actual Index: " << actual_index << "\n";
+             // std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
+             return &hash_table.at(actual_index).value();
+         }
+     }
+
+     return nullptr;
+ }
+```
+
+```terminaloutput
+Actual Index: 4
+Calculated Index: 2
+Printing Record: Student_L
+
+Calculated Index: 2
+Actual Index: 5
+Printing Record: Student_A
+
+Calculated Index: 2
+Printing Record: 0
+```
+
 ## Resources
 
 1. Hash Table: [Learn Hash Tables in 13 minutes](https://www.youtube.com/watch?v=FsfRsGFHuv4) - Bro Code
