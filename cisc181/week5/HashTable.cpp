@@ -150,32 +150,7 @@ public:
     }
 
     bool remove(Record record) {
-        const int index = hashFunction(record.key);
-
-        if (hash_table.at(index).has_value() && hash_table.at(index).value().key == record.key) {
-            hash_table.at(index).reset();
-            return true;
-        }
-
-        for (int i = 1; i < table_size; i++) {
-            // new index
-            int shifted_index = index + i;
-
-            // index wrapped if shifted_index <= table size
-            if (shifted_index >= table_size) shifted_index -= table_size;
-
-            // calculate new index
-            int actual_index = shifted_index % table_size;
-
-            // check if the new index is occupied
-            if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == record.key) {
-                std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
-                hash_table.at(actual_index).reset();
-                // hash_table
-                return true;
-            }
-        }
-        return false;
+        return remove(record.key);
     }
 
     void printData() {
