@@ -44,12 +44,6 @@ public:
         hash_table = std::vector<std::optional<Record> >(this->table_size);
     }
 
-    // Deconstructor
-    ~HashTable() {
-        // delete the vector created
-        delete &hash_table;
-    }
-
     int hashFunction(int key) const {
         int digit_sum = 0;
         for (int i = 0; i < INT_MAX; i++) {
