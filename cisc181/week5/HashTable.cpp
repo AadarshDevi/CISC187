@@ -18,8 +18,12 @@ private:
     std::vector<std::vector<Record> > *hash_table;
 
 public:
-    HashTable(int size) : size(size) {
-        hash_table.resize(size);
+    HashTable(int table_size) : table_size(table_size) {
+        hash_table = new std::vector<std::vector<Record> >(table_size);
+
+        for (int i = 0; i < table_size; i++) {
+            hash_table[i].resize(DEFAULT_SIZE);
+        }
     }
 
     int hashFunction(int key, int tableSize) {
