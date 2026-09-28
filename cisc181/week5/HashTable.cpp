@@ -138,7 +138,7 @@ public:
         std::cout << "\nPrinting Data:\n";
         if (hash_table.empty()) return;
         for (int i = 0; i < table_size; i++) {
-            if (&hash_table.at(i) == nullptr) {
+            if (!hash_table.at(i).has_value()) {
                 continue;
             }
             std::cout << "i = " << i << ": ";
