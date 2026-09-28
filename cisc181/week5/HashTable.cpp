@@ -19,7 +19,12 @@ private:
 
 public:
     HashTable(int table_size) : table_size(table_size) {
-        hash_table = new std::vector<std::vector<Record> >(table_size);
+        if (table_size > 0) this->table_size = table_size; // makes sure size is not 0 or negative
+
+        // table_size already has a default so no need to change if the length is 0 ir less
+
+        // create hash_table
+        hash_table = new std::vector<std::vector<Record> >(this->table_size);
 
         for (int i = 0; i < table_size; i++) {
             hash_table[i].resize(DEFAULT_SIZE);
