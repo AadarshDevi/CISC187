@@ -18,6 +18,10 @@ int hashFunction(int, int);
         return digit_sum % tableSize; // index = digital_sum % table_size
     }
 
+    int getSize() {
+        return size;
+    }
+};
 
 int main() {
     HashTable hash_table(10);
