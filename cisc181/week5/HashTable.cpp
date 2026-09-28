@@ -60,6 +60,10 @@ public:
         return digit_sum % table_size; // index = digital_sum % table_size
     }
 
+    bool insert(Record record) {
+        return true;
+    }
+
     bool add(Record record) {
         // const int index = hashFunction(record.key); // get table_index
         // hash_table->at(index).push_back(record); // place record in the vector with the table_index
