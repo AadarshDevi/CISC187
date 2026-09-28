@@ -76,9 +76,11 @@ using the hashFunction and manually calculating the index.
    Visual How
 4. Linear Probing: [L-6.4: Linear Probing in Hashing with example](https://www.youtube.com/watch?v=ZEyPqqRTO00) - Gate
    Smashers
-5. Arrays in
-   Heap: [How do I create an array in C++ which is on the heap instead of the stack?](https://stackoverflow.com/questions/675817/how-do-i-create-an-array-in-c-which-is-on-the-heap-instead-of-the-stack) -
-   Stack Overflow
+5. Vectors: (Different Approaches to Initialize a Vector in
+   C++)[https://medium.com/@pawara/different-approaches-to-initialize-a-vector-in-c-fe7342b5bda6] - Medium
+6. Vector of
+   Vectors: [Vector of Vectors in C++ STL with Examples](https://www.geeksforgeeks.org/cpp/vector-of-vectors-in-c-stl-with-examples/) -
+   GeeksForGeeks
 
 ## Extra
 
