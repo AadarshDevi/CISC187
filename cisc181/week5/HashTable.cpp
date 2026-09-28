@@ -83,7 +83,7 @@ public:
             // check if the new index is occupied
             if (!hash_table.at(actual_index).has_value()) {
                 //std::cout << "Actual Index: Now Occupied\t" << record.value << "\n";
-                std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
+                std::cout << "a_i = " << actual_index << "\t\t" << record.value << "\n";
                 hash_table.at(actual_index) = record;
                 // hash_table
                 return true;
