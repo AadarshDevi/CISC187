@@ -50,7 +50,7 @@ public:
         delete &hash_table;
     }
 
-    int hashFunction(int key) {
+    int hashFunction(int key) const {
         int digit_sum = 0;
         for (int i = 0; i < INT_MAX; i++) {
             int digit = key % 10; // get last digit
