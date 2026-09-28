@@ -83,17 +83,16 @@ HashTable class should be able to the below operations on the Records:
 
 2. Search
    ```c++
-   Record *get(int key) {
-      if (key <= 0) return nullptr; // null object safety check
-      const int index = hashFunction(key);
-      std::vector<Record> record_vector = hash_table->at(index);
-      for (Record record: record_vector) {
-         if (key == record.key) {
-            return &record;
-         }
-      }
-      return nullptr;
-   }
+    Record *get(int key) {
+        const int index = hashFunction(key);
+        std::vector<Record> record_vector = hash_table->at(index);
+        for (Record record: record_vector) {
+            if (key == record.key) {
+                return &record;
+            }
+        }
+        return nullptr;
+    }
    ```
 
 3. Delete
