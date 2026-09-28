@@ -121,8 +121,18 @@ int main() {
     Record record4{.key = 555890, .value = "Student_L"};
     hash_table.add(record4);
 
-    std::cout << "Printing Data:" << "\t";
     hash_table.printData();
+
+    hash_table.remove(555890);
+
+    hash_table.printData();
+
+    hash_table.remove(record1);
+
+    hash_table.printData();
+
+    Record *record5 = hash_table.get(555890);
+    std::cout << "\nPrinting Record: " << record5->value << "\n";
 
     std::cout << "\n";
     return 0;
