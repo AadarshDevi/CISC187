@@ -142,7 +142,7 @@ public:
                 continue;
             }
             std::cout << "i = " << i << ": ";
-            std::cout << hash_table.at(i).value << "\t";
+            std::cout << hash_table.at(i).value().value << "\t";
             std::cout << "\n";
         }
     }
