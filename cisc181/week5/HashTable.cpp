@@ -19,7 +19,7 @@ private:
     std::vector<std::vector<Record> > *hash_table;
 
 public:
-    HashTable(int table_size) : table_size(table_size) {
+    HashTable(int table_size) {
         if (table_size > 0) this->table_size = table_size; // makes sure size is not 0 or negative
 
         // table_size already has a default so no need to change if the length is 0 ir less
