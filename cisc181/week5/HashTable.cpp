@@ -6,7 +6,22 @@
 #include <vector>
 
 
-int hashFunction(int, int);
+struct Record {
+    int key;
+    std::string value;
+};
+
+class HashTable {
+private:
+    const int DEFAULT_SIZE = 11;
+    int size = DEFAULT_SIZE;
+    std::vector<Record> hash_table;
+
+public:
+    HashTable(int size) : size(size) {
+        hash_table.resize(size);
+    }
+
     int hashFunction(int key, int tableSize) {
         int digit_sum = 0;
         for (int i = 0; i < INT_MAX; i++) {
