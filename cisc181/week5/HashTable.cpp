@@ -104,10 +104,9 @@ public:
     void printData() {
         std::cout << "\nPrinting Data:\n";
         for (int i = 0; i < table_size; i++) {
-            std::vector<Record> record_vector = hash_table->at(i);
-            if (record_vector.empty()) continue;
+            if (hash_table.empty()) continue;
             std::cout << "i = " << i << ": ";
-            for (Record record: record_vector) {
+            for (Record record: hash_table) {
                 std::cout << record.value << "\t";
             }
             std::cout << "\n";
