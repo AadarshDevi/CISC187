@@ -6,13 +6,15 @@
 
 ## Table of Contents
 
-1. Part I
-    - Analysis
-2. Part II
-3. Part III
-    1. Class HashTable
-    2. Testing Class
-4. Part IV
+1. [Part I - Understanding Hash Functions](#part-1---understanding-hash-functions)
+    - [Analysis](#analysis)
+2. [Part II - Implement a Hash Function](#part-2---implement-a-hash-function)
+3. [Part III - Build a HashTable](#part-3---build-a-hash-table)
+    1. [Class HashTable](#class-hashtable)
+    2. [Testing Class](#testing)
+4. [Part IV - Linear Probing](#part-4---linear-probing)
+    1. [Output](#output)
+    2. [Class: HashTable](#class-hashtable-1)
 5. Part V
 
 ## Part 1 - Understanding Hash Functions
