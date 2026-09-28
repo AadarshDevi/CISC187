@@ -17,7 +17,10 @@ class HashTable {
 private:
     const int DEFAULT_SIZE = 11;
     int table_size = DEFAULT_SIZE;
-    std::vector<std::vector<Record> > *hash_table;
+    std::vector<Record> hash_table;
+    float DEFAULT_GROWING_FACTOR = 0.75;
+    float growing_factor = DEFAULT_GROWING_FACTOR;
+    int element_count = 0;
 
 public:
     HashTable(int table_size) {
