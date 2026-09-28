@@ -3,7 +3,8 @@
 //
 
 #include <iostream>
-#include <cmath>
+#include <vector>
+
 
 int hashFunction(int, int);
 
