@@ -194,17 +194,24 @@ int main() {
     std::cout << "Printing Record: " << record5->value << "\n";
     std::cout << "\n";
 
-    calc_index = hash_table.hashFunction(record5->key);
+    Record *record6 = hash_table.get(555000); // record in (i) position
+    calc_index = hash_table.hashFunction(record6->key);
     std::cout << "Calculated Index: " << calc_index << "\n";
     Record *record6 = hash_table.get(555000); // record in (i) position
     std::cout << "Printing Record: " << record6->value << "\n";
     std::cout << "\n";
 
-    calc_index = hash_table.hashFunction(record5->key);
+    int test_key = 555496;
+    Record *record7 = hash_table.get(test_key); // record in (none) position
+    calc_index = hash_table.hashFunction(test_key);
     std::cout << "Calculated Index: " << calc_index << "\n";
-    Record *record7 = hash_table.get(555496); // record in (none) position
-    std::cout << "Printing Record: " << record7 << "\n";
+    std::cout << "Printing Record: ";
 
+    if (record7 == nullptr)
+        std::cout << "No Record Exists With key - " << test_key;
+    else
+        std::cout << record7->key << "\n";
     std::cout << "\n";
+
     return 0;
 }
