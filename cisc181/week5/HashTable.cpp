@@ -62,13 +62,41 @@ public:
     }
 
     bool insert(Record record) {
-        return true;
-    }
+        // calculate home position
+        const int index = hashFunction(record.key);
+        std::cout << "i = " << index << "\t";
 
-    bool add(Record record) {
-        // const int index = hashFunction(record.key); // get table_index
-        // hash_table->at(index).push_back(record); // place record in the vector with the table_index
-        return true;
+        // is position empty or not
+        if (!hash_table.at(index).has_value()) {
+            //std::cout << "Empty Space: Now Occupying\t" << record.value << "\n";
+            std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
+            hash_table.at(index) = record;
+            return true;
+        }
+
+        // probe for new index
+        for (int i = 1; i < table_size; i++) {
+            // new index
+            int shifted_index = index + i;
+
+            // index wrapped if shifted_index <= table size
+            if (shifted_index >= table_size) shifted_index -= table_size;
+
+            // calculate new index
+            int actual_index = shifted_index % table_size;
+            //std::cout << "Actual Index: " << actual_index << "\t\t\t";
+
+            // check if the new index is occupied
+            if (!hash_table.at(actual_index).has_value()) {
+                //std::cout << "Actual Index: Now Occupied\t" << record.value << "\n";
+                std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
+                hash_table.at(actual_index) = record;
+                // hash_table
+                return true;
+            }
+        }
+        std::cout << "\n";
+        return false;
     }
 
     Record *get(int key) {
