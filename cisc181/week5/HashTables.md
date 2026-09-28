@@ -65,6 +65,8 @@ using the hashFunction and manually calculating the index.
 | 555000 |         5          |       5       |
 | 555890 |         2          |       2       |
 
+## Part 3 - Build a Hash Table
+
 ## Resources
 
 1. Hash Table: [Learn Hash Tables in 13 minutes](https://www.youtube.com/watch?v=FsfRsGFHuv4) - Bro Code
@@ -74,6 +76,9 @@ using the hashFunction and manually calculating the index.
    Visual How
 4. Linear Probing: [L-6.4: Linear Probing in Hashing with example](https://www.youtube.com/watch?v=ZEyPqqRTO00) - Gate
    Smashers
+5. Arrays in
+   Heap: [How do I create an array in C++ which is on the heap instead of the stack?](https://stackoverflow.com/questions/675817/how-do-i-create-an-array-in-c-which-is-on-the-heap-instead-of-the-stack) -
+   Stack Overflow
 
 ## Extra
 
