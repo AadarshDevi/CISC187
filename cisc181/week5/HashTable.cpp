@@ -91,6 +91,7 @@ public:
         const int index = hashFunction(key);
 
         if (hash_table.at(index).has_value() && hash_table.at(index).value().key == key) {
+            std::cout << "Actual Index: " << index << "\n";
             return &hash_table.at(index).value();
         }
 
