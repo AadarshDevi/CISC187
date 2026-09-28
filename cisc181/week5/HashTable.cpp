@@ -48,6 +48,15 @@ public:
         return digit_sum % table_size; // index = digital_sum % table_size
     }
 
+    bool add(Record record) {
+        // if object doesn't exist
+        if (&record == nullptr) return false;
+
+        const int index = hashFunction(record.key); // get table_index
+        hash_table->at(index).push_back(record); // place record in the vector with the table_index
+        return true;
+    }
+
     int getSize() {
         return table_size;
     }
