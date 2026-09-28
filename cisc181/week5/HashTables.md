@@ -227,39 +227,195 @@ Now that we have an existing HashTable class, we will now use linear probing ins
 changing add to insert for probing. The entire class's methods were rewritten for probing.
 
 ```c++
-bool insert(Record record) {
-   // calculate home position
-   const int index = hashFunction(record.key);
-   std::cout << "i = " << index << "\t";
-   
-   // is position empty or not
-   if (!hash_table.at(index).has_value()) {
-      std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
-      hash_table.at(index) = record;
-      return true;
-   }
-   
-   // probe for new index
-   for (int i = 1; i < table_size; i++) {
-      // new index
-      int shifted_index = index + i;
-      
-      // index wrapped if shifted_index <= table size
-      if (shifted_index >= table_size) shifted_index -= table_size;
-      
-      // calculate new index
-      int actual_index = shifted_index % table_size;
-      
-      // check if the new index is occupied
-      if (!hash_table.at(actual_index).has_value()) {
-         std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
-         hash_table.at(actual_index) = record;
-         return true;
-      }
-   }
-   std::cout << "\n";
-   return false;
-}
+#include <iostream>
+#include <string>
+#include <climits>
+#include <vector>
+#include <optional>
+
+
+struct Record {
+    int key;
+    std::string value;
+};
+
+class HashTable {
+private:
+    const int DEFAULT_SIZE = 11;
+    int table_size = DEFAULT_SIZE;
+    std::vector<std::optional<Record> > hash_table;
+    // float DEFAULT_GROWING_THRESHOLD = 0.75;
+    // float growing_threshold = DEFAULT_GROWING_THRESHOLD;
+    int element_count = 0;
+
+public:
+    HashTable(int table_size, float growing_threshold) {
+        if (table_size > 0) this->table_size = table_size; // makes sure size is not 0 or negative
+        // if (growing_threshold > 0) this->growing_threshold = growing_threshold;
+        // makes sure factor is not 0 or negative
+
+        // table_size already has a default so no need to change if the length is 0 ir less
+
+        // create hash_table
+        hash_table = std::vector<std::optional<Record> >(this->table_size);
+    }
+
+    HashTable(int table_size) {
+        if (table_size > 0) this->table_size = table_size; // makes sure size is not 0 or negative
+
+        // table_size already has a default so no need to change if the length is 0 ir less
+
+        // create hash_table
+        hash_table = std::vector<std::optional<Record> >(this->table_size);
+    }
+
+    int hashFunction(int key) const {
+        int digit_sum = 0;
+        for (int i = 0; i < INT_MAX; i++) {
+            int digit = key % 10; // get last digit
+            digit_sum += digit; // add to sum
+            key = key / 10; // remove the last digit which is now 0
+            if (key == 0) break; // escapes if key = 0
+        }
+        return digit_sum % table_size; // index = digital_sum % table_size
+    }
+
+    bool insert(Record record) {
+        // calculate home position
+        const int index = hashFunction(record.key);
+        std::cout << "i = " << index << "\t";
+
+        // is position empty or not
+        if (!hash_table.at(index).has_value()) {
+            //std::cout << "Empty Space: Now Occupying\t" << record.value << "\n";
+            std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
+            hash_table.at(index) = record;
+            return true;
+        }
+
+        // probe for new index
+        for (int i = 1; i < table_size; i++) {
+            // new index
+            int shifted_index = index + i;
+
+            // index wrapped if shifted_index <= table size
+            if (shifted_index >= table_size) shifted_index -= table_size;
+
+            // calculate new index
+            int actual_index = shifted_index % table_size;
+            //std::cout << "Actual Index: " << actual_index << "\t\t\t";
+
+            // check if the new index is occupied
+            if (!hash_table.at(actual_index).has_value()) {
+                //std::cout << "Actual Index: Now Occupied\t" << record.value << "\n";
+                std::cout << "a_i = " << actual_index << "\t\t" << record.value << "\n";
+                hash_table.at(actual_index) = record;
+                // hash_table
+                return true;
+            }
+        }
+        std::cout << "\n";
+        return false;
+    }
+
+    Record *get(int key) {
+        const int index = hashFunction(key);
+
+        if (hash_table.at(index).has_value() && hash_table.at(index).value().key == key) {
+            return &hash_table.at(index).value();
+        }
+
+        for (int i = 1; i < table_size; i++) {
+            // new index
+            int shifted_index = index + i;
+
+            // index wrapped if shifted_index <= table size
+            if (shifted_index >= table_size) shifted_index -= table_size;
+
+            // calculate new index
+            int actual_index = shifted_index % table_size;
+
+            // check if the new index is occupied
+            if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == key) {
+                std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
+                return &hash_table.at(actual_index).value();
+            }
+        }
+
+        return nullptr;
+    }
+
+    bool remove(int key) {
+        const int index = hashFunction(key);
+
+        if (hash_table.at(index).has_value() && hash_table.at(index).value().key == key) {
+            hash_table.at(index).reset();
+            return true;
+        }
+
+        for (int i = 1; i < table_size; i++) {
+            // new index
+            int shifted_index = index + i;
+
+            // index wrapped if shifted_index <= table size
+            if (shifted_index >= table_size) shifted_index -= table_size;
+
+            // calculate new index
+            int actual_index = shifted_index % table_size;
+
+            // check if the new index is occupied
+            if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == key) {
+                std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
+                hash_table.at(actual_index).reset();
+                // hash_table
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool remove(Record record) {
+        const int index = hashFunction(record.key);
+
+        if (hash_table.at(index).has_value() && hash_table.at(index).value().key == record.key) {
+            hash_table.at(index).reset();
+            return true;
+        }
+
+        for (int i = 1; i < table_size; i++) {
+            // new index
+            int shifted_index = index + i;
+
+            // index wrapped if shifted_index <= table size
+            if (shifted_index >= table_size) shifted_index -= table_size;
+
+            // calculate new index
+            int actual_index = shifted_index % table_size;
+
+            // check if the new index is occupied
+            if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == record.key) {
+                std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
+                hash_table.at(actual_index).reset();
+                // hash_table
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void printData() {
+        std::cout << "\nPrinting Data:\n";
+        if (hash_table.empty()) return;
+        for (int i = 0; i < table_size; i++) {
+            if (!hash_table.at(i).has_value()) {
+                continue;
+            }
+            std::cout << "i = " << i << ": ";
+            std::cout << hash_table.at(i).value().value << "\t";
+            std::cout << "\n";
+        }
+    }
+};
 ```
 
 ## Resources
