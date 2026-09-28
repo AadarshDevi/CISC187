@@ -243,6 +243,7 @@ Now that we have an existing HashTable class, we will now use linear probing ins
 8. Null
    Return: [Returning a "NULL reference" in C++?](https://stackoverflow.com/questions/10371094/returning-a-null-reference-in-c) -
    Stack Overflow
+9. Linear Probing on HashTable: [Hashing – Linear Probing](https://www.baeldung.com/cs/hashing-linear-probing) -Baeldung
 
 ## Extra
 
