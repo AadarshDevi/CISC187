@@ -180,14 +180,24 @@ int main() {
     // hash_table.remove(record1);
     // hash_table.printData();
 
-    hash_table.remove(record1);
-    hash_table.printData();
+    std::cout << "\n";
 
-    Record *record5 = hash_table.get(555890);
-    std::cout << "\nPrinting Record: " << record5 << "\n";
+    Record *record5 = hash_table.get(555890); // record in (i + 2) position
+    int calc_index = hash_table.hashFunction(record5->key);
+    std::cout << "Calculated Index: " << calc_index << "\n";
+    std::cout << "Printing Record: " << record5->value << "\n";
+    std::cout << "\n";
 
-    Record *record6 = hash_table.get(555980);
-    std::cout << "\nPrinting Record: " << record6->value << "\n";
+    calc_index = hash_table.hashFunction(record5->key);
+    std::cout << "Calculated Index: " << calc_index << "\n";
+    Record *record6 = hash_table.get(555000); // record in (i) position
+    std::cout << "Printing Record: " << record6->value << "\n";
+    std::cout << "\n";
+
+    calc_index = hash_table.hashFunction(record5->key);
+    std::cout << "Calculated Index: " << calc_index << "\n";
+    Record *record7 = hash_table.get(555496); // record in (none) position
+    std::cout << "Printing Record: " << record7 << "\n";
 
     std::cout << "\n";
     return 0;
