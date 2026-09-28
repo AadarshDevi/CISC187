@@ -221,6 +221,10 @@ int main() {
 }
 ```
 
+## Part 4 - Linear Probing
+
+Now that we have an existing HashTable class, we will now use linear probing instead of using multiple vectors.
+
 ## Resources
 
 1. Hash Table: [Learn Hash Tables in 13 minutes](https://www.youtube.com/watch?v=FsfRsGFHuv4) - Bro Code
