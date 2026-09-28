@@ -99,8 +99,13 @@ public:
             int actual_index = (index + i) % table_size;
 
             // check if the new index is occupied
-            if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == key) {
-                std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
+            if (!hash_table.at(actual_index).has_value()) {
+                return nullptr;
+            }
+
+            if (hash_table.at(actual_index).value().key == key) {
+                std::cout << "Actual Index: " << actual_index << "\n";
+                // std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
                 return &hash_table.at(actual_index).value();
             }
         }
