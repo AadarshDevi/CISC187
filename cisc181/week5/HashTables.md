@@ -6,13 +6,13 @@
 
 ## Table of Contents
 
-1. [Part I - Understanding Hash Functions](#part-1---understanding-hash-functions)
+1. [Part 1 - Understanding Hash Functions](#part-1---understanding-hash-functions)
     - [Analysis](#analysis)
-2. [Part II - Implement a Hash Function](#part-2---implement-a-hash-function)
-3. [Part III - Build a HashTable](#part-3---build-a-hash-table)
+2. [Part 2 - Implement a Hash Function](#part-2---implement-a-hash-function)
+3. [Part 3 - Build a HashTable](#part-3---build-a-hash-table)
     1. [Class HashTable](#class-hashtable)
     2. [Testing Class](#testing)
-4. [Part IV - Linear Probing](#part-4---linear-probing)
+4. [Part 4 - Linear Probing](#part-4---linear-probing)
     1. [Output](#output)
     2. [Class: HashTable](#class-hashtable-1)
 5. Part V - Home Position and Actual Position
@@ -24,6 +24,15 @@
 11. Part XI - Hashing vs. Encryption
 12. Part XII - Cryptographic and Non-Cryptographic Hashing
 13. Part XIII - Applications and Limitations
+5. Part 6 - Home Position and Actual Position
+6. [Part 6 - Searching with Linear Probing](#part-6--)
+7. Part 7 - Deletion and Tombstones
+8. Part 8 - Load Factor
+9. Part 9 - Hash Function Quality
+10. Part 10 - Complexity Analysis
+11. Part 11 - Hashing vs. Encryption
+12. Part 12 - Cryptographic and Non-Cryptographic Hashing
+13. Part 13 - Applications and Limitations
 14. Analysis & Reflection
 
 ## Part 1 - Understanding Hash Functions
