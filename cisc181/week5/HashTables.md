@@ -223,7 +223,44 @@ int main() {
 
 ## Part 4 - Linear Probing
 
-Now that we have an existing HashTable class, we will now use linear probing instead of using multiple vectors.
+Now that we have an existing HashTable class, we will now use linear probing instead of using multiple vectors. First is
+changing add to insert for probing.
+
+```c++
+bool insert(Record record) {
+   // calculate home position
+   const int index = hashFunction(record.key);
+   std::cout << "i = " << index << "\t";
+   
+   // is position empty or not
+   if (!hash_table.at(index).has_value()) {
+      std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
+      hash_table.at(index) = record;
+      return true;
+   }
+   
+   // probe for new index
+   for (int i = 1; i < table_size; i++) {
+      // new index
+      int shifted_index = index + i;
+      
+      // index wrapped if shifted_index <= table size
+      if (shifted_index >= table_size) shifted_index -= table_size;
+      
+      // calculate new index
+      int actual_index = shifted_index % table_size;
+      
+      // check if the new index is occupied
+      if (!hash_table.at(actual_index).has_value()) {
+         std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
+         hash_table.at(actual_index) = record;
+         return true;
+      }
+   }
+   std::cout << "\n";
+   return false;
+}
+```
 
 ## Resources
 
