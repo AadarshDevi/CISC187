@@ -23,8 +23,10 @@ private:
     int element_count = 0;
 
 public:
-    HashTable(int table_size) {
+    HashTable(int table_size, float growing_threshold) {
         if (table_size > 0) this->table_size = table_size; // makes sure size is not 0 or negative
+        if (growing_threshold > 0) this->growing_threshold = growing_threshold;
+        // makes sure factor is not 0 or negative
 
         // table_size already has a default so no need to change if the length is 0 ir less
 
