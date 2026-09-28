@@ -95,7 +95,37 @@ HashTable class should be able to the below operations on the Records:
     }
    ```
 
-3. Delete
+3. Delete (Key)
+   ```c++
+   
+   bool remove(int key) {
+      const int index = hashFunction(key);
+      std::vector<Record> record_vector = hash_table->at(index);
+      for (int i = 0; i < record_vector.size(); i++) {
+         if (record_vector[i].key == key) {
+            record_vector.erase(record_vector.begin() + i);
+            return true;
+         }
+      }
+      return false;
+   }
+   ```
+
+4. Delete (Record)
+   ```c++
+   
+   bool remove(Record record) {
+      const int index = hashFunction(record.key);
+      std::vector<Record> record_vector = hash_table->at(index);
+      for (int i = 0; i < record_vector.size(); i++) {
+         if (record_vector[i].key == record.key) {
+            record_vector.erase(record_vector.begin() + i);
+            return true;
+         }
+      }
+      return false;
+   }
+   ```
 
 ## Resources
 
