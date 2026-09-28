@@ -67,6 +67,12 @@ using the hashFunction and manually calculating the index.
 
 ## Part 3 - Build a Hash Table
 
+HashTable class should be able to the below operations on the Records:
+
+1. Place
+2. Search
+3. Delete
+
 ## Resources
 
 1. Hash Table: [Learn Hash Tables in 13 minutes](https://www.youtube.com/watch?v=FsfRsGFHuv4) - Bro Code
