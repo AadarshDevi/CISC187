@@ -174,8 +174,11 @@ int main() {
 
     hash_table.printData();
 
-    hash_table.remove(555890);
-    hash_table.printData();
+    // hash_table.remove(555890);
+    // hash_table.printData();
+    //
+    // hash_table.remove(record1);
+    // hash_table.printData();
 
     hash_table.remove(record1);
     hash_table.printData();
