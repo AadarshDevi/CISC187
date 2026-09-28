@@ -123,7 +123,36 @@ public:
     }
 
     bool remove(Record record) {
-        // const int index = hashFunction(record.key);
+        const int index = hashFunction(record.key);
+
+        Record table_record = hash_table.at(index).value();
+
+        if (table_record.key == record.key) {
+            hash_table.erase(hash_table.begin() + index);
+            return true;
+        }
+
+        for (int i = 1; i < table_size; i++) {
+            // new index
+            int shifted_index = index + i;
+
+            // index wrapped if shifted_index <= table size
+            if (shifted_index >= table_size) shifted_index -= table_size;
+
+            // calculate new index
+            int actual_index = shifted_index % table_size;
+            //std::cout << "Actual Index: " << actual_index << "\t\t\t";
+
+            // check if the new index is occupied
+            if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == record.key) {
+                //std::cout << "Actual Index: Now Occupied\t" << record.value << "\n";
+                std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
+                hash_table.erase(hash_table.begin() + actual_index);
+                // hash_table
+                return true;
+            }
+        }
+
         // std::vector<Record> &record_vector = hash_table->at(index);
         // for (int i = 0; i < record_vector.size(); i++) {
         //     if (record_vector[i].key == record.key) {
