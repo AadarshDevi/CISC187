@@ -197,7 +197,6 @@ int main() {
     Record *record6 = hash_table.get(555000); // record in (i) position
     calc_index = hash_table.hashFunction(record6->key);
     std::cout << "Calculated Index: " << calc_index << "\n";
-    Record *record6 = hash_table.get(555000); // record in (i) position
     std::cout << "Printing Record: " << record6->value << "\n";
     std::cout << "\n";
 
