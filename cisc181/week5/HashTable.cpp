@@ -58,7 +58,6 @@ public:
     }
 
     Record *get(int key) {
-        if (key <= 0) return nullptr; // null object safety check
         const int index = hashFunction(key);
         std::vector<Record> record_vector = hash_table->at(index);
         for (Record record: record_vector) {
