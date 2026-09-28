@@ -26,10 +26,6 @@ public:
 
         // create hash_table
         hash_table = new std::vector<std::vector<Record> >(this->table_size);
-
-        for (int i = 0; i < table_size; i++) {
-            hash_table[i].resize(DEFAULT_SIZE);
-        }
     }
 
     // Deconstructor
