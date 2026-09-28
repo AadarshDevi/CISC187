@@ -472,6 +472,42 @@ public:
 };
 ```
 
+## Part 5 -Home Position and Actual Position
+
+I already had a method to display the entire hash table, I modified it so i can show all the vales for each record.
+
+```c++
+void printData() {
+   std::cout << "\nPrinting Data:\n";
+   if (hash_table.empty()) return;
+   for (int i = 0; i < table_size; i++) {
+      if (!hash_table.at(i).has_value()) {
+         continue;
+      }
+      std::cout << "calculated_index = " << hashFunction(hash_table.at(i).value().key) << "\t";
+      std::cout << "actual_index = " << i << "\t";
+      std::cout << "(key : value) >> " << hash_table.at(i).value().key << " : ";
+      std::cout << "" << hash_table.at(i).value().value;
+      std::cout << "\n";
+   }
+}
+```
+
+```terminaloutput
+calculated_index = 2    actual_index = 2        (key : value) >> 555223 : Student_C
+calculated_index = 2    actual_index = 3        (key : value) >> 555980 : Student_G
+calculated_index = 2    actual_index = 4        (key : value) >> 555890 : Student_L
+calculated_index = 5    actual_index = 5        (key : value) >> 555000 : Student_A
+```
+
+### Analysis
+
+A key might not be in the index it was calculated for if there was a value that was already in that index. And because
+of linear probing, we would check the next index till we find an empty space to place the record. Linear probing is
+simpler because of the small dataset, if it were big, it would take a long time to place the record in an empty index.
+
+## Part 6 - Searching with Linear Probing
+
 ## Resources
 
 1. Hash Table: [Learn Hash Tables in 13 minutes](https://www.youtube.com/watch?v=FsfRsGFHuv4) - Bro Code
