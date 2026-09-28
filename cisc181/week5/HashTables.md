@@ -15,14 +15,16 @@
 4. [Part IV - Linear Probing](#part-4---linear-probing)
     1. [Output](#output)
     2. [Class: HashTable](#class-hashtable-1)
-5. Part V
-6. Part VI
-7. Part VII
-8. Part VIII
-9. Part IX
-10. Part X
-11. Part XI
-12. Part XII
+5. Part V - Home Position and Actual Position
+6. Part VI - Searching with Linear Probing
+7. Part VII - Deletion and Tombstones
+8. Part VIII - Load Factor
+9. Part IX - Hash Function Quality
+10. Part X - Complexity Analysis
+11. Part XI - Hashing vs. Encryption
+12. Part XII - Cryptographic and Non-Cryptographic Hashing
+13. Part XIII - Applications and Limitations
+14. Analysis & Reflection
 
 ## Part 1 - Understanding Hash Functions
 
