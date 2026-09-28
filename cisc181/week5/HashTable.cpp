@@ -103,12 +103,13 @@ public:
 
     void printData() {
         std::cout << "\nPrinting Data:\n";
+        if (hash_table.empty()) return;
         for (int i = 0; i < table_size; i++) {
-            if (hash_table.empty()) continue;
-            std::cout << "i = " << i << ": ";
-            for (Record record: hash_table) {
-                std::cout << record.value << "\t";
+            if (&hash_table.at(i) == nullptr) {
+                continue;
             }
+            std::cout << "i = " << i << ": ";
+            std::cout << hash_table.at(i).value << "\t";
             std::cout << "\n";
         }
     }
