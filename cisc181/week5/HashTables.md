@@ -16,6 +16,13 @@
     1. [Output](#output)
     2. [Class: HashTable](#class-hashtable-1)
 5. Part V
+6. Part VI
+7. Part VII
+8. Part VIII
+9. Part IX
+10. Part X
+11. Part XI
+12. Part XII
 
 ## Part 1 - Understanding Hash Functions
 
