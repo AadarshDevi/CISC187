@@ -99,6 +99,9 @@ HashTable class should be able to the below operations on the Records:
    Vectors: [Vector of Vectors in C++ STL with Examples](https://www.geeksforgeeks.org/cpp/vector-of-vectors-in-c-stl-with-examples/) -
    GeeksForGeeks
 7. Vector Operations: [Vector in C++ STL](https://www.geeksforgeeks.org/cpp/vector-in-cpp-stl/) - GeeksForGeeks
+8. Null
+   Return: [Returning a "NULL reference" in C++?](https://stackoverflow.com/questions/10371094/returning-a-null-reference-in-c) -
+   Stack Overflow
 
 ## Extra
 
