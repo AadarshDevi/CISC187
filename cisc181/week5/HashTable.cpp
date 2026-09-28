@@ -90,8 +90,14 @@ public:
         return false;
     }
 
-    int getSize() {
-        return table_size;
+    void printData() {
+        for (int i = 0; i < table_size; i++) {
+            std::vector<Record> record_vector = hash_table->at(i);
+            for (Record record: record_vector) {
+                std::cout << record.value << "\t";
+            }
+            std::cout << "\n";
+        }
     }
 };
 
