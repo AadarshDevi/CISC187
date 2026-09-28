@@ -74,47 +74,8 @@ using the hashFunction and manually calculating the index.
 HashTable class should be able to the below operations on the Records:
 
 1. Place
-   ```c++
-   bool add(Record record) {
-      // if object doesn't exist
-      if (&record == nullptr) return false;
-      
-      const int index = hashFunction(record.key); // get table_index
-      hash_table->at(index).push_back(record); // place record in the vector with the table_index
-      return true;
-   }
-   ```
-
 2. Search
-   ```c++
-    Record *get(int key) {
-        const int index = hashFunction(key);
-        std::vector<Record> record_vector = hash_table->at(index);
-        for (Record record: record_vector) {
-            if (key == record.key) {
-                return &record;
-            }
-        }
-        return nullptr;
-    }
-   ```
-
 3. Delete (Key)
-   ```c++
-   
-   bool remove(int key) {
-      const int index = hashFunction(key);
-      std::vector<Record> record_vector = hash_table->at(index);
-      for (int i = 0; i < record_vector.size(); i++) {
-         if (record_vector[i].key == key) {
-            record_vector.erase(record_vector.begin() + i);
-            return true;
-         }
-      }
-      return false;
-   }
-   ```
-
 4. Delete (Record)
    ```c++
    
@@ -130,6 +91,7 @@ HashTable class should be able to the below operations on the Records:
       return false;
    }
    ```
+
 
 ## Resources
 
