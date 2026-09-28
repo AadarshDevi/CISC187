@@ -238,6 +238,8 @@ changing add to insert for probing. The entire class's methods were rewritten fo
 My loop will not go into an infinite loop because it uses the current index and the size of the hash_table to loop
 through each index once. if it doesn't find an empty place, it will return false for not being able to place the record.
 
+### Output
+
 |  Key   | Calculated Index | Actual Index |
 |:------:|:----------------:|:------------:|
 | 555223 |        2         |      2       |
