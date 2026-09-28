@@ -1,5 +1,9 @@
 # Week 5: Hash Tables
 
+> [!NOTE]
+> **Google Gemini** was used to help me fix pointer and address problems because I was having a very hard time with
+> them.
+
 ## Table of Contents
 
 1. Part I
