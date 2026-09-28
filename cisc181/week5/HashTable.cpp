@@ -26,7 +26,7 @@ public:
         }
     }
 
-    int hashFunction(int key, int tableSize) {
+    int hashFunction(int key) {
         int digit_sum = 0;
         for (int i = 0; i < INT_MAX; i++) {
             int digit = key % 10; // get last digit
