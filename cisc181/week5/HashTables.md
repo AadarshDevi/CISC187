@@ -545,11 +545,11 @@ Actual Index: 4
 Calculated Index: 2
 Printing Record: Student_L
 
-Calculated Index: 2
 Actual Index: 5
+Calculated Index: 5
 Printing Record: Student_A
 
-Calculated Index: 2
+Calculated Index: 5
 Printing Record: 0
 ```
 
