@@ -34,6 +34,15 @@ public:
         hash_table = std::vector<Record>(this->table_size);
     }
 
+    HashTable(int table_size) {
+        if (table_size > 0) this->table_size = table_size; // makes sure size is not 0 or negative
+
+        // table_size already has a default so no need to change if the length is 0 ir less
+
+        // create hash_table
+        hash_table = std::vector<Record>(this->table_size);
+    }
+
     // Deconstructor
     ~HashTable() {
         // delete the vector created
