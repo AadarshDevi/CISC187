@@ -9,10 +9,12 @@
 int hashFunction(int, int);
 
 int main() {
-    std::cout << "Hash: " << hashFunction(555223, 10) << "\n";
-    std::cout << "Hash: " << hashFunction(555980, 10) << "\n";
-    std::cout << "Hash: " << hashFunction(555000, 10) << "\n";
-    std::cout << "Hash: " << hashFunction(555890, 10) << "\n";
+    HashTable hash_table(10);
+
+    std::cout << "Hash: " << hash_table.hashFunction(555223, hash_table.getSize()) << "\n";
+    std::cout << "Hash: " << hash_table.hashFunction(555980, hash_table.getSize()) << "\n";
+    std::cout << "Hash: " << hash_table.hashFunction(555000, hash_table.getSize()) << "\n";
+    std::cout << "Hash: " << hash_table.hashFunction(555890, hash_table.getSize()) << "\n";
 
     std::cout << "\n";
     return 0;
