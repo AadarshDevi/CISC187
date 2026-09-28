@@ -45,10 +45,10 @@ public:
 int main() {
     HashTable hash_table(10);
 
-    std::cout << "Hash: " << hash_table.hashFunction(555223, hash_table.getSize()) << "\n";
-    std::cout << "Hash: " << hash_table.hashFunction(555980, hash_table.getSize()) << "\n";
-    std::cout << "Hash: " << hash_table.hashFunction(555000, hash_table.getSize()) << "\n";
-    std::cout << "Hash: " << hash_table.hashFunction(555890, hash_table.getSize()) << "\n";
+    std::cout << "Hash: " << hash_table.hashFunction(555223) << "\n";
+    std::cout << "Hash: " << hash_table.hashFunction(555980) << "\n";
+    std::cout << "Hash: " << hash_table.hashFunction(555000) << "\n";
+    std::cout << "Hash: " << hash_table.hashFunction(555890) << "\n";
 
     std::cout << "\n";
     return 0;
