@@ -92,7 +92,7 @@ public:
         for (int i = 0; i < table_size; i++) {
             std::vector<Record> record_vector = hash_table->at(i);
             if (record_vector.empty()) continue;
-            std::cout << "i = " << hashFunction(record_vector.at(0).key) << ": ";
+            std::cout << "i = " << i << ": ";
             for (Record record: record_vector) {
                 std::cout << record.value << "\t";
             }
