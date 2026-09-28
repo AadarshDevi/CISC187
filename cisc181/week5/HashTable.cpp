@@ -89,8 +89,10 @@ public:
 
     Record *get(int key) {
         const int index = hashFunction(key);
+        std::cout << "Index Calculated: " << index << "\n";
 
         if (hash_table.at(index).has_value() && hash_table.at(index).value().key == key) {
+            std::cout << "Positions Checked: 1" << "\n";
             std::cout << "Actual Index: " << index << "\n";
             return &hash_table.at(index).value();
         }
@@ -105,6 +107,7 @@ public:
             }
 
             if (hash_table.at(actual_index).value().key == key) {
+                std::cout << "Positions Checked: " << (i + 1) << "\n";
                 std::cout << "Actual Index: " << actual_index << "\n";
                 // std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
                 return &hash_table.at(actual_index).value();
