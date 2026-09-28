@@ -175,6 +175,9 @@ int main() {
     Record record4{.key = 555890, .value = "Student_L"};
     hash_table.insert(record4);
 
+    // Record record4_2{.key = 555496, .value = "Student_Z"};
+    // hash_table.insert(record4_2);
+
     hash_table.printData();
 
     // hash_table.remove(555890);
