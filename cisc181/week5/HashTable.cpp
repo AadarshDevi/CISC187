@@ -14,8 +14,8 @@ struct Record {
 class HashTable {
 private:
     const int DEFAULT_SIZE = 11;
-    int size = DEFAULT_SIZE;
-    std::vector<Record> hash_table;
+    int table_size = DEFAULT_SIZE;
+    std::vector<std::vector<Record> > *hash_table;
 
 public:
     HashTable(int size) : size(size) {
@@ -30,11 +30,11 @@ public:
             key = key / 10; // remove the last digit which is now 0
             if (key == 0) break; // escapes if key = 0
         }
-        return digit_sum % tableSize; // index = digital_sum % table_size
+        return digit_sum % table_size; // index = digital_sum % table_size
     }
 
     int getSize() {
-        return size;
+        return table_size;
     }
 };
 
