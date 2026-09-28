@@ -105,12 +105,6 @@ int hashFunction(int key, int tableSize) {
     int digit = 0;
     // std::cout << lastNum << '\n';
     for (int i = 1; i < 10; i++) {
-        // if (
-        //     (remainder == lastNum) &&
-        //     (value == digit)) {
-        //     break;
-        // }
-
         remainder = (key % (int) pow(10, i));
         std::cout << "rem: " << remainder;
 
