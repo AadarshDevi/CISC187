@@ -31,6 +31,12 @@ public:
         }
     }
 
+    // Deconstructor
+    ~HashTable() {
+        // delete the vector created
+        delete hash_table;
+    }
+
     int hashFunction(int key) {
         int digit_sum = 0;
         for (int i = 0; i < INT_MAX; i++) {
