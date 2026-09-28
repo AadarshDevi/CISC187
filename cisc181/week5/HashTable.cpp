@@ -31,7 +31,7 @@ public:
         // table_size already has a default so no need to change if the length is 0 ir less
 
         // create hash_table
-        hash_table = new std::vector<std::vector<Record> >(this->table_size);
+        hash_table = std::vector<Record>(this->table_size);
     }
 
     // Deconstructor
