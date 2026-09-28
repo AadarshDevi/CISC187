@@ -224,7 +224,7 @@ int main() {
 ## Part 4 - Linear Probing
 
 Now that we have an existing HashTable class, we will now use linear probing instead of using multiple vectors. First is
-changing add to insert for probing.
+changing add to insert for probing. The entire class's methods were rewritten for probing.
 
 ```c++
 bool insert(Record record) {
