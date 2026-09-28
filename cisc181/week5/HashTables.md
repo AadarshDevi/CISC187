@@ -553,6 +553,12 @@ Calculated Index: 5
 Printing Record: 0
 ```
 
+|   Search Type   | Key Position | Actual Key Position  | Positions Checked |
+|:---------------:|:------------:|:--------------------:|:-----------------:|
+| Home-positioned |      5       |          5           |                   |
+|    displaced    |      2       |          4           |                   |
+| not in dataset  |      5       | 0 (Record Not Found) |                   |
+
 ## Resources
 
 1. Hash Table: [Learn Hash Tables in 13 minutes](https://www.youtube.com/watch?v=FsfRsGFHuv4) - Bro Code
