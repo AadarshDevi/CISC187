@@ -46,7 +46,7 @@ public:
     // Deconstructor
     ~HashTable() {
         // delete the vector created
-        delete hash_table;
+        delete &hash_table;
     }
 
     int hashFunction(int key) {
