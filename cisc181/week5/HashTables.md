@@ -275,6 +275,8 @@ a_i = 2         Student_G
 Printing Record: Student_G
 ```
 
+### Class: HashTable
+
 ```c++
 #include <iostream>
 #include <string>
