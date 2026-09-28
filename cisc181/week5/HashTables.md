@@ -226,6 +226,44 @@ int main() {
 Now that we have an existing HashTable class, we will now use linear probing instead of using multiple vectors. First is
 changing add to insert for probing. The entire class's methods were rewritten for probing. The same test suite is used.
 
+My loop will not go into an infinite loop because it uses the current index and the size of the hash_table to loop
+through each index once. if it doesn't find an empty place, it will return false for not being able to place the record.
+
+|  Key   | Calculated Index | Actual Index |
+|:------:|:----------------:|:------------:|
+| 555223 |        2         |      2       |
+| 555980 |        2         |      3       |
+| 555000 |        3         |      5       |
+| 555890 |        2         |      4       |
+
+```terminaloutput
+i = 2   a_i = 2         Student_C
+i = 2   a_i = 3         Student_G
+i = 5   a_i = 5         Student_A
+i = 2   a_i = 4         Student_L
+
+Printing Data:
+i = 2: Student_C
+i = 3: Student_G
+i = 4: Student_L
+i = 5: Student_A
+a_i = 2         Student_L
+
+Printing Data:
+i = 2: Student_C
+i = 3: Student_G
+i = 5: Student_A
+
+Printing Data:
+i = 3: Student_G
+i = 5: Student_A
+
+Printing Record: 0
+a_i = 2         Student_G
+
+Printing Record: Student_G
+```
+
 ```c++
 #include <iostream>
 #include <string>
