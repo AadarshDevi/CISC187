@@ -70,6 +70,17 @@ using the hashFunction and manually calculating the index.
 HashTable class should be able to the below operations on the Records:
 
 1. Place
+   ```c++
+   bool add(Record record) {
+      // if object doesn't exist
+      if (&record == nullptr) return false;
+      
+      const int index = hashFunction(record.key); // get table_index
+      hash_table->at(index).push_back(record); // place record in the vector with the table_index
+      return true;
+   }
+   ```
+
 2. Search
 3. Delete
 
