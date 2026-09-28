@@ -8,35 +8,22 @@
 int hashFunction(int, int);
 
 int main() {
-    hashFunction(555223, 10);
-    hashFunction(555980, 10);
-    hashFunction(555000, 10);
-    hashFunction(555890, 10);
+    std::cout << "Hash: " << hashFunction(555223, 10) << "\n";
+    std::cout << "Hash: " << hashFunction(555980, 10) << "\n";
+    std::cout << "Hash: " << hashFunction(555000, 10) << "\n";
+    std::cout << "Hash: " << hashFunction(555890, 10) << "\n";
 
     std::cout << "\n";
     return 0;
 }
 
 int hashFunction(int key, int tableSize) {
-    int lastNum = 0;
-    int sum = 0;
-    // std::cout << lastNum << '\n';
-    for (int i = 1; i < 10; i++) {
-        int remainder = (key % (int) pow(10, i));
-        std::cout << "rem: " << remainder;
-
-        int value = remainder - lastNum;
-        std::cout << ", val: " << value;
-
-        int digit = value / pow(10, i - 1);
-        std::cout << ", ext: " << digit;
-
-        lastNum = remainder;
-        std::cout << ", last: " << lastNum << '\n';
-
-        sum += digit;
+    int digit_sum = 0;
+    for (int i = 0; i < INT_MAX; i++) {
+        int digit = key % 10; // get last digit
+        digit_sum += digit; // add to sum
+        key = key / 10; // remove the last digit which is now 0
+        if (key == 0) break; // escapes if key = 0
     }
-    std::cout << "Sum: " << sum << "\n\n";
-
-    return 0;
+    return digit_sum % tableSize; // index = digital_sum % table_size
 }
