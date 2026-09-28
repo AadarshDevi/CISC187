@@ -6,6 +6,7 @@
 #include <string>
 #include <climits>
 #include <vector>
+#include <optional>
 
 
 struct Record {
@@ -17,7 +18,7 @@ class HashTable {
 private:
     const int DEFAULT_SIZE = 11;
     int table_size = DEFAULT_SIZE;
-    std::vector<Record> hash_table;
+    std::vector<std::optional<Record> > hash_table;
     // float DEFAULT_GROWING_THRESHOLD = 0.75;
     // float growing_threshold = DEFAULT_GROWING_THRESHOLD;
     int element_count = 0;
@@ -31,7 +32,7 @@ public:
         // table_size already has a default so no need to change if the length is 0 ir less
 
         // create hash_table
-        hash_table = std::vector<Record>(this->table_size);
+        hash_table = std::vector<std::optional<Record> >(this->table_size);
     }
 
     HashTable(int table_size) {
@@ -40,7 +41,7 @@ public:
         // table_size already has a default so no need to change if the length is 0 ir less
 
         // create hash_table
-        hash_table = std::vector<Record>(this->table_size);
+        hash_table = std::vector<std::optional<Record> >(this->table_size);
     }
 
     // Deconstructor
