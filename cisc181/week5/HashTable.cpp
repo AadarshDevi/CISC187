@@ -152,16 +152,16 @@ int main() {
     HashTable hash_table(10);
 
     Record record1{.key = 555223, .value = "Student_C"};
-    hash_table.add(record1);
+    hash_table.insert(record1);
 
     Record record2{.key = 555980, .value = "Student_G"};
-    hash_table.add(record2);
+    hash_table.insert(record2);
 
     Record record3{.key = 555000, .value = "Student_A"};
-    hash_table.add(record3);
+    hash_table.insert(record3);
 
     Record record4{.key = 555890, .value = "Student_L"};
-    hash_table.add(record4);
+    hash_table.insert(record4);
 
     hash_table.printData();
 
