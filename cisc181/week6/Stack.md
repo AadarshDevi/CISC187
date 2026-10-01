@@ -596,6 +596,25 @@ for (string test_input: test_inputs) {
 }
 ```
 
+Now to test the test cases. I push the char if it is an opening delimiter
+```c++
+for (string test_input: test_inputs) {  
+    std::stack<char> expression;  
+  
+    for (char test_char: test_input) {  
+        std::cout << test_char;  
+  
+		// is char opening delimiter? push
+        if (test_char == '(' || test_char == '{' || test_char == '[') {  
+            expression.push(test_char);  
+            continue;
+        }  
+		...
+    }  
+    ...
+}
+```
+
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
