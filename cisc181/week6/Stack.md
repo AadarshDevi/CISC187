@@ -356,6 +356,23 @@ Explain the difference between `top()` and `pop()`? ****The methods `top()` and 
 
 ## Part 7 — Test the Complete Stack
 
+***Question:*** Write a `main()` function that demonstrates all operations of your stack.
+
+Operations to Perform:
+1. Create an empty stack.
+2. Verify that `empty()` returns the correct result.
+3. Push at least five values.
+4. Display the current size.
+5. Display the current top.
+6. Pop at least two values.
+7. Display the new top and size.
+8. Continue removing values until the stack is empty.
+9. Demonstrate underflow handling.
+10. Fill the stack to capacity.
+11. Demonstrate overflow handling.
+
+```
+```
 ## Part 8 — Complexity Analysis
 
 ## Part 9 — Stack Correctness
