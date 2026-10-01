@@ -443,6 +443,30 @@ Process finished with exit code 0
 ```
 ## Part 8 — Complexity Analysis
 
+Analyze the following operations:
+
+```
+push()
+pop()
+top()
+empty()
+full()
+size()
+```
+
+| Operation | Big-O Complexity | Explanation                                                                                                                                      |
+| --------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `push()`  | $O(1)$           | We are pushing the new item to the top of the stack. So 1 operation. There is no inserting items. Only 1 item is added, the rest not affected.   |
+| `pop()`   | $O(1)$           | We are popping the top item from the top of the stack. So 1 operation. There is no moving items down. 1 item removed, the rest not affected.     |
+| `top()`   | $O(1)$           | Gives the top item, so 1 operation. Stack is not modified meaning nothing happens.                                                               |
+| `empty()` | $O(1)$           | Checks if the stack size is -1 which is 1 conditional. Stack is not modified making it remain the same. No items are touched.                    |
+| `full()`  | $O(1)$           | Checks if the stack size is $\text{CAPACITY} - 1$ which is 1 conditional. Stack is not modified making it remain the same. No items are touched. |
+| `size()`  | $O(1)$           | Gives the current stack size and adds 1 to it because index starts at 0. Stack is not modified making it remain the same. No items are touched.  |
+### One Million Elements
+
+***Question:*** A stack has `1,000,000` elements. Explain whether removing the top element requires examining the previous `999,999` elements. Connect your explanation to the purpose of maintaining `topIndex`.
+
+***Answer:*** A stack containing `1,000,000` elements will not be disturbed when the top item is removed (size = `999,999`) . The only item that is accessed or modified is the top item. The rest are not touched by the stack. The index, $\text{topIndex}=1,000,000$ starts and when the top item is removed, $\text{topIndex}=999,999$ which tells us that the `999,999` elements were not disturbed.
 ## Part 9 — Stack Correctness
 
 ## Part 10 — Balanced Delimiters
