@@ -408,3 +408,8 @@ Process finished with exit code 0
 
 ### Scenario E — Customer Service Line
 ## Analysis and Reflection
+
+## Resources
+
+1. How to catch std::overflow_error: [std::overflow_error](https://en.cppreference.com/cpp/error/overflow_error) - cppreference.com
+2. 3. 
