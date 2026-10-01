@@ -519,6 +519,17 @@ push(x3)                    stack -> (x1, x2, x3)
 push(xN)                    stack -> (x1, x2, x3, ..., xN)
 ```
 
+By repeatedly popping after pushing items in the stack, the items on the top will come out first. The last item was `xN` which will come out first then `x(N-1)` will come out till `x1` will come out by repeated `pop()` operations. What goes in first, comes out last, or ***Last In, First Out - LIFO***.
+
+```terminalOutput
+pop(xN)                    stack -> (x1, ..., x(N-2), x(N-1), xN)
+pop(x(N-1))                stack -> (x1, ..., x(N-2), x(N-1))
+pop(x(N-2))                stack -> (x1, ..., x(N-2))
+...                        ...
+pop(x1)                    stack -> (x1)
+```
+
+***Why would this be important?*** If we have a stack that has 5 numbers pushed in ascending (highest - lowest) order, we will know that the numbers popped will be in descending (lowest - highest) order because the last item (highest) comes out first. If we get the numbers mixed or in ascending order, we know that there is something wrong with the stack. It is a property of the stack and its is straight forward. The output from popping is $100\%$ predictable because when we push, we know the order so when we pop, the order is reversed, ***predictable***.
 ## Part 10 — Balanced Delimiters
 ## Part 11 — Implement the Balanced-Delimiter Algorithm
 ## Part 12 — Analyze Delimiter Matching
