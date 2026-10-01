@@ -674,7 +674,7 @@ If the stack has a $\text{stack size}\neq0$ then the test case was not delimiter
 ```terminalOutput
 "D:\College\Miramar Community College\Classes\CISC 181 - Data Structures in C++\cisc181\week6\Stack.exe"
 {(a+b)*[c-d]}   Stack Size: 0           // Stack Size = 0 --> Balanced
-{(a+b]*c}       Stack Size: 2           // Stack Size = 2 --> "(" & "]"
+{(a+b]*c}       Stack Size: 2           // Stack Size = 2 --> "(" & "]" Not sure how to fix
 ((a+b)) Stack Size: 0                   // Stack Size = 0 --> Balanced
 ((a+b)  Stack Size: 1                   // Stack Size = 1 --> "("
 [a+b]   Stack Size: 0                   // Stack Size = 0 --> Balanced
