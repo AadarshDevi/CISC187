@@ -371,7 +371,58 @@ Operations to Perform:
 10. Fill the stack to capacity.
 11. Demonstrate overflow handling.
 
-```
+```c++  
+// 1. empty stack - default size = 10 items  
+Stack stack;  
+  
+// 2. is stack empty  
+std::cout << "2. Stack Empty? " << stack.empty() << "\n";  
+  
+// 3. push 5 values  
+for (int i = 0; i < 5; i++) {  
+    stack.push((i + 1) * 10);  
+}  
+  
+// 4. display current stack size  
+std::cout << "\n4. Stack Size: " << stack.size() << "\n";  
+  
+// 5. display current top value  
+std::cout << "\n5. Top Value: " << stack.top() << "\n";  
+  
+// 6. pop 2 values  
+for (int i = 0; i < 2; i++) {  
+    stack.pop();  
+}  
+  
+// 7.1. display current top  
+std::cout << "\n7.1. Top Value: " << stack.top() << "\n";  
+  
+// 7.2. display current stack size  
+std::cout << "\n7.2. Stack Size: " << stack.size() << "\n";  
+  
+// 8. remove all items via pop  
+while (!stack.empty()) {  
+    stack.pop();  
+}  
+  
+// 9. display underflow handling - pop @ (size = 0)  
+try {  
+    stack.pop();  
+} catch (std::underflow_error const &e) {  
+    std::cout << e.what() << "\n";  
+}  
+  
+// 10. fill up stack  
+while (!stack.full()) {  
+    stack.push(stack.size() + 1);  
+}  
+  
+// 11. overflow handling - push @ (size = 10)  
+try {  
+    stack.push(stack.size() + 1);  
+} catch (std::overflow_error const &e) {  
+    std::cout << e.what() << "\n";  
+}
 ```
 
 ### Output
