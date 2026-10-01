@@ -257,9 +257,31 @@ Before Removing: 10
 
 Process finished with exit code 3
 ```
-### Part 4 Analysis
-Explain why accessing `data[topIndex]` when `topIndex = -1` is invalid. ***The last item in the stack is the first item in the stack, which is at index 0. $\text{topIndex}=-1$ means that the stack is empty. We are trying to read vales that do not exist at all.***
-## Part 6 — Implement
+### Part 5 Analysis
+Explain why accessing `data[topIndex]` when `topIndex = -1` is invalid. ***The remaining item in the stack is the first item added in the stack, which is at index 0. $\text{topIndex}=-1$ means that the stack is empty. We are trying to read items that do not exist at all.***
+## Part 6 — Implement `top()`
+
+***Stack Template:***
+```c++
+int top() const;
+```
+
+### Stack Method
+```c++
+// also called peek  
+int top() const {  
+    if (empty()) throw std::underflow_error("Stack Underflow"); // empty stack  
+    return data[topIndex]; // return top item without changing stack  
+}
+```
+#### Verification
+1. [x] Return the element at the top of the stack.
+2. [x] Leave the stack unchanged.
+3. [x] Throw an underflow exception if the stack is empty.
+### Testing
+
+#### Output
+### Part 6 Analysis
 
 ## Part 7 — Test the Complete Stack
 
