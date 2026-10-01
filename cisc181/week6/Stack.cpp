@@ -52,7 +52,50 @@ public:
 };
 
 int main() {
-    // 1. empty stack - default size = 10 items
+    return 0;
+}
+
+
+/*
+
+Stack stack;
+
+    // Add 5 items
+    cout << "Before: " << stack.size() << "\n";
+    for (int i = 0; i < 5; i++) {
+        stack.push(i + 1);
+        cout << stack.size() << "\n";
+    }
+
+    // Get the last item
+    std::cout << "\nTop: " << stack.top() << "\n";
+    std::cout << "Size: " << stack.size() << "\n";
+
+    // Remove 11 items
+    cout << "\nBefore Removing: " << stack.size() << "\n";
+    for (int i = 3; i > 0; i--) {
+        stack.pop();
+        cout << stack.size() << "\n";
+    }
+
+    // Get the last item
+    std::cout << "\nTop: " << stack.top() << "\n";
+    std::cout << "Size: " << stack.size() << "\n";
+
+    // Remove 11 items
+    cout << "\nBefore Removing: " << stack.size() << "\n";
+    for (int i = 2; i > 0; i--) {
+        stack.pop();
+        cout << stack.size() << "\n";
+    }
+
+    // Get the last item
+    std::cout << "\nTop: " << stack.top() << "\n";
+    std::cout << "Size: " << stack.size() << "\n";
+ */
+
+/*
+// 1. empty stack - default size = 10 items
     Stack stack;
 
     // 2. is stack empty
@@ -103,45 +146,4 @@ int main() {
     } catch (std::overflow_error const &e) {
         std::cout << e.what() << "\n";
     }
-
-    return 0;
-}
-
-
-/*
-
-Stack stack;
-
-    // Add 5 items
-    cout << "Before: " << stack.size() << "\n";
-    for (int i = 0; i < 5; i++) {
-        stack.push(i + 1);
-        cout << stack.size() << "\n";
-    }
-
-    // Get the last item
-    std::cout << "\nTop: " << stack.top() << "\n";
-    std::cout << "Size: " << stack.size() << "\n";
-
-    // Remove 11 items
-    cout << "\nBefore Removing: " << stack.size() << "\n";
-    for (int i = 3; i > 0; i--) {
-        stack.pop();
-        cout << stack.size() << "\n";
-    }
-
-    // Get the last item
-    std::cout << "\nTop: " << stack.top() << "\n";
-    std::cout << "Size: " << stack.size() << "\n";
-
-    // Remove 11 items
-    cout << "\nBefore Removing: " << stack.size() << "\n";
-    for (int i = 2; i > 0; i--) {
-        stack.pop();
-        cout << stack.size() << "\n";
-    }
-
-    // Get the last item
-    std::cout << "\nTop: " << stack.top() << "\n";
-    std::cout << "Size: " << stack.size() << "\n";
  */
