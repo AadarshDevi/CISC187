@@ -536,7 +536,7 @@ pop(x1)                    stack -> (x1)
 
 ***Answer:***
 
-Insert Flowchart
+![[Flowchart_Stack.drawio.svg|488]]
 
 ## Part 11 — Implement the Balanced-Delimiter Algorithm
 ## Part 12 — Analyze Delimiter Matching
