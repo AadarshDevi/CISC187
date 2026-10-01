@@ -1,6 +1,6 @@
 <mxfile host="Electron">
   <diagram name="Page-1" id="JieoEMkVSGVWWPDd5jcb">
-    <mxGraphModel dx="1441" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1253" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,8 +22,20 @@
         <mxCell id="I4nPL2Ck8qr3ZNDkl0a_-3" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="String Input&lt;div&gt;for checking&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;balanced&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;delimiters&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="190" x="285" y="390" as="geometry" />
         </mxCell>
+        <mxCell id="I4nPL2Ck8qr3ZNDkl0a_-11" edge="1" parent="1" source="I4nPL2Ck8qr3ZNDkl0a_-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="I4nPL2Ck8qr3ZNDkl0a_-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="I4nPL2Ck8qr3ZNDkl0a_-5" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="convert&amp;nbsp;&lt;div&gt;string to char array&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="100" x="330" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="I4nPL2Ck8qr3ZNDkl0a_-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" value="char at index" vertex="1">
+          <mxGeometry height="100" width="100" x="330" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="I4nPL2Ck8qr3ZNDkl0a_-12" edge="1" parent="1" source="I4nPL2Ck8qr3ZNDkl0a_-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="I4nPL2Ck8qr3ZNDkl0a_-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I4nPL2Ck8qr3ZNDkl0a_-10" parent="1" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" value="index = 0" vertex="1">
+          <mxGeometry height="60" width="100" x="330" y="630" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
