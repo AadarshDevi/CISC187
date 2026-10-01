@@ -64,11 +64,21 @@ int main() {
     }
 
     // 4. display current stack size
-    std::cout << "\n4. Stack Size (Push 1): " << stack.size() << "\n";
+    std::cout << "\n4. Stack Size: " << stack.size() << "\n";
 
     // 5. display current top value
     std::cout << "\n5. Top Value: " << stack.top() << "\n";
 
+    // 6. pop 2 values
+    for (int i = 0; i < 2; i++) {
+        stack.pop();
+    }
+
+    // 7.1. display current top
+    std::cout << "\n7.1. Top Value: " << stack.top() << "\n";
+
+    // 7.2. display current stack size
+    std::cout << "\n7.2. Stack Size: " << stack.size() << "\n";
 
     return 0;
 }
