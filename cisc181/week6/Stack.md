@@ -500,7 +500,16 @@ Explain why this property can be used to test whether your stack implementation 
 3. Explain why the property can be used to test whether the stack implementation is correct.
 
 ***Answer:***
-1. 
+1. 4 Consecutive `pop()` numbers: `stack -> (5, 10, 15, 20)`
+```terminalOutput
+pop() -> 20                 stack -> (5, 10, 15)
+pop() -> 15                 stack -> (5, 10)
+pop() -> 10                 stack -> (5)
+pop() -> 5                  stack -> ()
+```
+2. General Relationship
+
+The stack will fill up by adding values. It shows that the first value added tot he stack will be at the bottom. To remove it all the items above have to be removed. If there are $N$ spaces, $N$ items can be filled by $N$ `push()` operations. The first item is represented by `x1` and the subsequent items are represented by `xN`.
 
 
 ## Part 10 — Balanced Delimiters
