@@ -1,4 +1,5 @@
-
+>[!NOTE]
+>This was written in Obsidian, I apolagize if markdown is broken.
 ## Part 1 — Trace Stack Operations
 
 ***Question:***
