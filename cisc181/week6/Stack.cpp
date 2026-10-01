@@ -52,6 +52,24 @@ public:
 };
 
 int main() {
+    // 1. empty stack - default size = 10 items
+    Stack stack;
+
+    // 2. is stack empty
+    std::cout << "2. Stack Empty? " << stack.empty() << "\n";
+
+    // 3. push 5 values
+    for (int i = 0; i < 5; i++) {
+        stack.push((i + 1) * 10);
+    }
+
+    // 4. display current stack size
+    std::cout << "\n4. Stack Size (Push 1): " << stack.size() << "\n";
+
+    // 5. display current top value
+    std::cout << "\n5. Top Value: " << stack.top() << "\n";
+
+
     return 0;
 }
 
