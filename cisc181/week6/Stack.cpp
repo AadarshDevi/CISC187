@@ -52,7 +52,13 @@ public:
 };
 
 int main() {
-    Stack stack;
+    return 0;
+}
+
+
+/*
+
+Stack stack;
 
     // Add 5 items
     cout << "Before: " << stack.size() << "\n";
@@ -86,6 +92,4 @@ int main() {
     // Get the last item
     std::cout << "\nTop: " << stack.top() << "\n";
     std::cout << "Size: " << stack.size() << "\n";
-
-    return 0;
-}
+ */
