@@ -61,7 +61,8 @@ int main() {
         "((a+b)",
         "[a+b]",
         "{[()]}",
-        "{[(])}"
+        "{[(])}",
+        ")[]}"
     };
 
     for (string test_input: test_inputs) {
