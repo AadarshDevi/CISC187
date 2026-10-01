@@ -554,6 +554,13 @@ std::string test_inputs[] = {
 };
 ```
 
+Next I looped each string.
+```c++
+for (string test_input: test_inputs) {  
+    ... 
+}
+```
+
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
