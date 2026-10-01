@@ -680,10 +680,9 @@ If the stack has a $\text{stack size}\neq0$ then the test case was not delimiter
 [a+b]   Stack Size: 0                   // Stack Size = 0 --> Balanced
 {[()]}  Stack Size: 0                   // Stack Size = 0 --> Balanced
 {[(])}  Stack Size: 2                   // Stack Size = 2 --> "[" & "("
-)       Stack Size: 1                   // Stack Size = 0 --> Balanced
+)       Stack Size: 1                   // Stack Size = 1 --> ")"
 
 Process finished with exit code 0
-
 ```
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
