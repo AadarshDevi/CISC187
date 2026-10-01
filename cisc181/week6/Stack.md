@@ -317,6 +317,35 @@ std::cout << "Size: " << stack.size() << "\n";
 ```
 
 #### Output
+```terminalOuput
+"{MyFilepath_To_Folder}\CISC 181 - Data Structures in C++\cisc181\week6\Stack.exe"
+terminate called after throwing an instance of 'std::underflow_error'
+  what():  Stack Underflow
+Before: 0
+1
+2
+3
+4
+5
+
+Top: 5
+Size: 5
+
+Before Removing: 5
+4
+3
+2
+
+Top: 2
+Size: 2
+
+Before Removing: 2
+1
+0
+
+Top:
+Process finished with exit code 3
+```
 ### Part 6 Analysis
 
 ## Part 7 — Test the Complete Stack
