@@ -347,6 +347,12 @@ Top:
 Process finished with exit code 3
 ```
 ### Part 6 Analysis
+Explain the difference between `top()` and `pop()`? ****The methods `top()` and `pop()` do a similar thing, they give the top most item, but apart from that they do different things. `top()` only gives the top item. It does not modify the stack. `pop()` like `top()`, gives the top item, but it modifies the stack by removing it from the stack and then returning it. The table below shows the difference.***
+
+|         | Item Returned | Modifies Stack |
+| ------- | :-----------: | :------------: |
+| `pop()` |   Top most    |      Yes       |
+| `top()` |   Top most    |       No       |
 
 ## Part 7 — Test the Complete Stack
 
