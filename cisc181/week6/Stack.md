@@ -568,6 +568,20 @@ for (string test_input: test_inputs) {
 	...
 }
 ```
+
+I looped through each character in the string.
+```c++
+for (string test_input: test_inputs) {  
+    std::stack<char> expression;  
+  
+	// for each char in string
+    for (char test_char: test_input) {  
+        ...
+    }
+    ...
+}
+```
+
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
