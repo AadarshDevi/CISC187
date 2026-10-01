@@ -73,7 +73,15 @@ int main() {
 
             if (test_char == '(' || test_char == '{' || test_char == '[') {
                 expression.push(test_char);
-            } else if (expression.top() == '(' && test_char == ')') {
+                continue;
+            }
+
+            if (expression.empty() && (test_char == ')' || test_char == '}' || test_char == ']')) {
+                expression.push(test_char);
+                break;
+            }
+
+            if (expression.top() == '(' && test_char == ')') {
                 expression.pop();
             } else if (expression.top() == '{' && test_char == '}') {
                 expression.pop();
