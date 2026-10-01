@@ -639,6 +639,52 @@ for (string test_input: test_inputs) {
 }
 ```
 
+Now that most of the cases are handled, we now have the main logic. Pop an opening delimiter if char is the corresponding closing delimiter.
+```c++
+for (string test_input: test_inputs) {  
+    std::stack<char> expression;  
+  
+    for (char test_char: test_input) {  
+        std::cout << test_char;  
+  
+        if (test_char == '(' || test_char == '{' || test_char == '[') {  
+            expression.push(test_char);  
+            continue;  
+        }  
+  
+        if (expression.empty() && (test_char == ')' || test_char == '}' || test_char == ']')) {  
+            expression.push(test_char);  
+            break;  
+        }  
+  
+		// removing opening delimiter for the corresponding closing delimiter
+        if (expression.top() == '(' && test_char == ')') {  
+            expression.pop();  
+        } else if (expression.top() == '{' && test_char == '}') {  
+            expression.pop();  
+        } else if (expression.top() == '[' && test_char == ']') {  
+            expression.pop();  
+        }  
+    }  
+    ...
+}
+```
+
+If the stack has a $\text{stack size}\neq0$ then the test case was not delimiter balanced.
+```terminalOutput
+"D:\College\Miramar Community College\Classes\CISC 181 - Data Structures in C++\cisc181\week6\Stack.exe"
+{(a+b)*[c-d]}   Stack Size: 0           // Stack Size = 0 --> Balanced
+{(a+b]*c}       Stack Size: 2           // Stack Size = 2 --> "(" & "]"
+((a+b)) Stack Size: 0                   // Stack Size = 0 --> Balanced
+((a+b)  Stack Size: 1                   // Stack Size = 1 --> "("
+[a+b]   Stack Size: 0                   // Stack Size = 0 --> Balanced
+{[()]}  Stack Size: 0                   // Stack Size = 0 --> Balanced
+{[(])}  Stack Size: 2                   // Stack Size = 2 --> "[" & "("
+)       Stack Size: 1                   // Stack Size = 0 --> Balanced
+
+Process finished with exit code 0
+
+```
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
