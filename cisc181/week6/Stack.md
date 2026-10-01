@@ -511,6 +511,13 @@ pop() -> 5                  stack -> ()
 
 The stack will fill up by adding values. It shows that the first value added tot he stack will be at the bottom. To remove it all the items above have to be removed. If there are $N$ spaces, $N$ items can be filled by $N$ `push()` operations. The first item is represented by `x1` and the subsequent items are represented by `xN`.
 
+```terminalOutput
+push(x1)                    stack -> (x1)
+push(x2)                    stack -> (x1, x2)
+push(x3)                    stack -> (x1, x2, x3)
+...                         ...
+push(xN)                    stack -> (x1, x2, x3, ..., xN)
+```
 
 ## Part 10 — Balanced Delimiters
 ## Part 11 — Implement the Balanced-Delimiter Algorithm
