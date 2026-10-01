@@ -88,7 +88,7 @@ int main() {
     // 9. display underflow handling - pop @ (size = 0)
     try {
         stack.pop();
-    } catch (std::underflow_error e) {
+    } catch (std::underflow_error const &e) {
         std::cout << e.what() << "\n";
     }
 
@@ -101,7 +101,7 @@ int main() {
     // 11. overflow handling - push @ (size = 10)
     try {
         stack.push(stack.size() + 1);
-    } catch (std::overflow_error e) {
+    } catch (std::overflow_error const &e) {
         std::cout << e.what() << "\n";
     }
 
