@@ -279,6 +279,42 @@ int top() const {
 2. [x] Leave the stack unchanged.
 3. [x] Throw an underflow exception if the stack is empty.
 ### Testing
+```c++
+Stack stack;  
+  
+// Add 5 items  
+cout << "Before: " << stack.size() << "\n";  
+for (int i = 0; i < 5; i++) {  
+    stack.push(i + 1);  
+    cout << stack.size() << "\n";  
+}  
+  
+// Get the last item  
+std::cout << "\nTop: " << stack.top() << "\n";  
+std::cout << "Size: " << stack.size() << "\n";  
+  
+// Remove 11 items  
+cout << "\nBefore Removing: " << stack.size() << "\n";  
+for (int i = 3; i > 0; i--) {  
+    stack.pop();  
+    cout << stack.size() << "\n";  
+}  
+  
+// Get the last item  
+std::cout << "\nTop: " << stack.top() << "\n";  
+std::cout << "Size: " << stack.size() << "\n";  
+  
+// Remove 11 items  
+cout << "\nBefore Removing: " << stack.size() << "\n";  
+for (int i = 2; i > 0; i--) {  
+    stack.pop();  
+    cout << stack.size() << "\n";  
+}  
+  
+// Get the last item  
+std::cout << "\nTop: " << stack.top() << "\n";  
+std::cout << "Size: " << stack.size() << "\n";
+```
 
 #### Output
 ### Part 6 Analysis
