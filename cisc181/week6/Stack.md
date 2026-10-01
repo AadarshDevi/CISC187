@@ -539,6 +539,21 @@ pop(x1)                    stack -> (x1)
 ![[Flowchart_Stack.drawio.svg|488]]
 
 ## Part 11 — Implement the Balanced-Delimiter Algorithm
+
+To implement the algorithm, I took all the test cases and placed them in a string array  instead of manually changing the string.
+```c++
+std::string test_inputs[] = {  
+    "{(a+b)*[c-d]}",  
+    "{(a+b]*c}",  
+    "((a+b))",  
+    "((a+b)",  
+    "[a+b]",  
+    "{[()]}",  
+    "{[(])}",  
+	")[]}"
+};
+```
+
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
