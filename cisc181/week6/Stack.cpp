@@ -54,12 +54,16 @@ public:
 int main() {
     Stack stack;
 
-    // Add 10 items
+    // Add 5 items
     cout << "Before: " << stack.size() << "\n";
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 5; i++) {
         stack.push(i + 1);
         cout << stack.size() << "\n";
     }
+
+    // Get the last item
+    std::cout << "Top: " << stack.top() << "\n";
+    std::cout << "Size: " << stack.size() << "\n";
 
     // Remove 11 items
     cout << "\nBefore Removing: " << stack.size() << "\n";
