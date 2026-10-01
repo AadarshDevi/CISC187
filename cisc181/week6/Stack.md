@@ -373,6 +373,24 @@ Operations to Perform:
 
 ```
 ```
+
+### Output
+```terminalOutput
+"{MyFilepath_To_Folder}\CISC 181 - Data Structures in C++\cisc181\week6\Stack.exe"
+2. Stack Empty? 1
+
+3. Stack Size: 5
+
+4. Top Value: 50
+
+7.1. Top Value: 30
+
+7.2. Stack Size: 3
+Stack Underflow
+Stack Overflow
+
+Process finished with exit code 0
+```
 ## Part 8 — Complexity Analysis
 
 ## Part 9 — Stack Correctness
