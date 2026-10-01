@@ -64,7 +64,26 @@ int main() {
         "{[(])}"
     };
 
-    std::stack<char> expression;
+    for (string test_input: test_inputs) {
+        std::stack<char> expression;
+
+        for (char test_char: test_input) {
+            std::cout << test_char;
+
+            if (test_char == '(' || test_char == '{' || test_char == '[') {
+                expression.push(test_char);
+            } else if (expression.top() == '(' && test_char == ')') {
+                expression.pop();
+            } else if (expression.top() == '{' && test_char == '}') {
+                expression.pop();
+            } else if (expression.top() == '[' && test_char == ']') {
+                expression.pop();
+            }
+        }
+        std::cout << "\tStack Size: " << expression.size() << "\n";
+    }
+
+
     return 0;
 }
 
