@@ -496,9 +496,8 @@ Explain why this property can be used to test whether your stack implementation 
 
 ***Question:***
 1. Predict the 4 consecutive numbers retrieved by the 4 consecutive `pop()` operations.
-2. Explain the general relationship
-3. What is the numbers from`pop()` return? What is the order?
-4. Explain why the property can be used to test whether the stack implementation is correct.
+2. Explain the general relationship. What is the numbers from`pop()` return? What is the order?
+3. Explain why the property can be used to test whether the stack implementation is correct.
 
 ***Answer:***
 1. 
