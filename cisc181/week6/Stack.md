@@ -424,7 +424,6 @@ try {
     std::cout << e.what() << "\n";  
 }
 ```
-
 ### Output
 ```terminalOutput
 "{MyFilepath_To_Folder}\CISC 181 - Data Structures in C++\cisc181\week6\Stack.exe"
