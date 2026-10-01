@@ -54,6 +54,16 @@ public:
 };
 
 int main() {
+    std::string test_inputs[] = {
+        "{(a+b)*[c-d]}",
+        "{(a+b]*c}",
+        "((a+b))",
+        "((a+b)",
+        "[a+b]",
+        "{[()]}",
+        "{[(])}"
+    };
+
     return 0;
 }
 
