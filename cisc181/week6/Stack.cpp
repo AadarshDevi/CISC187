@@ -62,15 +62,30 @@ int main() {
     }
 
     // Get the last item
-    std::cout << "Top: " << stack.top() << "\n";
+    std::cout << "\nTop: " << stack.top() << "\n";
     std::cout << "Size: " << stack.size() << "\n";
 
     // Remove 11 items
     cout << "\nBefore Removing: " << stack.size() << "\n";
-    for (int i = 10; i > -1; i--) {
+    for (int i = 3; i > 0; i--) {
         stack.pop();
         cout << stack.size() << "\n";
     }
+
+    // Get the last item
+    std::cout << "\nTop: " << stack.top() << "\n";
+    std::cout << "Size: " << stack.size() << "\n";
+
+    // Remove 11 items
+    cout << "\nBefore Removing: " << stack.size() << "\n";
+    for (int i = 2; i > 0; i--) {
+        stack.pop();
+        cout << stack.size() << "\n";
+    }
+
+    // Get the last item
+    std::cout << "\nTop: " << stack.top() << "\n";
+    std::cout << "Size: " << stack.size() << "\n";
 
     return 0;
 }
