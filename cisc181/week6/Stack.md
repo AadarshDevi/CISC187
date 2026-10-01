@@ -561,6 +561,13 @@ for (string test_input: test_inputs) {
 }
 ```
 
+I created a new stack for each new test case instead of reusing the old stack object. It is so the old results do not accidentally affect the following tests. I sometimes forget to clear stack so its a better way to use a fresh stack instead.
+```c++
+for (string test_input: test_inputs) {  
+    std::stack<char> expression;  // stack
+	...
+}
+```
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
