@@ -615,6 +615,30 @@ for (string test_input: test_inputs) {
 }
 ```
 
+If the stack is empty, we iterate to the next char. If the char is a closing delimiter, we break out of the loop after we add the closing delimiter to the stack. This means the test case doesn't have balanced delimiters.
+```c++
+for (string test_input: test_inputs) {  
+    std::stack<char> expression;  
+  
+    for (char test_char: test_input) {  
+        std::cout << test_char;  
+  
+        if (test_char == '(' || test_char == '{' || test_char == '[') {  
+            expression.push(test_char); 
+            continue; 
+        }  
+  
+		// if stack is empty and char is closing delimiter --> break after char is added to stack (it tells that the delimiters aren't balanced)
+        if (expression.empty() && (test_char == ')' || test_char == '}' || test_char == ']')) {
+		    expression.push(test_char);
+		    break;
+		}
+        ...
+    }  
+    ...
+}
+```
+
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
