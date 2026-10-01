@@ -80,6 +80,31 @@ int main() {
     // 7.2. display current stack size
     std::cout << "\n7.2. Stack Size: " << stack.size() << "\n";
 
+    // 8. remove all items via pop
+    while (!stack.empty()) {
+        stack.pop();
+    }
+
+    // 9. display underflow handling - pop @ (size = 0)
+    try {
+        stack.pop();
+    } catch (std::underflow_error e) {
+        std::cout << e.what() << "\n";
+    }
+
+
+    // 10. fill up stack
+    while (!stack.full()) {
+        stack.push(stack.size() + 1);
+    }
+
+    // 11. overflow handling - push @ (size = 10)
+    try {
+        stack.push(stack.size() + 1);
+    } catch (std::overflow_error e) {
+        std::cout << e.what() << "\n";
+    }
+
     return 0;
 }
 
