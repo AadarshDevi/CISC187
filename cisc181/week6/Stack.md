@@ -208,7 +208,7 @@ int pop() {
 }
 ```
 #### Verification
-1. [x] - Verify that the stack is not empty.
+1. [x] Verify that the stack is not empty.
 2. [x] Save the current top value.
 3. [x] Decrease `topIndex`.
 4. [x] Return the removed value.
