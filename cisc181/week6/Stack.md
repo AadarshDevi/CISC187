@@ -582,6 +582,20 @@ for (string test_input: test_inputs) {
 }
 ```
 
+Now that I have everything ready to test, I print each letter when I am running the program.
+```c++
+for (string test_input: test_inputs) {  
+    std::stack<char> expression;  
+  
+    for (char test_char: test_input) {  
+        std::cout << test_char;  // print letter
+  
+        ...
+    }  
+    ...
+}
+```
+
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
