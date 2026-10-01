@@ -92,7 +92,6 @@ int main() {
         std::cout << e.what() << "\n";
     }
 
-
     // 10. fill up stack
     while (!stack.full()) {
         stack.push(stack.size() + 1);
