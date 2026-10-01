@@ -554,4 +554,4 @@ pop(x1)                    stack -> (x1)
 ## Resources
 
 1. How to catch std::overflow_error: [std::overflow_error](https://en.cppreference.com/cpp/error/overflow_error) - cppreference.com
-2. 3. 
+2. 
