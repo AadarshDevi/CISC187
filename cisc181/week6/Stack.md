@@ -469,6 +469,40 @@ size()
 ***Answer:*** A stack containing `1,000,000` elements will not be disturbed when the top item is removed (size = `999,999`) . The only item that is accessed or modified is the top item. The rest are not touched by the stack. The index, $\text{topIndex}=1,000,000$ starts and when the top item is removed, $\text{topIndex}=999,999$ which tells us that the `999,999` elements were not disturbed.
 ## Part 9 — Stack Correctness
 
+Suppose an empty stack receives:
+
+```
+push(5)
+push(10)
+push(15)
+push(20)
+```
+
+Without running the program, determine the values returned by four consecutive `pop()` operations.
+
+Then explain the general relationship:
+
+```
+push(x1), push(x2), ..., push(xN)
+```
+
+followed by repeated pops.
+
+What order should the values be returned in?
+
+Explain why this property can be used to test whether your stack implementation is correct.
+
+
+***Question:***
+1. Predict the 4 consecutive numbers retrieved by the 4 consecutive `pop()` operations.
+2. Explain the general relationship
+3. What is the numbers from`pop()` return? What is the order?
+4. Explain why the property can be used to test whether the stack implementation is correct.
+
+***Answer:***
+1. 
+
+
 ## Part 10 — Balanced Delimiters
 ## Part 11 — Implement the Balanced-Delimiter Algorithm
 ## Part 12 — Analyze Delimiter Matching
