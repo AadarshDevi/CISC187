@@ -64,6 +64,7 @@ int main() {
         "{[(])}"
     };
 
+    std::stack<char> expression;
     return 0;
 }
 
