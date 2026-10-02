@@ -512,32 +512,38 @@ I had a get method for searching and was modified to use clustering to stop goin
 simplified some statements too.
 
 ```c++
- Record *get(int key) {
-     const int index = hashFunction(key);
-
-     if (hash_table.at(index).has_value() && hash_table.at(index).value().key == key) {
-         std::cout << "Actual Index: " << index << "\n";
-         return &hash_table.at(index).value();
-     }
-
-     for (int i = 1; i < table_size; i++) {
-         // calculate new index
-         int actual_index = (index + i) % table_size;
-
-         // check if the new index is occupied
-         if (!hash_table.at(actual_index).has_value()) {
-             return nullptr;
-         }
-
-         if (hash_table.at(actual_index).value().key == key) {
-             std::cout << "Actual Index: " << actual_index << "\n";
-             // std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
-             return &hash_table.at(actual_index).value();
-         }
-     }
-
-     return nullptr;
- }
+Record *get(int key) {  
+    const int index = hashFunction(key);  
+    std::cout << "Index Calculated: " << index << "\n";  
+    int positions_checked = 0;  
+  
+    if (hash_table.at(index).has_value() && hash_table.at(index).value().key == key) {  
+        std::cout << "Positions Checked: 1" << "\n";  
+        std::cout << "Actual Index: " << index << "\n";  
+        return &hash_table.at(index).value();  
+    }  
+  
+    for (int i = 1; i < table_size; i++) {  
+        // calculate new index  
+        int actual_index = (index + i) % table_size;  
+        positions_checked++;  
+  
+        // check if the new index is occupied  
+        if (!hash_table.at(actual_index).has_value()) {  
+            std::cout << "Positions Checked: " << positions_checked << "\n";  
+            return nullptr;  
+        }  
+  
+        if (hash_table.at(actual_index).value().key == key) {  
+            std::cout << "Positions Checked: " << (i + 1) << "\n";  
+            std::cout << "Actual Index: " << actual_index << "\n";
+            return &hash_table.at(actual_index).value();  
+        }  
+    }  
+  
+    std::cout << "Positions Checked: " << positions_checked << "\n";  
+    return nullptr;  
+}
 ```
 
 ```terminaloutput
