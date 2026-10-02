@@ -622,7 +622,7 @@ A `HashTable`, though efficient, will require searching through the linear probi
 
 ***Question:*** Find every student whose ID is between `500000 and 600000`
 
-***Answer:*** 
+***Answer:*** Just like before, an `Array` would be more useful because with an array, we have the specific ids we can go through quickly. But if it is in a `HashTable`, we have to get the table index, and go through the index list or linear probe till we find the index. And for multiple indices, it will take longer.
 ### Scenario C — Sorted Traversal
 
 ***Question:*** Display all records in ascending order by key.
