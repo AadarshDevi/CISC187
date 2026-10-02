@@ -610,7 +610,31 @@ Printing Record: No Record Exists With key - 555496
 ## Part 12 - Cryptographic and Non-Cryptographic Hashing
 
 ## Part 13 - Applications and Limitations
+### Scenario A — Exact Lookup
 
+***Question:*** Given a student ID, retrieve the student's record.
+
+***Answer:*** A `HashTable` would be a good option because we know that student's id. We can easily find the index using the hashing function. If the hash table uses linked lists instead of linear probing, we would have to go through each item on the index list to get the information on the student.
+### Scenario B — Range Query
+
+***Question:*** Find every student whose ID is between `500000 and 600000`
+
+***Answer:*** 
+### Scenario C — Sorted Traversal
+
+***Question:*** Display all records in ascending order by key.
+
+***Answer:*** 
+### Scenario D — Minimum Key
+
+***Question:*** Quickly determine the smallest key stored in the data structure.
+
+***Answer:*** 
+### Scenario E — Username Lookup
+
+***Question:*** Given a username, retrieve the corresponding user profile. For each scenario, explain whether the strengths of hashing match the required operation.
+
+***Answer:*** 
 ## Analysis & Reflection
 
 ## Resources
