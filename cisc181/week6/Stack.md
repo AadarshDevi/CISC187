@@ -718,6 +718,12 @@ Stack: ( {
 
 But then I remembered that int he stack, the top item was `"("` so when `"}"` was reached, it wasn't able to close. ***I think this is a bug and I don't know how to fix this.***
 ## Part 12 — Analyze Delimiter Matching
+
+***Questions:***
+1. Explain how many times each character is examined? ***Each character in the program was checked once. Because it was looping, there was no place for a char to be examined twice.***
+2. Explain why each delimiter is pushed or popped at most once? ***One by one, only one char is being analyzed. So if there is a char that is an opening delimiter, it will add it to the stack. Multiple chars are not analyzed at the same time.***
+3. Explain the time complexity of the algorithm? ***The time complexity for the program is $O(N)$ because the more characters, the longer it will take to analyze the string to check if it is balanced.***
+4. Explain the worst-case space complexity. ***The worst-case space complexity will be $O(N)$ because each char takes up some space. Each char takes some $b$ bytes and with $N$ chars, it will take $b*N$ bytes.***
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
 ### Scenario B — Function Calls
