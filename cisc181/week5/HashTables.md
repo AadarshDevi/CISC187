@@ -578,6 +578,8 @@ Calculated Index: 4
 Printing Record: No Record Exists With key - 555496
 ```
 
+### Test Cases
+
 |   Search Type   | Key Position | Actual Key Position  | Positions Checked |
 |:---------------:|:------------:|:--------------------:|:-----------------:|
 | Home-positioned |      5       |          5           |         1         |
