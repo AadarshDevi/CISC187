@@ -614,7 +614,10 @@ Printing Record: No Record Exists With key - 555496
 
 ***Question:*** Given a student ID, retrieve the student's record.
 
-***Answer:*** A `HashTable` would be a good option because we know that student's id. We can easily find the index using the hashing function. If the hash table uses linked lists instead of linear probing, we would have to go through each item on the index list to get the information on the student.
+***Answer:*** 
+An `Array`would be a good option because we know that student's id. In an array we can easily get the student's information by using the id as an index. If the index and ids do not match up, we can do a simple calculation to get the index of the student with the id.
+
+A `HashTable`, though efficient, will require searching through the linear probing or the list of the index which increases the time taken to find the item in the table.
 ### Scenario B — Range Query
 
 ***Question:*** Find every student whose ID is between `500000 and 600000`
