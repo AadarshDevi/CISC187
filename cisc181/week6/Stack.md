@@ -737,4 +737,4 @@ But then I remembered that int he stack, the top item was `"("` so when `"}"` wa
 
 ## Resources
 
-1. How to catch std::overflow_error: [std::overflow_error](https://en.cppreference.com/cpp/error/overflow_error) - cppreference.com
+1. How to catch [std::overflow_error](https://en.cppreference.com/cpp/error/overflow_error) - cppreference.com
