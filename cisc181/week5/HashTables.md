@@ -580,12 +580,11 @@ Printing Record: No Record Exists With key - 555496
 
 ### Test Cases
 
-|   Search Type   | Key Position | Actual Key Position  | Positions Checked |
-|:---------------:|:------------:|:--------------------:|:-----------------:|
-| Home-positioned |      5       |          5           |         1         |
-|    displaced    |      2       |          4           |         3         |
-| not in dataset  |      5       | 0 (Record Not Found) |                   |
-
+|   Search Type   | Key Position |    Actual Key Position     | Positions Checked |
+| :-------------: | :----------: | :------------------------: | :---------------: |
+|    displaced    |      2       |             4              |         3         |
+| Home-positioned |      5       |             5              |         1         |
+| not in dataset  |      4       | nullptr (Record Not Found) |         2         |
 ## Resources
 
 1. Hash Table: [Learn Hash Tables in 13 minutes](https://www.youtube.com/watch?v=FsfRsGFHuv4) - Bro Code
