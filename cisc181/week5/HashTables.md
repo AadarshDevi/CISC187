@@ -638,6 +638,11 @@ A List even though is slower, can have the items inserted in a sorted manner. Th
 ***Question:*** Quickly determine the smallest key stored in the data structure.
 
 ***Answer:*** 
+A `HashTable` will be least effective because when inserting data, if it is inserted strategically, can help find the smallest key faster. But with both ways (the other being linear probing), the smallest key can be anywhere in the table.
+
+If the `HashTable` didn't get collisions, the index of the smallest key can be retrieved very quickly.
+
+A way to get the smallest key any way is if the items in the data structure is sorted, it will then be very fast to get it.
 ### Scenario E — Username Lookup
 
 ***Question:*** Given a username, retrieve the corresponding user profile. For each scenario, explain whether the strengths of hashing match the required operation.
