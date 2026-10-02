@@ -560,19 +560,20 @@ calculated_index = 2    actual_index = 3        (key : value) >> 555980 : Studen
 calculated_index = 2    actual_index = 4        (key : value) >> 555890 : Student_L
 calculated_index = 5    actual_index = 5        (key : value) >> 555000 : Student_A
 
-Index Calculated: 2
+Index Calculated: 2       // Displaced
 Positions Checked: 3
 Actual Index: 4
 Calculated Index: 2
 Printing Record: Student_L
 
-Index Calculated: 5
+Index Calculated: 5       // Home-positioned
 Positions Checked: 1
 Actual Index: 5
 Calculated Index: 5
 Printing Record: Student_A
 
-Index Calculated: 4
+Index Calculated: 4       // Not In Dataset
+Positions Checked: 2
 Calculated Index: 4
 Printing Record: No Record Exists With key - 555496
 ```
