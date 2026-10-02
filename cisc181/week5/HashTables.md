@@ -6,27 +6,34 @@
 
 ## Table of Contents
 
-1. [Part 1 - Understanding Hash Functions](#part-1---understanding-hash-functions)
-    - [Analysis](#analysis)
-2. [Part 2 - Implement a Hash Function](#part-2---implement-a-hash-function)
-3. [Part 3 - Build a HashTable](#part-3---build-a-hash-table)
-    1. [Class HashTable](#class-hashtable)
-    2. [Testing Class](#testing)
-4. [Part 4 - Linear Probing](#part-4---linear-probing)
-    1. [Output](#output)
-    2. [Class: HashTable](#class-hashtable-1)
-5. Part 6 - Home Position and Actual Position
-    6. [Analysis](#analysis-1)
-6. [Part 6 - Searching with Linear Probing](#part-6--)
-7. Part 7 - Deletion and Tombstones
-8. Part 8 - Load Factor
-9. Part 9 - Hash Function Quality
-10. Part 10 - Complexity Analysis
-11. Part 11 - Hashing vs. Encryption
-12. Part 12 - Cryptographic and Non-Cryptographic Hashing
-13. Part 13 - Applications and Limitations
-14. Analysis & Reflection
-
+1. [[HashTables##Part 1 - Understanding Hash Functions|Part 1 - Understanding Hash Functions]]
+	1. [[HashTables###Analysis|Analysis]]
+2. [[HashTables##Part 2 - Implement a Hash Function|Part 2 - Implement a Hash Function]]
+3. [[HashTables##Part 3 - Build a Hash Table|Part 3 - Build a Hash Table]]
+	1. [[HashTables###Class: HashTable|Class: HashTable]]
+	2. [[HashTables###Testing|Testing]]
+4. [[HashTables##Part 4 - Linear Probing|Part 4 - Linear Probing]]
+	1. [[HashTables###Output|Output]]
+	2. [[HashTables###Class: HashTable|Class: HashTable]]
+5. [[HashTables##Part 5 -Home Position and Actual Position|Part 5 -Home Position and Actual Position]]
+	1. [[HashTables###Analysis|Analysis]]
+6. [[HashTables##Part 6 - Searching with Linear Probing|Part 6 - Searching with Linear Probing]]
+	1. [[HashTables###Output|Output]]
+	2. [[HashTables###Test Cases|Test Cases]]
+7. [[HashTables##Part 7 - Deletion and Tombstones|Part 7 - Deletion and Tombstones]]
+8. [[HashTables##Part 8 - Load Factor|Part 8 - Load Factor]]
+9. [[HashTables##Part 9 - Hash Function Quality|Part 9 - Hash Function Quality]]
+10. [[HashTables##Part 10 - Complexity Analysis|Part 10 - Complexity Analysis]]
+11. [[HashTables##Part 11 - Hashing vs. Encryption|Part 11 - Hashing vs. Encryption]]
+12. [[HashTables##Part 12 - Cryptographic and Non-Cryptographic Hashing|Part 12 - Cryptographic and Non-Cryptographic Hashing]]
+13. [[HashTables##Part 13 - Applications and Limitations|Part 13 - Applications and Limitations]]
+14. [[HashTables##Analysis & Reflection|Analysis & Reflection]]
+15. [[HashTables##Resources|Resources]]
+16. [[HashTables##Extra|Extra]]
+	1. [[HashTables###Hashing Function|Hashing Function]]
+		1. [[HashTables####Version 1: Too Complicated|Version 1: Too Complicated]]
+		2. [[HashTables####Version 2: Better|Version 2: Better]]
+		3. [[HashTables####Version 2.1: Class-ified|Version 2.1: Class-ified]]
 ## Part 1 - Understanding Hash Functions
 
 The hash function for this section is to add each digit and mod 10 it.
