@@ -105,6 +105,7 @@ public:
 
             // check if the new index is occupied
             if (!hash_table.at(actual_index).has_value()) {
+                std::cout << "Positions Checked: " << positions_checked << "\n";
                 return nullptr;
             }
 
@@ -116,6 +117,7 @@ public:
             }
         }
 
+        std::cout << "Positions Checked: " << positions_checked << "\n";
         return nullptr;
     }
 
