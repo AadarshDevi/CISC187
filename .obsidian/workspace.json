@@ -188,12 +188,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "786b87a0632a5b7f",
+  "active": "dc038b916f4846e8",
   "lastOpenFiles": [
-    "cisc181/week6/Stack.cpp~",
-    "cisc181/week6/Flowchart_Stack.drawio.svg",
     "cisc181/week6/Queue.md",
     "cisc181/week6/Stack.md",
+    "cisc181/week5/HashTables.md",
+    "cisc181/week3_4/Adaptive_Sorting.md",
+    "cisc181/week3_4/Sorting_2.md",
+    "cisc181/week3_4/Sorting_1.md",
+    "cisc181/week2/Searching.md",
+    "cisc181/week1/Arrays.md",
+    "cisc181/week6/Stack.cpp~",
+    "cisc181/week6/Flowchart_Stack.drawio.svg",
     "cisc181/week6/FLowchart_Stack.drawio",
     "cisc181/week6/Stack.md~",
     "cisc181/week6/Stack.exe",
