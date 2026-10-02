@@ -571,8 +571,8 @@ Printing Record: No Record Exists With key - 555496
 
 |   Search Type   | Key Position | Actual Key Position  | Positions Checked |
 |:---------------:|:------------:|:--------------------:|:-----------------:|
-| Home-positioned |      5       |          5           |                   |
-|    displaced    |      2       |          4           |                   |
+| Home-positioned |      5       |          5           |         1         |
+|    displaced    |      2       |          4           |         3         |
 | not in dataset  |      5       | 0 (Record Not Found) |                   |
 
 ## Resources
