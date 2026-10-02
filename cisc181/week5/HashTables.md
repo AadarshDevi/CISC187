@@ -642,7 +642,8 @@ A List even though is slower, can have the items inserted in a sorted manner. Th
 
 ***Question:*** Given a username, retrieve the corresponding user profile. For each scenario, explain whether the strengths of hashing match the required operation.
 
-***Answer:*** 
+***Answer:*** If the `HashTable` has more empty spaces than items, and linear probing wasn't used or used less frequently, getting the user profile from the username will be very effective. Because linear probing has done less work, and most of the usernames are in the home index, the lookup will be very fast.
+
 ## Analysis & Reflection
 
 ## Resources
