@@ -726,13 +726,25 @@ But then I remembered that int he stack, the top item was `"("` so when `"}"` wa
 4. Explain the worst-case space complexity. ***The worst-case space complexity will be $O(N)$ because each char takes up some space. Each char takes some $b$ bytes and with $N$ chars, it will take $b*N$ bytes.***
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
+A Stack will be useful because when undoing, we need to undo the most recent change to be able to undo the change we need. So a stack will be useful. Undo is ***LIFO*** so is a stack.
+
+***Answer:*** Stack
 ### Scenario B — Function Calls
+Stack Trace, it is a stack with the names of methods that call another method. The recent one is on the top and the method that started the stack trace sits on the bottom.
 
+***Answer:*** Stack
 ### Scenario C — Browser Back Navigation
+History is a list of websites a person went to. But on a tab, to go back to a tab that was originally viewed, the user has to click the back button many times to go back to the webpage they want to see. So a stack is a good data structure for this.
 
+***Answer:*** Stack
 ### Scenario D — Depth-First Search
+A Tree data structure would be more efficient than a stack. Because this is trying to find paths to different places/unknown places, using a tree will be more useful than a stack. With a stack, only 1 way can be checked at a time. With a tree, many paths can be checked simultaneously.
 
+***Answer:*** Tree
 ### Scenario E — Customer Service Line
+The first come first serve is what I think when I read this problem. The first person comes and gets served before another person who came later. A Queue will be more effective. It is s ***FIFO*** or ***First In, First Out***.
+
+***Answer:*** Queue
 ## Analysis and Reflection
 
 ## Resources
