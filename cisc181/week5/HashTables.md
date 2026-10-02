@@ -585,6 +585,23 @@ Printing Record: No Record Exists With key - 555496
 |    displaced    |      2       |             4              |         3         |
 | Home-positioned |      5       |             5              |         1         |
 | not in dataset  |      4       | nullptr (Record Not Found) |         2         |
+
+## Part 7 - Deletion and Tombstones
+
+## Part 8 - Load Factor
+
+## Part 9 - Hash Function Quality
+
+## Part 10 - Complexity Analysis
+
+## Part 11 - Hashing vs. Encryption
+
+## Part 12 - Cryptographic and Non-Cryptographic Hashing
+
+## Part 13 - Applications and Limitations
+
+## Analysis & Reflection
+
 ## Resources
 
 1. Hash Table: [Learn Hash Tables in 13 minutes](https://www.youtube.com/watch?v=FsfRsGFHuv4) - Bro Code
