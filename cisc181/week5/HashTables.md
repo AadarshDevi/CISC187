@@ -628,6 +628,11 @@ A `HashTable`, though efficient, will require searching through the linear probi
 ***Question:*** Display all records in ascending order by key.
 
 ***Answer:*** 
+First, each item on the table will be examined multiple times so the lowest item gets printed out. Then the next item that is the 2nd lowest is printed, which also examines multiple items. By trying to print out the entire table in ascending order, it takes a long time.
+
+For linear probing, the items will not be ordered. So it has to be manually ordered, so does item lists. the hash index will be correct, but the item lists will not be ordered. Ordering them and then finding the lowest number will take as equally long.
+
+A List even though is slower, can have the items inserted in a sorted manner. This can make getting the items in ascending order easier.
 ### Scenario D — Minimum Key
 
 ***Question:*** Quickly determine the smallest key stored in the data structure.
