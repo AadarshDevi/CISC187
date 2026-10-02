@@ -1,4 +1,4 @@
-# Table of contents
+# Table of Contents
 1. [[Stack##Part 1 — Trace Stack Operations|Part 1 — Trace Stack Operations]]
 	1. [[Stack###Part 1 Analysis|Part 1 Analysis]]
 2. [[Stack##Part 2 — Implement an Array-Based Stack|Part 2 — Implement an Array-Based Stack]]

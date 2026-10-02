@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cisc181/week6/Stack.md",
+                "file": "cisc181/week5/HashTables.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stack"
+              "title": "HashTables"
             }
           }
         ]
@@ -190,9 +190,9 @@
   },
   "active": "786b87a0632a5b7f",
   "lastOpenFiles": [
-    "cisc181/week6/Queue.md",
     "cisc181/week6/Stack.md",
     "cisc181/week5/HashTables.md",
+    "cisc181/week6/Queue.md",
     "cisc181/week3_4/Adaptive_Sorting.md",
     "cisc181/week3_4/Sorting_2.md",
     "cisc181/week3_4/Sorting_1.md",
