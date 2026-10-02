@@ -528,9 +528,9 @@ Record *get(int key) {
         std::cout << "Positions Checked: 1" << "\n";  
         std::cout << "Actual Index: " << index << "\n";  
         return &hash_table.at(index).value();  
-    }  
+    }
   
-    for (int i = 1; i < table_size; i++) {  
+    for (int i = 1; i < table_size; i++) {
         // calculate new index  
         int actual_index = (index + i) % table_size;  
         positions_checked++;  
@@ -592,7 +592,6 @@ Printing Record: No Record Exists With key - 555496
 |    displaced    |      2       |             4              |         3         |
 | Home-positioned |      5       |             5              |         1         |
 | not in dataset  |      4       | nullptr (Record Not Found) |         2         |
-
 ## Part 7 - Deletion and Tombstones
 
 ## Part 8 - Load Factor
