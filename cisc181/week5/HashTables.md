@@ -546,6 +546,8 @@ Record *get(int key) {
 }
 ```
 
+### Output
+
 ```terminaloutput
 i = 2   a_i = 2         Student_C
 i = 2   a_i = 3         Student_G
