@@ -558,12 +558,15 @@ Actual Index: 4
 Calculated Index: 2
 Printing Record: Student_L
 
+Index Calculated: 5
+Positions Checked: 1
 Actual Index: 5
 Calculated Index: 5
 Printing Record: Student_A
 
-Calculated Index: 5
-Printing Record: 0
+Index Calculated: 4
+Calculated Index: 4
+Printing Record: No Record Exists With key - 555496
 ```
 
 |   Search Type   | Key Position | Actual Key Position  | Positions Checked |
