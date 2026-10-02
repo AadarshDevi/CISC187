@@ -744,3 +744,15 @@ int hashFunction(int key) {
    return digit_sum % table_size; // index = digital_sum % table_size
 }
 ```
+
+### My HashTable Idea
+
+A efficient way I though to write a `HashTable` is to have an array of lists with a minimum size for the table.
+
+***Size:*** The size of the `HashTable` can be calculated with the amount of data the data structure might theoretically store.
+
+***Insertion:*** Adding the items by id or index in ascending order, adding the items to the list by making sure it will be sorted instead of adding the item to the end.
+
+***Searching:*** A hash function can get the index and then, the item list can be searched with binary search to make finding the item faster.
+
+This is just my thought.
