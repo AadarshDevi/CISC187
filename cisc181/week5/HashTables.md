@@ -592,6 +592,11 @@ Printing Record: No Record Exists With key - 555496
 |    displaced    |      2       |             4              |         3         |
 | Home-positioned |      5       |             5              |         1         |
 | not in dataset  |      4       | nullptr (Record Not Found) |         2         |
+### Part 6 Analysis
+
+***Question:*** Explain why a displaced key may require multiple table accesses even though hash-table searching is commonly described as **O(1)** on average.
+
+***Answer:*** When searching for an item in a `HashTable` a displaced key has a calculated index but was not placed there because of a collision. This means that the item was moved down to an empty space in order to place the item in the table. Because the item is not in its designated index, all indices have to be checked to see if the item is in the table. This gives the time complexity to find it $O(N)$.
 ## Part 7 - Deletion and Tombstones
 
 ## Part 8 - Load Factor
