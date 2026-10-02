@@ -760,13 +760,13 @@ The first come first serve is what I think when I read this problem. The first p
 Connect your answers to the **LIFO** property rather than simply listing stack applications.
 
 ***Answers:***
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
-7. 
+1. An ***abstract data type*** is a data type that is created in memory. It does not physically exist. It was created in memory to store data. 
+2. Many times, we would need to go back to the previous step instead of going all the way to the start of the data structure. It is like instructions, the first instruction is needed to complete the next instruction. Because the stack is restricted, it is easier to learn, implement and test.
+3. the `topIndex` is a pointer pointing to the most recent item in the stack. If it is not updated, data added would not be accounted for or, data removed would not be accounted for by returning the same item the was supposed to be deleted.
+4. Stack Overflow is when an item is trying to be pushed into a stack that is full. It cannot accept new values. Stack Underflow is the opposite, it is trying to retrieve an item from the stack when there is no items in the stack.
+5. An array-based stack is basically an array with restricted access via a stack api. So just like an array, if more space is needed, we need it increase it manually and copy paste the data then delete the old stack. Data can be lost or altered by accident. A dynamic stack will help us to extend the limit when some percentage of the stack is filled up. It can also help duplicate the data when extending.
+6. Undo operations basically is trying to undo the last operation and put many of those together, we have an undo that has to be dome to undo another undo. If a car is built and there is a defect, all the parts have to be removed methodically, (like undo) in order to fix the problem. Recursion is the same except the method calls itself to do some work. The method call will have some work and a method call and after all the method calls are over each work will be finished. That is a stack behavior. backtracking and delimiters are also the same.
+7. If items have to processed in arriving order, a stack is the wrong data type because the last item will be processed first which means the other items that came before will leave and will be delayed. A time sensitive item that comes first would be the last to be process if it was in a stack and could be expired by the time it is processed.
 ## Resources
 
 1. How to catch [std::overflow_error](https://en.cppreference.com/cpp/error/overflow_error) - cppreference.com
