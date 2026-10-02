@@ -1,0 +1,18 @@
+{
+  "tocSettings": {
+    "arrowType": "Index",
+    "title": "Table of contents",
+    "codeBlocks": "n"
+  },
+  "removeCharactersFromTitles": [],
+  "hiddenLineIndicator": 0,
+  "textStyling": {
+    "removeWikilinks": true,
+    "removeFootnotes": true,
+    "removeHtml": false,
+    "removeTextStyling": true
+  },
+  "includePreToc": true,
+  "autoUpdate": true,
+  "shorterHeadingLinks": false
+}
