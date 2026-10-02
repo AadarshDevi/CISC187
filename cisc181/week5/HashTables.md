@@ -541,6 +541,19 @@ simplified some statements too.
 ```
 
 ```terminaloutput
+i = 2   a_i = 2         Student_C
+i = 2   a_i = 3         Student_G
+i = 5   a_i = 5         Student_A
+i = 2   a_i = 4         Student_L
+
+Printing Data:
+calculated_index = 2    actual_index = 2        (key : value) >> 555223 : Student_C
+calculated_index = 2    actual_index = 3        (key : value) >> 555980 : Student_G
+calculated_index = 2    actual_index = 4        (key : value) >> 555890 : Student_L
+calculated_index = 5    actual_index = 5        (key : value) >> 555000 : Student_A
+
+Index Calculated: 2
+Positions Checked: 3
 Actual Index: 4
 Calculated Index: 2
 Printing Record: Student_L
