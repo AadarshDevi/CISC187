@@ -747,6 +747,26 @@ The first come first serve is what I think when I read this problem. The first p
 ***Answer:*** Queue
 ## Analysis and Reflection
 
+***Question:*** Based on your implementation and testing, briefly discuss:
+
+1. Why a stack is considered an **Abstract Data Type** rather than a specific physical data structure.
+2. Why access is intentionally restricted to the top.
+3. How maintaining `topIndex` allows `push()`, `pop()`, and `top()` to operate efficiently.
+4. The difference between stack overflow and stack underflow.
+5. Why array-based stacks have a fixed capacity unless dynamic storage is introduced.
+6. Why stacks naturally support operations such as undo, recursion, backtracking, and delimiter matching.
+7. Why a stack is not appropriate when elements must be processed in arrival order.
+
+Connect your answers to the **LIFO** property rather than simply listing stack applications.
+
+***Answers:***
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
 ## Resources
 
 1. How to catch [std::overflow_error](https://en.cppreference.com/cpp/error/overflow_error) - cppreference.com
