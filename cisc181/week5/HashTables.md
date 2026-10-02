@@ -37,9 +37,9 @@ The hash function for this section is to add each digit and mod 10 it.
 4. 555890: $5+5+5+8+9+0=32$ then $32\space \%\space 10=2$
 
 |  Key   | Digital Sum | Table Index |
-|:------:|:-----------:|:-----------:|
+| :----: | :---------: | :---------: |
 | 555223 |     22      |      2      |
-| 555980 |     32      |      2      | 
+| 555980 |     32      |      2      |
 | 555000 |     15      |      5      |
 | 555890 |     32      |      2      |
 
