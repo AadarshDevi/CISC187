@@ -101,6 +101,7 @@ public:
         for (int i = 1; i < table_size; i++) {
             // calculate new index
             int actual_index = (index + i) % table_size;
+            positions_checked++;
 
             // check if the new index is occupied
             if (!hash_table.at(actual_index).has_value()) {
