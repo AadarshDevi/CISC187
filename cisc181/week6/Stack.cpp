@@ -90,6 +90,16 @@ int main() {
             }
         }
         std::cout << "\tStack Size: " << expression.size() << "\n";
+
+        if (expression.empty()) continue;
+
+        std::cout << "Stack: ";
+        while (!expression.empty()) {
+            char resulting_delimiter = expression.top();
+            expression.pop();
+            std::cout << resulting_delimiter << " ";
+        }
+        std::cout << "\n\n";
     }
 
 
