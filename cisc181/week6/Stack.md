@@ -684,6 +684,39 @@ If the stack has a $\text{stack size}\neq0$ then the test case was not delimiter
 
 Process finished with exit code 0
 ```
+
+***Important Cases:***
+1. [x] A closing delimiter with no matching opening delimiter.
+2. [x] Different delimiter types that do not match.
+3. [x] Opening delimiters left in the stack after the expression ends.
+4. [x] Correctly nested delimiters.
+
+Because of the confusion, I added a print statement to print each delimiter left in the stack.
+```terminalOutput
+{(a+b)*[c-d]}   Stack Size: 0
+{(a+b]*c}       Stack Size: 2
+Stack: ( {
+
+((a+b)) Stack Size: 0
+((a+b)  Stack Size: 1
+Stack: (
+
+[a+b]   Stack Size: 0
+{[()]}  Stack Size: 0
+{[(])}  Stack Size: 2
+Stack: [ {
+
+)       Stack Size: 1
+Stack: )
+```
+
+The part that made my question my sanity was:
+```terminalOutput
+{(a+b]*c}       Stack Size: 2
+Stack: ( {
+```
+
+But then I remembered that int he stack, the top item was `"("` so when `"}"` was reached, it wasn't able to close. ***I think this is a bug and I don't know how to fix this.***
 ## Part 12 — Analyze Delimiter Matching
 ## Part 13 — Stack Applications
 ### Scenario A — Undo
