@@ -282,6 +282,14 @@ int dequeue() {
     return item;  // return value removed
 }
 ```
+
+1. [x] Verify that the queue is not empty.
+2. [x] Save the value at `frontIndex`.
+3. [x] Advance `frontIndex`.
+4. [x] Decrease `count`.
+5. [x] Return the removed value.
+6. [x] Circular indexing
+7. [x] If queue is empty, throw `underflow_error`
 ### Testing
 
 We will use the logging/Queue Info method from before. It will be used a lot.
