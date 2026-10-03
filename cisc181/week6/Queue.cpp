@@ -67,6 +67,20 @@ public:
 int main() {
     Queue queue;
     queue.printInfo();
+
+    queue.enqueue(10);
+    queue.enqueue(20);
+    queue.enqueue(30);
+    queue.enqueue(40);
+    queue.enqueue(50);
+    queue.printInfo();
+
+    try {
+        queue.enqueue(50);
+    } catch (std::overflow_error const &e) {
+        std::cout << " >> Error: " << e.what() << "\n";
+    }
+
     return 0;
 }
 
