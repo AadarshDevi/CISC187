@@ -178,17 +178,23 @@ int size() const {
 // A separate method because it is used a lot
 // and I can make mistakes when I copy paste
 inline int nextIndex(int index) const {  
-    return (index + 1) % this->CAPACITY;  
+    return (index + 1) % this->CAPACITY; // Circular Indexing
 }
 
 void enqueue(int item) {
-	// throw error if queue full
-    if (full()) throw std::overflow_error("Queue Overflow");
-    queue[rearIndex] = item; // set new item  
-    rearIndex = nextIndex(rearIndex);  // go to next index
-    count++;  // increment count
+    if (full()) throw std::overflow_error("Queue Overflow"); // check if queue is full
+    queue[rearIndex] = item; // store item at rearIndex  
+    rearIndex = nextIndex(rearIndex);  // advance rearindex
+    count++;  // increase count
 }
 ```
+
+1. [x] Verify that the queue is not full.
+2. [x] Store the value at `rearIndex`.
+3. [x] Advance `rearIndex`.
+4. [x] Increase `count`.
+5. [x] Circular Indexing
+6. [x] If queue is full, throw `overflow_error`
 ### Testing
 
 ### Part 5 Analysis
