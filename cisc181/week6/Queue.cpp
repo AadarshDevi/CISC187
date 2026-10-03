@@ -30,7 +30,9 @@ public:
 
     void front();
 
-    void empty();
+    bool empty() const {
+        return count == 0;
+    }
 
     bool full() const {
         return count >= this->CAPACITY;
