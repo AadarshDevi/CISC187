@@ -210,7 +210,29 @@ void printInfo() {
 ```
 
 ***Test:*** Fill queue and force `overflow_error`
+
 ```c++
+Queue queue;  
+std::cout << "\nBefore Adding Items\n";  
+queue.printInfo();  
+  
+queue.enqueue(10);  
+queue.enqueue(20);  
+queue.enqueue(30);  
+queue.enqueue(40);  
+queue.enqueue(50);  
+  
+std::cout << "After Adding Items\n";  
+queue.printInfo();  
+  
+  
+std::cout << "Attempting Overflow Error\n";  
+try {  
+    queue.enqueue(50);  
+} catch (std::overflow_error const &e) {  
+    std::cout << " >> Error: " << e.what() << "\n";  
+}
+```
 
 ```
 ### Part 5 Analysis
