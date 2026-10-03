@@ -6,7 +6,7 @@
 
 class Queue {
 private:
-    const int CAPACITY = 10;
+    int CAPACITY;
     int queue[CAPACITY];
     int frontIndex;
     int rearIndex;
