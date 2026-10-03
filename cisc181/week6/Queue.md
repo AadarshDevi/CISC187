@@ -267,6 +267,13 @@ Attempting Overflow Error
 ## Part 6 — Implement `dequeue()`
 
 ```c++
+// Inline Method to help give the next index
+// A separate method because it is used a lot
+// and I can make mistakes when I copy paste
+inline int nextIndex(int index) const {  
+    return (index + 1) % this->CAPACITY; // Circular Indexing
+}
+
 int dequeue() {  
     if (empty()) throw std::underflow_error("Queue Underflow");  
     const int item = queue[frontIndex];  
@@ -279,6 +286,36 @@ int dequeue() {
 
 We will use the logging/Queue Info method from before. It will be used a lot.
 
+***Test:*** Add items to queue. Then force `underflow_error`
+
+```c++
+Queue queue;  
+std::cout << "\nBefore Adding Items\n";  
+queue.printInfo();  
+  
+// add items to queue
+queue.enqueue(10);  
+queue.enqueue(20);  
+queue.enqueue(30);  
+queue.enqueue(40);  
+queue.enqueue(50);  
+  
+std::cout << "After Adding Items\n";  
+queue.printInfo();  
+
+// empty queue
+while (!queue.empty()) {  
+    queue.dequeue();  
+}  
+
+// force underflow
+std::cout << "Attempting Underflow Error\n";  
+try {  
+    queue.dequeue();  
+} catch (std::underflow_error const &e) {  
+    std::cout << " >> Error: " << e.what() << "\n";  
+}
+```
 
 ### Part 6 Analysis
 
