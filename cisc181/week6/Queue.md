@@ -29,9 +29,25 @@ enqueue(60)
 2. ***What is the final queue size?*** The final size of the queue is `4`.
 3. ***In what order would the remaining elements be removed?*** The order in which the objects will be removed is $30\rightarrow40\rightarrow50\rightarrow60$.
 4. ***How does this demonstrate FIFO behavior?*** The item that was in the queue the longest, `10`, was removed first. The last element entered, `60`, would be out of the queue the last.
-
 ## Part 2 — Why Not Shift the Array?
+Suppose the queue contains:
 
+```
+Index      0    1    2    3    4
+         +----+----+----+----+----+
+         | 10 | 20 | 30 | 40 |    |
+         +----+----+----+----+----+
+           ↑              ↑
+         front           rear
+```
+
+A naïve `dequeue()` implementation could remove `10` and shift every remaining element one position to the left:
+
+```
+for (int i = 1; i < count; ++i) {
+    data[i - 1] = data[i];
+}
+```
 ### Part 2 Analysis
 
 ## Part 3 — Implement a Circular Queue
