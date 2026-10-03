@@ -327,6 +327,36 @@ try {
 }
 ```
 
+### Output
+
+```terminalOutput
+Before Adding Items
+Queue Information
+----------------------
+Front Index: 0
+Rear Index: 0
+Size: 0
+Count: 0
+
+After Adding Items
+Queue Information
+----------------------
+Front Index: 0
+Rear Index: 0
+Size: 5
+Count: 5
+
+Emptying Queue
+Queue Information
+----------------------
+Front Index: 0
+Rear Index: 0
+Size: 0
+Count: 0
+
+Attempting Underflow Error
+ >> Error: Queue Underflow
+```
 ### Part 6 Analysis
 
 ## Part 7 — Implement `front()`
