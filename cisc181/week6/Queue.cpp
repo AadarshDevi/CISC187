@@ -57,8 +57,8 @@ public:
 };
 
 int main() {
-    Queue queue();
-
+    Queue queue;
+    queue.printInfo();
     return 0;
 }
 
