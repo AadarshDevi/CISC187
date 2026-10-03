@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cisc181/week5/HashTables.md",
+                "file": "cisc181/week6/Queue.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HashTables"
+              "title": "Queue"
             }
           }
         ],
@@ -203,10 +203,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "b7e59f0f33abb6cc",
+  "active": "dc038b916f4846e8",
   "lastOpenFiles": [
-    "cisc181/week6/Stack.md",
     "cisc181/week5/HashTables.md",
+    "cisc181/week6/Stack.md",
     "cisc181/week5/HashTable.cpp~",
     "cisc181/week6/Queue.cpp~",
     "cisc181/week6/Queue.md",
