@@ -2,6 +2,7 @@
 // Created by CryosArtic on 10/1/2026.
 //
 
+#include <iostream>
 #include <stdexcept>
 
 class Queue {
