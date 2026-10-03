@@ -12,6 +12,10 @@ private:
     int rearIndex;
     int count;
 
+    inline int nextIndex(int index) const {
+        return (index + 1) % this->CAPACITY;
+    }
+
 public:
     Queue() {
         frontIndex = 0;
