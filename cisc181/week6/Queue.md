@@ -135,6 +135,10 @@ Queue() {
 }  
 ```
 
+For a queue with capacity $N$:
+1. [x] $0\leq\text{frontIndex}<N$: `inline int nextIndex(int index) const;`
+2. [x] $0\leq\text{frontIndex}<N$: `inline int nextIndex(int index) const;`
+3. [x] $0\leq\text{frontIndex}\leq N$: `bool empty() const;` and `bool full() cost;`
 ### Part 4 Task
 
 #### Implement `empty()`
