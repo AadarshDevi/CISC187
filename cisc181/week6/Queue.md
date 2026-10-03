@@ -2,6 +2,28 @@
 
 ## Part 1 — Trace Queue Operations
 
+***Question:*** Perform the operations below
+```c++
+enqueue(10)
+enqueue(20)
+enqueue(30)
+dequeue()
+enqueue(40)
+enqueue(50)
+dequeue()
+enqueue(60)
+```
+
+| Operation     | Value Returned | Logical Queue After Operation | Front | Size | Queue |
+| ------------- | -------------- | ----------------------------- | ----- | ---- | ----- |
+| `enqueue(10)` | —              |                               |       |      |       |
+| `enqueue(20)` | —              |                               |       |      |       |
+| `enqueue(30)` | —              |                               |       |      |       |
+| `dequeue()`   |                |                               |       |      |       |
+| `enqueue(40)` | —              |                               |       |      |       |
+| `enqueue(50)` | —              |                               |       |      |       |
+| `dequeue()`   |                |                               |       |      |       |
+| `enqueue(60)` | —              |                               |       |      |       |
 ### Part 1 Analysis
 
 ## Part 2 — Why Not Shift the Array?
