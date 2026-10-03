@@ -51,5 +51,7 @@ public:
         return count >= this->CAPACITY;
     }
 
-    void size();
+    int size() const {
+        return count;
+    }
 };
