@@ -26,7 +26,7 @@ public:
     void enqueue(int item) {
         if (full()) throw std::overflow_error("Queue Overflow");
         queue[rearIndex] = item;
-        rearIndex = (rearIndex + 1) % this->CAPACITY;
+        rearIndex = nextIndex(rearIndex);
         count++;
     }
 
