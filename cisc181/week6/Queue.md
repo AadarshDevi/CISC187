@@ -197,6 +197,10 @@ void enqueue(int item) {
 6. [x] If queue is full, throw `overflow_error`
 ### Testing
 
+***Test:*** Fill queue and force `overflow_error`
+```c++
+
+```
 ### Part 5 Analysis
 
 ## Part 6 — Implement `dequeue()`
