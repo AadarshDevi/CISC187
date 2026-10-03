@@ -174,14 +174,21 @@ int size() const {
 ## Part 5 — Implement `enqueue()`
 
 ```c++
-void enqueue(int item) {  
-    if (full()) throw std::overflow_error("Queue Overflow");  // throw error if queue full
+// Inline Method to help give the next index
+// A separate method because it is used a lot
+// and I can make mistakes when I copy paste
+inline int nextIndex(int index) const {  
+    return (index + 1) % this->CAPACITY;  
+}
+
+void enqueue(int item) {
+	// throw error if queue full
+    if (full()) throw std::overflow_error("Queue Overflow");
     queue[rearIndex] = item; // set new item  
     rearIndex = nextIndex(rearIndex);  // go to next index
     count++;  // increment count
 }
 ```
-
 ### Testing
 
 ### Part 5 Analysis
