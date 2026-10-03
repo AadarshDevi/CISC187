@@ -2,6 +2,8 @@
 // Created by CryosArtic on 10/1/2026.
 //
 
+#include <stdexcept>
+
 class Queue {
 private:
     const int CAPACITY = 10;
