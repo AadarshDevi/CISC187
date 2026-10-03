@@ -14,6 +14,12 @@ private:
 
 public:
     void enqueue(int item);
+    Queue() {
+        frontIndex = 0;
+        rearIndex = 0;
+        count = 0;
+    }
+
 
     void dequeue();
 
