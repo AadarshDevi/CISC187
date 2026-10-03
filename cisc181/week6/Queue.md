@@ -194,7 +194,7 @@ int size() const {
 
 ***Question:*** Print jobs should be processed in the order in which they arrive.
 
-***Answer:***
+***Answer:*** A Queue is the appropriate structure because the first print job should be printed first. It's first come, first serve.
 ### Scenario B — Server Requests
 
 ***Question:*** Requests waiting for a worker should generally be processed in arrival order.
