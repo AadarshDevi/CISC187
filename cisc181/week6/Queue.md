@@ -162,8 +162,14 @@ int size() const {
 ### Part 4 Analysis
 1. ***Why does `count == 0` represent an empty queue?*** It means that there is no data in the queue which means the queue is empty.
 2. ***Why does `count == CAPACITY` represent a full queue?*** This means all the spaces in the queue are occupied by items. There are no empty spaces left.
-3. ***Why can `frontIndex == rearIndex` represent either an empty or full circular queue in this design?*** The `frontIndex` is the element to be removed from the queue. When it is removed, it goes to the next index. For `rearIndex`, it is the next empty space where the new item can be added to the queue. When a new item is added, it goes to the next index. When the `frontIndex` and `rearIndex` are the same, it means that the queue could be full. the `frontIndex` is at the next index to be removed and 
-4. ***How does maintaining `count` remove this ambiguity?***
+3. ***Why can `frontIndex == rearIndex` represent either an empty or full circular queue in this design?*** 
+   
+   The `frontIndex` is the element to be removed from the queue. When it is removed, it goes to the next index. For `rearIndex`, it is the next empty space where the new item can be added to the queue. When a new item is added, it goes to the next index.
+   
+   When data is being added, and not being removed, the `frontIndex` will be the same. The `rearIndex` will continue to go to the next index till it reaches the `frontIndex` where it is full. `rearIndex` will think that the index where `frontIndex` is on is empty.
+   
+   If the queue is full and data is being removed instead, the `frontIndex` will continue to go to the next item in the queue. `rearIndex` will staty in the same place. `frontIndex` will catch up. When the last item is removed, `frontIndex` will think that there is data int he next index and move. But there is no data and `rearIndex` and `frontIndex` are on the same index.
+1. ***How does maintaining `count` remove this ambiguity?*** Because count increments when items are added and decrements when items are removed, this will have up-to date information on the number of items in the queue. So it is checking one number instead of trying to guess if the queue is empty or not.
 
 ## Part 5 — Implement `enqueue()`
 
