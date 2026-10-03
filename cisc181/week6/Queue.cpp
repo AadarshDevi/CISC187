@@ -19,5 +19,7 @@ public:
 private:
     const int CAPACITY = 10;
     int queue[CAPACITY];
-
+    int frontIndex;
+    int rearIndex;
+    int count;
 };
