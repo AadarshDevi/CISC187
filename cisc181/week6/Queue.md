@@ -214,7 +214,7 @@ int size() const {
 
 ***Question:*** The most recently called unfinished function must complete before the calling function resumes.
 
-***Answer:*** The first function is waiting to be finished, so it should be completed before calling the next function. This is a queue.
+***Answer:*** Function calling is a `Call Stack`. It means the function on the top has to be finished before the function that called the top function can finish processing. So a queue will not work here because it will try to process the first but it's inputs are dependent on method that will be called. So a queue will not be able to process the functions.
 
 ## Part 14 — Queue and Breadth-First Search
 
