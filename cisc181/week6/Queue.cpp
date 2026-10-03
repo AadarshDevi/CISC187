@@ -57,10 +57,12 @@ public:
     }
 
     void printInfo() {
+        std::cout << "Queue Information" << "\n";
+        std::cout << "----------------------" << "\n";
         std::cout << "Front Index: " << frontIndex << "\n";
         std::cout << "Rear Index: " << rearIndex << "\n";
         std::cout << "Size: " << size() << "\n";
-        std::cout << "Count: " << count << "\n";
+        std::cout << "Count: " << count << "\n\n";
     }
 };
 
