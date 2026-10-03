@@ -24,6 +24,18 @@ public:
         count = 0;
     }
 
+    bool empty() const {
+        return count == 0;
+    }
+
+    bool full() const {
+        return count >= this->CAPACITY;
+    }
+
+    int size() const {
+        return count;
+    }
+
     void enqueue(int item) {
         if (full()) throw std::overflow_error("Queue Overflow");
         queue[rearIndex] = item;
@@ -42,18 +54,6 @@ public:
     int front() const {
         if (empty()) throw std::underflow_error("Queue Underflow");
         return queue[frontIndex];
-    }
-
-    bool empty() const {
-        return count == 0;
-    }
-
-    bool full() const {
-        return count >= this->CAPACITY;
-    }
-
-    int size() const {
-        return count;
     }
 
     void printInfo() {
