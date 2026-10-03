@@ -277,6 +277,9 @@ int dequeue() {
 ```
 ### Testing
 
+We will use the logging/Queue Info method from before. It will be used a lot.
+
+
 ### Part 6 Analysis
 
 ## Part 7 — Implement `front()`
