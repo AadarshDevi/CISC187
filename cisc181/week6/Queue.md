@@ -261,6 +261,9 @@ Attempting Overflow Error
 ```
 ### Part 5 Analysis
 
+***Question:*** Explain why `++rearIndex;` by itself is not sufficient for a circular queue?
+
+***Answer:*** When the queue starts empty, nothing will be affected much. But items are added and removed, `rearIndex` will be at the last index of the queue. There if an item is added, the index will go out of the range of the array. This is how we get the ***`Array Index Out Of Bounds Error`***. A modulus helps to make the index stay inside the array.
 ## Part 6 — Implement `dequeue()`
 
 ### Testing
