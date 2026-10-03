@@ -312,9 +312,11 @@ std::cout << "After Adding Items\n";
 queue.printInfo();  
 
 // empty queue
+std::cout << "Emptying Queue\n";
 while (!queue.empty()) {  
     queue.dequeue();  
 }  
+queue.printInfo();
 
 // force underflow
 std::cout << "Attempting Underflow Error\n";  
