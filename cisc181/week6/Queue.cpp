@@ -30,7 +30,13 @@ public:
         count++;
     }
 
-    void dequeue();
+    int dequeue() {
+        if (empty()) throw std::underflow_error("Queue Underflow");
+        int item = queue[frontIndex];
+        frontIndex = nextIndex(frontIndex);
+        count--;
+        return item;
+    }
 
     void front();
 
