@@ -25,6 +25,10 @@ enqueue(60)
 | `dequeue()`   | 20             | ⟨     ,     , 30, 40, 50,      ⟩     | 30    | 3    |
 | `enqueue(60)` | —              | ⟨     ,     , 30, 40, 50, 60 ⟩       | 30    | 4    |
 ### Part 1 Analysis
+1. ***What is the final front element?*** The front item after the final operation is `30`.
+2. ***What is the final queue size?*** The final size of the queue is `4`.
+3. ***In what order would the remaining elements be removed?*** The order in which the objects will be removed is $30\rightarrow40\rightarrow50\rightarrow60$.
+4. ***How does this demonstrate FIFO behavior?*** The item that was in the queue the longest, `10`, was removed first. The last element entered, `60`, would be out of the queue the last.
 
 ## Part 2 — Why Not Shift the Array?
 
