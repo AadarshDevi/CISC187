@@ -160,6 +160,10 @@ int size() const {
 }
 ```
 ### Part 4 Analysis
+1. ***Why does `count == 0` represent an empty queue?*** It means that there is no data in the queue which means the queue is empty.
+2. ***Why does `count == CAPACITY` represent a full queue?*** This means all the spaces in the queue are occupied by items. There are no empty spaces left.
+3. ***Why can `frontIndex == rearIndex` represent either an empty or full circular queue in this design?*** The `frontIndex` is the element to be removed from the queue. When it is removed, it goes to the next index. For `rearIndex`, it is the next empty space where the new item can be added to the queue. When a new item is added, it goes to the next index. When the `frontIndex` and `rearIndex` are the same, it means that the queue could be full. the `frontIndex` is at the next index to be removed and 
+4. ***How does maintaining `count` remove this ambiguity?***
 
 ## Part 5 — Implement `enqueue()`
 
