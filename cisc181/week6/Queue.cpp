@@ -3,6 +3,13 @@
 //
 
 class Queue {
+private:
+    const int CAPACITY = 10;
+    int queue[CAPACITY];
+    int frontIndex;
+    int rearIndex;
+    int count;
+
 public:
     void enqueue(int item);
 
@@ -15,11 +22,4 @@ public:
     void full();
 
     void size();
-
-private:
-    const int CAPACITY = 10;
-    int queue[CAPACITY];
-    int frontIndex;
-    int rearIndex;
-    int count;
 };
