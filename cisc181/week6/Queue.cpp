@@ -80,11 +80,14 @@ int main() {
     std::cout << "After Adding Items\n";
     queue.printInfo();
 
+    while (!queue.empty()) {
+        queue.dequeue();
+    }
 
-    std::cout << "Attempting Overflow Error\n";
+    std::cout << "Attempting Underflow Error\n";
     try {
-        queue.enqueue(50);
-    } catch (std::overflow_error const &e) {
+        queue.dequeue();
+    } catch (std::underflow_error const &e) {
         std::cout << " >> Error: " << e.what() << "\n";
     }
 
