@@ -266,6 +266,15 @@ Attempting Overflow Error
 ***Answer:*** When the queue starts empty, nothing will be affected much. But items are added and removed, `rearIndex` will be at the last index of the queue. There if an item is added, the index will go out of the range of the array. This is how we get the ***`Array Index Out Of Bounds Error`***. A modulus helps to make the index stay inside the array.
 ## Part 6 — Implement `dequeue()`
 
+```c++
+int dequeue() {  
+    if (empty()) throw std::underflow_error("Queue Underflow");  
+    const int item = queue[frontIndex];  
+    frontIndex = nextIndex(frontIndex);  
+    count--;  
+    return item;  
+}
+```
 ### Testing
 
 ### Part 6 Analysis
