@@ -204,17 +204,17 @@ int size() const {
 
 ***Question:*** A text editor should undo the most recent operation first.
 
-***Answer:***
+***Answer:*** This is the job for a stack, not a queue. For the text editor to undo a certain change, it has to undo the changes done after it. This is not what a queue does.
 ### Scenario D — Breadth-First Search
 
 ***Question:*** Vertices discovered earlier should be processed before vertices discovered later.
 
-***Answer:***
+***Answer:*** The vertices that are discovered first are processed first in a `Breadth-First Seach`. The later vertices have to wait to be processed. 
 ### Scenario E — Function Calls
 
 ***Question:*** The most recently called unfinished function must complete before the calling function resumes.
 
-***Answer:***
+***Answer:*** The first function is waiting to be finished, so it should be completed before calling the next function. This is a queue.
 
 ## Part 14 — Queue and Breadth-First Search
 
