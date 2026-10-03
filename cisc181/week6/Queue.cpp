@@ -23,6 +23,14 @@ public:
         count = 0;
     }
 
+    Queue(int capacity) {
+        if (capacity <= 0) throw std::invalid_argument("Capcaity cannot be less than or equal to 0.");
+        CAPACITY = capacity;
+        frontIndex = 0;
+        rearIndex = 0;
+        count = 0;
+    }
+
     void enqueue(int item) {
         if (full()) throw std::overflow_error("Queue Overflow");
         queue[rearIndex] = item;
