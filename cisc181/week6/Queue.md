@@ -173,6 +173,15 @@ int size() const {
 
 ## Part 5 — Implement `enqueue()`
 
+```c++
+void enqueue(int item) {  
+    if (full()) throw std::overflow_error("Queue Overflow");  // throw error if queue full
+    queue[rearIndex] = item; // set new item  
+    rearIndex = nextIndex(rearIndex);  // go to next index
+    count++;  // increment count
+}
+```
+
 ### Testing
 
 ### Part 5 Analysis
