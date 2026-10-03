@@ -80,9 +80,11 @@ int main() {
     std::cout << "After Adding Items\n";
     queue.printInfo();
 
+    std::cout << "Emptying Queue\n";
     while (!queue.empty()) {
         queue.dequeue();
     }
+    queue.printInfo();
 
     std::cout << "Attempting Underflow Error\n";
     try {
