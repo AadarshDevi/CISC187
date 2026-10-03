@@ -121,6 +121,40 @@ public:
 ```
 ## Part 4 — Queue State and Invariants
 
+My Queue Implementation should maintain:
+1. [x] `frontIndex`: location of the next element to remove
+2. [x] `rearIndex`: location where the next element will be inserted
+3. [x] `count`: number of elements currently stored
+
+My implementation of Queue initializes the indices and count.
+```c++
+Queue() {  
+	frontIndex = 0;  
+	rearIndex = 0;  
+	count = 0;  
+}  
+```
+
+### Part 4 Task
+
+#### Implement `empty()`
+```c++
+bool empty() const {  
+	return count == 0;  
+}  
+```
+#### Implement `full()`
+```c++
+bool full() const {  
+	return count >= this->CAPACITY;  
+}
+```
+#### Implement `size()`
+```c++
+int size() const {  
+	return count;  
+}
+```
 ### Part 4 Analysis
 
 ## Part 5 — Implement `enqueue()`
