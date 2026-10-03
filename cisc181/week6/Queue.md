@@ -199,7 +199,7 @@ int size() const {
 
 ***Question:*** Requests waiting for a worker should generally be processed in arrival order.
 
-***Answer:***
+***Answer:*** The worker should process the orders that come first so they can be sent to be delivered earlier.
 ### Scenario C — Undo
 
 ***Question:*** A text editor should undo the most recent operation first.
