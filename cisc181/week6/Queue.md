@@ -14,16 +14,16 @@ dequeue()
 enqueue(60)
 ```
 
-| Operation     | Value Returned | Logical Queue After Operation | Front | Size | Queue |
-| ------------- | -------------- | ----------------------------- | ----- | ---- | ----- |
-| `enqueue(10)` | —              |                               |       |      |       |
-| `enqueue(20)` | —              |                               |       |      |       |
-| `enqueue(30)` | —              |                               |       |      |       |
-| `dequeue()`   |                |                               |       |      |       |
-| `enqueue(40)` | —              |                               |       |      |       |
-| `enqueue(50)` | —              |                               |       |      |       |
-| `dequeue()`   |                |                               |       |      |       |
-| `enqueue(60)` | —              |                               |       |      |       |
+| Operation     | Value Returned | Logical Queue After Operation | Front | Size | Queue              |
+| ------------- | -------------- | ----------------------------- | ----- | ---- | ------------------ |
+| `enqueue(10)` | —              |                               |       |      | ⟨ 10 ⟩             |
+| `enqueue(20)` | —              |                               |       |      | ⟨ 10, 20 ⟩         |
+| `enqueue(30)` | —              |                               |       |      | ⟨ 10, 20, 30 ⟩     |
+| `dequeue()`   | 10             |                               |       |      | ⟨ 20, 30 ⟩         |
+| `enqueue(40)` | —              |                               |       |      | ⟨ 20, 30, 40 ⟩     |
+| `enqueue(50)` | —              |                               |       |      | ⟨ 20, 30, 40, 50 ⟩ |
+| `dequeue()`   | 20             |                               |       |      | ⟨ 30, 40, 50 ⟩     |
+| `enqueue(60)` | —              |                               |       |      | ⟨ 30, 40, 50, 60 ⟩ |
 ### Part 1 Analysis
 
 ## Part 2 — Why Not Shift the Array?
