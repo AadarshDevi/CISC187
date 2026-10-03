@@ -55,7 +55,70 @@ for (int i = 1; i < count; ++i) {
 3. ***Why can repeatedly removing all `N` elements this way require O(N²) total work?*** There are $N$ items in the queue. Removing an item make $N-1$ items move. So for $N$ items moving $N-1$ times, $N(N-1)=N^2-N=N^2$ work.
 4. ***Why is advancing the front index preferable to physically moving every remaining element?*** Moving the `frontIndex` will not force the $N-1$ elements. Only thing that changes is `frontIndex`. Moving `frontIndex` is `1` operation and moving $N-1$ items is $N-1$ operations.
 ## Part 3 — Implement a Circular Queue
-
+### Class: Queue
+```c++
+#include <iostream>  
+#include <stdexcept>  
+  
+class Queue {  
+private:  
+    static constexpr int CAPACITY = 5;  
+    int queue[CAPACITY];  
+    int frontIndex;  
+    int rearIndex;  
+    int count;  
+  
+    inline int nextIndex(int index) const {  
+        return (index + 1) % this->CAPACITY;  
+    }  
+  
+public:  
+    Queue() {  
+        frontIndex = 0;  
+        rearIndex = 0;  
+        count = 0;  
+    }  
+  
+    bool empty() const {  
+        return count == 0;  
+    }  
+  
+    bool full() const {  
+        return count >= this->CAPACITY;  
+    }  
+  
+    int size() const {  
+        return count;  
+    }  
+  
+    void enqueue(int item) {  
+        if (full()) throw std::overflow_error("Queue Overflow");  
+        queue[rearIndex] = item;  
+        rearIndex = nextIndex(rearIndex);  
+        count++;  
+    }  
+  
+    int dequeue() {  
+        if (empty()) throw std::underflow_error("Queue Underflow");  
+        const int item = queue[frontIndex];  
+        frontIndex = nextIndex(frontIndex);  
+        count--;  
+        return item;  
+    }  
+  
+    int front() const {  
+        if (empty()) throw std::underflow_error("Queue Underflow");  
+        return queue[frontIndex];  
+    }  
+  
+    void printInfo() {  
+        std::cout << "Front Index: " << frontIndex << "\n";  
+        std::cout << "Rear Index: " << rearIndex << "\n";  
+        std::cout << "Size: " << size() << "\n";  
+        std::cout << "Count: " << count << "\n";  
+    }  
+};
+```
 ## Part 4 — Queue State and Invariants
 
 ### Part 4 Analysis
