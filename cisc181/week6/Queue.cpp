@@ -32,7 +32,9 @@ public:
 
     void empty();
 
-    void full();
+    bool full() const {
+        return count >= this->CAPACITY;
+    }
 
     void size();
 };
