@@ -38,7 +38,10 @@ public:
         return item;
     }
 
-    void front();
+    int front() const {
+        if (empty()) throw std::underflow_error("Queue Underflow");
+        return queue[frontIndex];
+    }
 
     bool empty() const {
         return count == 0;
