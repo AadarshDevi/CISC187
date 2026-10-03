@@ -275,11 +275,11 @@ inline int nextIndex(int index) const {
 }
 
 int dequeue() {  
-    if (empty()) throw std::underflow_error("Queue Underflow");  
-    const int item = queue[frontIndex];  
-    frontIndex = nextIndex(frontIndex);  
-    count--;  
-    return item;  
+    if (empty()) throw std::underflow_error("Queue Underflow");  // check queue is not empty
+    const int item = queue[frontIndex];  // save value at frontIndex
+    frontIndex = nextIndex(frontIndex);  // advance frontIndex
+    count--;  // decrease count
+    return item;  // return value removed
 }
 ```
 ### Testing
