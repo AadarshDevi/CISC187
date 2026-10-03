@@ -52,8 +52,8 @@ for (int i = 1; i < count; ++i) {
 
 1. ***If the queue contains `N` elements, approximately how many elements may need to move during one `dequeue()`?*** If there are $N$ elements, $N-1$ elements have to moved each time an item is removed from the queue.
 2. ***What is the Big-O complexity of this approach?*** The time complexity is $O(N)$ for the operation. Each time, the $N$ items have to be moved.
-3. ***Why can repeatedly removing all `N` elements this way require O(N²) total work?***
-4. ***Why is advancing the front index preferable to physically moving every remaining element?***
+3. ***Why can repeatedly removing all `N` elements this way require O(N²) total work?*** There are $N$ items in the queue. Removing an item make $N-1$ items move. So for $N$ items moving $N-1$ times, $N(N-1)=N^2-N=N^2$ work.
+4. ***Why is advancing the front index preferable to physically moving every remaining element?*** Moving the `frontIndex` will not force the $N-1$ elements. Only thing that changes is `frontIndex`. Moving `frontIndex` is `1` operation and moving $N-1$ items is $N-1$ operations.
 ## Part 3 — Implement a Circular Queue
 
 ## Part 4 — Queue State and Invariants
