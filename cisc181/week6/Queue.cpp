@@ -4,7 +4,7 @@
 
 class Queue {
 public:
-    void enqueue();
+    void enqueue(int item);
 
     void dequeue();
 
