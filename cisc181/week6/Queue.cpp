@@ -32,7 +32,7 @@ public:
 
     int dequeue() {
         if (empty()) throw std::underflow_error("Queue Underflow");
-        int item = queue[frontIndex];
+        const int item = queue[frontIndex];
         frontIndex = nextIndex(frontIndex);
         count--;
         return item;
