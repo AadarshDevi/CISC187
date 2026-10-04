@@ -442,7 +442,7 @@ queue.printLogicalQueue();
 
 ### Output
 
-There is a table below the output section that shows the terminal output as a table: [Output Table](#output-table) [[#Output Table]]
+There is a table below the output section that shows the terminal output as a table: [Output Table](#output-table)
 
 ```terminalOuput
 Before Adding Items
