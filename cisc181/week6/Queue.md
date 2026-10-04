@@ -445,77 +445,77 @@ Front Index: 0
 Rear Index: 0
 Count: 0
 
-Logical Queue:  -1528818176 694 104 1 2061467664
+Physical Queue: 1099699712 520 104 1 -1150320624
 Queue Information
 ----------------------
 Front Index: 0
 Rear Index: 1
 Count: 1
 
-Logical Queue:  10 694 104 1 2061467664
+Physical Queue: 10 520 104 1 -1150320624
 Queue Information
 ----------------------
 Front Index: 1
 Rear Index: 1
 Count: 0
 
-Logical Queue:  10 694 104 1 2061467664
+Physical Queue: 10 520 104 1 -1150320624
 Queue Information
 ----------------------
 Front Index: 1
 Rear Index: 2
 Count: 1
 
-Logical Queue:  10 20 104 1 2061467664
+Physical Queue: 10 20 104 1 -1150320624
 Queue Information
 ----------------------
 Front Index: 1
 Rear Index: 3
 Count: 2
 
-Logical Queue:  10 20 30 1 2061467664
+Physical Queue: 10 20 30 1 -1150320624
 Queue Information
 ----------------------
 Front Index: 2
 Rear Index: 3
 Count: 1
 
-Logical Queue:  10 20 30 1 2061467664
+Physical Queue: 10 20 30 1 -1150320624
 Queue Information
 ----------------------
 Front Index: 2
 Rear Index: 4
 Count: 2
 
-Logical Queue:  10 20 30 40 2061467664
+Physical Queue: 10 20 30 40 -1150320624
 Queue Information
 ----------------------
 Front Index: 2
 Rear Index: 0
 Count: 3
 
-Logical Queue:  10 20 30 40 50
+Physical Queue: 10 20 30 40 50
 Queue Information
 ----------------------
 Front Index: 3
 Rear Index: 0
 Count: 2
 
-Logical Queue:  10 20 30 40 50
+Physical Queue: 10 20 30 40 50
 Queue Information
 ----------------------
 Front Index: 3
 Rear Index: 1
 Count: 3
 
-Logical Queue:  60 20 30 40 50
+Physical Queue: 60 20 30 40 50
 Queue Information
 ----------------------
 Front Index: 3
 Rear Index: 2
 Count: 4
 
-Logical Queue:  60 70 30 40 50
+Physical Queue: 60 70 30 40 50
 ```
 
 ### Output Table
