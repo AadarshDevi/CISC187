@@ -43,7 +43,7 @@ Index      0    1    2    3    4
 
 A naïve `dequeue()` implementation could remove `10` and shift every remaining element one position to the left:
 
-```
+```c++
 for (int i = 1; i < count; ++i) {
     data[i - 1] = data[i];
 }
