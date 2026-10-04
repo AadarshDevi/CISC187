@@ -14,16 +14,16 @@ dequeue()
 enqueue(60)
 ```
 
-| Operation     | Value Returned | Logical Queue After Operation        | Front | Size |
-| ------------- | -------------- | ------------------------------------ | ----- | ---- |
-| `enqueue(10)` | —              | ⟨ 10,     ,     ,     ,     ,      ⟩ | 10    | 1    |
-| `enqueue(20)` | —              | ⟨ 10, 20,     ,     ,     ,      ⟩   | 10    | 2    |
-| `enqueue(30)` | —              | ⟨ 10, 20, 30,     ,     ,      ⟩     | 10    | 3    |
-| `dequeue()`   | 10             | ⟨     , 20, 30,     ,     ,      ⟩   | 20    | 2    |
-| `enqueue(40)` | —              | ⟨     , 20, 30, 40,     ,      ⟩     | 20    | 3    |
-| `enqueue(50)` | —              | ⟨     , 20, 30, 40, 50,      ⟩       | 20    | 4    |
-| `dequeue()`   | 20             | ⟨     ,     , 30, 40, 50,      ⟩     | 30    | 3    |
-| `enqueue(60)` | —              | ⟨     ,     , 30, 40, 50, 60 ⟩       | 30    | 4    |
+| Operation     | Value Returned | Logical Queue After Operation               | Front | Size |
+| ------------- | -------------- | ------------------------------------------- | ----- | ---- |
+| `enqueue(10)` | —              | $10$                                        | 10    | 1    |
+| `enqueue(20)` | —              | $10\rightarrow20$                           | 10    | 2    |
+| `enqueue(30)` | —              | $10\rightarrow20\rightarrow30$              | 10    | 3    |
+| `dequeue()`   | 10             | $20\rightarrow30$                           | 20    | 2    |
+| `enqueue(40)` | —              | $20\rightarrow30\rightarrow40$              | 20    | 3    |
+| `enqueue(50)` | —              | $20\rightarrow30\rightarrow40\rightarrow50$ | 20    | 4    |
+| `dequeue()`   | 20             | $30\rightarrow40\rightarrow50$              | 30    | 3    |
+| `enqueue(60)` | —              | $30\rightarrow40\rightarrow50\rightarrow60$ | 30    | 4    |
 ### Part 1 Analysis
 1. ***What is the final front element?*** The front item after the final operation is `30`.
 2. ***What is the final queue size?*** The final size of the queue is `4`.
