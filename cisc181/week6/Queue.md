@@ -113,8 +113,7 @@ public:
   
     void printInfo() {  
         std::cout << "Front Index: " << frontIndex << "\n";  
-        std::cout << "Rear Index: " << rearIndex << "\n";  
-        std::cout << "Size: " << size() << "\n";  
+        std::cout << "Rear Index: " << rearIndex << "\n";
         std::cout << "Count: " << count << "\n";  
     }  
 };
