@@ -394,7 +394,50 @@ both methods `front()` and `dequeue()` perform similar functions. but they opera
 ***Test:*** Check if my implementation of circular indexing works.
 
 ```c++
-// code
+Queue queue;  
+std::cout << "\nBefore Adding Items\n";  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.enqueue(10);  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.dequeue();  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.enqueue(20);  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.enqueue(30);  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.dequeue();  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.enqueue(40);  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.enqueue(50);  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.dequeue();  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.enqueue(60);  
+queue.printInfo();  
+queue.printLogicalQueue();  
+
+queue.enqueue(70);  
+queue.printInfo();  
+queue.printLogicalQueue();
 ```
 
 | Operation | `frontIndex` | `rearIndex` | `count` | Logical Queue |
