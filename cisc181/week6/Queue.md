@@ -367,6 +367,17 @@ By shifting all elements, the time takes for $N$ items will be $N-1$ operations.
 The time complexity for moving $N$ items (after removing the front item) forward is $O(N)$, while updating the `frontIndex` is $O(1)$.
 ## Part 7 — Implement `front()`
 
+```c++
+int front() const {  
+	// underflow_error if queue is empty
+    if (empty()) throw std::underflow_error("Queue Underflow");  
+    return queue[frontIndex];  // return oldest element, queue unchanged
+}
+```
+
+1. [x] Return the oldest element currently in the queue.
+2. [x] Leave the queue unchanged.
+3. [x] Throw an underflow exception if the queue is empty.
 ### Part 7 Analysis
 
 ## Part 8 — Demonstrate Circular Wraparound
