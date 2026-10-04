@@ -538,7 +538,7 @@ Physical Queue: 60 70 30 40 50
 1. ***When did wraparound occur?*** The wrap around occurred  when `rearIndex` reached max limit of the array.
 2. ***Why is the next position after the last physical array index index `0`?*** We modulo the indices so that we can go around the array with getting an array index out of bounds error. After the index becomes 4 (last index), the next index is 0 because $(4+1) \space\%\space 5 = 0$ so the index goes to 0. Hence the wraparound.
 3. ***Why can physical array order differ from logical queue order?*** The logical order sees what item is the oldest in the array. The physical queue sees where the items are in the array. Logical queue only cares about `First In, First Out`. It is the ***Abstract Data Type***, it is the way the items are accessed. It doesn't think about how the items are in the array, it's the physical queue's part.
-4. ***How does modular arithmetic make this possible?***
+4. ***How does modular arithmetic make this possible?*** The modular arithmetic helps the indices from going out of bounds and accidentally create a memory leak. It helps to keep the indices inside the array, and its very useful for circular indexing.
 
 ## Part 9 — Logical Position vs. Physical Position
 
