@@ -390,47 +390,47 @@ both methods `front()` and `dequeue()` perform similar functions. but they opera
 Queue queue;  
 std::cout << "\nBefore Adding Items\n";  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.enqueue(10);  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.dequeue();  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.enqueue(20);  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.enqueue(30);  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.dequeue();  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.enqueue(40);  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.enqueue(50);  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.dequeue();  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.enqueue(60);  
 queue.printInfo();  
-queue.printLogicalQueue();  
+queue.printPhysicalQueue();  
 
 queue.enqueue(70);  
 queue.printInfo();  
-queue.printLogicalQueue();
+queue.printPhysicalQueue();
 ```
 
 ### Output
