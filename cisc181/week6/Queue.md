@@ -390,6 +390,9 @@ int front() const {
 | `dequeue()` | oldest items     | Yes            |
 both methods `front()` and `dequeue()` perform similar functions. but they operate differently. `front()` gives the oldest item on the list. Method `dequeue()` also returns the oldest item, but unlike `front()`, it removes the oldest item from the queue. It modifies the queue, which `front()` doesnt.
 ## Part 8 — Demonstrate Circular Wraparound
+| Operation | `frontIndex` | `rearIndex` | `count` | Logical Queue |
+| --------- | ------------ | ----------- | ------- | ------------- |
+| Initial   |              |             |         |               |
 
 ### Part 8 Analysis
 
