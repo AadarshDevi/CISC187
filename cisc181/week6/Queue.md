@@ -440,9 +440,117 @@ queue.printInfo();
 queue.printLogicalQueue();
 ```
 
-| Operation | `frontIndex` | `rearIndex` | `count` | Logical Queue |
-| --------- | ------------ | ----------- | ------- | ------------- |
-| Initial   |              |             |         |               |
+### Output
+
+There is a table below the output section that shows the terminal output as a table: [[#Output Table]]
+
+```terminalOuput
+Before Adding Items
+Queue Information
+----------------------
+Front Index: 0
+Rear Index: 0
+Size: 0
+Count: 0
+
+Logical Queue:  -1528818176 694 104 1 2061467664
+Queue Information
+----------------------
+Front Index: 0
+Rear Index: 1
+Size: 1
+Count: 1
+
+Logical Queue:  10 694 104 1 2061467664
+Queue Information
+----------------------
+Front Index: 1
+Rear Index: 1
+Size: 0
+Count: 0
+
+Logical Queue:  10 694 104 1 2061467664
+Queue Information
+----------------------
+Front Index: 1
+Rear Index: 2
+Size: 1
+Count: 1
+
+Logical Queue:  10 20 104 1 2061467664
+Queue Information
+----------------------
+Front Index: 1
+Rear Index: 3
+Size: 2
+Count: 2
+
+Logical Queue:  10 20 30 1 2061467664
+Queue Information
+----------------------
+Front Index: 2
+Rear Index: 3
+Size: 1
+Count: 1
+
+Logical Queue:  10 20 30 1 2061467664
+Queue Information
+----------------------
+Front Index: 2
+Rear Index: 4
+Size: 2
+Count: 2
+
+Logical Queue:  10 20 30 40 2061467664
+Queue Information
+----------------------
+Front Index: 2
+Rear Index: 0
+Size: 3
+Count: 3
+
+Logical Queue:  10 20 30 40 50
+Queue Information
+----------------------
+Front Index: 3
+Rear Index: 0
+Size: 2
+Count: 2
+
+Logical Queue:  10 20 30 40 50
+Queue Information
+----------------------
+Front Index: 3
+Rear Index: 1
+Size: 3
+Count: 3
+
+Logical Queue:  60 20 30 40 50
+Queue Information
+----------------------
+Front Index: 3
+Rear Index: 2
+Size: 4
+Count: 4
+
+Logical Queue:  60 70 30 40 50
+```
+
+### Output Table
+
+| Operation          | `frontIndex` | `rearIndex` | `count` | Logical Queue |
+| ------------------ | ------------ | ----------- | ------- | ------------- |
+| Initial            | 0            | 0           |         |               |
+| enqueue(10);       |              |             |         |               |
+| dequeue();         |              |             |         |               |
+| enqueue(20);  <br> |              |             |         |               |
+| enqueue(30);       |              |             |         |               |
+| dequeue();         |              |             |         |               |
+| enqueue(40);       |              |             |         |               |
+| enqueue(50);       |              |             |         |               |
+| dequeue();         |              |             |         |               |
+| enqueue(60);       |              |             |         |               |
+| enqueue(70);       |              |             |         |               |
 
 ### Part 8 Analysis
 
