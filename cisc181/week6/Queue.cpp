@@ -64,6 +64,14 @@ public:
         std::cout << "Size: " << size() << "\n";
         std::cout << "Count: " << count << "\n\n";
     }
+
+    void printLogicalQueue() {
+        std::cout << "Logical Queue:" << "\t";
+        for (int i = 0; i < CAPACITY; i++) {
+            std::cout << queue[i] << " ";
+        }
+        std::cout << "\n";
+    }
 };
 
 int main() {
