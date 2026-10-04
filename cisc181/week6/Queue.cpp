@@ -78,28 +78,47 @@ int main() {
     Queue queue;
     std::cout << "\nBefore Adding Items\n";
     queue.printInfo();
+    queue.printLogicalQueue();
 
     queue.enqueue(10);
+    queue.printInfo();
+    queue.printLogicalQueue();
+
+    queue.dequeue();
+    queue.printInfo();
+    queue.printLogicalQueue();
+
     queue.enqueue(20);
+    queue.printInfo();
+    queue.printLogicalQueue();
+
     queue.enqueue(30);
+    queue.printInfo();
+    queue.printLogicalQueue();
+
+    queue.dequeue();
+    queue.printInfo();
+    queue.printLogicalQueue();
+
     queue.enqueue(40);
+    queue.printInfo();
+    queue.printLogicalQueue();
+
     queue.enqueue(50);
-
-    std::cout << "After Adding Items\n";
     queue.printInfo();
+    queue.printLogicalQueue();
 
-    std::cout << "Emptying Queue\n";
-    while (!queue.empty()) {
-        queue.dequeue();
-    }
+    queue.dequeue();
     queue.printInfo();
+    queue.printLogicalQueue();
 
-    std::cout << "Attempting Underflow Error\n";
-    try {
-        queue.dequeue();
-    } catch (std::underflow_error const &e) {
-        std::cout << " >> Error: " << e.what() << "\n";
-    }
+    queue.enqueue(60);
+    queue.printInfo();
+    queue.printLogicalQueue();
+
+    queue.enqueue(70);
+    queue.printInfo();
+    queue.printLogicalQueue();
 
     return 0;
 }
