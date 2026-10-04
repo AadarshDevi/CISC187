@@ -64,8 +64,8 @@ public:
         std::cout << "Count: " << count << "\n\n";
     }
 
-    void printLogicalQueue() {
-        std::cout << "Logical Queue:" << "\t";
+    void printPhysicalQueue() {
+        std::cout << "Physical Queue:" << "\t";
         for (int i = 0; i < CAPACITY; i++) {
             std::cout << queue[i] << " ";
         }
@@ -77,47 +77,47 @@ int main() {
     Queue queue;
     std::cout << "\nBefore Adding Items\n";
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.enqueue(10);
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.dequeue();
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.enqueue(20);
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.enqueue(30);
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.dequeue();
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.enqueue(40);
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.enqueue(50);
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.dequeue();
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.enqueue(60);
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     queue.enqueue(70);
     queue.printInfo();
-    queue.printLogicalQueue();
+    queue.printPhysicalQueue();
 
     return 0;
 }
