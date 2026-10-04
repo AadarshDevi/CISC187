@@ -361,7 +361,10 @@ Attempting Underflow Error
 
 ***Question:*** Explain why `dequeue()` should advance `frontIndex` instead of shifting all remaining elements.
 
-***Answer:*** 
+***Answer:***
+By shifting all elements, the time takes for $N$ items will be $N-1$ operations. So each time an item is removed, the rest of the items will eb shifted front. Instead of shifting the elements, shifting the `frontIndex`, which is a single `int`, it takes $1$ operation.
+
+The time complexity for moving $N$ items (after removing the front item) forward is $O(N)$, while updating the `frontIndex` is $O(1)$.
 ## Part 7 — Implement `front()`
 
 ### Part 7 Analysis
