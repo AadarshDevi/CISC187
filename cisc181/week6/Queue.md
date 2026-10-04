@@ -359,6 +359,9 @@ Attempting Underflow Error
 ```
 ### Part 6 Analysis
 
+***Question:*** Explain why `dequeue()` should advance `frontIndex` instead of shifting all remaining elements.
+
+***Answer:*** 
 ## Part 7 — Implement `front()`
 
 ### Part 7 Analysis
