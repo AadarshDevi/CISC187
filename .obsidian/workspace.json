@@ -29,7 +29,17 @@
               "state": {
                 "file": "cisc181/week6/Queue.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
               "title": "Queue"
@@ -98,8 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "2772b1d41cbd9620",
@@ -204,10 +213,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "b7e59f0f33abb6cc",
+  "active": "dc038b916f4846e8",
   "lastOpenFiles": [
-    "cisc181/week5/HashTables.md",
+    "Output Table.md",
     "cisc181/week6/Queue.md",
+    "().md",
+    "cisc181/week5/HashTables.md",
     "cisc181/week6/Queue.cpp~",
     "cisc181/week6/Stack.md",
     "cisc181/week6/Queue.exe",
