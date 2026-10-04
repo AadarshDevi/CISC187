@@ -396,6 +396,11 @@ both methods `front()` and `dequeue()` perform similar functions. but they opera
 
 ### Part 8 Analysis
 
+1. When did wraparound occur?
+2. Why is the next position after the last physical array index index `0`?
+3. Why can physical array order differ from logical queue order?
+4. How does modular arithmetic make this possible?
+
 ## Part 9 — Logical Position vs. Physical Position
 
 ## Part 10 — Test the Complete Circular Queue
