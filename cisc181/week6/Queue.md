@@ -442,7 +442,7 @@ queue.printLogicalQueue();
 
 ### Output
 
-There is a table below the output section that shows the terminal output as a table: [[#Output Table]]
+There is a table below the output section that shows the terminal output as a table: [Output Table](#output-table) [[#Output Table]]
 
 ```terminalOuput
 Before Adding Items
@@ -538,19 +538,19 @@ Logical Queue:  60 70 30 40 50
 
 ### Output Table
 
-| Operation          | `frontIndex` | `rearIndex` | `count` | Logical Queue |
-| ------------------ | ------------ | ----------- | ------- | ------------- |
-| Initial            | 0            | 0           |         |               |
-| enqueue(10);       |              |             |         |               |
-| dequeue();         |              |             |         |               |
-| enqueue(20);  <br> |              |             |         |               |
-| enqueue(30);       |              |             |         |               |
-| dequeue();         |              |             |         |               |
-| enqueue(40);       |              |             |         |               |
-| enqueue(50);       |              |             |         |               |
-| dequeue();         |              |             |         |               |
-| enqueue(60);       |              |             |         |               |
-| enqueue(70);       |              |             |         |               |
+| Operation          | `frontIndex` | `rearIndex` | `count` | Logical Queue                         |
+| ------------------ | ------------ | ----------- | ------- | ------------------------------------- |
+| Initial            | 0            | 0           | 0       | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| enqueue(10);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| dequeue();         |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| enqueue(20);  <br> |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| enqueue(30);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| dequeue();         |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| enqueue(40);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| enqueue(50);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| dequeue();         |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| enqueue(60);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
+| enqueue(70);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
 
 ### Part 8 Analysis
 
