@@ -520,20 +520,19 @@ Physical Queue: 60 70 30 40 50
 
 ### Output Table
 
-| Operation          | `frontIndex` | `rearIndex` | `count` | Logical Queue                         |
-| ------------------ | ------------ | ----------- | ------- | ------------------------------------- |
-| Initial            | 0            | 0           | 0       | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| enqueue(10);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| dequeue();         |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| enqueue(20);  <br> |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| enqueue(30);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| dequeue();         |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| enqueue(40);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| enqueue(50);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| dequeue();         |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| enqueue(60);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-| enqueue(70);       |              |             |         | ⟨    ,     ,     ,     ,     ,      ⟩ |
-
+| Operation          | `frontIndex` | `rearIndex` | `count` | Logical Queue                               |
+| ------------------ | ------------ | ----------- | ------- | ------------------------------------------- |
+| Initial            | 0            | 0           | 0       |                                             |
+| enqueue(10);       | 0            | 1           | 1       | $10$                                        |
+| dequeue();         | 1            | 1           | 0       |                                             |
+| enqueue(20);  <br> | 1            | 2           | 1       | $20$                                        |
+| enqueue(30);       | 1            | 3           | 2       | $20 \rightarrow 30$                         |
+| dequeue();         | 2            | 3           | 1       | $30$                                        |
+| enqueue(40);       | 2            | 4           | 2       | $30\rightarrow40$                           |
+| enqueue(50);       | 2            | 0           | 3       | $30\rightarrow40\rightarrow50$              |
+| dequeue();         | 3            | 0           | 2       | $40\rightarrow50$                           |
+| enqueue(60);       | 3            | 1           | 3       | $40\rightarrow50\rightarrow60$              |
+| enqueue(70);       | 3            | 2           | 4       | $40\rightarrow50\rightarrow60\rightarrow70$ |
 ### Part 8 Analysis
 
 1. When did wraparound occur?
