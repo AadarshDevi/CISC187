@@ -70,10 +70,8 @@ public:
         const int index = hashFunction(record.key);
         std::cout << "i = " << index << "\t";
 
-        // is position empty or not
+        // check if home position is empty
         if (!hash_table.at(index).has_value()) {
-            //std::cout << "Empty Space: Now Occupying\t" << record.value << "\n";
-            std::cout << "a_i = " << index << "\t\t" << record.value << "\n";
             hash_table.at(index) = record;
             return true;
         }
