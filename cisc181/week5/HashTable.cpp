@@ -145,7 +145,7 @@ public:
             // check if the new index is occupied
             if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == key) {
                 // std::cout << "a_i = " << index << "\t\t" << hash_table.at(actual_index).value().value << "\n";
-                hash_table.at(actual_index).reset();
+                hash_table.at(actual_index).value().key = -1;
                 // hash_table
                 return true;
             }
