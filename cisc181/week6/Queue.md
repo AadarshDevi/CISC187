@@ -1,5 +1,48 @@
 # Week 6: Queues
 
+>[!NOTE]
+>Format might be broken.
+# Table of contents
+
+
+1. [[Queue##Part 1 — Trace Queue Operations|Part 1 — Trace Queue Operations]]
+	1. [[Queue###Part 1 Analysis|Part 1 Analysis]]
+2. [[Queue##Part 2 — Why Not Shift the Array?|Part 2 — Why Not Shift the Array?]]
+	1. [[Queue###Part 2 Analysis|Part 2 Analysis]]
+3. [[Queue##Part 3 — Implement a Circular Queue|Part 3 — Implement a Circular Queue]]
+	1. [[Queue###Class: Queue|Class: Queue]]
+4. [[Queue##Part 4 — Queue State and Invariants|Part 4 — Queue State and Invariants]]
+	1. [[Queue###Part 4 Task|Part 4 Task]]
+		1. [[Queue####Implement `empty()`|Implement empty()]]
+		2. [[Queue####Implement `full()`|Implement full()]]
+		3. [[Queue####Implement `size()`|Implement size()]]
+	2. [[Queue###Part 4 Analysis|Part 4 Analysis]]
+5. [[Queue##Part 5 — Implement `enqueue()`|Part 5 — Implement enqueue()]]
+	1. [[Queue###Testing|Testing]]
+	2. [[Queue###Output|Output]]
+	3. [[Queue###Part 5 Analysis|Part 5 Analysis]]
+6. [[Queue##Part 6 — Implement `dequeue()`|Part 6 — Implement dequeue()]]
+	1. [[Queue###Testing|Testing]]
+	2. [[Queue###Output|Output]]
+	3. [[Queue###Part 6 Analysis|Part 6 Analysis]]
+7. [[Queue##Part 7 — Implement `front()`|Part 7 — Implement front()]]
+	1. [[Queue###Part 7 Analysis|Part 7 Analysis]]
+8. [[Queue##Part 8 — Demonstrate Circular Wraparound|Part 8 — Demonstrate Circular Wraparound]]
+	1. [[Queue###Output|Output]]
+	2. [[Queue###Output Table|Output Table]]
+	3. [[Queue###Part 8 Analysis|Part 8 Analysis]]
+9. [[Queue##Part 9 — Logical Position vs. Physical Position|Part 9 — Logical Position vs. Physical Position]]
+10. [[Queue##Part 10 — Test the Complete Circular Queue|Part 10 — Test the Complete Circular Queue]]
+11. [[Queue##Part 11 — Complexity Analysis|Part 11 — Complexity Analysis]]
+12. [[Queue##Part 12 — FIFO Correctness|Part 12 — FIFO Correctness]]
+13. [[Queue##Part 13 — Queue Applications|Part 13 — Queue Applications]]
+	1. [[Queue###Scenario A — Print Server|Scenario A — Print Server]]
+	2. [[Queue###Scenario B — Server Requests|Scenario B — Server Requests]]
+	3. [[Queue###Scenario C — Undo|Scenario C — Undo]]
+	4. [[Queue###Scenario D — Breadth-First Search|Scenario D — Breadth-First Search]]
+	5. [[Queue###Scenario E — Function Calls|Scenario E — Function Calls]]
+14. [[Queue##Part 14 — Queue and Breadth-First Search|Part 14 — Queue and Breadth-First Search]]
+15. [[Queue##Analysis and Reflection|Analysis and Reflection]]
 ## Part 1 — Trace Queue Operations
 
 ***Question:*** Perform the operations below
@@ -67,7 +110,6 @@ for (int i = 1; i < count; ++i) {
 4. ***Why is advancing the front index preferable to physically moving every remaining element?*** Moving the
    `frontIndex` will not force the $N-1$ elements. Only thing that changes is `frontIndex`. Moving `frontIndex` is `1`
    operation and moving $N-1$ items is $N-1$ operations.
-
 ## Part 3 — Implement a Circular Queue
 
 ### Class: Queue
@@ -134,7 +176,6 @@ public:
     }  
 };
 ```
-
 ## Part 4 — Queue State and Invariants
 
 My Queue Implementation should maintain:
@@ -158,7 +199,6 @@ For a queue with capacity $N$:
 1. [x] $0\leq\text{frontIndex}<N$: `inline int nextIndex(int index) const;`
 2. [x] $0\leq\text{frontIndex}<N$: `inline int nextIndex(int index) const;`
 3. [x] $0\leq\text{frontIndex}\leq N$: `bool empty() const;` and `bool full() cost;`
-
 ### Part 4 Task
 
 #### Implement `empty()`
@@ -922,9 +962,7 @@ stop new vertices from entering it.
 
 ***Question:*** The most recently called unfinished function must complete before the calling function resumes.
 
-***Answer:*** Function calling is a `Call Stack`. It means the function on the top has to be finished before the
-function that called the top function can finish processing. So a queue will not work here because it will try to
-process the first but it's inputs are dependent on method that will be called. So a queue will not be able to process
+***Answer:*** Function calling is a `Call Stack`. It means the function on the top has to be finished before the function that called the top function can finish processing. So a queue will not work here because it will try to process the first but it's inputs are dependent on method that will be called. So a queue will not be able to process
 the functions.
 
 ## Part 14 — Queue and Breadth-First Search
@@ -960,6 +998,4 @@ the functions.
 9. ***Why queues are appropriate for systems that process work in arrival order.*** If a new order comes, it would be
    processed before any new items arrive. If it is not processed first, it will be stuck in the system waiting for
    processing while clogging up the space.
-10. ***How FIFO ordering supports breadth-first traversal.*** The first vertex is processed. If the vertex has edges, it
-    adds those vertices after the stored vertices. Once the initial vertices are done being processed, the edges are
-    processed. This continues till all vertices and edges are processed.
+10. ***How FIFO ordering supports breadth-first traversal.*** The first vertex is processed. If the vertex has edges, it adds those vertices after the stored vertices. Once the initial vertices are done being processed, the edges are processed. This continues till all vertices and edges are processed.
