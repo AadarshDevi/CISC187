@@ -1,9 +1,9 @@
 # Week 5: Hash Tables
 
 > [!NOTE]
-> **Google Gemini** was used to help me fix pointer and address problems because I was having a very hard time with
-> them.
-
+> **Google Gemini** was used to help me fix pointer and address problems because I was having a very hard time with them.
+> 
+> Obsidian might not have correctly done Table of Contents.
 ## Table of Contents
 
 1. [[HashTables##Part 1 - Understanding Hash Functions|Part 1 - Understanding Hash Functions]]
@@ -505,7 +505,6 @@ calculated_index = 2    actual_index = 3        (key : value) >> 555980 : Studen
 calculated_index = 2    actual_index = 4        (key : value) >> 555890 : Student_L
 calculated_index = 5    actual_index = 5        (key : value) >> 555000 : Student_A
 ```
-
 ### Analysis
 
 A key might not be in the index it was calculated for if there was a value that was already in that index. And because
