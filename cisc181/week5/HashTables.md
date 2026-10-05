@@ -707,6 +707,88 @@ If an index is marked `empty`,
 
 ## Part 8 - Load Factor
 
+Modified and added a few new methods for Load Factor.
+
+New variables for load factoring.
+```c++  
+float DEFAULT_GROWING_THRESHOLD = 0.75;  
+float growing_threshold = DEFAULT_GROWING_THRESHOLD;  
+int element_count = 0;
+```
+
+Updated constructor to change threshold.
+```c++
+HashTable(int table_size, float growing_threshold) {  
+    if (table_size > 0) this->table_size = table_size;
+    
+	// custom threshold needed to grow vector  
+    if (growing_threshold > 0) this->growing_threshold = growing_threshold;  
+    
+    for (int i = 0; i < table_size; i++) {  
+        hash_table.at(i) = std::nullopt;  
+    }  
+}
+```
+
+New method added to get the load on the vector.
+```c++ 
+double loadFactor() const {  
+    return (double) element_count / table_size;  
+}
+```
+
+New method to extend the vector's capacity.
+```c++  
+inline void extend_vector() {  
+    hash_table.resize(hash_table.size() * 2); // double the size each time the factor is reached  
+}
+```
+
+Modified `insert()` to check if the vector should expand when the threshold is achieved.
+```c++  
+bool insert(Record record) {  
+    // increase the size of the vector if the percent full >= growing threshold  
+    if (loadFactor() >= growing_threshold) {  
+        extend_vector();  
+    }  
+  
+    const int index = hashFunction(record.key);  
+    std::cout << "i = " << index << "\t";  
+  
+    if (!hash_table.at(index).has_value()) {  
+        hash_table.at(index) = record;  
+        element_count++;  
+        return true;  
+    }  
+  
+    int deleted_index = -1;  
+    bool found_deleted_record = false;  
+  
+    for (int i = 1; i < table_size; i++) {  
+        int actual_index = (index + i) % table_size;  
+  
+        if (hash_table.at(actual_index).has_value()) {  
+            if (!found_deleted_record && hash_table.at(actual_index).value().key == -1) {  
+                found_deleted_record = true;  
+                deleted_index = actual_index;  
+            }  
+            continue;  
+        }  
+  
+        hash_table.at(actual_index) = record;  
+        element_count++;  
+        return true;  
+    }  
+  
+    if (found_deleted_record) {  
+        hash_table.at(deleted_index) = record;  
+        element_count++;  
+        return true;  
+    }  
+  
+    return false;  
+}
+```
 ## Part 9 - Hash Function Quality
 
 ## Part 10 - Complexity Analysis
