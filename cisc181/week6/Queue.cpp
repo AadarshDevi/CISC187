@@ -120,6 +120,13 @@ int main() {
     // FIFO removal order
     queue.printLogicalQueue();
 
+    // front()
+    std::cout << "First Item: " << queue.front() << "\n";
+
+    // size()
+    std::cout << "Size: " << queue.size() << "\n";
+
+    // multiple dequeue operations
     queue.dequeue();
     queue.printPhysicalQueue();
 
