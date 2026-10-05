@@ -872,12 +872,17 @@ For each operation, explain why the amount of work does or does not depend on th
 
 ## Part 12 — FIFO Correctness
 
-***Question:*** Compare – Implementation A: Every dequeue shifts the remaining elements and Implementation B: Dequeue
-advances `frontIndex` using modulo. For one `dequeue()`, determine the complexity of each approach and explain the
-difference. Then explain the total complexity of removing all `N` elements from each implementation.
+***Question:*** Compare – Implementation A: Every dequeue shifts the remaining elements and Implementation B: Dequeue advances `frontIndex` using modulo. For one `dequeue()`, determine the complexity of each approach and explain the difference. Then explain the total complexity of removing all `N` elements from each implementation.
 
 ***Answer:***
 
+$$
+N (N-1) = N^2-N
+$$
+$$
+O(N^2)
+$$
+So there is more work that is done. If the `frontIndex` is modulo-ed, then the index will cycle through valid indices in queue. Changing the `frontIndex` takes a time complexity of $O(1)$ because the number changes, only the number. And because of the same reason, the work done for changing the `frontIndex` is $O(N)$.
 ## Part 13 — Queue Applications
 
 ### Scenario A — Print Server
