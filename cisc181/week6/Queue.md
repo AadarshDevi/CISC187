@@ -885,7 +885,7 @@ difference. Then explain the total complexity of removing all `N` elements from 
 
 ***Answer:*** A Queue is the appropriate structure because the first print job should be printed first. It's first come,
 first serve. if the first print job isn't printed first, the prints will start piling up and will take longer to
-comeplete all. For print jobs, there is also a time limit for when it has to be comepleted.
+complete all. For print jobs, there is also a time limit for when it has to be completed.
 
 ### Scenario B — Server Requests
 
