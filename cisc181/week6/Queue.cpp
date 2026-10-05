@@ -97,6 +97,7 @@ int main() {
     // empty queue
     Queue queue;
     queue.printPhysicalQueue();
+    queue.printLogicalQueue();
 
     // multiple enqueue operations
     queue.enqueue(10);
