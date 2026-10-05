@@ -106,8 +106,6 @@ int main() {
     queue.enqueue(20);
     queue.printPhysicalQueue();
 
-    queue.printLogicalQueue();
-
     queue.enqueue(30);
     queue.printPhysicalQueue();
 
