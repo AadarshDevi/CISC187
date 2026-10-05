@@ -22,6 +22,10 @@ public:
         frontIndex = 0;
         rearIndex = 0;
         count = 0;
+
+        for (int i = 0; i < this->CAPACITY; i++) {
+            queue[i] = -1;
+        }
     }
 
     bool empty() const {
