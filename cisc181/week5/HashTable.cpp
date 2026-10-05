@@ -174,6 +174,10 @@ public:
         return false;
     }
 
+    inline void extend_vector() {
+        hash_table.resize(hash_table.size() * 2); // double the size each time the factor is reached
+    }
+
     bool remove(Record record) {
         return remove(record.key);
     }
