@@ -692,6 +692,19 @@ bool insert(Record record) {
 }
 ```
 
+When a key is removed:
+
+1. [x] Do not immediately mark the slot as `EMPTY`.
+2. [x] Mark it as `DELETED`.
+3. [x] Search operations must continue past `DELETED` positions.
+4. [x] Future insertions may reuse tombstone positions.
+5. [x] Before inserting into a tombstone position, continue probing far enough to ensure the same key does not already exist later in the probe sequence.
+
+### Demonstration
+
+### Analysis
+If an index is marked `empty`, 
+
 ## Part 8 - Load Factor
 
 ## Part 9 - Hash Function Quality
