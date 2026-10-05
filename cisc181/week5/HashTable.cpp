@@ -33,6 +33,11 @@ public:
 
         // create hash_table
         hash_table = std::vector<std::optional<Record> >(this->table_size);
+
+        // empty item
+        for (int i = 0; i < table_size; i++) {
+            hash_table.at(i) = std::nullopt;
+        }
     }
 
     HashTable(int table_size) {
@@ -42,6 +47,11 @@ public:
 
         // create hash_table
         hash_table = std::vector<std::optional<Record> >(this->table_size);
+
+        // empty item
+        for (int i = 0; i < table_size; i++) {
+            hash_table.at(i) = std::nullopt;
+        }
     }
 
     int hashFunction(int key) const {
