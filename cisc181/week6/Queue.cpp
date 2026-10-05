@@ -140,7 +140,6 @@ int main() {
     queue.printPhysicalQueue();
 
     // circular wrap around
-
     queue.enqueue(60);
     queue.printPhysicalQueue();
 
@@ -185,7 +184,6 @@ int main() {
     } catch (std::underflow_error const &e) {
         std::cout << "Attempting Underflow Error: " << e.what() << "\n";
     }
-
 
     return 0;
 }
