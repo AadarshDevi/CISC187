@@ -567,8 +567,7 @@ Calculate the physical positions for `i = 0, 1, 2, 3`.
 
 ***Question:*** Explain why this relationship allows the logical queue to cross the physical end of the array without moving existing elements.
 
-***Answer:*** When the indices are changing, only the indices that tell the start and end of the queue change. This will hold the logical queue without messing up the items in the array.
-
+***Answer:*** When the indices are changing, only the indices that tell the start and end of the queue change. This will hold the logical queue without messing up the items in the array. The logical queue just wraps around the physical queue.
 ## Part 10 — Test the Complete Circular Queue
 
 ## Part 11 — Complexity Analysis
