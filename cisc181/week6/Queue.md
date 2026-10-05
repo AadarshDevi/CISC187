@@ -542,6 +542,33 @@ Physical Queue: 60 70 30 40 50
 
 ## Part 9 — Logical Position vs. Physical Position
 
+Suppose:
+
+```
+CAPACITY = 8
+frontIndex = 6
+count = 4
+```
+
+The physical index of logical queue position `i` is:
+
+```c++
+(frontIndex + i) % CAPACITY
+```
+
+Calculate the physical positions for `i = 0, 1, 2, 3`.
+
+| Logical Position | Calculation                               | Physical Index |
+| ---------------- | ----------------------------------------- | -------------- |
+| 0                | $(6+0)\space\%\space8$                    | 6              |
+| 1                | $(6+1)\space\%\space8$                    | 7              |
+| 2                | $(6+2)\space\%\space8 = 8\space\%\space8$ | 0              |
+| 3                | $(6+3)\space\%\space8 = 9\space\%\space8$ | 1              |
+
+***Question:*** Explain why this relationship allows the logical queue to cross the physical end of the array without moving existing elements.
+
+***Answer:*** When the indices are changing, only the indices that tell the start and end of the queue change. This will hold the logical queue without messing up the items in the array.
+
 ## Part 10 — Test the Complete Circular Queue
 
 ## Part 11 — Complexity Analysis
