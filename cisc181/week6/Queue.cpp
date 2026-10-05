@@ -89,58 +89,47 @@ public:
 };
 
 int main() {
+    // empty queue
     Queue queue;
-    std::cout << "\nBefore Adding Items\n";
-    queue.printInfo();
     queue.printPhysicalQueue();
 
+    // multiple enqueue operations
     queue.enqueue(10);
-    queue.printInfo();
-    queue.printPhysicalQueue();
-
-    queue.dequeue();
-    queue.printInfo();
     queue.printPhysicalQueue();
 
     queue.enqueue(20);
-    queue.printInfo();
     queue.printPhysicalQueue();
+
+    queue.printLogicalQueue();
 
     queue.enqueue(30);
-    queue.printInfo();
-    queue.printPhysicalQueue();
-
-    queue.dequeue();
-    queue.printInfo();
     queue.printPhysicalQueue();
 
     queue.enqueue(40);
-    queue.printInfo();
     queue.printPhysicalQueue();
 
     queue.enqueue(50);
-    queue.printInfo();
+    queue.printPhysicalQueue();
+
+    // FIFO removal order
+    queue.printLogicalQueue();
+
+    queue.dequeue();
     queue.printPhysicalQueue();
 
     queue.dequeue();
-    queue.printInfo();
     queue.printPhysicalQueue();
 
-    queue.enqueue(60);
-    queue.printInfo();
+    queue.printLogicalQueue();
+
+    queue.dequeue();
     queue.printPhysicalQueue();
 
-    queue.enqueue(70);
-    queue.printInfo();
+    queue.dequeue();
     queue.printPhysicalQueue();
+
+    // FIFO removal order
+    queue.printLogicalQueue();
 
     return 0;
 }
-
-// <, , , , , >
-// <10, 20, 22, , , >
-// F           R
-// <  ,   , 22, , , >
-//          F  R
-// <  ,   ,   , , , >
-//            FR
