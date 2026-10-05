@@ -84,14 +84,25 @@ public:
         for (int i = 1; i < table_size; i++) {
             int actual_index = (index + i) % table_size;
 
-            // check if the new index is occupied
-            if (!hash_table.at(actual_index).has_value()) {
-                //std::cout << "Actual Index: Now Occupied\t" << record.value << "\n";
-                std::cout << "a_i = " << actual_index << "\t\t" << record.value << "\n";
-                hash_table.at(actual_index) = record;
-                // hash_table
-                return true;
+            // table has a value
+            if (hash_table.at(actual_index).has_value()) {
+                // already not found a deleted key AND key == -1
+                if (!found_deleted_record && hash_table.at(actual_index).value().key == -1) {
+                    found_deleted_record = true;
+                    deleted_index = actual_index;
+                }
+                continue;
             }
+
+            // index is empty then save record
+            hash_table.at(actual_index) = record;
+            return true;
+        }
+
+        // if linear probing failed: place record at the first deleted index
+        if (found_deleted_record) {
+            hash_table.at(deleted_index) = record;
+            return true;
         }
 
         // nothing found, no places to add item
