@@ -66,6 +66,11 @@ public:
     }
 
     bool insert(Record record) {
+        // increase the size of the vector if the percent full >= growing threshold
+        if ((double) element_count / table_size >= growing_threshold) {
+            extend_vector();
+        }
+
         // calculate home position
         const int index = hashFunction(record.key);
         std::cout << "i = " << index << "\t";
