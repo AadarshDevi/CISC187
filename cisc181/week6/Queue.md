@@ -874,7 +874,7 @@ For each operation, explain why the amount of work does or does not depend on th
 
 ***Question:*** Compare – Implementation A: Every dequeue shifts the remaining elements and Implementation B: Dequeue advances `frontIndex` using modulo. For one `dequeue()`, determine the complexity of each approach and explain the difference. Then explain the total complexity of removing all `N` elements from each implementation.
 
-***Answer:***
+***Answer:*** When a dequeue operation happens, each item on the queue has to shift to a front index. For $N$ items, they have to move $N-1$ items. The work for moving the items would be:
 
 $$
 N (N-1) = N^2-N
