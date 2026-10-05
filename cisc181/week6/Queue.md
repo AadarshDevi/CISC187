@@ -579,13 +579,13 @@ Physical Queue: 60 70 30 40 50
 
 ## Analysis and Reflection
 
-1. ***Why a queue is an Abstract Data Type rather than a specific physical representation.***
-2. ***How FIFO differs from LIFO.***
-3. ***Why circular indexing is preferable to shifting elements after every dequeue.***
-4. ***How `frontIndex`, `rearIndex`, and `count` work together.***
-5. ***Why modular arithmetic is necessary for wraparound.***
-6. ***Why `frontIndex == rearIndex` can be ambiguous without additional state.***
-7. ***How maintaining `count` solves the empty-versus-full problem.***
-8. ***Why properly implemented enqueue and dequeue operations are O(1).***
-9. ***Why queues are appropriate for systems that process work in arrival order.***
+1. ***Why a queue is an Abstract Data Type rather than a specific physical representation.*** A queue is not a physical holder for data. It is the behavior on what is supposed to be possible on an array. In the array, a queue behavior means that an items added first have to be taken out first. A physical data type would be the array, but an abstract data type tells how the array should be accessed and modified.
+2. ***How FIFO differs from LIFO.*** `FIFO` is First In, First Out. It means the oldest item in the queue will be taken out of the queue first. In `LIFO`, the Last In, First Out means the newest item added to the data structure will be removed first.
+3. ***Why circular indexing is preferable to shifting elements after every dequeue.*** When items are moved, it is possible to mix up the order. Other than that, one of the main concerns is that it takes a lot longer to shift the items to the new index. In circular indexing, only the indices are moved, this makes getting and using the queue faster since only 2 values are changed, and not the data.
+4. ***How `frontIndex`, `rearIndex`, and `count` work together.*** `frontIndex` keeps track of the oldest item in the queue. It tells which item has to be removed first. `rearIndex` does the opposite. It keeps track of an empty space or a new index where data can be stored. It can be thought of tracking the end of the queue. `count` takes care of the number of items in the queue. It helps remove the confusion when the `frontIndex` and `rearIndex` are the same.
+5. ***Why modular arithmetic is necessary for wraparound.*** When we do division, we get the quotient. Modulus is division, but instead of the quotient, it gives us the remainder. So if the length of an array is 8, index 8 will have a remainder of 0, bringing the index to 0 instead of an index out of bounds error.
+6. ***Why `frontIndex == rearIndex` can be ambiguous without additional state.*** If we are only adding values, then the oldest index can wrap around and be on the same index as `rearIndex`. If there is a full queue and we remove all,, `rearIndex` will be on the same index as `frontIndex`. We would not know if the array is full or empty.
+7. ***How maintaining `count` solves the empty-versus-full problem.*** If there `count = 0`, it means there are no items in the queue. We do not have too guess if the indices represent empty or full queue. For a full queue, `count = N`.
+8. ***Why properly implemented enqueue and dequeue operations are O(1).*** We are only getting the first value and placing the new value in the new index. There is no calculations. The queue knows which items can be accessed. There is only 1 index that we write to or read from. That's all.
+9. ***Why queues are appropriate for systems that process work in arrival order.*** If a new order comes, it would be processed before any new items arrive. If it is not processed first, it will be stuck in the system waiting for processing while clogging up the space.
 10. ***How FIFO ordering supports breadth-first traversal.***
