@@ -80,8 +80,7 @@ int hashFunction(int key, int tableSize) {
 }
 ```
 
-It is not a while loop because if the function fails, there will be a hard loop exit. Below are the outputs for the keys
-using the hashFunction and manually calculating the index.
+It is not a while loop because if the function fails, there will be a hard loop exit. Below are the outputs for the keys using the `hashFunction` and manually calculating the index.
 
 |  Key   | Manual Calculation | Hash Function |
 |:------:|:------------------:|:-------------:|
