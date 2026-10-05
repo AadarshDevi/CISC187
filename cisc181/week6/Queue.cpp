@@ -72,6 +72,10 @@ public:
     void printPhysicalQueue() {
         std::cout << "Physical Queue:" << "\t";
         for (int i = 0; i < CAPACITY; i++) {
+            if (queue[i] == -1) {
+                std::cout << "__" << " ";
+                continue;
+            }
             std::cout << queue[i] << " ";
         }
         std::cout << "\n";
