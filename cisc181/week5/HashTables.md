@@ -627,7 +627,7 @@ bool remove(int key) {
         int actual_index = (index + i) % table_size;  
         if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == key) {
         
-	        // setting removed item's key = -1
+	        // setting removed item's key = -1 aka Deleted
             hash_table.at(actual_index).value().key = -1;  
             return true;  
         }  
@@ -635,6 +635,21 @@ bool remove(int key) {
     return false;  
 }
 ```
+
+When a key is removed:
+
+1. [x] Do not immediately mark the slot as `EMPTY`.
+2. [x] Mark it as `DELETED`.
+3. [ ] Search operations must continue past `DELETED` positions.
+4. [ ] Future insertions may reuse tombstone positions.
+5. [ ] Before inserting into a tombstone position, continue probing far enough to ensure the same key does not already exist later in the probe sequence.
+
+I updated `insert()` to be able to do the three things above not completed yet.
+
+```c++
+
+```
+
 ## Part 8 - Load Factor
 
 ## Part 9 - Hash Function Quality
