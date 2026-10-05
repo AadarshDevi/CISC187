@@ -598,6 +598,44 @@ Printing Record: No Record Exists With key - 555496
 ***Answer:*** When searching for an item in a `HashTable` a displaced key has a calculated index but was not placed there because of a collision. This means that the item was moved down to an empty space in order to place the item in the table. Because the item is not in its designated index, all indices have to be checked to see if the item is in the table. This gives the time complexity to find it $O(N)$.
 ## Part 7 - Deletion and Tombstones
 
+I am using an `enum-ish` way to differential between the three states: $\text{Empty} = \text{nullptr}$ and $\text{Deleted.key} = -1$ because we are dealing with ids.
+
+Modified Constructor
+```c++
+HashTable(int table_size) {  
+    if (table_size > 0) this->table_size = table_size; // makes sure size is not 0 or negative  
+  
+    // table_size already has a default so no need to change if the length is 0 ir less
+  
+    // empty item  
+    for (int i = 0; i < table_size; i++) {  
+        hash_table.at(i) = std::nullopt;  
+    }  
+}
+```
+
+Modified remove to set `Record`'s `key` to `-1`
+```c++
+bool remove(int key) {  
+    const int index = hashFunction(key);  
+  
+    if (hash_table.at(index).has_value() && hash_table.at(index).value().key == key) {  
+        hash_table.at(index).reset();  
+        return true;  
+    }  
+  
+    for (int i = 1; i < table_size; i++) {  
+        int actual_index = (index + i) % table_size;  
+        if (hash_table.at(actual_index).has_value() && hash_table.at(actual_index).value().key == key) {
+        
+	        // setting removed item's key = -1
+            hash_table.at(actual_index).value().key = -1;  
+            return true;  
+        }  
+    }  
+    return false;  
+}
+```
 ## Part 8 - Load Factor
 
 ## Part 9 - Hash Function Quality
