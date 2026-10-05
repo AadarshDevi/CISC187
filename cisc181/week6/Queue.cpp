@@ -76,6 +76,16 @@ public:
         }
         std::cout << "\n";
     }
+
+    void printLogicalQueue() {
+        for (int i = 0; i < CAPACITY; i++) {
+            int index = nextIndex(frontIndex + i - 1);
+            const int value = queue[index];
+            if (value == -1) continue;
+            std::cout << value << " ";
+        }
+        std::cout << "\n";
+    }
 };
 
 int main() {
