@@ -815,6 +815,7 @@ int main() {
 }
 ```
 
+***Output:***
 ```terminalOutput
 Physical Queue: __ __ __ __ __
 Logical Queue:
