@@ -595,7 +595,7 @@ Calculate the physical positions for `i = 0, 1, 2, 3`.
 
 ***Question:*** Vertices discovered earlier should be processed before vertices discovered later.
 
-***Answer:*** The vertices that are discovered first are processed first in a `Breadth-First Seach`. The later vertices have to wait to be processed. 
+***Answer:*** The vertices that are discovered first are processed first in a `Breadth-First Seach`. The later vertices have to wait to be processed. If the older vertices are not processed, the vertices can pile up in the queue and can stop new vertices from entering it.
 ### Scenario E — Function Calls
 
 ***Question:*** The most recently called unfinished function must complete before the calling function resumes.
