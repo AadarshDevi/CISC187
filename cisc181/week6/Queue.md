@@ -643,7 +643,7 @@ The test suite to show:
 9. [x] Queue underflow.
 10. [x] Queue overflow.
 
-***Test Suite:***
+***Test Suite:*** I show how the physical queue is after each operation. They are labeled as the above check list.
 ```c++
 int main() {  
     // empty queue  
@@ -771,7 +771,6 @@ Physical Queue: __ __ __ 90 __
 Physical Queue: __ __ __ __ __
 Attempting Underflow Error: Queue Underflow
 ```
-
 ## Part 11 — Complexity Analysis
 
 ## Part 12 — FIFO Correctness
