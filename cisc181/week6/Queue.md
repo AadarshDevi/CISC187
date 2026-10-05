@@ -773,6 +773,27 @@ Attempting Underflow Error: Queue Underflow
 ```
 ## Part 11 — Complexity Analysis
 
+***Question:*** Analyze:
+
+```
+enqueue()
+dequeue()
+front()
+empty()
+full()
+size()
+```
+
+| Operation   | Big-O Complexity | Explanation                                                                                                    |
+| ----------- | ---------------- | -------------------------------------------------------------------------------------------------------------- |
+| `enqueue()` | $O(N)$           | Adds one item from the new index that is at the end. No need to search for an empty space for the new item.    |
+| `dequeue()` | $O(N)$           | Get's one item from a ready index that is at the front. No need to search for the item.                        |
+| `front()`   | $O(N)$           | Gets the item at the front, the front index. No searching needed.                                              |
+| `empty()`   | $O(N)$           | Checks a counter var to see if the queue has 0 items. No need to traverse queue. Just checking one variable.   |
+| `full()`    | $O(N)$           | Checks a counter var to see if the queue has $N$ items. No need to traverse queue. Just checking one variable. |
+| `size()`    | $O(N)$           | The counter var gives the size of the queue. No need to calculate it. Just checking one variable.              |
+|             |                  |                                                                                                                |
+For each operation, explain why the amount of work does or does not depend on the number of elements stored.
 ## Part 12 — FIFO Correctness
 
 ## Part 13 — Queue Applications
