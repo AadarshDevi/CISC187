@@ -73,6 +73,7 @@ public:
         // check if home position is empty
         if (!hash_table.at(index).has_value()) {
             hash_table.at(index) = record;
+            element_count++;
             return true;
         }
 
@@ -96,12 +97,14 @@ public:
 
             // index is empty then save record
             hash_table.at(actual_index) = record;
+            element_count++;
             return true;
         }
 
         // if linear probing failed: place record at the first deleted index
         if (found_deleted_record) {
             hash_table.at(deleted_index) = record;
+            element_count++;
             return true;
         }
 
