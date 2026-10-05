@@ -169,5 +169,25 @@ int main() {
 
     queue.printLogicalQueue();
 
+    queue.dequeue();
+    queue.printPhysicalQueue();
+
+    queue.dequeue();
+    queue.printPhysicalQueue();
+
+    queue.dequeue();
+    queue.printPhysicalQueue();
+
+    queue.dequeue();
+    queue.printPhysicalQueue();
+
+    try {
+        queue.dequeue();
+        queue.printPhysicalQueue();
+    } catch (std::underflow_error const &e) {
+        std::cout << "Attempting Underflow Error: " << e.what() << "\n";
+    }
+
+
     return 0;
 }
