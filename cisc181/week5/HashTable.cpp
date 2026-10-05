@@ -76,7 +76,11 @@ public:
             return true;
         }
 
-        // probe for new index
+        // keep track of a deleted index
+        int deleted_index = -1;
+        bool found_deleted_record = false;
+
+        // if position is not empty, linear probe. ignore all deleted spaces
         for (int i = 1; i < table_size; i++) {
             // new index
             int actual_index = (index + i) % table_size;
