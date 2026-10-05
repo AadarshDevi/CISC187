@@ -50,6 +50,7 @@ public:
     int dequeue() {
         if (empty()) throw std::underflow_error("Queue Underflow");
         const int item = queue[frontIndex];
+        queue[frontIndex] = -1;
         frontIndex = nextIndex(frontIndex);
         count--;
         return item;
