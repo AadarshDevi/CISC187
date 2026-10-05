@@ -647,7 +647,49 @@ When a key is removed:
 I updated `insert()` to be able to do the three things above not completed yet.
 
 ```c++
-
+bool insert(Record record) {  
+    // calculate home position  
+    const int index = hashFunction(record.key);  
+    std::cout << "i = " << index << "\t";  
+  
+    // check if home position is empty  
+    if (!hash_table.at(index).has_value()) {  
+        hash_table.at(index) = record;  
+        return true;  
+    }  
+  
+    // keep track of a deleted index  
+    int deleted_index = -1;  
+    bool found_deleted_record = false;  
+  
+    // if position is not empty, linear probe. ignore all deleted spaces  
+    for (int i = 1; i < table_size; i++) {  
+        int actual_index = (index + i) % table_size;  
+  
+        // table has a value  
+        if (hash_table.at(actual_index).has_value()) {  
+            // already not found a deleted key AND key == -1  
+            if (!found_deleted_record && hash_table.at(actual_index).value().key == -1) {  
+                found_deleted_record = true;  
+                deleted_index = actual_index;  
+            }  
+            continue;  
+        }  
+  
+        // index is empty then save record  
+        hash_table.at(actual_index) = record;  
+        return true;  
+    }  
+  
+    // if linear probing failed: place record at the first deleted index  
+    if (found_deleted_record) {  
+        hash_table.at(deleted_index) = record;  
+        return true;  
+    }  
+  
+    // nothing found, no places to add item  
+    return false;  
+}
 ```
 
 ## Part 8 - Load Factor
