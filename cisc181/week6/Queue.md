@@ -570,6 +570,208 @@ Calculate the physical positions for `i = 0, 1, 2, 3`.
 ***Answer:*** When the indices are changing, only the indices that tell the start and end of the queue change. This will hold the logical queue without messing up the items in the array. The logical queue just wraps around the physical queue.
 ## Part 10 — Test the Complete Circular Queue
 
+I updated a few methods to make this possible.
+
+I added a default value so it would be easier to show that the queue is empty.
+```c++
+Queue() {  
+    frontIndex = 0;  
+    rearIndex = 0;  
+    count = 0;  
+  
+	// Added
+    for (int i = 0; i < this->CAPACITY; i++) {  
+        queue[i] = -1;  
+    }  
+}
+```
+
+Dequeued operation removes the item by making the item at the index `-1`.
+```c++
+int dequeue() {  
+    if (empty()) throw std::underflow_error("Queue Underflow");  
+    const int item = queue[frontIndex];  
+    queue[frontIndex] = -1;  // Added
+    frontIndex = nextIndex(frontIndex);  
+    count--;  
+    return item;  
+}
+```
+
+Updated `printPhysicalQueue()` to print the empty queue instead of `-1`s.
+```c++
+void printPhysicalQueue() {  
+    std::cout << "Physical Queue:" << "\t";  
+    for (int i = 0; i < CAPACITY; i++) {  
+    
+	    // Added
+        if (queue[i] == -1) {  
+            std::cout << "__" << " ";  
+            continue;  
+        }  
+        // End
+        
+        std::cout << queue[i] << " ";  
+    }  
+    std::cout << "\n";  
+}
+```
+
+Created a method to print logical queue.
+```c++
+void printLogicalQueue() {  
+    std::cout << "Logical Queue:" << "\t";  
+    for (int i = 0; i < CAPACITY; i++) {  
+        int index = nextIndex(frontIndex + i - 1);  
+        const int value = queue[index];  
+        if (value == -1) continue;  
+        std::cout << value << " ";  
+    }  
+    std::cout << "\n";  
+}
+```
+
+The test suite to show:
+1. [x] An initially empty queue.
+2. [x] Multiple enqueue operations.
+3. [x] FIFO removal order.
+4. [x] `front()`.
+5. [x] `size()`.
+6. [x] Multiple dequeue operations.
+7. [x] Circular wraparound.
+8. [x] Reuse of previously vacated array positions.
+9. [x] Queue underflow.
+10. [x] Queue overflow.
+
+***Test Suite:***
+```c++
+int main() {  
+    // empty queue  
+    Queue queue;  
+    queue.printPhysicalQueue();  
+    queue.printLogicalQueue();  
+  
+    // multiple enqueue operations  
+    queue.enqueue(10);  
+    queue.printPhysicalQueue();  
+  
+    queue.enqueue(20);  
+    queue.printPhysicalQueue();  
+  
+    queue.enqueue(30);  
+    queue.printPhysicalQueue();  
+  
+    queue.enqueue(40);  
+    queue.printPhysicalQueue();  
+  
+    queue.enqueue(50);  
+    queue.printPhysicalQueue();  
+  
+    // FIFO removal order  
+    queue.printLogicalQueue();  
+  
+    // front()  
+    std::cout << "First Item: " << queue.front() << "\n";  
+  
+    // size()  
+    std::cout << "Size: " << queue.size() << "\n";  
+  
+    // multiple dequeue operations  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    queue.printLogicalQueue();  
+  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    // circular wrap around  
+    queue.enqueue(60);  
+    queue.printPhysicalQueue();  
+  
+    queue.enqueue(70);  
+    queue.printPhysicalQueue();  
+  
+    queue.enqueue(80);  
+    queue.printPhysicalQueue();  
+  
+    queue.enqueue(90);  
+    queue.printPhysicalQueue();  
+  
+    // Queue Overflow Error  
+    try {  
+        queue.enqueue(100);  
+        queue.printPhysicalQueue();  
+    } catch (std::overflow_error const &e) {  
+        std::cout << "Attempting Overflow Error: " << e.what() << "\n";  
+    }  
+  
+    // Dequeue Operations  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    queue.printLogicalQueue();  
+  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    queue.dequeue();  
+    queue.printPhysicalQueue();  
+  
+    try {  
+        queue.dequeue();  
+        queue.printPhysicalQueue();  
+    } catch (std::underflow_error const &e) {  
+        std::cout << "Attempting Underflow Error: " << e.what() << "\n";  
+    }
+  
+    return 0;  
+}
+```
+
+
+```terminalOutput
+Physical Queue: __ __ __ __ __
+Logical Queue:
+Physical Queue: 10 __ __ __ __
+Physical Queue: 10 20 __ __ __
+Physical Queue: 10 20 30 __ __
+Physical Queue: 10 20 30 40 __
+Physical Queue: 10 20 30 40 50
+Logical Queue:  10 20 30 40 50
+First Item: 10
+Size: 5
+Physical Queue: __ 20 30 40 50
+Physical Queue: __ __ 30 40 50
+Logical Queue:  30 40 50
+Physical Queue: __ __ __ 40 50
+Physical Queue: __ __ __ __ 50
+Physical Queue: 60 __ __ __ 50
+Physical Queue: 60 70 __ __ 50
+Physical Queue: 60 70 80 __ 50
+Physical Queue: 60 70 80 90 50
+Attempting Overflow Error: Queue Overflow
+Physical Queue: 60 70 80 90 __
+Logical Queue:  60 70 80 90
+Physical Queue: __ 70 80 90 __
+Physical Queue: __ __ 80 90 __
+Physical Queue: __ __ __ 90 __
+Physical Queue: __ __ __ __ __
+Attempting Underflow Error: Queue Underflow
+```
+
 ## Part 11 — Complexity Analysis
 
 ## Part 12 — FIFO Correctness
