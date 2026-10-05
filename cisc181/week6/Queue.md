@@ -580,17 +580,17 @@ Calculate the physical positions for `i = 0, 1, 2, 3`.
 
 ***Question:*** Print jobs should be processed in the order in which they arrive.
 
-***Answer:*** A Queue is the appropriate structure because the first print job should be printed first. It's first come, first serve.
+***Answer:*** A Queue is the appropriate structure because the first print job should be printed first. It's first come, first serve. if the first print job isn't printed first, the prints will start piling up and will take longer to comeplete all. For print jobs, there is also a time limit for when it has to be comepleted.
 ### Scenario B — Server Requests
 
 ***Question:*** Requests waiting for a worker should generally be processed in arrival order.
 
-***Answer:*** The worker should process the orders that come first so they can be sent to be delivered earlier.
+***Answer:*** The worker should process the orders that come first so they can be sent to be delivered earlier. If they aren't processed quickly, it can end up being more work and a warehouse full of orders that will be delayed to be sent out.
 ### Scenario C — Undo
 
 ***Question:*** A text editor should undo the most recent operation first.
 
-***Answer:*** This is the job for a stack, not a queue. For the text editor to undo a certain change, it has to undo the changes done after it. This is not what a queue does.
+***Answer:*** This is the job for a stack, not a queue. For the text editor to undo a certain change, it has to undo the changes done after it. This is not what a queue does. If it changes an old change before undoing later changes, it could break the changes after it and ruin the entire document. Some change in the present was reliant on the past change. Changing this past change can change the present document to an undesirable outcome.
 ### Scenario D — Breadth-First Search
 
 ***Question:*** Vertices discovered earlier should be processed before vertices discovered later.
