@@ -82,6 +82,7 @@ public:
     }
 
     void printLogicalQueue() {
+        std::cout << "Logical Queue:" << "\t";
         for (int i = 0; i < CAPACITY; i++) {
             int index = nextIndex(frontIndex + i - 1);
             const int value = queue[index];
