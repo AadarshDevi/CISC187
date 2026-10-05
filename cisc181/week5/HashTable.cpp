@@ -82,9 +82,7 @@ public:
 
         // if position is not empty, linear probe. ignore all deleted spaces
         for (int i = 1; i < table_size; i++) {
-            // new index
             int actual_index = (index + i) % table_size;
-            //std::cout << "Actual Index: " << actual_index << "\t\t\t";
 
             // check if the new index is occupied
             if (!hash_table.at(actual_index).has_value()) {
@@ -95,7 +93,8 @@ public:
                 return true;
             }
         }
-        std::cout << "\n";
+
+        // nothing found, no places to add item
         return false;
     }
 
