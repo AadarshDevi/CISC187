@@ -141,7 +141,32 @@ int main() {
     queue.dequeue();
     queue.printPhysicalQueue();
 
-    // FIFO removal order
+    // circular wrap around
+
+    queue.enqueue(60);
+    queue.printPhysicalQueue();
+
+    queue.enqueue(70);
+    queue.printPhysicalQueue();
+
+    queue.enqueue(80);
+    queue.printPhysicalQueue();
+
+    queue.enqueue(90);
+    queue.printPhysicalQueue();
+
+    // Queue Overflow Error
+    try {
+        queue.enqueue(100);
+        queue.printPhysicalQueue();
+    } catch (std::overflow_error const &e) {
+        std::cout << "Attempting Overflow Error: " << e.what() << "\n";
+    }
+
+    // Dequeue Operations
+    queue.dequeue();
+    queue.printPhysicalQueue();
+
     queue.printLogicalQueue();
 
     return 0;
