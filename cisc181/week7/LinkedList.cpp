@@ -177,9 +177,9 @@ public:
         Node *current = head;
 
         // loop through list
-        while (head != nullptr) {
+        while (current != nullptr) {
             // get next node
-            Node *next = head->next;
+            Node *next = current->next;
 
             // delete current node
             delete current;
