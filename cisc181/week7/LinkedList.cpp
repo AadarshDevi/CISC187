@@ -74,7 +74,12 @@ public:
         // get the first node of the list
         Node *firstNode = head;
 
-    void insertFront(int value);
+        // create a new node that points to the first node
+        Node *newNode = new Node{value, firstNode};
+
+        // head points to new node (not first node)
+        head = newNode;
+    }
 
     void insertBack(int value);
 
