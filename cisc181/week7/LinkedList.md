@@ -68,7 +68,7 @@ first
 +---+---------+
 ```
 
-Next we create out second node.
+Next we create our second node.
 
 ```
 Node *second = new Node{13, nullptr};
@@ -147,7 +147,8 @@ Your diagram should identify:
 2. ***What does `head` actually store?*** `head` contains the address of `Node first`.
 3. ***What does `first->next` contain?*** It contains the address to `Node second`.
 4. ***What does `third->next` contain?*** It is a `nullptr` which means it is pointing to nothing.
-5. ***What would happen to your ability to access the list if `head` were lost?*** We would not be able access the data
+5. ***What would happen to your ability to access the list if `head` were lost?*** We would not be able to access the
+   data
    at all. The address of `Node first` is lost which subsequently means the rest of the Nodes' address are lost.
 
 ## Part 2 — Trace a Linked List
@@ -207,7 +208,7 @@ Before implementing them, we will describe them.
 Below is my interpretation of the LinkedList class.
 
 > [!NOTE]
->The code for LinkedList is updated during each parts if there were any mistakes.
+>The code for LinkedList is updated during each part if there were any mistakes.
 
 ```c++  
 struct Node {  
@@ -488,8 +489,8 @@ Linked List is Empty
 
 ***Question:*** Determine the Big-O complexity of `insertFront()` and explain why traversal is not required.
 
-***Answer:*** The time complexity to add an item in the front is $O (1)$. We are taking a node and we are getting the
-head's link and we are moving it to the new node. And the head now points to the new node. There is no moving of data,
+***Answer:*** The time complexity to add an item in the front is $O (1)$. We are taking a node, and we are getting the
+head's link, and we are moving it to the new node. And the head now points to the new node. There is no moving of data,
 it is just added in the front where the pointers are changed.
 
 ## Part 6 — Insert at the End
@@ -568,7 +569,7 @@ Linked List is Empty
 ***Question:*** Explain why insertion at the end is O (N) when only a `head` pointer is maintained. Then explain how
 maintaining a `tail` pointer would change the complexity of insertion at the end.
 
-***Answer:*** The insertion at the end of the `LinkedList` is $O (N)$ because we have to iterate through he entire list
+***Answer:*** The insertion at the end of the `LinkedList` is $O (N)$ because we have to iterate through the entire list
 to get the last item on the list. Once we get it, we add the new node. A tail pointer will point to the last pointer. It
 is like the header but for the last item in the list. With this, we have direct access to the last item on the list. We
 can add it and update the tail pointer to the new last node.
@@ -1179,13 +1180,13 @@ Implement `~LinkedList();`, the destructor, it should traverse the list and dele
 
 Suppose a program repeatedly creates nodes but never calls `delete`. Explain:
 
-1. ***What happens to the allocated memory?*** The data in in memory that is not freed. It will continue to accumulate
-   and stare the computer from it's memory.
+1. ***What happens to the allocated memory?*** The data in memory that is not freed. It will continue to accumulate
+   and stare the computer from its memory.
 2. ***Why is this considered a memory leak?*** The data goes in memory but is not freed, aka unused data is not leaving
    memory. Like I said in the previous question, it will eat up all the memory.
 3. ***Why is memory management especially important when implementing linked structures with raw pointers?*** It is easy
    to forget to free memory. When using it in memory tight places, the inaccessible data can remain in the already
-   little memory. Data not needed removed from memory can save this from happening.
+   little memory. Data not needed to be removed from memory can save this from happening.
 
 ## Part 12 — Complexity Analysis
 
@@ -1214,7 +1215,7 @@ Consider an array and a singly linked list, each containing `N` elements. Compar
 3. **Removing the first element.** Removing a value from an array will be faster because we can
    do $\text{array.length} - 1$ to get the last item and remove it but in a list, we have to go through the list and
    then get to the last list before we can delete it.
-4. **Searching for a particular value.** Searching for a value will be faster in a n array because we have access to the
+4. **Searching for a particular value.** Searching for a value will be faster in an array because we have access to the
    array where it can order to make it faster for searching. The list will take longer to find it because the items
    could be anywhere in the list.
 5. **Memory layout.** An array is faster because all the items are next to each other in memory while the items in a
@@ -1314,19 +1315,20 @@ Connect your answers to your implementation and observations rather than providi
 2. ***The role of the `head` pointer.*** The role of the pointer is to have a visible starting point to the list and
    also to make sure the nodes don't end up leaking memory.
 3. ***Why traversal is O (N).*** We are going through every single node in the list.
-4. ***Why insertion at the beginning is O (1).*** We are moving the head to point at the new node where it's own pointer
+4. ***Why insertion at the beginning is O (1).*** We are moving the head to point at the new node where its own pointer
    will point to the old first node.
 5. ***Why insertion at the end is O (N) without a tail pointer.*** We have to go through the entire list to be able to
    add the new node.
 6. ***Why deletion requires careful pointer manipulation.*** If we forget to point the values to the right nodes, we
-   might lose data. If some of the ndoes are not deleted after removing, we have a memory leak.
+   might lose data. If some of the nodes are not deleted after removing, we have a memory leak.
 7. ***Why dynamically allocated nodes must eventually be deallocated.*** We can have many nodes in memory that do not
    need to be there. This will in turn increase the memory used by the program. These nodes, cannot be accessed and the
    only way to destroy them is to terminate the program.
 8. ***Why a linked list cannot perform binary search efficiently like an indexed array.*** Pointers will take longer
    than indexing. So sorting the list will take longer. Another thing is if the list is a singly linked list, we do not
    have a `tail` to give the end of the list. Even if we have a `tail`, we can only travel one way, left. So in order to
-   be able traverse both directions, we would need a `prev` pointer. This will increase the size of the node which makes
+   be able to traverse both directions, we would need a `prev` pointer. This will increase the size of the node which
+   makes
    it taking more space.
 9. ***When a linked list may be preferable to an array or vector.*** A linked list is most preferable for when we are
    doing many insertion and deletion operations. Arrays and vectors have to move data in order to insert or delete data.
