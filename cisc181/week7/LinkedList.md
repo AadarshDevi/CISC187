@@ -1014,19 +1014,19 @@ public:
 
 Write a `main()` function that demonstrates the major operations. Your output should make it possible to verify that the list remains correctly connected after every structural modification. Your test should include:
 
-1. [ ] Create an empty list
-2. [ ] Verify that it is empty
-3. [ ] Insert several values at the front
-4. [ ] Insert several values at the back
-5. [ ] Display the list
-6. [ ] Search for existing and missing values
-7. [ ] Insert after a value in the middle
-8. [ ] Attempt insertion after a nonexistent value
-9. [ ] Remove the first node
-10. [ ] Remove a middle node
-11. [ ] Remove the last node
-12. [ ] Attempt to remove a nonexistent value
-13. [ ] Display the final list
+1. [x] Create an empty list
+2. [x] Verify that it is empty
+3. [x] Insert several values at the front
+4. [x] Insert several values at the back
+5. [x] Display the list
+6. [x] Search for existing and missing values
+7. [x] Insert after a value in the middle
+8. [x] Attempt insertion after a nonexistent value
+9. [x] Remove the first node
+10. [x] Remove a middle node
+11. [x] Remove the last node
+12. [x] Attempt to remove a nonexistent value
+13. [x] Display the final list
 
 ```c++
 // 1. Create an empty LinkedList
