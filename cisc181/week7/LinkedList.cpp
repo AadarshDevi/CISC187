@@ -84,6 +84,14 @@ public:
     }
 
     void insertBack(int value);
+    void insertBack(int value) {
+        // check if list is empty
+        if (empty()) {
+            Node *node = new Node{value, head};
+            head = node;
+            return;
+        }
+
 
     bool insertAfter(int target, int value);
 
