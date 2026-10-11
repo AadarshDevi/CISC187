@@ -1074,6 +1074,20 @@ std::cout << "Removed Value: 1192 ? " << (list.remove(1192) ? "true" : "false") 
 list.display();
 ```
 
+### Output
+
+```terminalOutput
+Linked List is Empty
+75 60 45 30 15 25 50 75 100 125
+Item Found: 45 ? true
+Item Found: 10 ? false
+Inserted Value: 15 -> 230 ? true
+Inserted Value: 120 -> 40 ? false
+Removed Value: 75 ? true
+Removed Value: 230 ? true
+Removed Value: 125 ? true
+Removed Value: 1192 ? false
+60 45 30 15 25 50 75 100
 ```
 
 ## Part 11 — Memory Management
