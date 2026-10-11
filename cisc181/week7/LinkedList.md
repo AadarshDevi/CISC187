@@ -1092,6 +1092,30 @@ Removed Value: 1192 ? false
 
 ## Part 11 — Memory Management
 
+Your linked list dynamically allocates nodes using `new` Therefore, the class must release the allocated memory. Implement `~LinkedList();`, the destructor, it should traverse the list and delete every remaining node.
+
+```c++
+~LinkedList() {  
+    // get start of the node  
+    Node *current = head;  
+  
+    // loop through list  
+    while (current != nullptr) {  
+        // get next node  
+        Node *next = current->next;  
+  
+        // delete current node  
+        delete current;  
+  
+        // current node is next node  
+        current = next;  
+    }  
+  
+    // make head point to nothing  
+    head = nullptr;  
+}
+```
+
 ### Part 11 Analysis
 
 ## Part 12 — Complexity Analysis
