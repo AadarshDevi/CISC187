@@ -23,6 +23,26 @@ public:
     }
 
     void display() const;
+    void display() const {
+        // check if the list is empty
+        if (empty()) {
+            std::cout << "Linked List is Empty\n";
+        }
+
+        // a node to hold the pointers for the next value
+        Node *current = head;
+
+        // loop over each item in the list
+        while (current != nullptr) {
+            // print out the value
+            std::cout << current->data << " ";
+
+            // go to the next node
+            current = current->next;
+        }
+        std::cout << "\n";
+    }
+
 
     bool search(int value) const;
 
