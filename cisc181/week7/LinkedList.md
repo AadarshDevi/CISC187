@@ -118,7 +118,14 @@ while (temp != nullptr) {
 2. Worst Case: $O(N)$ - The data is at the end of the list.
 ## Part 3 — Build a `LinkedList` Class
 
-
+Before implementing them, we will describe them.
+1. `empty()`: is the linked list empty
+2. `display()`: display the values of the linked list
+3. `search(int value)`: Search the linked list for the value.
+4. `insertFront(int value)`: add the value to the front of the list
+5. `insertBack(int value)`: add the value to the back of the list
+6. `insertAfter(int target, int value)`: add the value after the target value.
+7. `remove(int value)`: remove the value
 
 ## Part 4
 ## Part 5
