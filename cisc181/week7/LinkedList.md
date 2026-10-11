@@ -657,6 +657,20 @@ bool insertAfter(int target, int value) {
 ### Test
 
 ```c++
+// Fill up empty list
+LinkedList list = LinkedList();  
+for (int i = 1; i <= 4; i++) {  
+    list.insertBack(i * 10);  
+}  
+list.display();  
+
+// insert a value after a value that does exists
+std::cout << "Insert Successful: 20 -> 25 ? " << (list.insertAfter(20, 25) ? "true" : "false") << "\n";  
+list.display();  
+
+// insert a value after a value that doesn't exist
+std::cout << "Insert Successful: 60 -> 80 ? " << (list.insertAfter(60, 80) ? "true" : "false") << "\n";  
+list.display();
 ```
 ### Output
 
