@@ -151,9 +151,10 @@ public:
 
         while (current != nullptr) {
             // node with the value to be removed found
-            if (current->data == value) {
-                // the node that has the value is not connected to the list anymore
-                previous->next = current->next;
+            if (current->data != value) {
+                previous = current; // current node is now previous node
+                current = current->next; // the next node is the current node
+                continue;
             }
 
             // current node is now previous node
