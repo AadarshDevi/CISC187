@@ -160,7 +160,23 @@ public:
     }
 
     ~LinkedList() {
-        delete head; // updated later
+        // get start of the node
+        Node *current = head;
+
+        // loop through list
+        while (head != nullptr) {
+            // get next node
+            Node *next = head->next;
+
+            // delete current node
+            delete current;
+
+            // current node is next node
+            current = next;
+        }
+
+        // make head point to nothing
+        head = nullptr;
     }
 };
 
