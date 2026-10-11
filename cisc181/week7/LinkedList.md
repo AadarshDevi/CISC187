@@ -367,6 +367,15 @@ bool empty() const {
 
 
 ### Pointer Analysis
+
+1. ***Explain why the order of pointer updates matters.*** The order of the pointers matter because they dictate how the
+   items in the list are ordered. If two pointers switch, then the two nodes will have their places switched. It means
+   the values will also be in a different order. If the order in a list is $10\rightarrow20\rightarrow30$ then a pointer
+   switch can change the order: $10\rightarrow30\rightarrow20$.
+2. ***What could happen if `head` were changed before preserving the connection to the existing list?*** If head was
+   changed before preserving the connection, the new node will be connected to the list, but the rest of the list will
+   be lost to memory. Those links were severed and not saved.
+
 ### Complexity
 ## Part 6 — Insert at the End
 ### Part 6 Analysis
