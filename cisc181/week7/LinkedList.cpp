@@ -190,19 +190,15 @@ public:
 
 int main() {
     LinkedList list = LinkedList();
+    for (int i = 1; i <= 10; i++) {
+        list.insertBack(i * 10);
+    }
     list.display();
 
-    list.insertFront(20);
-    list.display();
-
-    list.insertBack(30);
-    list.display();
-
-    list.insertFront(10);
-    list.display();
-
-    list.insertBack(40);
-    list.display();
+    std::cout << "Found Value: 10 ? " << list.search(10) << "\n";
+    std::cout << "Found Value: 50 ? " << list.search(50) << "\n";
+    std::cout << "Found Value: 100 ? " << list.search(100) << "\n";
+    std::cout << "Found Value: 120 ? " << list.search(120) << "\n";
 
     return 0;
 }
