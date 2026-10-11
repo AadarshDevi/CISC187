@@ -182,18 +182,15 @@ public:
 };
 
 int main() {
-    LinkedList list; // = LinkedList();
-
-    list.insertFront(5);
-    list.insertFront(4);
-    list.insertFront(3);
-    list.insertFront(2);
-    list.insertFront(1);
-
+    LinkedList list = LinkedList();
     list.display();
 
-    list.insertBack(0);
+    list.insertFront(30);
+    list.insertFront(20);
+    list.insertFront(10);
+    list.display();
 
+    list.insertFront(5);
     list.display();
 
     return 0;
