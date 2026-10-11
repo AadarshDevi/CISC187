@@ -106,7 +106,9 @@ public:
 
     bool remove(int value);
 
-    ~LinkedList();
+    bool remove(int value) {
+        return false;
+    }
 
     ~LinkedList() {
         delete head; // updated later
