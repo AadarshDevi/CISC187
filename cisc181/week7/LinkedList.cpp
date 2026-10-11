@@ -157,14 +157,16 @@ public:
                 continue;
             }
 
-            // current node is now previous node
-            previous = current;
-
-            // the next node is the current node
-            current = current->next;
+            // the node that has the value is not connected to the list anymore
+            if (previous == nullptr) {
+                head = current->next;
+            } else {
+                previous->next = current->next;
+            }
 
             // delete current
             delete current;
+            return true;
         }
 
         return true;
