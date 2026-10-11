@@ -1126,15 +1126,38 @@ Suppose a program repeatedly creates nodes but never calls `delete`. Explain:
 
 ## Part 12 — Complexity Analysis
 
+Complete the table for your implementation. Assume the list maintains a `head` pointer but **no tail pointer**. Do not provide only the Big-O notation. Explain what traversal or pointer manipulation causes each result.
+
+| Operation                      | Big-O  | Explanation                                                                                                                                                                                        |
+| ------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Access element at position `i` | $O(N)$ | The item can be anywhere in the list which means we have to traverse the list. If it is long, it will take longer.                                                                                 |
+| Search                         | $O(N)$ | We have to search for the number through the entire list. If there are $N$ values, we have to search all of them.                                                                                  |
+| Insert at beginning            | $O(1)$ | We add a new node and change what the pointers are pointing at. we are not moving or traversing data. We can use the `head` to get the first element and then insert the new node in between them. |
+| Insert at end                  | $O(N)$ | We are adding the value at the end of the list. But because we do not have a `tail`, we have to traverse the entire list to be able to get the last node and append it.                            |
+| Insert after a specified value | $O(N)$ | Like traversing the end, we have to traverse the list to find the specific item and add the new value after that.                                                                                  |
+| Delete first node              | $O(1)$ | We get the `head` and we delete the node. Simple.                                                                                                                                                  |
+| Delete specified value         | $O(N)$ | We have to traverse the list in order to find the value then get the previous node and next node and connect them.                                                                                 |
+| Traverse entire list           | $O(N)$ | We are going through every single item in the list which means $N$ items will take time. If $N$ is bigger, it will take longer to travel.                                                          |
+
 ## Part 13 — Linked List vs. Array
+
+
 
 ### Part 13 Analysis
 
+
+
 ## Part 14 — Reasoning About a Tail Pointer
+
+
 
 ## Part 15 — Singly vs. Doubly Linked Lists
 
+
+
 ## Part 16 — Circular Linked Lists
+
+
 
 ## Analysis and Reflection
 
