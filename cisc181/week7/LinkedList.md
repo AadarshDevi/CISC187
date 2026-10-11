@@ -337,6 +337,7 @@ public:
 };
 ```
 ## Part 4 — Initialize the List
+```
 ## Part 5 — Insert at the Beginning
 ### Pointer Analysis
 ### Complexity
