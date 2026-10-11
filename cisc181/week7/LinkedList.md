@@ -695,6 +695,63 @@ Insert Successful: 60 -> 80 ? false
 
 ## Part 9 — Delete a Node
 
+Implement `bool remove(int value);`. Before calling `delete`, make sure the remaining nodes are properly reconnected. Your function must correctly handle:
+1. [ ] An empty list.
+2. [ ] Removing the first node.
+3. [ ] Removing a middle node.
+4. [ ] Removing the last node.
+5. [ ] Attempting to remove a value that does not exist.
+
+### Example
+
+```c++
+// Before 10 → 20 → 30 → 40 → nullptr
+remove(30);
+// After: 10 → 20 → 40 → nullptr
+```
+
+### Method `delete()`
+
+```c++
+bool remove(int value) {  
+    // list is empty  
+    if (empty()) return false;  
+  
+    // keep track of current and previous node  
+    Node *current = head;  
+    Node *previous = nullptr;  
+  
+    while (current != nullptr) {  
+        // node with the value to be removed found  
+        if (current->data == value) {  
+            // the node that has the value is not connected to the list anymore  
+            previous->next = current->next;  
+        }  
+  
+        // current node is now previous node  
+        previous = current;  
+  
+        // the next node is the current node  
+        current = current->next;  
+  
+        // delete current  
+        delete current;  
+    }  
+  
+    return true;  
+}
+```
+
+### Test
+
+```c++
+```
+
+### Output
+
+```terminalOutput
+```
+
 ### Part 9 Analysis
 
 ## Part 10 — Test the Complete Linked List
