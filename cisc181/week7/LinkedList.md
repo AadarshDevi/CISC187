@@ -88,6 +88,35 @@ Your diagram should identify:
 5. ***What would happen to your ability to access the list if `head` were lost?*** We would not be able access the data at all. The address of `Node first` is lost which subsequently means the rest of the Nodes' address are lost.
 ## Part 2 — Trace a Linked List
 ## Part 3
+
+We are given a linked list:
+```
+head → 10 → 20 → 30 → 40 → nullptr
+```
+
+and the below program to iterate through it.
+```c++
+Node* temp = head;
+
+while (temp != nullptr) {
+    cout << temp->data << " ";
+    temp = temp->next;
+}
+```
+
+| Iteration | `temp->data` | `temp->next` |
+| :-------: | :----------: | :----------: |
+|     1     |      10      | Second Node  |
+|     2     |      20      |  Third Node  |
+|     3     |      30      | Fourth Node  |
+|     4     |      40      |   nothing    |
+***Question: Explain why the traversal stops.*** The traversal stops because the last Node, `fourth` does not have a pointer to a valid Node. There is no node, so it points to nothing.
+### Part 2 Complexity
+***Question:*** If the list contains `N` nodes, determine the Big-O complexity of traversing the entire list and explain your reasoning.
+
+***Answer:*** $N$ Nodes contain $N-1$ pointers. So for each node, the iterator has to go from the front to the back. if it misses it, it has to go to the start and then iterate. It cannot just go back a `Node`. So based on this information,
+1. Best Case: $O(1)$ - The data needed is in the front
+2. Worst Case: $O(N)$ - The data is at the end of the list.
 ## Part 4
 ## Part 5
 ## Part 6
