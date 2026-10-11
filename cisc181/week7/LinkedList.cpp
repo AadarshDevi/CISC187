@@ -132,6 +132,30 @@ public:
     }
 
     bool remove(int value) {
+        // list is empty
+        if (empty()) return false;
+
+        // keep track of current and previous node
+        Node *current = head;
+        Node *previous = nullptr;
+
+        while (current != nullptr) {
+            // node with the value to be removed found
+            if (current->data == value) {
+                // the node that has the value is not connected to the list anymore
+                previous->next = current->next;
+            }
+
+            // current node is now previous node
+            previous = current;
+
+            // the next node is the current node
+            current = current->next;
+
+            // delete current
+            delete current;
+        }
+
         return false;
     }
 
