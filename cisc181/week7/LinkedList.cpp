@@ -104,7 +104,9 @@ public:
         lastNode->next = node;
     }
 
-    bool remove(int value);
+    bool insertAfter(int target, int value) {
+        return false;
+    }
 
     bool remove(int value) {
         return false;
