@@ -194,22 +194,48 @@ public:
 };
 
 int main() {
-    // 1. empty linked list
+    // 1. Create an empty list
     LinkedList list = LinkedList();
+
+    // 2. Verify that it is empty
     list.display();
 
-    // 2. verify list is emoty
-    list.display();
-
-    // 5. add in front
+    // 3. Insert several values at the front
     for (int i = 1; i < 6; i++) {
         list.insertFront(i * 10 * 3 / 2);
     }
 
-    // 4. add in back
+    // 4. Insert several values at the back
     for (int i = 1; i < 6; i++) {
         list.insertBack(i * 10 * 5 / 2);
     }
+
+    // 5. Display the list
+    list.display();
+
+    // 6. Search for existing and missing values
+    std::cout << "Item Found: 45 ? " << (list.search(45) ? "true" : "false") << "\n";
+    std::cout << "Item Found: 10 ? " << (list.search(10) ? "true" : "false") << "\n";
+
+    // 7. Insert after a value in the middle
+    std::cout << "Inserted Value: 15 -> 230 ? " << (list.insertAfter(15, 230) ? "true" : "false") << "\n";
+
+    // 8. Attempt insertion after a nonexistent value
+    std::cout << "Inserted Value: 120 -> 40 ? " << (list.insertAfter(120, 40) ? "true" : "false") << "\n";
+
+    // 9. Remove the first node
+    std::cout << "Removed Value: 75 ? " << (list.remove(75) ? "true" : "false") << "\n";
+
+    // 10. Remove a middle node
+    std::cout << "Removed Value: 230 ? " << (list.remove(230) ? "true" : "false") << "\n";
+
+    // 11. Remove the last node
+    std::cout << "Removed Value: 125 ? " << (list.remove(125) ? "true" : "false") << "\n";
+
+    // 12. Attempt to remove a nonexistent value
+    std::cout << "Removed Value: 1192 ? " << (list.remove(1192) ? "true" : "false") << "\n";
+
+    // 13. Display the final list
     list.display();
 
     return 0;
