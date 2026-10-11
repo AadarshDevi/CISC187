@@ -195,14 +195,39 @@ public:
 
 int main() {
     LinkedList list = LinkedList();
-    for (int i = 1; i <= 4; i++) {
+    list.display();
+
+    // empty list
+    std::cout << "Remove Node: 30 ? " << (list.remove(30) ? "true" : "false") << "\n";
+    list.display();
+
+    // delete from a single item list
+    list.insertBack(1 * 10);
+    list.display();
+
+    std::cout << "Removed Node: 10 ? " << (list.remove(10) ? "true" : "false") << "\n";
+    list.display();
+
+    // populate list
+    for (int i = 2; i <= 10; i++) {
         list.insertBack(i * 10);
     }
     list.display();
 
-    std::cout << "Insert Successful: 20 -> 25 ? " << (list.insertAfter(20, 25) ? "true" : "false") << "\n";
+    // remove first node
+    std::cout << "Removed First Node: 10 ? " << (list.remove(10) ? "true" : "false") << "\n";
     list.display();
-    std::cout << "Insert Successful: 60 -> 80 ? " << (list.insertAfter(60, 80) ? "true" : "false") << "\n";
+
+    // remove middle node
+    std::cout << "Removed Middle Node: 50 ? " << (list.remove(50) ? "true" : "false") << "\n";
+    list.display();
+
+    // remove last node
+    std::cout << "Removed Last Node: 100 ? " << (list.remove(100) ? "true" : "false") << "\n";
+    list.display();
+
+    // empty list
+    std::cout << "Nonexistent Node: 120 ? " << (list.remove(120) ? "true" : "false") << "\n";
     list.display();
 
     return 0;
