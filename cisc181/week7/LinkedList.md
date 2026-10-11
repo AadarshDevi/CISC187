@@ -442,7 +442,7 @@ list.insertFront(5);
 list.display();
 ```
 
-and the output is
+### Output
 
 ```terminalOutput
 Linked List is Empty
