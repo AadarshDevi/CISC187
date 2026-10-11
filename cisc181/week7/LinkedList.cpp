@@ -94,7 +94,15 @@ public:
         // create new last node
         Node *node = new Node{value, nullptr};
 
-    bool insertAfter(int target, int value);
+        // find the last node
+        Node *lastNode = head;
+        while (lastNode->next != nullptr) {
+            lastNode = lastNode->next;
+        }
+
+        // set the last node to point at the new node
+        lastNode->next = node;
+    }
 
     bool remove(int value);
 
