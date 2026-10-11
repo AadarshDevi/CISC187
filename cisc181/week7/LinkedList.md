@@ -1152,7 +1152,9 @@ Consider an array and a singly linked list, each containing `N` elements. Compar
 
 ### Part 13 Analysis
 
+***Question:*** Explain why linked lists can perform some insertion and deletion operations efficiently but cannot provide O(1) random access.
 
+***Answer:***
 
 ## Part 14 — Reasoning About a Tail Pointer
 
@@ -1168,9 +1170,6 @@ Consider an array and a singly linked list, each containing `N` elements. Compar
 
 ## Analysis and Reflection
 
-***Question:***
-
-***Answer:***
 
 ***Question:***
 
