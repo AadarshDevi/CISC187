@@ -807,7 +807,10 @@ Nonexistent Node: 120 ? false
 
 ### Part 9 Analysis
 
-
+1. ***Why does deleting the head require special handling?*** If the head is only deleted, the rest of the list will remain in memory which means they cannot be freed from memory. So before the head is deleted, we preserve the link to the first node so we can delete the entire list.
+2. ***Why must access to the node be preserved before it is deleted?*** When the pointer to the next node is deleted, there is no way to access the node or any node after that. It's lost to memory. If it is preserved, we will be able to access the data after the preserved node.
+3. ***What is a memory leak?*** if the node connection isn't preserved, the rest of the nodes are inaccessible but still present in memory. They cannot be deleted, access or be released. These nodes will gather in memory and grow as time goes. At a certain point they can end up swallowing the entire memory. This memory cannot be used. It is wasted. Nothing can use it.
+4. ***Why is accessing a node after `delete` unsafe?*** Accessing a node after deleting it is like burning a book and then trying to read it. There's nothing. You are trying to find the book and searching frantically for something that no longer exists. For memory, we are trying to access information that no longer exists. We are trying to read info from a specific address that no longer exists.
 
 ## Part 10 — Test the Complete Linked List
 
@@ -828,10 +831,6 @@ Nonexistent Node: 120 ? false
 ## Part 16 — Circular Linked Lists
 
 ## Analysis and Reflection
-
-***Question:***
-
-***Answer:***
 
 ***Question:***
 
