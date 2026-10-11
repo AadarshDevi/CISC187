@@ -185,6 +185,9 @@ Before implementing them, we will describe them.
 
 Below is my interpretation of the LinkedList class.
 
+>[!NOTE]
+>The code for LinkedList is updated during each parts if there were any mistakes.
+
 ```c++  
 struct Node {  
     int data;  
