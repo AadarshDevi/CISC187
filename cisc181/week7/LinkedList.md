@@ -468,6 +468,73 @@ Linked List is Empty
 
 ## Part 6 — Insert at the End
 
+Implement `void insertBack(int value);` Assume your class maintains only `Node* head;` and does **not** maintain a tail pointer. Your implementation must correctly handle:
+1. [x] An empty list.
+2. [x] A list containing one node.
+3. [x] A list containing multiple nodes.
+
+```c++
+  
+void insertBack(int value) {  
+    // check if list is empty  
+    if (empty()) {  
+        Node *node = new Node{value, head};  
+        head = node;  
+        return;  
+    }  
+  
+    // create new last node  
+    Node *node = new Node{value, nullptr};  
+  
+    // check if the list has a single node  
+    if (head->next == nullptr) {  
+        head->next = node;  
+        return;
+    }  
+      
+    // find the last node  
+    Node *lastNode = head;  
+    while (lastNode->next != nullptr) {  
+        lastNode = lastNode->next;  
+    }  
+  
+    // set the last node to point at the new node  
+    lastNode->next = node;  
+}
+```
+
+### Test Suite
+
+```c++
+// Empty Linked List
+LinkedList list = LinkedList();  
+list.display();  
+  
+// Add 1 item to simulate single item
+list.insertFront(20);  
+list.display();  
+
+list.insertBack(30);  
+list.display();  
+
+// Add another item to simulate multiple items
+list.insertFront(10);
+list.display();  
+  
+list.insertBack(40);  
+list.display();
+```
+
+### Output
+
+```terminalOutput
+Linked List is Empty
+20
+20 30
+10 20 30
+10 20 30 40
+```
+
 ### Part 6 Analysis
 
 ## Part 7 — Search the List
