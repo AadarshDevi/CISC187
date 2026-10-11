@@ -713,7 +713,3 @@ bool insertAfter(int target, int value) {
 ***Question:***
 
 ***Answer:***
-
-***Question:***
-
-***Answer:***
