@@ -53,6 +53,18 @@ public:
 
 
     bool search(int value) const;
+        // go through each node to check if the value exists
+        while (current != nullptr) {
+            if (current->data == value) {
+                // value found
+                return true;
+            }
+        }
+
+        // value not found
+        return false;
+    }
+
 
     void insertFront(int value);
 
