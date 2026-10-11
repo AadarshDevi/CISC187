@@ -83,7 +83,6 @@ public:
         head = newNode;
     }
 
-    void insertBack(int value);
     void insertBack(int value) {
         // check if list is empty
         if (empty()) {
@@ -92,6 +91,8 @@ public:
             return;
         }
 
+        // create new last node
+        Node *node = new Node{value, nullptr};
 
     bool insertAfter(int target, int value);
 
