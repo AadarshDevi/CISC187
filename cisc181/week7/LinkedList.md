@@ -462,6 +462,10 @@ Linked List is Empty
 
 ### Complexity
 
+***Question:*** Determine the Big-O complexity of `insertFront()` and explain why traversal is not required.
+
+***Answer:*** The time complexity to add an item in the front is $O(1)$. We are taking a node and we are getting the head's link and we are moving it to the new node. And the head now points to the new node. There is no moving of data, it is just added in the front where the pointers are changed.
+
 ## Part 6 — Insert at the End
 
 ### Part 6 Analysis
