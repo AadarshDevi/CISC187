@@ -638,6 +638,7 @@ bool insertAfter(int target, int value) {
         targetNode = targetNode->next;  
     }  
   
+	// the target value doesn't exist
     if (targetNode == nullptr) return false;  
   
     // get target's old next pointer  
