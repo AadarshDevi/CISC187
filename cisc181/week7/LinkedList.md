@@ -683,6 +683,9 @@ Insert Successful: 60 -> 80 ? false
 ```
 ### Pointer Reasoning
 
+***Question:*** Before writing the function, explain the two pointer changes required to insert the new node without disconnecting the remainder of the list.
+
+***Answer:*** To insert a value, the pointer the current and previous nodes are needed. The previous node connects to the new node and the new node connects to the next node. ***(Answered before writing code)***
 ### Complexity
 
 ## Part 9 — Delete a Node
