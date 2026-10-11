@@ -1192,7 +1192,21 @@ Answer:
 
 ## Part 16 — Circular Linked Lists
 
+You do **not** need to implement a complete circular linked list. Consider:
 
+```
+head
+ ↓
+10 → 20 → 30 → 40
+↑              |
+|______________|
+```
+
+In a circular singly linked list: `last->next == head` rather than `last->next == nullptr`. Answer:
+1. ***Why would a normal `while (temp != nullptr)` traversal fail?*** This is like circular indexing in the HashTable except here, the last item on the list will be linked to the first item on the list.
+2. ***What condition could determine when one complete traversal has finished?*** A count variable can be useful to keep track of the no of items int he list. It can help us traverse the list without endlessly traversing through.
+3. ***Why are circular linked lists suitable for repeated cyclic processing?*** In circular linking, the last item is linked to the first item, this means we would go in circles instead of a row.  Anything that needs to go forever can have something like this.
+4. ***Give one application where circular behavior would be useful.*** The only useful application I can think of using Circular Linked Lists would be for performing some tasks that have to happen in order for a very long time, like a scheduler in a microcontroller, or something that is trying to pull information from the internet so it can be up to date.
 
 ## Analysis and Reflection
 
