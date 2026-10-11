@@ -1212,9 +1212,3 @@ In a circular singly linked list: `last->next == head` rather than `last->next =
 
 
 ***Question:***
-
-***Answer:***
-
-***Question:***
-
-***Answer:***
