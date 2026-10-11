@@ -1212,6 +1212,7 @@ In a circular singly linked list: `last->next == head` rather than `last->next =
 
 Connect your answers to your implementation and observations rather than providing only definitions. Briefly discuss:
 1. ***Why linked lists do not require contiguous memory.*** The nodes have pointers to the next or previous node in the list so because of this, the nodes can be anywhere in memory.
+2. ***The role of the `head` pointer.*** The role of the pointer is to have a visible starting point to the list and also to make sure the nodes don't end up leaking memory.
 3. ***Why traversal is O(N).*** We are going through every single node in the list.
 4. ***Why insertion at the beginning is O(1).*** We are moving the head to point at the new node where it's own pointer will point to the old first node.
 5. ***Why insertion at the end is O(N) without a tail pointer.*** We have to go through the entire list to be able to add the new node.
