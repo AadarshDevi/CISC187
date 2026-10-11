@@ -1174,7 +1174,21 @@ Answer:
 
 ## Part 15 — Singly vs. Doubly Linked Lists
 
+You do **not** need to implement a complete doubly linked list for this part. A doubly linked-list node contains:
 
+```
+struct Node {
+    int data;
+    Node* prev;
+    Node* next;
+};
+```
+
+Answer:
+1. **What additional information does `prev` provide?** `prev` is `next` but for the opposite direction. `next` is a pointer to a node next in line in the list while `prev` is a pointer to the node that is before the current node.
+2. **Why can a doubly linked list traverse in both directions?** Because we have access to the front and back, moving through the list will be the same. One goes to the right, and the other left.
+3. **How does the additional pointer affect memory usage?** Memory will increase for each node because it is carrying an additional pointer.
+4. **If you already have a pointer directly to a node, why can deletion be easier in a doubly linked list?** deletion will become faster because we can find the `targetNode` and get it's previous and next nodes and then link them both. then we can delete the `targetNode`. It will make linking easier.
 
 ## Part 16 — Circular Linked Lists
 
