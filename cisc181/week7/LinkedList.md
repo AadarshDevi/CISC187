@@ -543,6 +543,37 @@ Linked List is Empty
 
 ## Part 7 — Search the List
 
+Implement `bool search(int value) const;`. Traverse the list starting from `head` and return `true` if the value exists and `false` otherwise. Test:
+
+1. [ ] ***10***: A value at the beginning.
+2. [ ] ***50***: A value in the middle
+3. [ ] ***100***: A value at the end.
+4. [ ] ***120***: A value not present.
+
+```c++
+// Populate an Empty List
+LinkedList list = LinkedList();  
+for (int i = 1; i <= 10; i++) {  
+	list.insertBack(i * 10);  
+}  
+list.display();
+  
+std::cout << "Found Value: 10 ? " << list.search(10) << "\n";
+std::cout << "Found Value: 50 ? " << list.search(50) << "\n";  
+std::cout << "Found Value: 100 ? " << list.search(100) << "\n";  
+std::cout << "Found Value: 120 ? " << list.search(120) << "\n";
+```
+
+### Output
+
+```terminalOutput
+10 20 30 40 50 60 70 80 90 100
+Found Value: 10 ? 1    // true
+Found Value: 50 ? 1    // true
+Found Value: 100 ? 1   // true
+Found Value: 120 ? 0   // false
+```
+
 ### Complexity Analysis
 
 ## Part 8 — Insert After a Specific Value
