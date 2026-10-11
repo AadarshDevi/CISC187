@@ -63,6 +63,16 @@ public:
         return false;
     }
 
+    void insertFront(int value) {
+        // check if empty
+        if (empty()) {
+            Node *node = new Node{value, nullptr};
+            head = node;
+            return;
+        }
+
+        // get the first node of the list
+        Node *firstNode = head;
 
     void insertFront(int value);
 
