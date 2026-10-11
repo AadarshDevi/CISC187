@@ -87,7 +87,6 @@ Your diagram should identify:
 4. ***What does `third->next` contain?*** It is a `nullptr` which means it is pointing to nothing.
 5. ***What would happen to your ability to access the list if `head` were lost?*** We would not be able access the data at all. The address of `Node first` is lost which subsequently means the rest of the Nodes' address are lost.
 ## Part 2 — Trace a Linked List
-## Part 3
 
 We are given a linked list:
 ```
@@ -117,6 +116,10 @@ while (temp != nullptr) {
 ***Answer:*** $N$ Nodes contain $N-1$ pointers. So for each node, the iterator has to go from the front to the back. if it misses it, it has to go to the start and then iterate. It cannot just go back a `Node`. So based on this information,
 1. Best Case: $O(1)$ - The data needed is in the front
 2. Worst Case: $O(N)$ - The data is at the end of the list.
+## Part 3 — Build a `LinkedList` Class
+
+
+
 ## Part 4
 ## Part 5
 ## Part 6
