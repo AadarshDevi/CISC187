@@ -105,7 +105,30 @@ public:
     }
 
     bool insertAfter(int target, int value) {
-        return false;
+        // node cannot be inserted after a value in an empty list
+        if (empty()) return false;
+
+
+        // find target node
+        Node *targetNode = head;
+
+        while (targetNode != nullptr) {
+            if (targetNode->data == target) {
+                break;
+            }
+        }
+
+        // get target's old next pointer
+        Node *oldNext = targetNode->next;
+
+        // create a new node with the pointer to the target's old next pointer
+        Node *newNode = new Node{value, oldNext};
+
+        // target node points to new node
+        targetNode->next = newNode;
+
+        // node inserted successfully
+        return true;
     }
 
     bool remove(int value) {
