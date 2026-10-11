@@ -1141,7 +1141,14 @@ Complete the table for your implementation. Assume the list maintains a `head` p
 
 ## Part 13 — Linked List vs. Array
 
-
+Consider an array and a singly linked list, each containing `N` elements. Compare them for:
+1. **Accessing the element at index `N/2`.** An array will be faster because it has direct access to all the indices. It can directly get the value. The list has to go through every item using pointers to get the middle value.
+2. **Inserting at the beginning.** Adding a new value at the front is faster in the list because we change where the pointers are pointing but in an array, we have to shift the value to the right so we have space for the new value.
+3. **Removing the first element.** Removing a value from an array will be faster because we can do $\text{array.length} - 1$ to get the last item and remove it but in a list, we have to go through the list and then get to the last list before we can delete it.
+4. **Searching for a particular value.** Searching for a value will be faster in a n array because we have access to the array where it can order to make it faster for searching. The list will take longer to find it because the items could be anywhere in the list.
+5. **Memory layout.** An array is faster because all the items are next to each other in memory while the items in a list are all over memory and need to get the pointers to find the next item in the list.
+6. **Ability to grow dynamically.** Lists can grow easily because the pointers can just point to the new node and not have to worry about changing or shifting values. For an array, we have to create a larger list and then copy the old values to the new extended list and only then can we add the new value.
+7. **Additional memory required per element.** For an array because the items are right next to each other, we do not need pointers which will take up more space in memory. Linked lists other than storing data will have the pointers.
 
 ### Part 13 Analysis
 
