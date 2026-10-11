@@ -192,15 +192,15 @@ public:
 
 int main() {
     LinkedList list = LinkedList();
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 4; i++) {
         list.insertBack(i * 10);
     }
     list.display();
 
-    std::cout << "Found Value: 10 ? " << list.search(10) << "\n";
-    std::cout << "Found Value: 50 ? " << list.search(50) << "\n";
-    std::cout << "Found Value: 100 ? " << list.search(100) << "\n";
-    std::cout << "Found Value: 120 ? " << list.search(120) << "\n";
+    std::cout << "Insert Successful: 20 -> 25 ? " << (list.insertAfter(20, 25) ? "true" : "false") << "\n";
+    list.display();
+    std::cout << "Insert Successful: 60 -> 80 ? " << (list.insertAfter(60, 80) ? "true" : "false") << "\n";
+    list.display();
 
     return 0;
 }
