@@ -166,7 +166,7 @@ public:
             delete current;
         }
 
-        return false;
+        return true;
     }
 
     ~LinkedList() {
