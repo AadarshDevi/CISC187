@@ -22,7 +22,6 @@ public:
         return head == nullptr;
     }
 
-    void display() const;
     void display() const {
         // check if the list is empty
         if (empty()) {
@@ -42,6 +41,15 @@ public:
         }
         std::cout << "\n";
     }
+
+    bool search(int value) const {
+        // check if list is empty
+        if (empty()) {
+            return false;
+        }
+
+        // pointer to the first node
+        Node *current = head;
 
 
     bool search(int value) const;
