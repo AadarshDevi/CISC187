@@ -612,6 +612,56 @@ Found Value: 120 ? 0   // false
 
 ## Part 8 — Insert After a Specific Value
 
+Implement `bool insertAfter(int target, int value);`. Return `false` if `target` cannot be found.
+### Example
+
+```c++
+// Before: 10 → 20 → 30 → 40 → nullptr
+insertAfter(20, 25);
+// After:  10 → 20 → 25 → 30 → 40 → nullptr
+```
+
+### Method `insertAfter()`
+
+```c++
+bool insertAfter(int target, int value) {  
+    // node cannot be inserted after a value in an empty list  
+    if (empty()) return false;  
+  
+    // find target node  
+    Node *targetNode = head;  
+  
+    while (targetNode != nullptr) {  
+        if (targetNode->data == target) {  
+            break;  
+        }  
+        targetNode = targetNode->next;  
+    }  
+  
+    if (targetNode == head || targetNode == nullptr) return false;  
+  
+    // get target's old next pointer  
+    Node *oldNext = targetNode->next;  
+  
+    // create a new node with the pointer to the target's old next pointer  
+    Node *newNode = new Node{value, oldNext};  
+  
+    // target node points to new node  
+    targetNode->next = newNode;  
+  
+    // node inserted successfully  
+    return true;  
+}
+```
+
+### Test
+
+```c++
+```
+### Output
+
+```terminalOutput
+```
 ### Pointer Reasoning
 
 ### Complexity
