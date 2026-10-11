@@ -28,6 +28,7 @@ public:
         // check if the list is empty
         if (empty()) {
             std::cout << "Linked List is Empty\n";
+            return;
         }
 
         // a node to hold the pointers for the next value
