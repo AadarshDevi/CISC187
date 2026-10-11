@@ -60,6 +60,7 @@ public:
                 // value found
                 return true;
             }
+            current = current->next;
         }
 
         // value not found
