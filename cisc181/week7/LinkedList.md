@@ -548,10 +548,35 @@ Linked List is Empty
 
 Implement `bool search(int value) const;`. Traverse the list starting from `head` and return `true` if the value exists and `false` otherwise. Test:
 
-1. [ ] ***10***: A value at the beginning.
-2. [ ] ***50***: A value in the middle
-3. [ ] ***100***: A value at the end.
-4. [ ] ***120***: A value not present.
+1. [x] ***10***: A value at the beginning.
+2. [x] ***50***: A value in the middle
+3. [x] ***100***: A value at the end.
+4. [x] ***120***: A value not present.
+
+```c++
+bool search(int value) const {  
+    // check if list is empty  
+    if (empty()) {  
+        return false;  
+    }  
+  
+    // pointer to the first node  
+    Node *current = head;  
+  
+    // go through each node to check if the value exists  
+    while (current != nullptr) {  
+        if (current->data == value) {  
+            // value found  
+            return true;  
+        }  
+        current = current->next; // next node
+    }  
+  
+    // value not found  
+    return false;  
+}
+```
+### Test Suite
 
 ```c++
 // Populate an Empty List
