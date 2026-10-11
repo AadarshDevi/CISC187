@@ -108,6 +108,9 @@ public:
 
     ~LinkedList();
 
+    ~LinkedList() {
+        delete head; // updated later
+    }
 };
 
 int main() {
