@@ -537,6 +537,10 @@ Linked List is Empty
 
 ### Part 6 Analysis
 
+***Question:*** Explain why insertion at the end is O(N) when only a `head` pointer is maintained. Then explain how maintaining a `tail` pointer would change the complexity of insertion at the end.
+
+***Answer:*** The insertion at the end of the `LinkedList` is $O(N)$ because we have to iterate through he entire list to get the last item on the list. Once we get it, we add the new node. A tail pointer will point to the last pointer. It is like the header but for the last item in the list. With this, we have direct access to the last item on the list. We can add it and update the tail pointer to the new last  node.
+
 ## Part 7 — Search the List
 
 ### Complexity Analysis
@@ -570,10 +574,6 @@ Linked List is Empty
 ## Part 16 — Circular Linked Lists
 
 ## Analysis and Reflection
-
-***Question:***
-
-***Answer:***
 
 ***Question:***
 
