@@ -1029,15 +1029,13 @@ Write a `main()` function that demonstrates the major operations. Your output sh
 13. [x] Display the final list
 
 ```c++
-// 1. Create an empty LinkedList
-LinkedList list = LinkedList();
-
-// 2. Verify that it is empty
-// Output: "Linked List is Empty"
-list.display();
-
-// 3. Insert several values at the front
-// Output: 75 60 45 30 15
+// 1. Create an empty list  
+LinkedList list = LinkedList();  
+  
+// 2. Verify that it is empty  
+list.display();  
+  
+// 3. Insert several values at the front  
 for (int i = 1; i < 6; i++) {  
     list.insertFront(i * 10 * 3 / 2);  
 }
