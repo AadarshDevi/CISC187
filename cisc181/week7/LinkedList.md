@@ -1038,10 +1038,9 @@ list.display();
 // 3. Insert several values at the front  
 for (int i = 1; i < 6; i++) {  
     list.insertFront(i * 10 * 3 / 2);  
-}
-
-// 4. Insert several values at the back
-// Output: 75 60 45 30 15 25 50 75 100 125
+}  
+  
+// 4. Insert several values at the back  
 for (int i = 1; i < 6; i++) {  
     list.insertBack(i * 10 * 5 / 2);  
 }
