@@ -1154,7 +1154,7 @@ Consider an array and a singly linked list, each containing `N` elements. Compar
 
 ***Question:*** Explain why linked lists can perform some insertion and deletion operations efficiently but cannot provide O(1) random access.
 
-***Answer:***
+***Answer:*** :Linked Lists can easily do insertions and deletions efficiently because they can add or delete a new node and do not have to shifts the values in the list. After the item is inserted or deleted, the pointers point to a new node instead. This makes inserting and deleting nodes very fast.
 
 ## Part 14 — Reasoning About a Tail Pointer
 
