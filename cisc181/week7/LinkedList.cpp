@@ -194,40 +194,22 @@ public:
 };
 
 int main() {
+    // 1. empty linked list
     LinkedList list = LinkedList();
     list.display();
 
-    // empty list
-    std::cout << "Remove Node: 30 ? " << (list.remove(30) ? "true" : "false") << "\n";
+    // 2. verify list is emoty
     list.display();
 
-    // delete from a single item list
-    list.insertBack(1 * 10);
-    list.display();
-
-    std::cout << "Removed Node: 10 ? " << (list.remove(10) ? "true" : "false") << "\n";
-    list.display();
-
-    // populate list
-    for (int i = 2; i <= 10; i++) {
-        list.insertBack(i * 10);
+    // 5. add in front
+    for (int i = 1; i < 6; i++) {
+        list.insertFront(i * 10 * 3 / 2);
     }
-    list.display();
 
-    // remove first node
-    std::cout << "Removed First Node: 10 ? " << (list.remove(10) ? "true" : "false") << "\n";
-    list.display();
-
-    // remove middle node
-    std::cout << "Removed Middle Node: 50 ? " << (list.remove(50) ? "true" : "false") << "\n";
-    list.display();
-
-    // remove last node
-    std::cout << "Removed Last Node: 100 ? " << (list.remove(100) ? "true" : "false") << "\n";
-    list.display();
-
-    // empty list
-    std::cout << "Nonexistent Node: 120 ? " << (list.remove(120) ? "true" : "false") << "\n";
+    // 4. add in back
+    for (int i = 1; i < 6; i++) {
+        list.insertBack(i * 10 * 5 / 2);
+    }
     list.display();
 
     return 0;
