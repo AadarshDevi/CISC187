@@ -604,6 +604,12 @@ Found Value: 120 ? 0   // false
 
 ### Complexity Analysis
 
+***Question:*** Determine the best-case and worst-case complexity. Explain what list arrangement produces each case.
+
+***Answer:*** Time complexities:
+1. ***Best Case: $O(1)$*** - The value is found at the first node. No need to traverse the entire list. From the test above, because `10` was in the first node, we did not have to go through the entire list.
+2. ***Worst Case: $O(N)$*** - The value is at the last node in the list. We have to traverse the entire list to find the last value. The value `100` and `120` in the test shows the wort case. The former is in the last node of the list while the latter isn't in the list at all. For both, we still have to go through each node in the list.
+
 ## Part 8 — Insert After a Specific Value
 
 ### Pointer Reasoning
