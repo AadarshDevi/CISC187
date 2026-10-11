@@ -723,36 +723,91 @@ bool remove(int value) {
   
     while (current != nullptr) {  
         // node with the value to be removed found  
-        if (current->data == value) {  
-            // the node that has the value is not connected to the list anymore  
+        if (current->data != value) {  
+            previous = current; // current node is now previous node  
+            current = current->next; // the next node is the current node  
+            continue;  
+        }  
+  
+        // the node that has the value is not connected to the list anymore  
+        if (previous == nullptr) {  
+            head = current->next;  
+        } else {  
             previous->next = current->next;  
         }  
   
-        // current node is now previous node  
-        previous = current;  
-  
-        // the next node is the current node  
-        current = current->next;  
-  
         // delete current  
         delete current;  
+        return true;  
     }  
   
-    return true;  
+    return false;  
 }
 ```
 
 ### Test
 
 ```c++
+LinkedList list = LinkedList();  
+list.display();  
+  
+// empty list  
+std::cout << "Remove Node: 30 ? " << (list.remove(30) ? "true" : "false") << "\n";  
+list.display();  
+  
+// delete from a single item list  
+list.insertBack(1 * 10);  
+list.display();  
+  
+std::cout << "Removed Node: 10 ? " << (list.remove(10) ? "true" : "false") << "\n";  
+list.display();  
+  
+// populate list  
+for (int i = 2; i <= 10; i++) {  
+    list.insertBack(i * 10);  
+}  
+list.display();  
+  
+// remove first node  
+std::cout << "Removed First Node: 10 ? " << (list.remove(10) ? "true" : "false") << "\n";  
+list.display();  
+  
+// remove middle node  
+std::cout << "Removed Middle Node: 50 ? " << (list.remove(50) ? "true" : "false") << "\n";  
+list.display();  
+  
+// remove last node  
+std::cout << "Removed Last Node: 100 ? " << (list.remove(100) ? "true" : "false") << "\n";  
+list.display();  
+  
+// empty list  
+std::cout << "Nonexistent Node: 120 ? " << (list.remove(120) ? "true" : "false") << "\n";  
+list.display();
 ```
 
 ### Output
 
 ```terminalOutput
+Linked List is Empty
+Remove Node: 30 ? false
+Linked List is Empty
+10
+Removed Node: 10 ? true
+Linked List is Empty
+20 30 40 50 60 70 80 90 100
+Removed First Node: 10 ? false
+20 30 40 50 60 70 80 90 100
+Removed Middle Node: 50 ? true
+20 30 40 60 70 80 90 100
+Removed Last Node: 100 ? true
+20 30 40 60 70 80 90
+Nonexistent Node: 120 ? false
+20 30 40 60 70 80 90
 ```
 
 ### Part 9 Analysis
+
+
 
 ## Part 10 — Test the Complete Linked List
 
