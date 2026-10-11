@@ -399,6 +399,56 @@ there is no data in the linked list. If `head` was not `nullptr`, it means that 
 
 ## Part 5 — Insert at the Beginning
 
+Implement `void insertFront(int value);` and the operation should:
+
+1. [x] Dynamically create a new node.
+2. [x] Make the new node point to the current first node.
+3. [x] Update `head`.
+
+```c++
+void insertFront(int value) {  
+    // check if empty  
+    if (empty()) {  
+        Node *node = new Node{value, nullptr};  
+        head = node;  
+        return;  
+    }  
+  
+    // get the first node of the list  
+    Node *firstNode = head;
+  
+    // create a new node that points to the first node  
+    Node *newNode = new Node{value, firstNode};
+  
+    // head points to new node (not first node)  
+    head = newNode;
+}
+```
+
+### Test Suite
+
+Testing to see if `insertfront()` works correctly.
+
+```c++
+LinkedList list = LinkedList();  
+list.display();  
+  
+list.insertFront(30);  
+list.insertFront(20);  
+list.insertFront(10);  
+list.display();  
+  
+list.insertFront(5);  
+list.display();
+```
+
+and the output is
+
+```terminalOutput
+Linked List is Empty
+10 20 30
+5 10 20 30
+```
 
 ### Pointer Analysis
 
