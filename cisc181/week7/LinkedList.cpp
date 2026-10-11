@@ -95,6 +95,12 @@ public:
         // create new last node
         Node *node = new Node{value, nullptr};
 
+        // check if the list has a single node
+        if (head->next == nullptr) {
+            head->next = node;
+            return;
+        }
+
         // find the last node
         Node *lastNode = head;
         while (lastNode->next != nullptr) {
