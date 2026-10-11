@@ -675,6 +675,11 @@ list.display();
 ### Output
 
 ```terminalOutput
+10 20 30 40
+Insert Successful: 20 -> 25 ? true
+10 20 25 30 40
+Insert Successful: 60 -> 80 ? false
+10 20 25 30 40
 ```
 ### Pointer Reasoning
 
