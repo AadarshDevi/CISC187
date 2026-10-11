@@ -51,8 +51,6 @@ public:
         // pointer to the first node
         Node *current = head;
 
-
-    bool search(int value) const;
         // go through each node to check if the value exists
         while (current != nullptr) {
             if (current->data == value) {
