@@ -16,7 +16,9 @@ private:
     Node *head;
 
 public:
-    LinkedList();
+    LinkedList() {
+        head = nullptr;
+    }
 
     bool empty() const {
         return head == nullptr;
