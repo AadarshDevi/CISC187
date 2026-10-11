@@ -116,7 +116,6 @@ public:
         // node cannot be inserted after a value in an empty list
         if (empty()) return false;
 
-
         // find target node
         Node *targetNode = head;
 
@@ -124,7 +123,10 @@ public:
             if (targetNode->data == target) {
                 break;
             }
+            targetNode = targetNode->next;
         }
+
+        if (targetNode == nullptr) return false;
 
         // get target's old next pointer
         Node *oldNext = targetNode->next;
