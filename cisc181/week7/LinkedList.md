@@ -688,6 +688,10 @@ Insert Successful: 60 -> 80 ? false
 ***Answer:*** To insert a value, the pointer the current and previous nodes are needed. The previous node connects to the new node and the new node connects to the next node. ***(Answered before writing code)***
 ### Complexity
 
+***Question:*** Explain why the actual pointer insertion is O(1), but the complete `insertAfter()` operation can still be O(N).
+
+***Answer:*** Adding a value in the middle is taking the previous node's connection and the next node's connection and passing it through the new node instead of next node. This is an easy operation which give it $O(1)$. But getting to the previous and next node to insert new node means traversing the list. This is where the $O(N)$ comes from. We are traversing the list, $O(N)$ and inserting the new value, $O(1)$.
+
 ## Part 9 — Delete a Node
 
 ### Part 9 Analysis
