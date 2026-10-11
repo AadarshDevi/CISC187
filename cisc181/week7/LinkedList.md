@@ -365,6 +365,7 @@ bool empty() const {
 ***Answer:*** `head` being `nullptr` means that the head (the start of the list) is pointing to nothing which means that there is no data in the linked list. If `head` was not `nullptr`, it means that there are items in the list.
 ## Part 5 — Insert at the Beginning
 
+
 ### Pointer Analysis
 ### Complexity
 ## Part 6 — Insert at the End
