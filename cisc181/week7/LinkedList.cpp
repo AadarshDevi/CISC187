@@ -18,7 +18,9 @@ private:
 public:
     LinkedList();
 
-    bool empty() const;
+    bool empty() const {
+        return head == nullptr;
+    }
 
     void display() const;
 
