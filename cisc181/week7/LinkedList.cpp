@@ -191,12 +191,16 @@ int main() {
     LinkedList list = LinkedList();
     list.display();
 
-    list.insertFront(30);
     list.insertFront(20);
+    list.display();
+
+    list.insertBack(30);
+    list.display();
+
     list.insertFront(10);
     list.display();
 
-    list.insertFront(5);
+    list.insertBack(40);
     list.display();
 
     return 0;
