@@ -337,6 +337,20 @@ public:
 };
 ```
 ## Part 4 — Initialize the List
+
+Implement:
+1. Constructor
+2. `empty()`
+
+Creating an object
+```c++
+LinkedList list = LinkedList();
+```
+### Constructor: `LinkedList()`
+```c++
+LinkedList() {  
+    head = nullptr;  
+}
 ```
 ## Part 5 — Insert at the Beginning
 
