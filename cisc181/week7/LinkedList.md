@@ -352,6 +352,17 @@ LinkedList() {
     head = nullptr;  
 }
 ```
+### Method: `empty()`
+```c++
+bool empty() const {  
+    return head == nullptr;  
+}
+```
+### Part 4 Analysis
+
+***Question:*** Explain why `nullptr` is an appropriate representation of an empty linked list.
+
+***Answer:*** `head` being `nullptr` means that the head (the start of the list) is pointing to nothing which means that there is no data in the linked list. If `head` was not `nullptr`, it means that there are items in the list.
 ## Part 5 — Insert at the Beginning
 
 ### Pointer Analysis
