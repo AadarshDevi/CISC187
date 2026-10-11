@@ -1158,7 +1158,19 @@ Consider an array and a singly linked list, each containing `N` elements. Compar
 
 ## Part 14 — Reasoning About a Tail Pointer
 
+Your current implementation maintains `Node* head` and remember that a singly linked list does not store a pointer from a node to its predecessor. Suppose you modify it to maintain:
 
+```
+Node* head;
+Node* tail;
+```
+
+Answer:
+1. ***Which operation from your implementation becomes significantly faster?*** The operation that I think would benefit from this is `insertBack()` because we do not have to traverse the entire list to add an item to the end of the list.
+2. ***What is its new Big-O complexity?*** With this addition, `insertBack()` will take $O(N)$ instead of $O(1)$.
+3. ***Does maintaining `tail` make searching O(1)?*** No, We would still have to traverse the entire list.
+4. ***Does maintaining `tail` make deleting the final node O(1) in a singly linked list?*** No, it would not make a difference.
+5. ***Explain your answer to Question 4.*** Deleting a node from a list with one item means both the `head` and `tail` would point to the same thing. So there would be no difference. We can use either to remove the item.
 
 ## Part 15 — Singly vs. Doubly Linked Lists
 
