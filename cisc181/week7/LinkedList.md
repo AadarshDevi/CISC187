@@ -1118,6 +1118,12 @@ Your linked list dynamically allocates nodes using `new` Therefore, the class mu
 
 ### Part 11 Analysis
 
+Suppose a program repeatedly creates nodes but never calls `delete`. Explain:
+
+1. ***What happens to the allocated memory?*** The data in in memory that is not freed. It will continue to accumulate and stare the computer from it's memory.
+2. ***Why is this considered a memory leak?*** The data goes in memory but is not freed, aka unused data is not leaving memory. Like I said in the previous question, it will eat up all the memory.
+3. ***Why is memory management especially important when implementing linked structures with raw pointers?*** It is easy to forget to free memory. When using it in memory tight places, the inaccessible data can remain in the already little memory. Data not needed removed from memory can save this from happening.
+
 ## Part 12 — Complexity Analysis
 
 ## Part 13 — Linked List vs. Array
