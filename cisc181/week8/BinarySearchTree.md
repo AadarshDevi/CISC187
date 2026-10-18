@@ -420,24 +420,84 @@ void insert(int value) {
 ## Part 6 — Search
 
 Implement `bool search(int value) const;`. For every test, manually predict the search path before running the program. Test:
-1. [ ] The root.
-2. [ ] A leaf.
-3. [ ] An internal node.
-4. [ ] A value not stored in the tree.
+1. [x] The root.
+2. [x] A leaf.
+3. [x] An internal node.
+4. [x] A value not stored in the tree.
 
+### Search
+
+```c++  
+bool search(Node *node, int value) const {  
+    // node doesnt exists means the val doesnt exist  
+    if (node == nullptr) return false;  
+  
+    // value found  
+    if (value == node->data) return true;  
+  
+    // value is in left subtree  
+    if (value < node->data) return search(node->left, value);  
+  
+    // value is in right subtree  
+    if (value > node->data) return search(node->right, value);  
+  
+    // if something doesnt work, then, the value wasn't found  
+    return false;  
+}
+
+bool search(int value) const {  
+    return search(root, value);;  
+}
+```
 ### Test Suite
 
 ```c++
+BinarySearchTree tree;  
+  
+tree.insert(50);  
+tree.insert(25);  
+tree.insert(60);  
+tree.insert(75);  
+tree.insert(27);  
+tree.insert(5);  
+tree.insert(1);  
+tree.insert(10);  
+  
+tree.inorder();  
+  
+std::cout << "Root (50): " << (tree.search(50) ? "true" : "false") << "\n";  
+std::cout << "Leaf (10): " << (tree.search(10) ? "true" : "false") << "\n";  
+std::cout << "Internal (5): " << (tree.search(5) ? "true" : "false") << "\n";  
+std::cout << "Invalid Value (100): " << (tree.search(100) ? "true" : "false") << "\n";
 ```
 
 ### Complexity
 
-Explain why search is best expressed as:
+***Question:*** Explain why search is best expressed as `O(H)` where `H` is tree height. Then explain why this is approximately `O(log N)` for a reasonably balanced tree but may become `O(N)` for a highly skewed tree.
 
-```
-O(H)
-```
+***Answer:***
 
-where `H` is tree height.
+$$\text{Let: } h = \text{Depth of Binary Tree}$$
+***Here, $H = h$, the same thing.***
 
-Then explain why this is approximately `O(log N)` for a reasonably balanced tree but may become `O(N)` for a highly skewed tree.
+If we are searching for a value, it can be in the range $[0,H]$ .
+
+Because we are in a balanced tree, we can assume that half of the tree can be eliminated when the value is greater than or less than the root value.
+$$\text{Let: } N = \text{Number of items}$$
+In our tree, there are only 2 child nodes for a parent node so:
+$$\text{Height 0} = \text{1 Node}$$
+$$\text{Height 1} = 1 + 2 = 3\text{ Nodes}$$
+$$\text{Height 2} = 1 + 2 + 4 = 7\text{ Nodes}$$
+$$...$$
+$$\text{Height H} = 2^{h+1} - 1\text{ Nodes}$$
+So we find $h$:
+$$N = 2^{h+1} - 1$$
+$$N + 1 = 2^{h+1}$$
+$$log(N + 1) = log(2^{h+1})$$
+$$\log_2(N+1) = (h+1)log_2(2)$$
+$$\log_2(N+1) -1 = h$$
+With this, we can now see that time complexity of the ***Binary Tree*** being $O(h)$. If we reduce $O(h)$, we get:
+$$\log_2(N+1) -1$$
+$$\log(N)$$
+$$O\log(N)$$
+So this how we get the time complexity for the `Binary Tree`.
