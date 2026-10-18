@@ -156,7 +156,7 @@ public:
     }
 
     bool search(int value) const {
-        return false;
+        return search(root, value);;
     }
 
     bool remove(int value) {
