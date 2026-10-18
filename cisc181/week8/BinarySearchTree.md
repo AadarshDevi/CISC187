@@ -170,3 +170,249 @@ public:
 };
 ```
 
+### BST Implementation
+
+```c++
+#include <iostream>  
+  
+using namespace std;  
+  
+struct Node {  
+    int data;  
+    Node *left;  
+    Node *right;  
+  
+    Node(int value) {  
+        data = value;  
+        left = nullptr;  
+        right = nullptr;  
+    }  
+};  
+  
+class BinarySearchTree {  
+private:  
+    Node *root;  
+  
+    Node *insert(Node *node, int value) {  
+        // node given is null = add new value  
+        if (node == nullptr) return new Node(value);  
+  
+        // add new node  
+        if (node->data > value) node->left = insert(node->left, value);  
+        else if (node->data < value) node->right = insert(node->right, value);  
+  
+        return node;  
+    }  
+  
+    bool search(Node *node, int value) const { return false; }  
+  
+    void inorder(Node *node) const {  
+        if (node == nullptr) return;  
+  
+        inorder(node->left);  
+        cout << node->data << " ";  
+        inorder(node->right);  
+    }  
+  
+    void preorder(Node *node) const {  
+        // null node  
+        if (node == nullptr)  
+            return;  
+  
+        // print value  
+        cout << node->data << " ";  
+  
+        // traverse the root's left subtree  
+        preorder(node->left);  
+  
+        // traverse the root's right subtree  
+        preorder(node->right);  
+    }  
+  
+    void postorder(Node *node) const {  
+        // null node  
+        if (node == nullptr) return;  
+  
+        // traverse the root's left subtree  
+        postorder(node->left);  
+  
+        // traverse the root's right subtree  
+        postorder(node->right);  
+  
+        // print value  
+        cout << node->data << " ";  
+    }  
+  
+    Node *findMin(Node *node) const {  
+        // empty node  
+        if (node == nullptr) return nullptr;  
+  
+        // get the left most node  
+        while (node->left != nullptr)  
+            node = node->left;  
+  
+        return node;  
+    }  
+  
+    Node *findMax(Node *node) const {  
+        // empty node  
+        if (node == nullptr) return nullptr;  
+  
+        // get the left most node  
+        while (node->right != nullptr)  
+            node = node->right;  
+  
+        return node;  
+    }  
+  
+    Node *remove(Node *node, int value) {  
+        // empty node aka no children  
+        if (node == nullptr) return nullptr;  
+  
+        // more nodes available: check which path to traverse  
+        if (value < node->data) node->left = remove(node->left, value);  
+        else if (value > node->data) node->right = remove(node->right, value);  
+        else {  
+            // no left node but there might be a right node  
+            // so save the right node and check later            // delete the parent node. (safely deleted)            if (node->left == nullptr) {  
+                Node *temp = node->right;  
+                delete node;  
+                return temp;  
+            }  
+  
+            // check if there is a right node,  
+            // if there exists, delete it.            // same as the above condition but for right            if (node->right == nullptr) {  
+                Node *temp = node->left;  
+                delete node;  
+                return temp;  
+            }  
+  
+            // if the node has two children  
+            // get the lowest value of right subtree            Node *temp = findMin(node->right);  
+  
+            // replace root value with this value  
+            node->data = temp->data;  
+  
+            // slowly delete the right subtree by assigning the right subtree  
+            // then we send in the temp value so we can reduce the leaves            node->right = remove(node->right, temp->data);  
+        }  
+  
+        return node;  
+    }  
+  
+    void deleteTree(Node *node) {  
+    }  
+  
+public:  
+    BinarySearchTree() {  
+        root = nullptr;  
+    }  
+  
+    ~BinarySearchTree() {  
+        deleteTree(root);  
+    }  
+  
+    bool empty() const {  
+        return root == nullptr;  
+    }  
+  
+    void insert(int value) {  
+        root = insert(root, value);  
+    }  
+  
+    bool search(int value) const {  
+        return false;  
+    }  
+  
+    bool remove(int value) {  
+        root = remove(root, value);  
+        return true;  
+    }  
+  
+    void inorder() const {  
+        if (empty()) return;  
+        inorder(root);  
+        std::cout << "\n";  
+    }  
+  
+    void preorder() const {  
+        if (empty()) return;  
+        preorder(root);  
+    }  
+  
+    void postorder() const {  
+        if (empty()) return;  
+        postorder(root);  
+    }  
+  
+    int minimum() const {  
+        // no value found  
+        if (empty()) return -1;  
+  
+        // Node with min val  
+        Node *minNode = findMin(root);  
+  
+        // node DNE  
+        if (minNode == nullptr) return -1;  
+  
+        // min val  
+        int minVal = minNode->data;  
+  
+        return minVal;  
+    }  
+  
+    int maximum() const {  
+        // no value found  
+        if (empty()) return -1;  
+  
+        // Node with min val  
+        Node *maxNode = findMax(root);  
+  
+        // node DNE  
+        if (maxNode == nullptr) return -1;  
+  
+        // min val  
+        int maxVal = maxNode->data;  
+  
+        return maxVal;  
+    }  
+};
+```
+## Part 5 — BST Insertion
+
+Implement `void insert(int value);` and its recursive helper. Your insertion must preserve: `Left subtree values < Node < Right subtree values`. Example insertion sequence: `50, 30, 70, 20, 40` should produce:
+
+```
+        50
+       /  \
+     30    70
+    / \
+   20 40
+```
+
+### Code
+
+```c++
+private:
+Node *insert(Node *node, int value) {  
+    // node given is null = add new value  
+    if (node == nullptr) return new Node(value);  
+  
+    // add new node  
+    if (node->data > value) node->left = insert(node->left, value);  
+    else if (node->data < value) node->right = insert(node->right, value);  
+  
+    return node;  
+}
+
+public:
+void insert(int value) {  
+    root = insert(root, value);  
+}
+```
+### Analysis
+
+1. ***Why does insertion follow only one path through the tree?*** There exists only 2 paths. The value is either greater or lower than the node's value. So it has only one option (also, duplication is ignored).
+2. ***Why does the recursive helper return a `Node*`?*** Because it builds the links. It links the new node to the old/parent node.
+3. ***What happens when insertion reaches `nullptr`?*** A new node is created for the new value and this will be inserted to the previous node.
+4. ***What happens if the value already exists?*** The current `node -> data == value` means that the node itself will be returned cause it will bypass the 2 conditionals.
