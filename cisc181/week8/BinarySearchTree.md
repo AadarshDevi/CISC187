@@ -870,19 +870,12 @@ Consider this BST:
      20  40  60  80
 ```
 
-Suppose the query is:
+You do **not** need to implement a complete range-search function. Suppose the query is `Find all values from 35 through 70`. Without performing a complete traversal:
+1. ***Determine which values should be returned.*** Values to be returned are: `40, 50, 60, 70`
+2. ***Identify branches that can be ignored.*** 30 left leaf and 70 right leaf.
+3. ***Explain how the BST ordering property allows the algorithm to avoid exploring branches that cannot contain valid results.*** If the value is less than or greater than the max and min values of the range, we ignore them. By doing this, we can ignore the nodes that will guaranteed to not have the value int he range.
 
-```
-Find all values from 35 through 70.
-```
 
-Without performing a complete traversal:
-
-1. Determine which values should be returned.
-2. Identify branches that can be ignored.
-3. Explain how the BST ordering property allows the algorithm to avoid exploring branches that cannot contain valid results.
-
-You do **not** need to implement a complete range-search function.
 
 ## Part 14 — Memory Management
 
