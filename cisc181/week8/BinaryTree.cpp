@@ -59,7 +59,7 @@ private:
         preorder(node->right);
     }
 
-    void postorder(Node *node) {
+    void postorder(Node *node) const {
         // null node
         if (node == nullptr) return;
 
