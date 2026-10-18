@@ -844,7 +844,17 @@ tree.inorder();
 
 ***Answer:*** Depending on how the values are inserted, they are placed differently. If a high number and a low number are placed, left tree will be the low and the right will be large tree. In the example above, if we have the  2 distant middle vales (2 middle values from their respective halves of the input), we will have trees that branch out. Like in the questions above, if we add values that are larger that the root and the next node, it will be a long tree with single branches.
 
+## Part 12 — Complexity Analysis
 
+| Operation              | Balanced BST | Highly Skewed BST | Why? |
+| ---------------------- | ------------ | ----------------- | ---- |
+| Search                 |              |                   |      |
+| Insert                 |              |                   |      |
+| Delete                 |              |                   |      |
+| Minimum                |              |                   |      |
+| Maximum                |              |                   |      |
+| Full inorder traversal |              |                   |      |
 
+Then answer "why is saying “BST search is O(log N)" is incomplete or potentially incorrect? Use tree height in your explanation.
 
 
