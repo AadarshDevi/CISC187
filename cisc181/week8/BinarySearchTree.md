@@ -722,18 +722,17 @@ Implement `bool remove(int value);`. Deletion must correctly handle all three st
 20 40  60 80
 ```
 
-Delete:
 ***Question:*** Delete `50`
 
+***Answer:*** Least value in right subtree.
 
 ```
-50
+	 60
+    /  \
+  30    70
+ / \      \
+20 40     80
 ```
-
-For the two-child case, use the **inorder successor**: the smallest value in the right subtree.
-
-Before implementing deletion, draw the tree **before and after** each case.
-
 ### Analysis
 
 Explain why deleting a node with two children requires more work than deleting a leaf.
