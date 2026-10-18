@@ -122,7 +122,8 @@ public:
     }
 
     bool remove(int value) {
-        return false;
+        remove(root, value);
+        return true;
     }
 
     void inorder() const {
