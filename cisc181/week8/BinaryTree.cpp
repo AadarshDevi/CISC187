@@ -34,10 +34,19 @@ private:
     }
 
     bool search(Node *node, int value) const {
+        // node doesnt exists means the val doesnt exist
         if (node == nullptr) return false;
+
+        // value found
         if (value == node->data) return true;
+
+        // value is in left subtree
         if (value < node->data) return search(node->left, value);
+
+        // value is in right subtree
         if (value > node->data) return search(node->right, value);
+
+        // if something doesnt work, then, the value wasn't found
         return false;
     }
 
@@ -231,8 +240,10 @@ int main() {
 
     std::cout << tree.minimum() << " is the min value.\n";
     std::cout << tree.maximum() << " is the max value.\n";
-    tree.remove(50);
-    tree.inorder();
+    // tree.remove(50);
+    // tree.inorder();
+
+    std::cout << "Num 5 exists: " << (tree.search(5) ? "true" : "false") << "\n";
 
     return 0;
 }
