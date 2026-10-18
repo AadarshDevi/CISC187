@@ -53,7 +53,18 @@ private:
         preorder(node->right);
     }
 
-    void postorder(Node *node) const {
+    void postorder(Node *node) {
+        // null node
+        if (node == nullptr) return;
+
+        // traverse the root's left subtree
+        postorder(node->left);
+
+        // traverse the root's right subtree
+        postorder(node->right);
+
+        // print value
+        cout << node->data << " ";
     }
 
     Node *findMin(Node *node) const {
