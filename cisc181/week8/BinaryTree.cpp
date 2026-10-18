@@ -85,10 +85,12 @@ public:
         return root == nullptr;
     }
 
-    void insert(int value);
     void insert(int value) {
+        // Recursively finding parent node
+        insert(root, value);
 
-    bool search(int value) const;
+        // Add Node to Parent Node
+    }
 
     bool search(int value) const {
         return false;
