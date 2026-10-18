@@ -126,7 +126,7 @@ private:
             Node *temp = findMin(node->right);
 
             // replace root value with this value
-            node->right = temp->left;
+            node->data = temp->data;
 
             // slowly delete the right subtree by assigning the right subtree
             // then we send in the temp value so we can reduce the leaves
