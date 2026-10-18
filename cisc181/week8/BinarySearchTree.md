@@ -683,6 +683,8 @@ Implement `bool remove(int value);`. Deletion must correctly handle all three st
 ```
 
 Delete:
+***Question:*** Delete `30`
+
 
 ```
 30
@@ -699,6 +701,8 @@ Delete:
 ```
 
 Delete:
+***Question:*** Delete `30`
+
 
 ```
 30
@@ -715,6 +719,8 @@ Delete:
 ```
 
 Delete:
+***Question:*** Delete `50`
+
 
 ```
 50
