@@ -90,7 +90,19 @@ public:
     }
 
     int maximum() const {
-        return -1;
+        // no value found
+        if (empty()) return -1;
+
+        // Node with min val
+        Node *maxNode = findMax(root->right);
+
+        // node DNE
+        if (maxNode == nullptr) return -1;
+
+        // min val
+        int maxVal = maxNode->data;
+
+        return maxVal;
     }
 };
 
