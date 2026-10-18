@@ -95,5 +95,14 @@ public:
 };
 
 int main() {
+    BinarySearchTree tree;
+
+    tree.insert(50);
+    tree.insert(25);
+    tree.insert(5);
+    tree.insert(10);
+
+    tree.inorder();
+
     return 0;
 }
