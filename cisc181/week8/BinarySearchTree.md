@@ -858,3 +858,79 @@ tree.inorder();
 Then answer "why is saying “BST search is O(log N)" is incomplete or potentially incorrect? Use tree height in your explanation.
 
 
+## Part 13 — Ordered Operations
+
+Consider this BST:
+
+```
+           50
+          /  \
+        30    70
+       / \    / \
+     20  40  60  80
+```
+
+Suppose the query is:
+
+```
+Find all values from 35 through 70.
+```
+
+Without performing a complete traversal:
+
+1. Determine which values should be returned.
+2. Identify branches that can be ignored.
+3. Explain how the BST ordering property allows the algorithm to avoid exploring branches that cannot contain valid results.
+
+You do **not** need to implement a complete range-search function.
+
+## Part 14 — Memory Management
+
+Nodes in your BST are dynamically allocated.
+
+Implement the destructor so that all remaining nodes are released when the BST object is destroyed.
+
+### Analysis
+
+1. Why should children be deleted before their parent?
+2. Which traversal naturally supports this ordering?
+3. What would happen if dynamically allocated nodes were never released?
+4. How does maximum recursion depth relate to tree height?
+
+## Part 15 — Complete BST Test
+
+Write a `main()` function that demonstrates your completed BST.
+
+Your test should demonstrate:
+
+1. An initially empty tree.
+2. Multiple insertions.
+3. Duplicate insertion behavior.
+4. Successful search.
+5. Unsuccessful search.
+6. Inorder traversal.
+7. Preorder traversal.
+8. Postorder traversal.
+9. Minimum.
+10. Maximum.
+11. Leaf deletion.
+12. One-child deletion.
+13. Two-child deletion.
+14. Correct tree behavior after deletion.
+
+Your program output should make it possible to verify that the BST remains correctly ordered after structural changes.
+
+## Analysis and Reflection
+
+Briefly explain:
+
+- Why the BST invariant applies to entire subtrees.
+- Why insertion order affects tree shape.
+- Why search follows only one path.
+- Why inorder traversal produces sorted output.
+- Why deletion is more complicated than insertion.
+- Why BST performance depends on height.
+- Why a skewed BST can behave like a linked list.
+- Why self-balancing trees such as AVL and Red-Black trees are useful.
+
+Connect your explanations to your implementation and observations rather than providing only definitions.
