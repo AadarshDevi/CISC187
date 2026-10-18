@@ -102,6 +102,7 @@ private:
 
 public:
     BinarySearchTree() {
+        root = nullptr;
     }
 
     ~BinarySearchTree() {
