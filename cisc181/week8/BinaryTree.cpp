@@ -33,10 +33,12 @@ private:
 
     bool search(Node *node, int value) const { return false; }
 
-    void inorder(Node *node) const;
     void inorder(Node *node) const {
+        if (empty()) return;
 
-    void preorder(Node *node) const;
+        inorder(node->left);
+        cout << node->data << " ";
+        inorder(node->right);
     }
 
     void preorder(Node *node) const {
