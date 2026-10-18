@@ -161,7 +161,7 @@ public:
     }
 
     bool remove(int value) {
-        remove(root, value);
+        root = remove(root, value);
         return true;
     }
 
