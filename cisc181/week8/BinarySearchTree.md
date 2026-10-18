@@ -117,7 +117,7 @@ Implement a BST from scratch. Do **not** use `std::set` or `std::map` for the ma
 
 ### Template Given
 
-```
+```c++
 #include <iostream>
 
 using namespace std;
