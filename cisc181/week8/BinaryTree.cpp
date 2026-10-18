@@ -29,6 +29,9 @@ private:
         // add new node
         if (node->data > value) node->left = insert(node->left, value);
         else if (node->data < value) node->right = insert(node->right, value);
+
+        std::cout << "Node added: " << node->data << "\n";
+        return node;
     }
 
     bool search(Node *node, int value) const { return false; }
@@ -86,10 +89,13 @@ public:
     }
 
     void insert(int value) {
+        std::cout << "Inserting: " << value << "\n";
+
         // Recursively finding parent node
         insert(root, value);
 
         // Add Node to Parent Node
+        std::cout << "Insertion Completed\n";
     }
 
     bool search(int value) const {
