@@ -106,6 +106,7 @@ public:
     }
 
     ~BinarySearchTree() {
+        deleteTree(root);
     }
 
     bool empty() const {
