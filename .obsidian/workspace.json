@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cisc181/week7/LinkedList.md",
+                "file": "cisc181/week8/BinarySearchTree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LinkedList"
+              "title": "BinarySearchTree"
             }
           }
         ]
@@ -188,14 +188,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "b31e0479c2e801e8",
+  "active": "dc038b916f4846e8",
   "lastOpenFiles": [
+    "cisc181/week7/LinkedList.md",
     "cisc181/week7/LinkedList.md~",
     "cisc181/week7/LinkedList.cpp~",
     "cisc181/week7/LinkedList.exe",
     "cisc181/week7/LinkedList.cpp",
     "cisc181/week6/Queue.md",
-    "cisc181/week7/LinkedList.md",
     "cisc181/week5/HashTables.md",
     "cisc181/week7",
     "cisc181/week5/HashTable.cpp~",
@@ -212,7 +212,6 @@
     "cisc181/week1/Arrays.md",
     "cisc181/week6/Stack.cpp~",
     "cisc181/week6/Flowchart_Stack.drawio.svg",
-    "cisc181/week6/FLowchart_Stack.drawio",
     "cisc181/week_3_4/Adaptive_Sorting.md",
     "cisc181/week_3_4/Sorting_2.md"
   ]
