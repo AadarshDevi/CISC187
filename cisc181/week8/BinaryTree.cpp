@@ -232,19 +232,22 @@ int main() {
     BinarySearchTree tree;
 
     tree.insert(50);
-    tree.insert(70);
     tree.insert(30);
-    tree.insert(60);
-    tree.insert(40);
+    tree.insert(70);
     tree.insert(20);
+    tree.insert(40);
+    tree.insert(60);
     tree.insert(80);
-
-    std::cout << "In-order: ";
     tree.inorder();
-    std::cout << "Pre-order: ";
-    tree.preorder();
-    std::cout << "\nPost-order: ";
-    tree.postorder();
+    
+    tree.remove(20);
+    tree.inorder();
+
+    tree.remove(30);
+    tree.inorder();
+
+    tree.remove(40);
+    tree.inorder();
 
     return 0;
 }
