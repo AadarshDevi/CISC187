@@ -30,7 +30,6 @@ private:
         if (node->data > value) node->left = insert(node->left, value);
         else if (node->data < value) node->right = insert(node->right, value);
 
-        std::cout << "Node added: " << node->data << "\n";
         return node;
     }
 
