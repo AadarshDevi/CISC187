@@ -874,14 +874,21 @@ You do **not** need to implement a complete range-search function. Suppose the q
 1. ***Determine which values should be returned.*** Values to be returned are: `40, 50, 60, 70`
 2. ***Identify branches that can be ignored.*** 30 left leaf and 70 right leaf.
 3. ***Explain how the BST ordering property allows the algorithm to avoid exploring branches that cannot contain valid results.*** If the value is less than or greater than the max and min values of the range, we ignore them. By doing this, we can ignore the nodes that will guaranteed to not have the value int he range.
-
-
-
 ## Part 14 — Memory Management
 
-Nodes in your BST are dynamically allocated.
+Nodes in your BST are dynamically allocated. Implement the destructor so that all remaining nodes are released when the BST object is destroyed.
 
-Implement the destructor so that all remaining nodes are released when the BST object is destroyed.
+### `~BinarySearchTree()` and `deleteTree()`
+
+Deconstructor: `~BinarySearchTree()`
+
+```c++
+```
+
+Deletion: `deleteTree()`
+
+```c++
+```
 
 ### Analysis
 
