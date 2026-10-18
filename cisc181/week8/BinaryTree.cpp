@@ -233,17 +233,19 @@ int main() {
 
     tree.insert(50);
     tree.insert(25);
+    tree.insert(60);
+    tree.insert(75);
+    tree.insert(27);
     tree.insert(5);
+    tree.insert(1);
     tree.insert(10);
 
     tree.inorder();
 
-    std::cout << tree.minimum() << " is the min value.\n";
-    std::cout << tree.maximum() << " is the max value.\n";
-    // tree.remove(50);
-    // tree.inorder();
-
-    std::cout << "Num 5 exists: " << (tree.search(5) ? "true" : "false") << "\n";
+    std::cout << "Root (50): " << (tree.search(50) ? "true" : "false") << "\n";
+    std::cout << "Leaf (10): " << (tree.search(10) ? "true" : "false") << "\n";
+    std::cout << "Internal (5): " << (tree.search(5) ? "true" : "false") << "\n";
+    std::cout << "Invalid Value (100): " << (tree.search(100) ? "true" : "false") << "\n";
 
     return 0;
 }
