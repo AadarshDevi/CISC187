@@ -846,16 +846,17 @@ tree.inorder();
 
 ## Part 12 — Complexity Analysis
 
+Fill the table and then answer "why is saying “BST search is O(log N)" is incomplete or potentially incorrect? Use tree height in your explanation.
+
 | Operation              | Balanced BST | Highly Skewed BST | Why? |
 | ---------------------- | ------------ | ----------------- | ---- |
-| Search                 |              |                   |      |
-| Insert                 |              |                   |      |
-| Delete                 |              |                   |      |
-| Minimum                |              |                   |      |
-| Maximum                |              |                   |      |
-| Full inorder traversal |              |                   |      |
+| Search                 | $O(log(N))$  | $O(N)$            |      |
+| Insert                 | $O(log(N))$  | $O(N)$            |      |
+| Delete                 | $O(log(N))$  | $O(N)$            |      |
+| Minimum                | $O(log(N))$  | $O(N)$            |      |
+| Maximum                | $O(log(N))$  | $O(N)$            |      |
+| Full inorder traversal | $O(N)$       | $O(N)$            |      |
 
-Then answer "why is saying “BST search is O(log N)" is incomplete or potentially incorrect? Use tree height in your explanation.
 
 
 ## Part 13 — Ordered Operations
