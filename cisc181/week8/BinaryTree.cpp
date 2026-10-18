@@ -105,6 +105,8 @@ public:
     }
 
     void preorder() const {
+        if (empty()) return;
+        preorder(root);
     }
 
     void postorder() const {
