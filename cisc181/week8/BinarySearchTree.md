@@ -111,3 +111,62 @@ Then identify:
 ***Question:*** Explain why BST search does not need to examine both subtrees after comparing the target with the current node.
 
 ***Answer:*** There are only 2 possible ways for the number to be in: left or right. So if it is not left, then it is right and vice versa. This is also because this binary tree can only have 2 child nodes.
+## Part 4 — Implement a BST Class
+
+Implement a BST from scratch. Do **not** use `std::set` or `std::map` for the main implementation. You may add private helper functions if necessary. Do not copy or assign `BinarySearchTree` objects in this lab because the implementation uses raw owning pointers.
+
+### Template Given
+
+```
+#include <iostream>
+
+using namespace std;
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int value) {
+        data = value;
+        left = nullptr;
+        right = nullptr;
+    }
+};
+
+class BinarySearchTree {
+private:
+    Node* root;
+
+    Node* insert(Node* node, int value);
+    bool search(Node* node, int value) const;
+
+    void inorder(Node* node) const;
+    void preorder(Node* node) const;
+    void postorder(Node* node) const;
+
+    Node* findMin(Node* node) const;
+    Node* findMax(Node* node) const;
+
+    Node* remove(Node* node, int value);
+    void deleteTree(Node* node);
+
+public:
+    BinarySearchTree();
+    ~BinarySearchTree();
+
+    bool empty() const;
+
+    void insert(int value);
+    bool search(int value) const;
+    bool remove(int value);
+
+    void inorder() const;
+    void preorder() const;
+    void postorder() const;
+
+    int minimum() const;
+    int maximum() const;
+};
+```
+
