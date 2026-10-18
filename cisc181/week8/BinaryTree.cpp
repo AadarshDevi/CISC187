@@ -33,7 +33,13 @@ private:
         return node;
     }
 
-    bool search(Node *node, int value) const { return false; }
+    bool search(Node *node, int value) const {
+        if (node == nullptr) return false;
+        if (value == node->data) return true;
+        if (value < node->data) return search(node->left, value);
+        if (value > node->data) return search(node->right, value);
+        return false;
+    }
 
     void inorder(Node *node) const {
         if (node == nullptr) return;
