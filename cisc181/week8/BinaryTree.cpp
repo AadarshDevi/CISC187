@@ -144,6 +144,9 @@ int main() {
     tree.insert(5);
     tree.insert(10);
 
+    std::cout << tree.minimum() << " is the min value.\n";
+    std::cout << tree.maximum() << " is the max value.\n";
+
     tree.inorder();
 
     return 0;
