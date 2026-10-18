@@ -187,6 +187,8 @@ int main() {
 
     std::cout << tree.minimum() << " is the min value.\n";
     std::cout << tree.maximum() << " is the max value.\n";
+    tree.remove(50);
+    tree.inorder();
 
     return 0;
 }
