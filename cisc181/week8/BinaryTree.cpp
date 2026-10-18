@@ -95,7 +95,46 @@ private:
         return node;
     }
 
-    Node *remove(Node *node, int value) { return nullptr; }
+    Node *remove(Node *node, int value) {
+        // empty node aka no children
+        if (node == nullptr) return nullptr;
+
+        // more nodes available: check which path to traverse
+        if (value < node->data) node->left = remove(node->left, value);
+        else if (value > node->data) node->right = remove(node->right, value);
+        else {
+            // no left node but there might be a right node
+            // so save the right node and check later
+            // delete the parent node. (safely deleted)
+            if (node->left == nullptr) {
+                Node *temp = node->right;
+                delete node;
+                return temp;
+            }
+
+            // check if there is a right node,
+            // if there exists, delete it.
+            // same as the above condition but for right
+            if (node->right == nullptr) {
+                Node *temp = node->left;
+                delete node;
+                return temp;
+            }
+
+            // if the node has two children
+            // get the lowest value of right subtree
+            Node *temp = findMin(node->right);
+
+            // replace root value with this value
+            node->right = temp->left;
+
+            // slowly delete the right subtree by assigning the right subtree
+            // then we send in the temp value so we can reduce the leaves
+            node->right = remove(node->right, temp->data);
+        }
+
+        return node;
+    }
 
     void deleteTree(Node *node) {
     }
