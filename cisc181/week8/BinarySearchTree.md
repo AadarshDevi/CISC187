@@ -735,5 +735,5 @@ Implement `bool remove(int value);`. Deletion must correctly handle all three st
 ```
 ### Analysis
 
-1. ***Explain why deleting a node with two children requires more work than deleting a leaf.***
-2. ***Also explain why simply deleting a node without reconnecting its subtree would corrupt the tree.***
+1. ***Explain why deleting a node with two children requires more work than deleting a leaf.*** When a node has two children, we have to make sure that both children don't vanish. We have to connect them to the tree so we do not lose the information. For a single leaf, we set the parent node to have the value of the child node. After that, we delete the child node. There is no moving nodes, only changing parent node value. With `inorder` successor, we get the least smallest value from the right subtree of the node. By doing the same thing, we can delete the old value.
+2. ***Also explain why simply deleting a node without reconnecting its subtree would corrupt the tree.*** If we delete a node, the links to and from the node are disconnected. If the node had child nodes, all information under the node is lost. That is a memory leak.
