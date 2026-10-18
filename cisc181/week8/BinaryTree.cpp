@@ -21,49 +21,77 @@ struct Node {
 class BinarySearchTree {
 private:
     Node *root;
+    Node *root = nullptr;
+
+    Node *insert(Node *node, int value) {
 
     Node *insert(Node *node, int value);
+    }
 
-    bool search(Node *node, int value) const;
+    bool search(Node *node, int value) const { return false; }
 
     void inorder(Node *node) const;
+    void inorder(Node *node) const {
 
     void preorder(Node *node) const;
+    }
 
-    void postorder(Node *node) const;
+    void preorder(Node *node) const {
+    }
 
-    Node *findMin(Node *node) const;
+    void postorder(Node *node) const {
+    }
 
-    Node *findMax(Node *node) const;
+    Node *findMin(Node *node) const { return nullptr; };
 
-    Node *remove(Node *node, int value);
+    Node *findMax(Node *node) const { return nullptr; };
 
-    void deleteTree(Node *node);
+    Node *remove(Node *node, int value) { return nullptr; }
+
+    void deleteTree(Node *node) {
+    }
 
 public:
-    BinarySearchTree();
+    BinarySearchTree() {
+    }
 
-    ~BinarySearchTree();
+    ~BinarySearchTree() {
+    }
 
     bool empty() const {
         return root == nullptr;
     }
 
     void insert(int value);
+    void insert(int value) {
 
     bool search(int value) const;
 
-    bool remove(int value);
+    bool search(int value) const {
+        return false;
+    }
 
-    void inorder() const;
+    bool remove(int value) {
+        return false;
+    }
 
-    void preorder() const;
+    void inorder() const {
+        inorder(root);
+    }
 
-    void postorder() const;
+    void preorder() const {
+    }
 
-    int minimum() const;
+    void postorder() const {
+    }
 
-    int maximum() const;
+    int minimum() const {
+        return -1;
+    }
+
+    int maximum() const {
+        return -1;
+    }
 };
 
 int main() {
