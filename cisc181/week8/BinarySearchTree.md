@@ -790,4 +790,61 @@ tree.inorder();
 ### Reasoning
 
 1. ***Why is `inorder` traversal a useful correctness check after deletion?*** The `inorder` goes from the smallest value to the largest. If the nodes are placed wrong, we can see the values misplaced in the order. If `60` and `70` were swapped, we can deduce that something went wrong.
-2. ***Is sorted `inorder` output alone enough to prove that the complete implementation is correct? Briefly explain.*** 
+2. ***Is sorted `inorder` output alone enough to prove that the complete implementation is correct? Briefly explain.*** No. This is because memory leaks cannot be detected. If we lose nodes, or not delete nodes from memory, we will not know. The nodes could also have been inserted wrong even though the `inorder` shows the order is right.
+
+## Part 11 — Balanced vs. Skewed Trees
+
+***Question:*** Draw each tree and answer the questions given.
+
+***Question: Tree A - *** Insert `40, 20, 60, 10, 30, 50, 70`
+
+***Answer:***
+
+```
+		 40
+	  /      \
+	20        60
+   /  \      /  \
+ 10    30  50   70
+```
+
+1. ***Number of nodes:*** 7
+2. ***Height:*** 2
+3. ***Search path for `70`:*** $40\rightarrow 60\rightarrow 70$
+4. ***Number of nodes examined while searching for `70`:*** 3
+
+***Question: Tree B - *** Insert `10, 20, 30, 40, 50, 60, 70`
+
+***Answer:***
+
+```
+10
+  \
+   20
+	 \
+	  30
+		\
+		 40
+		   \
+			50
+			  \
+			   60
+			     \
+				  70
+```
+
+1. ***Number of nodes***: 7
+2. ***Height***: 6
+3. ***Search path for `70`:*** $10\rightarrow 20\rightarrow 30\rightarrow 40\rightarrow 50\rightarrow 60\rightarrow 70$
+4. ***Number of nodes examined while searching for `70`:*** 7
+
+### Analysis
+
+***Question:*** Explain why the same set of values can produce dramatically different BST performance simply because the insertion order changed.
+
+***Answer:*** Depending on how the values are inserted, they are placed differently. If a high number and a low number are placed, left tree will be the low and the right will be large tree. In the example above, if we have the  2 distant middle vales (2 middle values from their respective halves of the input), we will have trees that branch out. Like in the questions above, if we add values that are larger that the root and the next node, it will be a long tree with single branches.
+
+
+
+
+
