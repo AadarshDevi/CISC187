@@ -419,20 +419,16 @@ void insert(int value) {
 
 ## Part 6 — Search
 
-Implement:
+Implement `bool search(int value) const;`. For every test, manually predict the search path before running the program. Test:
+1. [ ] The root.
+2. [ ] A leaf.
+3. [ ] An internal node.
+4. [ ] A value not stored in the tree.
 
+### Test Suite
+
+```c++
 ```
-bool search(int value) const;
-```
-
-Test:
-
-- The root.
-- A leaf.
-- An internal node.
-- A value not stored in the tree.
-
-For every test, manually predict the search path before running the program.
 
 ### Complexity
 
