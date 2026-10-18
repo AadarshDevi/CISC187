@@ -523,11 +523,11 @@ For the tree:
 
 predict all three traversal outputs **before running your program**.
 
-| Traversal | Predicted Output | Actual Output |
-| --------- | ---------------- | ------------- |
-| Inorder   |                  |               |
-| Preorder  |                  |               |
-| Postorder |                  |               |
+| Traversal | Predicted Output                                                                                         | Actual Output          |
+| --------- | -------------------------------------------------------------------------------------------------------- | ---------------------- |
+| Inorder   | $$20\rightarrow 30\rightarrow 40\rightarrow 50\rightarrow 60\rightarrow 70\rightarrow 80$$               | `20 30 40 50 60 70 80` |
+| Preorder  | $$50\rightarrow 30\rightarrow 20\rightarrow 40\rightarrow 70\rightarrow 60\rightarrow 80$$               | `50 30 20 40 70 60 80` |
+| Postorder | $$20\rightarrow 40\rightarrow 30\rightarrow 30\rightarrow 60\rightarrow 80\rightarrow 70\rightarrow 50$$ | `20 40 30 60 80 70 50` |
 ### `inorder()`
 
 ```c++  
