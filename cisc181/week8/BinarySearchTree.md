@@ -700,12 +700,14 @@ Delete:
 20
 ```
 
-Delete:
 ***Question:*** Delete `30`
 
+***Answer:***
 
 ```
-30
+	50
+  /
+20
 ```
 
 ### Case 3 — Node With Two Children
