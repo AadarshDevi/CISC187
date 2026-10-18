@@ -677,9 +677,9 @@ Implement `bool remove(int value);`. Deletion must correctly handle all three st
 ### Case 1 — Leaf Node
 
 ```
-        50
-       /  \
-     30    70
+	50
+   /  \
+ 30    70
 ```
 
 Delete:
@@ -691,11 +691,11 @@ Delete:
 ### Case 2 — Node With One Child
 
 ```
-        50
-       /
-     30
-     /
-   20
+	50
+   /
+ 30
+ /
+20
 ```
 
 Delete:
@@ -707,11 +707,11 @@ Delete:
 ### Case 3 — Node With Two Children
 
 ```
-        50
-       /  \
-     30    70
-    / \    / \
-   20 40  60 80
+	 50
+    /  \
+  30    70
+ / \    / \
+20 40  60 80
 ```
 
 Delete:
