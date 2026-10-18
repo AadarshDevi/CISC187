@@ -920,13 +920,13 @@ Write a `main()` function that demonstrates your completed BST. Your program out
 
 Briefly explain:
 
-- Why the BST invariant applies to entire subtrees.
-- Why insertion order affects tree shape.
-- Why search follows only one path.
-- Why inorder traversal produces sorted output.
-- Why deletion is more complicated than insertion.
-- Why BST performance depends on height.
-- Why a skewed BST can behave like a linked list.
-- Why self-balancing trees such as AVL and Red-Black trees are useful.
+1. ***Why the BST invariant applies to entire subtrees.*** 
+2. ***Why insertion order affects tree shape.***
+3. ***Why search follows only one path.***
+4. ***Why inorder traversal produces sorted output.***
+5. ***Why deletion is more complicated than insertion.***
+6. ***Why BST performance depends on height.***
+7. ***Why a skewed BST can behave like a linked list.***
+8. ***Why self-balancing trees such as AVL and Red-Black trees are useful.***
 
 Connect your explanations to your implementation and observations rather than providing only definitions.
