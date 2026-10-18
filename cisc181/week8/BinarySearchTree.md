@@ -671,3 +671,68 @@ Node *findMax(Node *node) const {
 2. ***Why is the maximum found by repeatedly following `right`?*** Like `minimum()`, the max value for a node is the right node. So traversing it will lead to the rightmost leaf. This leaf will have the largest value.
 3. ***What should the functions do if the tree is empty?*** If there are no items in the tree, aka empty, we `return -1` to say that the tree was empty.
 4. ***Why are these operations O(H)?*** The largest and smallest values will always be in the bottom of the tree. When traversing the tree, they go deeper into the tree. If the tree is $H$ deep, then these values will be $H$ deep.
+## Part 9 — BST Deletion
+
+Implement:
+
+```
+bool remove(int value);
+```
+
+Deletion must correctly handle all three structural cases.
+
+### Case 1 — Leaf Node
+
+```
+        50
+       /  \
+     30    70
+```
+
+Delete:
+
+```
+30
+```
+
+### Case 2 — Node With One Child
+
+```
+        50
+       /
+     30
+     /
+   20
+```
+
+Delete:
+
+```
+30
+```
+
+### Case 3 — Node With Two Children
+
+```
+        50
+       /  \
+     30    70
+    / \    / \
+   20 40  60 80
+```
+
+Delete:
+
+```
+50
+```
+
+For the two-child case, use the **inorder successor**: the smallest value in the right subtree.
+
+Before implementing deletion, draw the tree **before and after** each case.
+
+### Analysis
+
+Explain why deleting a node with two children requires more work than deleting a leaf.
+
+Also explain why simply deleting a node without reconnecting its subtree would corrupt the tree.
