@@ -73,7 +73,8 @@ For the unsuccessful search, identify the point at which the algorithm determine
 Analysis
 
 Explain why BST search does not need to examine both subtrees after comparing the target with the current node.
-Part 4 — Implement a BST Class
+
+## Part 4 — Implement a BST Class
 
 Implement a BST from scratch.
 
@@ -191,7 +192,8 @@ where H is tree height.
 
 Then explain why this is approximately O (log N) for a reasonably balanced tree but may become O (N) for a highly skewed
 tree.
-Part 7 — Tree Traversals
+
+## Part 7 — Tree Traversals
 
 Implement:
 
@@ -227,7 +229,8 @@ Postorder
 Analysis
 
 Explain why inorder traversal of a valid BST produces values in sorted order.
-Part 8 — Minimum and Maximum
+
+## Part 8 — Minimum and Maximum
 
 Implement:
 
@@ -293,7 +296,8 @@ Analysis
 Explain why deleting a node with two children requires more work than deleting a leaf.
 
 Also explain why simply deleting a node without reconnecting its subtree would corrupt the tree.
-Part 10 — Verify Deletion
+
+## Part 10 — Verify Deletion
 
 Construct:
 
@@ -318,7 +322,9 @@ Reasoning
 Why is inorder traversal a useful correctness check after deletion?
 
 Is sorted inorder output alone enough to prove that the complete implementation is correct? Briefly explain.
-Part 11 — Balanced vs. Skewed Trees
+
+## Part 11 — Balanced vs. Skewed Trees
+
 Tree A
 
 Insert:
@@ -344,7 +350,9 @@ Analysis
 
 Explain why the same set of values can produce dramatically different BST performance simply because the insertion order
 changed.
-Part 12 — Complexity Analysis
+
+## Part 12 — Complexity Analysis
+
 Operation Balanced BST Highly Skewed BST Why?
 Search			
 Insert			
@@ -358,7 +366,8 @@ Then answer:
     Why is saying “BST search is O(log N)” incomplete or potentially incorrect?
 
 Use tree height in your explanation.
-Part 13 — Ordered Operations
+
+## Part 13 — Ordered Operations
 
 Consider this BST:
 
@@ -379,7 +388,8 @@ Without performing a complete traversal:
     Explain how the BST ordering property allows the algorithm to avoid exploring branches that cannot contain valid results.
 
 You do not need to implement a complete range-search function.
-Part 14 — Memory Management
+
+## Part 14 — Memory Management
 
 Nodes in your BST are dynamically allocated.
 
@@ -391,7 +401,7 @@ Analysis
     What would happen if dynamically allocated nodes were never released?
     How does maximum recursion depth relate to tree height?
 
-Part 15 — Complete BST Test
+## Part 15 — Complete BST Test
 
 Write a main () function that demonstrates your completed BST.
 
@@ -413,7 +423,8 @@ Your test should demonstrate:
     Correct tree behavior after deletion.
 
 Your program output should make it possible to verify that the BST remains correctly ordered after structural changes.
-Analysis and Reflection
+
+## Analysis and Reflection
 
 Briefly explain:
 
