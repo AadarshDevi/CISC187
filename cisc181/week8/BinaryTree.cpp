@@ -20,7 +20,7 @@ struct Node {
 
 class BinarySearchTree {
 private:
-    Node *root = nullptr;
+    Node *root;
 
     Node *insert(Node *node, int value) {
         // node given is null = add new value
