@@ -416,3 +416,32 @@ void insert(int value) {
 2. ***Why does the recursive helper return a `Node*`?*** Because it builds the links. It links the new node to the old/parent node.
 3. ***What happens when insertion reaches `nullptr`?*** A new node is created for the new value and this will be inserted to the previous node.
 4. ***What happens if the value already exists?*** The current `node -> data == value` means that the node itself will be returned cause it will bypass the 2 conditionals.
+
+## Part 6 — Search
+
+Implement:
+
+```
+bool search(int value) const;
+```
+
+Test:
+
+- The root.
+- A leaf.
+- An internal node.
+- A value not stored in the tree.
+
+For every test, manually predict the search path before running the program.
+
+### Complexity
+
+Explain why search is best expressed as:
+
+```
+O(H)
+```
+
+where `H` is tree height.
+
+Then explain why this is approximately `O(log N)` for a reasonably balanced tree but may become `O(N)` for a highly skewed tree.
