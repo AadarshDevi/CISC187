@@ -37,7 +37,7 @@ private:
     bool search(Node *node, int value) const { return false; }
 
     void inorder(Node *node) const {
-        if (empty()) return;
+        if (node == nullptr) return;
 
         inorder(node->left);
         cout << node->data << " ";
