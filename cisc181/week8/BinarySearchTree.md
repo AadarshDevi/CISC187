@@ -735,6 +735,5 @@ Implement `bool remove(int value);`. Deletion must correctly handle all three st
 ```
 ### Analysis
 
-Explain why deleting a node with two children requires more work than deleting a leaf.
-
-Also explain why simply deleting a node without reconnecting its subtree would corrupt the tree.
+1. ***Explain why deleting a node with two children requires more work than deleting a leaf.***
+2. ***Also explain why simply deleting a node without reconnecting its subtree would corrupt the tree.***
