@@ -682,12 +682,14 @@ Implement `bool remove(int value);`. Deletion must correctly handle all three st
  30    70
 ```
 
-Delete:
 ***Question:*** Delete `30`
 
+***Answer:***
 
 ```
-30
+50
+  \
+   70
 ```
 
 ### Case 2 — Node With One Child
