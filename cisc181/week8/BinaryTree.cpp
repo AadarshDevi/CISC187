@@ -42,7 +42,17 @@ private:
     void postorder(Node *node) const {
     }
 
-    Node *findMin(Node *node) const { return nullptr; };
+    Node *findMin(Node *node) const {
+        // empty node
+        if (node == nullptr) return nullptr;
+
+        // get the left most node
+        while (node->left != nullptr)
+            node = node->left;
+
+        return node;
+    }
+
     Node *findMax(Node *node) const {
         // empty node
         if (node == nullptr) return nullptr;
@@ -94,7 +104,19 @@ public:
     }
 
     int minimum() const {
-        return -1;
+        // no value found
+        if (empty()) return -1;
+
+        // Node with min val
+        Node *minNode = findMin(root->left);
+
+        // node DNE
+        if (minNode == nullptr) return -1;
+
+        // min val
+        int minVal = minNode->data;
+
+        return minVal;
     }
 
     int maximum() const {
