@@ -45,7 +45,9 @@ public:
 
     ~BinarySearchTree();
 
-    bool empty() const;
+    bool empty() const {
+        return root == nullptr;
+    }
 
     void insert(int value);
 
