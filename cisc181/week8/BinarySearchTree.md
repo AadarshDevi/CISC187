@@ -86,3 +86,28 @@ Then identify:
 7. Depth of `40`: 3
 8. Depth of `80`: 3
 9. Height of the tree: 3
+## Part 3 — Trace BST Search
+
+***Question:*** Using the BST from Part 2, manually trace searches for `40` and `75`. For the unsuccessful search, identify the point at which the algorithm determines that the target does not exist.
+
+***Answer:***
+
+| Current Node | Target | Comparison | Direction     |
+| ------------ | ------ | ---------- | ------------- |
+| 45           | 40     | $40 < 45$  | left          |
+| 25           | 40     | $25 < 40$  | right         |
+| 35           | 40     | $35 < 40$  | right         |
+| 40           | 40     | $40 == 40$ | ***`Found`*** |
+
+| Current Node | Target | Comparison | Direction       |
+| ------------ | ------ | ---------- | --------------- |
+| 45           | 75     | $75 > 45$  | right           |
+| 70           | 75     | $75 > 70$  | right           |
+| 90           | 75     | $75< 90$   | right           |
+| 80           | 75     | $75 < 80$  | ***`nullptr`*** |
+
+### Analysis
+
+***Question:*** Explain why BST search does not need to examine both subtrees after comparing the target with the current node.
+
+***Answer:***
