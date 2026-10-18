@@ -232,20 +232,19 @@ int main() {
     BinarySearchTree tree;
 
     tree.insert(50);
-    tree.insert(25);
+    tree.insert(70);
+    tree.insert(30);
     tree.insert(60);
-    tree.insert(75);
-    tree.insert(27);
-    tree.insert(5);
-    tree.insert(1);
-    tree.insert(10);
+    tree.insert(40);
+    tree.insert(20);
+    tree.insert(80);
 
+    std::cout << "In-order: ";
     tree.inorder();
-
-    std::cout << "Root (50): " << (tree.search(50) ? "true" : "false") << "\n";
-    std::cout << "Leaf (10): " << (tree.search(10) ? "true" : "false") << "\n";
-    std::cout << "Internal (5): " << (tree.search(5) ? "true" : "false") << "\n";
-    std::cout << "Invalid Value (100): " << (tree.search(100) ? "true" : "false") << "\n";
+    std::cout << "Pre-order: ";
+    tree.preorder();
+    std::cout << "\nPost-order: ";
+    tree.postorder();
 
     return 0;
 }
