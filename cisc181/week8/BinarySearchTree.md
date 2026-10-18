@@ -737,3 +737,29 @@ Implement `bool remove(int value);`. Deletion must correctly handle all three st
 
 1. ***Explain why deleting a node with two children requires more work than deleting a leaf.*** When a node has two children, we have to make sure that both children don't vanish. We have to connect them to the tree so we do not lose the information. For a single leaf, we set the parent node to have the value of the child node. After that, we delete the child node. There is no moving nodes, only changing parent node value. With `inorder` successor, we get the least smallest value from the right subtree of the node. By doing the same thing, we can delete the old value.
 2. ***Also explain why simply deleting a node without reconnecting its subtree would corrupt the tree.*** If we delete a node, the links to and from the node are disconnected. If the node had child nodes, all information under the node is lost. That is a memory leak.
+## Part 10 — Verify Deletion
+
+Construct a binary tree with the given values: `50, 30, 70, 20, 40, 60, 80`. Then perform:
+
+```
+remove(20)
+remove(30)
+remove(50)
+```
+
+After **each deletion**:
+
+1. [ ] Draw the resulting tree.
+2. [ ] Run inorder traversal.
+3. [ ] Verify that the values remain sorted.
+4. [ ] Verify that the deleted value can no longer be found.
+5. [ ] Verify that all other expected values remain accessible.
+### Test Suite
+```c++
+
+```
+### Reasoning
+
+Why is inorder traversal a useful correctness check after deletion?
+
+Is sorted inorder output alone enough to prove that the complete implementation is correct? Briefly explain.
