@@ -110,4 +110,4 @@ Then identify:
 
 ***Question:*** Explain why BST search does not need to examine both subtrees after comparing the target with the current node.
 
-***Answer:***
+***Answer:*** There are only 2 possible ways for the number to be in: left or right. So if it is not left, then it is right and vice versa. This is also because this binary tree can only have 2 child nodes.
