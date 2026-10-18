@@ -119,7 +119,7 @@ public:
         if (empty()) return -1;
 
         // Node with min val
-        Node *minNode = findMin(root->left);
+        Node *minNode = findMin(root);
 
         // node DNE
         if (minNode == nullptr) return -1;
@@ -135,7 +135,7 @@ public:
         if (empty()) return -1;
 
         // Node with min val
-        Node *maxNode = findMax(root->right);
+        Node *maxNode = findMax(root);
 
         // node DNE
         if (maxNode == nullptr) return -1;
@@ -159,8 +159,6 @@ int main() {
 
     std::cout << tree.minimum() << " is the min value.\n";
     std::cout << tree.maximum() << " is the max value.\n";
-
-    tree.inorder();
 
     return 0;
 }
