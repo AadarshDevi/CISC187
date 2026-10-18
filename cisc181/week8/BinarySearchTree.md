@@ -918,13 +918,13 @@ Write a `main()` function that demonstrates your completed BST. Your program out
 
 Briefly explain:
 
-1. ***Why the BST invariant applies to entire subtrees.*** 
-2. ***Why insertion order affects tree shape.***
-3. ***Why search follows only one path.***
-4. ***Why inorder traversal produces sorted output.***
-5. ***Why deletion is more complicated than insertion.***
-6. ***Why BST performance depends on height.***
-7. ***Why a skewed BST can behave like a linked list.***
-8. ***Why self-balancing trees such as AVL and Red-Black trees are useful.***
+1. ***Why the BST invariant applies to entire subtrees.*** If we do inappropriate operations on the tree, we can break the tree and potentially making the tree operations take way longer. It is like stack, heap and queue, we have to respect the structure. If we follow its rules, we will have an easier time working with it.
+2. ***Why insertion order affects tree shape.*** Insertion order for this tree will try to make each node have a max of 2 nodes. The numbers that are inserted if all are greater than the first insertion, we will not have the left subtree.
+3. ***Why search follows only one path.*** There is either value smaller than or greater than the node value. So it has to travel only one path.
+4. ***Why `inorder` traversal produces sorted output.*** `inorder` traverses in `left --> root --> right` way so the values left of the root are always less than the root value. And for the right, they are always greater than the root.
+5. ***Why deletion is more complicated than insertion.*** For deletion, we have to make sure we do not accidentally create a memory leak by forgetting to link the child nodes back to the tree. If we are changing values, not forgetting to delete the node after the vale transfer happens.
+6. ***Why BST performance depends on height.*** The more the height, the more nodes in the tree. The tree runs on $O(log(N))$ which means the more items, closer time to do searches, insertions, and deletions. 
+7. ***Why a skewed BST can behave like a linked list.*** The height of the tree will increase which in turn will take longer to do operations.
+8. ***Why self-balancing trees such as AVL and Red-Black trees are useful.*** These trees can help reduce the height which in turn means we have to traverse less deep.
 
 Connect your explanations to your implementation and observations rather than providing only definitions.
