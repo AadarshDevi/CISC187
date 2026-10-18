@@ -848,17 +848,14 @@ tree.inorder();
 
 Fill the table and then answer "why is saying “BST search is O(log N)" is incomplete or potentially incorrect? Use tree height in your explanation.
 
-| Operation              | Balanced BST | Highly Skewed BST | Why? |
-| ---------------------- | ------------ | ----------------- | ---- |
-| Search                 | $O(log(N))$  | $O(N)$            |      |
-| Insert                 | $O(log(N))$  | $O(N)$            |      |
-| Delete                 | $O(log(N))$  | $O(N)$            |      |
-| Minimum                | $O(log(N))$  | $O(N)$            |      |
-| Maximum                | $O(log(N))$  | $O(N)$            |      |
-| Full inorder traversal | $O(N)$       | $O(N)$            |      |
-
-
-
+| Operation              | Balanced BST | Highly Skewed BST | Why?                                                                                                                                                      |
+| ---------------------- | ------------ | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Search                 | $O(log(N))$  | $O(N)$            | Balanced: Half of the nodes for the balanced are eliminated.<br><br>Highly Skewed: It has to go through many more nodes to find it.                       |
+| Insert                 | $O(log(N))$  | $O(N)$            | We have to find the right insertion tree. From there determine the position for the new value. This means it has to dive deep into the tree (the height). |
+| Delete                 | $O(log(N))$  | $O(N)$            | We have to find the right node in the tree to delete. This will traverse the tree to find it.                                                             |
+| Minimum                | $O(log(N))$  | $O(N)$            | Going through each height to get the min value.                                                                                                           |
+| Maximum                | $O(log(N))$  | $O(N)$            | Going through each height to get the max value.                                                                                                           |
+| Full inorder traversal | $O(N)$       | $O(N)$            | We have to go through every single node in the tree. More nodes, the longer it takes.                                                                     |
 ## Part 13 — Ordered Operations
 
 Consider this BST:
