@@ -45,11 +45,17 @@ private:
     }
 
     void preorder(Node *node) const {
+        // null node
         if (node == nullptr)
             return;
 
+        // print value
         cout << node->data << " ";
+
+        // traverse the root's left subtree
         preorder(node->left);
+
+        // traverse the root's right subtree
         preorder(node->right);
     }
 
