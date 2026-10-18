@@ -107,7 +107,9 @@ public:
     }
 
     void inorder() const {
+        if (empty()) return;
         inorder(root);
+        std::cout << "\n";
     }
 
     void preorder() const {
