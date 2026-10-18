@@ -673,14 +673,7 @@ Node *findMax(Node *node) const {
 4. ***Why are these operations O(H)?*** The largest and smallest values will always be in the bottom of the tree. When traversing the tree, they go deeper into the tree. If the tree is $H$ deep, then these values will be $H$ deep.
 ## Part 9 — BST Deletion
 
-Implement:
-
-```
-bool remove(int value);
-```
-
-Deletion must correctly handle all three structural cases.
-
+Implement `bool remove(int value);`. Deletion must correctly handle all three structural cases. For the two-child case, use the **`inorder` successor**: the smallest value in the right subtree. Before implementing deletion, draw the tree **before and after** each case.
 ### Case 1 — Leaf Node
 
 ```
