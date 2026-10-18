@@ -899,26 +899,22 @@ Deletion: `deleteTree()`
 
 ## Part 15 — Complete BST Test
 
-Write a `main()` function that demonstrates your completed BST.
+Write a `main()` function that demonstrates your completed BST. Your program output should make it possible to verify that the BST remains correctly ordered after structural changes. Your test should demonstrate:
 
-Your test should demonstrate:
-
-1. An initially empty tree.
-2. Multiple insertions.
-3. Duplicate insertion behavior.
-4. Successful search.
-5. Unsuccessful search.
-6. Inorder traversal.
-7. Preorder traversal.
-8. Postorder traversal.
-9. Minimum.
-10. Maximum.
-11. Leaf deletion.
-12. One-child deletion.
-13. Two-child deletion.
-14. Correct tree behavior after deletion.
-
-Your program output should make it possible to verify that the BST remains correctly ordered after structural changes.
+1. [ ] An initially empty tree.
+2. [ ] Multiple insertions.
+3. [ ] Duplicate insertion behavior.
+4. [ ] Successful search.
+5. [ ] Unsuccessful search.
+6. [ ] Inorder traversal.
+7. [ ] Preorder traversal.
+8. [ ] Postorder traversal.
+9. [ ] Minimum.
+10. [ ] Maximum.
+11. [ ] Leaf deletion.
+12. [ ] One-child deletion.
+13. [ ] Two-child deletion.
+14. [ ] Correct tree behavior after deletion.
 
 ## Analysis and Reflection
 
