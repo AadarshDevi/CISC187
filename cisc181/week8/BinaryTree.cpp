@@ -89,13 +89,7 @@ public:
     }
 
     void insert(int value) {
-        std::cout << "Inserting: " << value << "\n";
-
-        // Recursively finding parent node
-        insert(root, value);
-
-        // Add Node to Parent Node
-        std::cout << "Insertion Completed\n";
+        root = insert(root, value);
     }
 
     bool search(int value) const {
