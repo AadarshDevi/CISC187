@@ -750,16 +750,44 @@ remove(50)
 After **each deletion**:
 
 1. [ ] Draw the resulting tree.
-2. [ ] Run inorder traversal.
+2. [ ] Run `inorder` traversal.
 3. [ ] Verify that the values remain sorted.
 4. [ ] Verify that the deleted value can no longer be found.
 5. [ ] Verify that all other expected values remain accessible.
 ### Test Suite
-```c++
 
+```c++
+BinarySearchTree tree;  
+  
+tree.insert(50);  
+tree.insert(30);  
+tree.insert(70);  
+tree.insert(20);  
+tree.insert(40);  
+tree.insert(60);  
+tree.insert(80);
+tree.inorder();
+  
+tree.remove(20);  
+tree.inorder();  
+  
+tree.remove(30);  
+tree.inorder();  
+  
+tree.remove(40);  
+tree.inorder();
 ```
+
+### Output
+
+```terminalOutput
+20 30 40 50 60 70 80      // Initial Binary Tree
+30 40 50 60 70 80         // tree.remove(20);
+40 50 60 70 80            // tree.remove(30);
+50 60 70 80               // tree.remove(40);
+```
+
 ### Reasoning
 
-Why is inorder traversal a useful correctness check after deletion?
-
-Is sorted inorder output alone enough to prove that the complete implementation is correct? Briefly explain.
+1. ***Why is `inorder` traversal a useful correctness check after deletion?*** The `inorder` goes from the smallest value to the largest. If the nodes are placed wrong, we can see the values misplaced in the order. If `60` and `70` were swapped, we can deduce that something went wrong.
+2. ***Is sorted `inorder` output alone enough to prove that the complete implementation is correct? Briefly explain.*** 
