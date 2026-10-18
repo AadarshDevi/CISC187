@@ -20,12 +20,15 @@ struct Node {
 
 class BinarySearchTree {
 private:
-    Node *root;
     Node *root = nullptr;
 
     Node *insert(Node *node, int value) {
+        // node given is null = add new value
+        if (node == nullptr) return new Node(value);
 
-    Node *insert(Node *node, int value);
+        // add new node
+        if (node->data > value) node->left = insert(node->left, value);
+        else if (node->data < value) node->right = insert(node->right, value);
     }
 
     bool search(Node *node, int value) const { return false; }
