@@ -45,6 +45,12 @@ private:
     }
 
     void preorder(Node *node) const {
+        if (node == nullptr)
+            return;
+
+        cout << node->data << " ";
+        preorder(node->left);
+        preorder(node->right);
     }
 
     void postorder(Node *node) const {
