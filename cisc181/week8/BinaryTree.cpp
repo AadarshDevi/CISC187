@@ -108,6 +108,8 @@ public:
     }
 
     void postorder() const {
+        if (empty()) return;
+        postorder(root);
     }
 
     int minimum() const {
