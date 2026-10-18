@@ -592,4 +592,6 @@ void postorder(Node *node) const {
 ```
 ### Analysis
 
-Explain why inorder traversal of a valid BST produces values in sorted order.
+***Question:*** Explain why inorder traversal of a valid BST produces values in sorted order.
+
+***Answer:*** In-order Traversal of BST produces sorted values because the algorithm goes to the left first which is the lowest value of the three (Left, Root, and Right) then is recursively goes down till the last depth/height. Since the lowest value comes first, it then goes to root, which is the middle value and then right, the highest value. So each step up prints the larger numbers in the tree.
