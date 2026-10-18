@@ -892,10 +892,10 @@ Deletion: `deleteTree()`
 
 ### Analysis
 
-1. Why should children be deleted before their parent?
-2. Which traversal naturally supports this ordering?
-3. What would happen if dynamically allocated nodes were never released?
-4. How does maximum recursion depth relate to tree height?
+1. ***Why should children be deleted before their parent?*** If the children are deleted then their memory will be removed. If the parent is deleted, the children will be in memory making it  memory leak.
+2. ***Which traversal naturally supports this ordering?*** `postorder()` naturally supports this kind of traversing because it traverses from `left --> right --> root`.
+3. ***What would happen if dynamically allocated nodes were never released?*** A memory leak will be created and will consume too much resources.
+4. ***How does maximum recursion depth relate to tree height?*** The recursion depth will be equal the depth of the tree because it will go down each root and delete the children, come back up, delete the root and it will happen for each node in the tree.
 
 ## Part 15 — Complete BST Test
 
