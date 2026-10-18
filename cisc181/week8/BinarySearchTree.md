@@ -595,3 +595,79 @@ void postorder(Node *node) const {
 ***Question:*** Explain why inorder traversal of a valid BST produces values in sorted order.
 
 ***Answer:*** In-order Traversal of BST produces sorted values because the algorithm goes to the left first which is the lowest value of the three (Left, Root, and Right) then is recursively goes down till the last depth/height. Since the lowest value comes first, it then goes to root, which is the middle value and then right, the highest value. So each step up prints the larger numbers in the tree.
+
+## Part 8 — Minimum and Maximum
+
+Implement the methods below. Your implementation should use the structure of the BST rather than traversing every node.
+
+```
+int minimum() const;
+int maximum() const;
+```
+
+### `minimum()`
+
+```c++
+int minimum() const {  
+    // no value found  
+    if (empty()) return -1;  
+  
+    // Node with min val  
+    Node *minNode = findMin(root);  
+  
+    // node DNE  
+    if (minNode == nullptr) return -1;  
+  
+    // min val  
+    int minVal = minNode->data;  
+  
+    return minVal;  
+}
+
+Node *findMin(Node *node) const {  
+    // empty node  
+    if (node == nullptr) return nullptr;  
+  
+    // get the left most node  
+    while (node->left != nullptr)  
+        node = node->left;  
+  
+    return node;  
+}
+```
+### `maximum()`
+
+```c++
+int maximum() const {  
+    // no value found  
+    if (empty()) return -1;  
+  
+    // Node with min val  
+    Node *maxNode = findMax(root);  
+  
+    // node DNE  
+    if (maxNode == nullptr) return -1;  
+  
+    // min val  
+    int maxVal = maxNode->data;  
+  
+    return maxVal;  
+}
+
+Node *findMax(Node *node) const {  
+    // empty node  
+    if (node == nullptr) return nullptr;  
+  
+    // get the left most node  
+    while (node->right != nullptr)  
+        node = node->right;  
+  
+    return node;  
+}
+```
+### Analysis
+
+1. ***Why is the minimum found by repeatedly following `left`?*** The minimum value for a node will always be it's left leaf. So by traversing the left nodes, we get to the final leaf. This leaf will have the min value in the tree.
+2. ***Why is the maximum found by repeatedly following `right`?*** Like `minimum()`, the max value for a node is the right node. So traversing it will lead to the rightmost leaf. This leaf will have the largest value.
+3. ***What should the functions do if the tree is empty?*** If there are no items in the tree, aka empty, we `return -1` to say that the tree was empty.
+4. ***Why are these operations O(H)?*** The largest and smallest values will always be in the bottom of the tree. When traversing the tree, they go deeper into the tree. If the tree is $H$ deep, then these values will be $H$ deep.
