@@ -43,8 +43,16 @@ private:
     }
 
     Node *findMin(Node *node) const { return nullptr; };
+    Node *findMax(Node *node) const {
+        // empty node
+        if (node == nullptr) return nullptr;
 
-    Node *findMax(Node *node) const { return nullptr; };
+        // get the left most node
+        while (node->right != nullptr)
+            node = node->right;
+
+        return node;
+    }
 
     Node *remove(Node *node, int value) { return nullptr; }
 
