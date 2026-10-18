@@ -501,3 +501,95 @@ $$\log_2(N+1) -1$$
 $$\log(N)$$
 $$O\log(N)$$
 So this how we get the time complexity for the `Binary Tree`.
+## Part 7 — Tree Traversals
+
+Implement:
+
+```c++
+void inorder() const;        // Left → Root → Right
+void preorder() const;       // Root → Left → Right
+void postorder() const;      // Left → Right → Root
+```
+
+For the tree:
+
+```
+        50
+       /  \
+     30    70
+    / \    / \
+   20 40  60 80
+```
+
+predict all three traversal outputs **before running your program**.
+
+| Traversal | Predicted Output | Actual Output |
+| --------- | ---------------- | ------------- |
+| Inorder   |                  |               |
+| Preorder  |                  |               |
+| Postorder |                  |               |
+### `inorder()`
+
+```c++  
+void inorder() const {  
+    if (empty()) return;  
+    inorder(root);  
+    std::cout << "\n";  
+}  
+
+void inorder(Node *node) const {  
+    if (node == nullptr) return;  
+  
+    inorder(node->left);  
+    cout << node->data << " ";  
+    inorder(node->right);  
+}  
+```
+### `preorder()`
+
+```c++
+void preorder() const {  
+    if (empty()) return;  
+    preorder(root);  
+}  
+  
+void preorder(Node *node) const {  
+    // null node  
+    if (node == nullptr)  
+        return;  
+  
+    // print value  
+    cout << node->data << " ";  
+  
+    // traverse the root's left subtree  
+    preorder(node->left);  
+  
+    // traverse the root's right subtree  
+    preorder(node->right);  
+}  
+```
+### `postorder()`
+
+```c++
+void postorder() const {  
+    if (empty()) return;  
+    postorder(root);  
+}  
+  
+void postorder(Node *node) const {  
+    // null node  
+    if (node == nullptr) return;  
+  
+    // traverse the root's left subtree  
+    postorder(node->left);  
+  
+    // traverse the root's right subtree  
+    postorder(node->right);  
+  
+    // print value  
+    cout << node->data << " ";  
+}
+```
+### Analysis
+
+Explain why inorder traversal of a valid BST produces values in sorted order.
