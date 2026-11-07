@@ -48,11 +48,21 @@ they are connected. A node in a tree has to be connected to another node, but in
 | A cyclic graph with two disconnected components | No    | Nodes cannot be alone, they must be connected to another node.                                                     |
 ## Part 3 — Adjacency List Representation
 
+I redrew the question as a graph
+
+```
+	A
+  /   \
+ v     v
+B ----> C
 |	    |
 v       v
 D ----> E
   \   /
 	V
+	F
+```
+
 ***Question:*** Using the graph from Part 1, create its adjacency list.
 
 | Vertex | Adjacent Vertices |
