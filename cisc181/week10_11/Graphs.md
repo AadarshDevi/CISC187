@@ -22,15 +22,7 @@ E-F
 7. ***Explain the difference between a path's length and the distance between two vertices.*** The path length is the number of edges between the starting and ending vertices in the path. Distance is the shortest path from starting and ending vertices.
 ## Part 2 — Graphs vs. Trees
 
-Explain why every tree is a graph, but not every graph is a tree.
-
-Your response should discuss:
-
-- Cycles
-- Connectivity
-- Disconnected vertices
-
-Then determine whether each structure below could be considered a tree.
+***Question:*** Explain why every tree is a graph, but not every graph is a tree. Your response should discuss: Cycles, Connectivity, and Disconnected vertices. Then determine whether each structure below could be considered a tree.
 
 |Structure|Tree?|Reason|
 |---|---|---|
