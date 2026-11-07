@@ -24,10 +24,16 @@ E-F
 
 ***Question:*** Explain why every tree is a graph, but not every graph is a tree. Your response should discuss: Cycles, Connectivity, and Disconnected vertices. Then determine whether each structure below could be considered a tree.
 
-|Structure|Tree?|Reason|
-|---|---|---|
-|Connected graph with no cycles|||
-|Connected graph containing a cycle|||
-|Acyclic graph with two disconnected components|||
+***Answer:*** A tree is a graph because it is comprised of nodes and branches which are also used in graphs. They are the same building blocks used to build graphs. In a tree, a node connects to other nodes, so does a graph. But not all graphs can be trees in some situations.
+
+When a graph is not a tree, it is because there is cycle in the graph. In a tree, 1 node can only connect to the nodes below itself. In a graph, any node can connect any other node. In a tree a node can only have 1 parent node, but a graph can have 0 to $\infty$.
+
+Another reason some graphs can't be trees, is that in a graph, some nodes can be disconnected from the graph even though it is still part of it. In a tree, all nodes will always be connected to other nodes, sometimes the path is long, but they are connected. A node in a tree has to be connected to another node, but in a graph, it can just exist.
+
+| Structure                                       | Tree? | Reason                                                                                                             |
+| ----------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------ |
+| Connected graph with no cycles                  | Yes   | The branches will branch out and not mix with other branches. Nodes will have 1 parent node only.                  |
+| Connected graph containing a cycle              | No    | The branches can merge into another node making it not a tree. A node in a tree cannot have multiple parent nodes. |
+| A cyclic graph with two disconnected components | No    | Nodes cannot be alone, they must be connected to another node.                                                     |
 
 ## Part 3 — Adjacency List Representation
