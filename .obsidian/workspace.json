@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cisc181/week9/BinaryHeap.md",
+                "file": "cisc181/week10_11/Graphs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BinaryHeap"
+              "title": "Graphs"
             }
           }
         ]
@@ -190,8 +190,10 @@
   },
   "active": "2e666d375f858b7d",
   "lastOpenFiles": [
-    "cisc181/week8/BinarySearchTree.md",
     "cisc181/week9/BinaryHeap.md",
+    "cisc181/week10_11/Graphs.md",
+    "cisc181/week10_11",
+    "cisc181/week8/BinarySearchTree.md",
     "cisc181/week9",
     "cisc181/project1/Project 1 -.md",
     "cisc181/project1/main.cpp~",
@@ -204,7 +206,6 @@
     "cisc181/week7/LinkedList.md",
     "cisc181/week7/LinkedList.md~",
     "cisc181/week7/LinkedList.cpp~",
-    "cisc181/week7/LinkedList.exe",
     "cisc181/week6/Queue.md",
     "cisc181/week5/HashTables.md",
     "Output Table.md",
