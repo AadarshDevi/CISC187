@@ -46,5 +46,24 @@ they are connected. A node in a tree has to be connected to another node, but in
 | Connected graph with no cycles                  | Yes   | The branches will branch out and not mix with other branches. Nodes will have 1 parent node only.                  |
 | Connected graph containing a cycle              | No    | The branches can merge into another node making it not a tree. A node in a tree cannot have multiple parent nodes. |
 | A cyclic graph with two disconnected components | No    | Nodes cannot be alone, they must be connected to another node.                                                     |
-
 ## Part 3 — Adjacency List Representation
+
+|	    |
+v       v
+D ----> E
+  \   /
+	V
+***Question:*** Using the graph from Part 1, create its adjacency list.
+
+| Vertex | Adjacent Vertices |
+| ------ | ----------------- |
+| A      | B, C              |
+| B      | A, C, D           |
+| C      | A, B, E           |
+| D      | B, E, F           |
+| E      | C, D, F           |
+| F      | D, E              |
+***Questions:***
+1. ***Why does each undirected edge appear twice in an adjacency-list representation?***
+2. ***Why is the total storage for an adjacency list commonly described as O(V + E)?***
+3. ***Why are adjacency lists especially useful for sparse graphs?***
