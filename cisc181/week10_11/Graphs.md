@@ -20,3 +20,22 @@ E-F
 5. ***What is the length of the path you provided?*** `4`
 6. ***Determine the shortest distance from `A` to `F`.*** $A\rightarrow C\rightarrow E\rightarrow F$
 7. ***Explain the difference between a path's length and the distance between two vertices.*** The path length is the number of edges between the starting and ending vertices in the path. Distance is the shortest path from starting and ending vertices.
+## Part 2 — Graphs vs. Trees
+
+Explain why every tree is a graph, but not every graph is a tree.
+
+Your response should discuss:
+
+- Cycles
+- Connectivity
+- Disconnected vertices
+
+Then determine whether each structure below could be considered a tree.
+
+|Structure|Tree?|Reason|
+|---|---|---|
+|Connected graph with no cycles|||
+|Connected graph containing a cycle|||
+|Acyclic graph with two disconnected components|||
+
+## Part 3 — Adjacency List Representation
