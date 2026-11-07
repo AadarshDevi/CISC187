@@ -11,14 +11,15 @@
             "id": "2e666d375f858b7d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "cisc181/week10_11/Graphs.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/plugins/table-of-contents-automatic-but-compatible-with-publish/data.json",
+                "bFile": ".obsidian/plugins/table-of-contents-automatic-but-compatible-with-publish/data.json",
+                "aRef": "HEAD",
+                "bRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Graphs"
+              "icon": "diff",
+              "title": "Diff: data.json  (Index)"
             }
           }
         ],
@@ -162,7 +163,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cisc181/week10_11/Graphs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
