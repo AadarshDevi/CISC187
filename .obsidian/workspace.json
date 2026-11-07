@@ -21,7 +21,8 @@
               "title": "Graphs"
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -99,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cisc181/week_3_4/Sorting_1.md",
+                "file": "cisc181/week10_11/Graphs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cisc181/week_3_4/Sorting_1.md",
+                "file": "cisc181/week10_11/Graphs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cisc181/week_3_4/Sorting_1.md",
+                "file": "cisc181/week10_11/Graphs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -169,13 +170,25 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "033275246fec0752",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "pinned": true,
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,13 +198,14 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "2e666d375f858b7d",
   "lastOpenFiles": [
-    "cisc181/week9/BinaryHeap.md",
     "cisc181/week10_11/Graphs.md",
+    "cisc181/week9/BinaryHeap.md",
     "cisc181/week10_11",
     "cisc181/week8/BinarySearchTree.md",
     "cisc181/week9",
