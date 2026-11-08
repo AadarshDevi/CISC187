@@ -78,6 +78,25 @@ D ----> E
 2. ***Why is the total storage for an adjacency list commonly described as O(V + E)?*** $O(V)$ is the space needed for $N$ nodes. Next are the edges. $O(E)$ is the space needed for directed edges. It is also the same space needed for the undirected edges because $O(2E) = O(E)$. $2E$ is 2 edges between 2 nodes for an undirected edge. So if we add the sum for the total storage needed it boils down to $O(V) + O(E) = O(V+E)$.
 3. ***Why are adjacency lists especially useful for sparse graphs?*** In an adjunct list, the graph has undirected edges. This means the number of edges in the graph is less than the theoretical total number of edges in the graph.
 
+## Part 4 — Adjacency Matrix Representation
+
+Create the adjacency matrix for the same graph.
+
+|     | B   | C   | D   | E   | F   |
+| --- | --- | --- | --- | --- | --- |
+| A   |     |     |     |     |     |
+| B   |     |     |     |     |     |
+| C   |     |     |     |     |     |
+| D   |     |     |     |     |     |
+| E   |     |     |     |     |     |
+| F   |     |     |     |     |     |
+
+***Question:***
+1. ***Why is the matrix symmetric for this graph?***
+2. ***How quickly can an adjacency matrix determine whether two vertices are adjacent?***
+3. ***Why does the matrix require O(V2) space?***
+4. ***Why may this representation be wasteful for sparse graphs?***
+
 ## Part 8 — Directed Graphs
 
 ```
