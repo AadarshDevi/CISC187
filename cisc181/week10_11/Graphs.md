@@ -80,8 +80,6 @@ D ----> E
 
 ## Part 8 — Directed Graphs
 
-Consider the directed edges:
-
 ```
 A -> B
 A -> C
@@ -91,10 +89,9 @@ D -> C
 D -> E
 ```
 
-Answer:
-
-1. Which vertices are adjacent from `A`?
-2. Is `A` adjacent from `B`? Explain.
-3. Give one directed path from `A` to `E`.
-4. Identify whether a directed cycle exists.
-5. Explain why adding an edge to a directed adjacency list differs from adding an undirected edge.
+***Questions:*** Consider the directed edges above.
+1. ***Which vertices are adjacent from `A`?*** `B, C`
+2. ***Is `A` adjacent from `B`? Explain.*** Yes, `A` is adjacent to `B` because there is an edge from `A` to `B`
+3. ***Give one directed path from `A` to `E`.***
+4. ***Identify whether a directed cycle exists.***
+5. ***Explain why adding an edge to a directed adjacency list differs from adding an undirected edge.***
