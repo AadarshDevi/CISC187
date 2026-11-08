@@ -95,3 +95,27 @@ D -> E
 3. ***Give one directed path from `A` to `E`.*** $A\rightarrow B\rightarrow D\rightarrow E$
 4. ***Identify whether a directed cycle exists.*** Yes, there is a cycle in the graph: $B\rightarrow D\rightarrow C\rightarrow B$
 5. ***Explain why adding an edge to a directed adjacency list differs from adding an undirected edge.*** Adding an undirected edge allows us to traverse between 2 nodes back and forth. But adding a directed edge allows traversal in one direction, there is no going back. Think of an undirected edge as a two way road and a directed edge as a one way road.
+
+## Part 9 — Weighted Graphs
+
+Consider the weighted graph:
+
+```
+A --4-- B
+A --2-- C
+B --5-- D
+C --1-- B
+C --8-- D
+B --3-- E
+D --2-- E
+```
+
+Calculate the total cost of:
+
+1. `A -> B -> E`
+2. `A -> C -> B -> E`
+3. `A -> C -> D -> E`
+
+Which of these paths has the lowest total weight?
+
+Explain why the path with the fewest edges is not necessarily the path with the lowest cost.
