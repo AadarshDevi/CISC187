@@ -214,16 +214,7 @@ Vertices:
 
 ## Part 6 — Breadth-First Search
 
-Breadth-First Search visits vertices by increasing distance from the starting vertex. BFS uses a **queue** to maintain the frontier.
-
-Implement:
-
-```
-void bfs(int start) const;
-```
-
-Your BFS should:
-
+Breadth-First Search visits vertices by increasing distance from the starting vertex. BFS uses a **queue** to maintain the frontier. Implement `void bfs(int start) const;`. Your BFS should:
 1. Enqueue the starting vertex.
 2. Mark the starting vertex as discovered.
 3. Repeatedly dequeue a vertex.
