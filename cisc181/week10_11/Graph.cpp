@@ -87,7 +87,7 @@ public:
         // create lists to store child nodes
         queue<int> frontierQueue;
 
-        // crates a list to track if the node was visited/discovered
+        // creates a list to track if the node was visited/discovered; setting default val to false
         vector<bool> discoveredSet(adjacencyList.size(), false);
 
         // push starting vertex
