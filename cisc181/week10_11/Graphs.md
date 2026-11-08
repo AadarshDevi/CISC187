@@ -99,22 +99,22 @@ D -> E
 ## Part 9 — Weighted Graphs
 
 Consider the weighted graph below, Calculate the total cost of:
-1. `A -> B -> E`
-2. `A -> C -> B -> E`
-3. `A -> C -> D -> E`
+1. $A \rightarrow B \rightarrow E=4+3=7$
+2. $A \rightarrow C \rightarrow B \rightarrow E=2+1+3=6$
+3. $A \rightarrow C \rightarrow D \rightarrow E=2+8+2=12$
 
 ```
-A --4-- B
-A --2-- C
-B --5-- D
-C --1-- B
-C --8-- D
-B --3-- E
-D --2-- E
+A --4--> B
+A --2--> C
+B --5--> D
+C --1--> B
+C --8--> D
+B --3--> E
+D --2--> E
 ```
 
 ***Question:*** Which of these paths has the lowest total weight? 
-***Answer:***
+***Answer:*** Path $A \rightarrow C \rightarrow B \rightarrow E$ has the lowest weight of $6$.
 
 ***Question:*** Explain why the path with the fewest edges is not necessarily the path with the lowest cost.
-***Answer:***
+***Answer:*** Some paths can have a lot of edges, but their weights can be lower, or a short path can have larger weights. Some paths can have a combo of large and small weighted edges. So path length does not equal lowest cost.
