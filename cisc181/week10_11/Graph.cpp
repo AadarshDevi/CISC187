@@ -104,6 +104,7 @@ public:
 
             // loop through each edge in adjacentList
             for (int vertex: adjacencyList[currentVertex]) {
+                // node already not found
                 if (!discoveredSet[vertex]) {
                     frontierQueue.push(vertex); // add node
                     discoveredSet[vertex] = true; // set visited=true
