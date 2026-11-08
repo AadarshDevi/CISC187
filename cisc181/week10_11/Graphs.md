@@ -167,6 +167,7 @@ Original Graph:
 | C             | D         | 8      |
 | B             | E         | 3      |
 | D             | E         | 2      |
+
 Initialization:
 
 | Starting Node | Distance |
