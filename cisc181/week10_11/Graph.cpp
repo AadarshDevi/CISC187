@@ -51,7 +51,7 @@ public:
         int iterator = 0;
         cout << "Vertices:\n";
         for (vector<int> vec: adjacencyList) {
-            cout << "Vertex " << iterator << " --> ";
+            cout << "\t" << iterator << " --> ";
             for (int vert: adjacencyList[iterator])
                 cout << vert << " ";
             cout << "\n";
