@@ -82,20 +82,20 @@ D ----> E
 
 Create the adjacency matrix for the same graph.
 
-|     | B   | C   | D   | E   | F   |
-| --- | --- | --- | --- | --- | --- |
-| A   |     |     |     |     |     |
-| B   |     |     |     |     |     |
-| C   |     |     |     |     |     |
-| D   |     |     |     |     |     |
-| E   |     |     |     |     |     |
-| F   |     |     |     |     |     |
+|     |  A  |  B  |  C  |  D  |  E  |  F  |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+|  A  |     |  1  |  1  |     |     |     |
+|  B  |  1  |     |  1  |  1  |     |     |
+|  C  |  1  |  1  |     |     |  1  |     |
+|  D  |     |  1  |     |     |  1  |  1  |
+|  E  |     |     |  1  |  1  |     |  1  |
+|  F  |     |     |     |  1  |  1  |     |
 
 ***Question:***
-1. ***Why is the matrix symmetric for this graph?***
-2. ***How quickly can an adjacency matrix determine whether two vertices are adjacent?***
-3. ***Why does the matrix require O(V2) space?***
-4. ***Why may this representation be wasteful for sparse graphs?***
+1. ***Why is the matrix symmetric for this graph?*** The graph uses undirected edges which means the two nodes can traverse to each other easily. This is y the graph is symmetric. Node B can traverse to Node C and vice versa. The nodes each have a edge to the other node. There are 2 edges between the two nodes.
+2. ***How quickly can an adjacency matrix determine whether two vertices are adjacent?*** It will take $O(1)$ because we are using a matrix (2D array). We do not have to traverse the entire 2D array because we know the row and col of the nodes. We can just point access the item and check if it is 1 (for adjacent) or 0 (not adjacent).
+3. ***Why does the matrix require $O(V^2)$ space?*** It will take $O(V^2)$ space because we are using a matrix (2D array) of $V\times V$ elements. 
+4. ***Why may this representation be wasteful for sparse graphs?*** In a graph, not all nodes are connected to other nodes. There could be nodes that do not connect to other nodes. In this case, there are less edges between all of the nodes. Most of the items in the matrix will be empty. There is no point in storing a lot of 0s.
 
 ## Part 8 — Directed Graphs
 
