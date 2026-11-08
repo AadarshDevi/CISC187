@@ -312,6 +312,19 @@ For each graph below, state whether Dijkstra's algorithm is appropriate and expl
 |Unweighted graph treated as all edges having weight 1|||
 |Directed graph containing a negative edge weight|||
 
+## Part 12 — Complexity Analysis
+
+Complete the following table.
+
+|Operation / Representation|Big-O|Explanation|
+|---|---|---|
+|Adjacency-list storage|||
+|Adjacency-matrix storage|||
+|Matrix adjacency check|||
+|Dijkstra with list-based unvisited queue|||
+|Dijkstra with binary-heap priority queue|||
+
+Do not provide only final Big-O values. Explain why each complexity occurs.
 
 ## Analysis and Reflection
 
