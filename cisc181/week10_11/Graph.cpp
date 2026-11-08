@@ -45,3 +45,13 @@ public:
 
     void dfs(int start) const;
 };
+
+int main() {
+    constexpr int vertices = 5;
+    Graph graph(vertices);
+    graph.addEdge(0, 1);
+    graph.addEdge(2, 3);
+    graph.addEdge(5, 2);
+    graph.addEdge(0, 3);
+    graph.display();
+}
