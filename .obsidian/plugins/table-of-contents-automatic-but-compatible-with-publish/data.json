@@ -5,7 +5,7 @@
     "codeBlocks": "n"
   },
   "removeCharactersFromTitles": [],
-  "hiddenLineIndicator": 191,
+  "hiddenLineIndicator": 16,
   "textStyling": {
     "removeWikilinks": true,
     "removeFootnotes": true,

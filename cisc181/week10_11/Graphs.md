@@ -201,6 +201,20 @@ Check [extra](#extra) for the entire calculations.
 2. ***Use predecessor information to reconstruct the shortest path from `A` to `E`.*** $A\rightarrow C\rightarrow B\rightarrow E$.
 3. ***Explain why predecessor values are needed if you want the actual path rather than only its total cost.*** The total cost to get from `A` to `E` is only the distance. It does not say what path to take to get the least distance, that's what ***Dijkstra's Shortest Path Algorithm*** gives. We use predecessors to get the path that has the least distance.
 
+## Analysis and Reflection
+
+***Questions:***
+1. ***Why adjacency lists are often preferred for sparse graphs.***
+2. ***Why adjacency matrices provide fast adjacency checking.***
+3. ***Why BFS uses a queue.***
+4. ***Why DFS uses a stack.***
+5. ***Why already-discovered or visited vertices must be tracked.***
+6. ***Why BFS can determine shortest distance in an unweighted graph.***
+7. ***Why BFS does not automatically solve weighted shortest-path problems.***
+8. ***Why directed edges must not automatically be treated as bidirectional.***
+9. ***Why Dijkstra's algorithm stores predecessors.***
+10. ***Why Dijkstra's algorithm should not be used when negative edge weights are present.***
+
 ## Extra
 
 ### Part 10
