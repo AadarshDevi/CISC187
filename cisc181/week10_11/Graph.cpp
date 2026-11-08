@@ -116,6 +116,10 @@ public:
         }
     }
 
+    inline std::string visited(bool visited) const {
+        return visited ? "true" : "false";
+    }
+
     void dfs(int start) const;
 };
 
