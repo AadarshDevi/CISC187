@@ -92,6 +92,9 @@ public:
 
         // push starting vertex
         frontierQueue.push(start);
+
+        while (!frontierQueue.empty()) {
+        }
     }
 
     void dfs(int start) const;
