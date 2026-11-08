@@ -98,6 +98,10 @@ public:
             // get the oldest item in the list
             int currentVertex = frontierQueue.front();
             frontierQueue.pop();
+
+            // we discovered the vertex
+            discoveredSet[currentVertex] = true;
+
         }
     }
 
