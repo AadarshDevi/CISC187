@@ -40,6 +40,7 @@ public:
             if (i == destination) {
                 cout << "Source and Destination have an edge.\n";
                 return;
+            }
 
         // no edge, add it
         adjacencyList[source].push_back(destination);
