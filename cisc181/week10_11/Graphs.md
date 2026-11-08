@@ -5,7 +5,7 @@
 2. [Part 2 — Graphs vs. Trees](#part-2--graphs-vs-trees)
 3. [Part 3 — Adjacency List Representation](#part-3--adjacency-list-representation)
 4. [Part 4 — Adjacency Matrix Representation](#part-4--adjacency-matrix-representation)
-5. Part 5
+5. [Part 5 — Implement an Adjacency-List Graph](#part-5--implement-an-adjacency-list-graph)
 6. Part 6
 7. Part 7
 8. [Part 8 — Directed Graphs](#part-8--directed-graphs)
