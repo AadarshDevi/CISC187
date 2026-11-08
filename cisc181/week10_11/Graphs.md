@@ -116,6 +116,51 @@ Create the adjacency matrix for the same graph.
 3. ***Why does the matrix require $O(V^2)$ space?*** It will take $O(V^2)$ space because we are using a matrix (2D array) of $V\times V$ elements. 
 4. ***Why may this representation be wasteful for sparse graphs?*** In a graph, not all nodes are connected to other nodes. There could be nodes that do not connect to other nodes. In this case, there are less edges between all of the nodes. Most of the items in the matrix will be empty. There is no point in storing a lot of 0s.
 
+## Part 5 — Implement an Adjacency-List Graph
+
+Implement an undirected graph in C++ using an adjacency list.
+
+You may use a structure similar to:
+
+```
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <stack>
+
+using namespace std;
+
+class Graph {
+private:
+    vector<vector<int>> adjacencyList;
+
+public:
+    Graph(int vertices);
+
+    void addEdge(int source, int destination);
+    void display() const;
+
+    void bfs(int start) const;
+    void dfs(int start) const;
+};
+```
+
+For this lab, vertices may be represented using integer indices.
+
+### Implement `addEdge()`
+
+Because the graph is undirected, adding the edge:
+
+```
+0 -- 1
+```
+
+must update the adjacency lists of both vertices.
+
+### Implement `display()`
+
+Display every vertex followed by its adjacent vertices.
+
 ## Part 8 — Directed Graphs
 
 ```
