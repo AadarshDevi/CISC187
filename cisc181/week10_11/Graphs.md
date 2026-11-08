@@ -240,13 +240,3 @@ Checking adjacent vertices of $B$.
 | B              | E               | $\infty$         | $3+3=6$              | Yes     | B           |
 
 Now we have reached $E$.
-
-***Question:*** After the algorithm finishes:
-1. ***Give the shortest distance from `A` to every vertex.***
-
-| Node              | B   | C   | D   | E   |
-| ----------------- | --- | --- | --- | --- |
-| Distance from $A$ | 3   | 2   | 8   | 6   |
-
-2. ***Use predecessor information to reconstruct the shortest path from `A` to `E`.*** $A\rightarrow C\rightarrow B\rightarrow E$.
-3. ***Explain why predecessor values are needed if you want the actual path rather than only its total cost.*** The total cost to get from `A` to `E` is only the distance. It does not say what path to take to get the least distance, that's what ***Dijkstra's Shortest Path Algorithm*** gives. We use predecessors to get the path that has the least distance.
