@@ -20,7 +20,20 @@ public:
 
     void addEdge(int source, int destination) {
         // src and dest same
-        if (source == destination) return;
+        if (source == destination) {
+            cout << "Source and destination vertices are he same.\n";
+            return;
+        }
+
+        if (source > adjacencyList.size() || source < 0) {
+            cout << "Source vertex out of bounds!\n";
+            return;
+        }
+
+        if (destination > adjacencyList.size() || destination < 0) {
+            cout << "Destination vertex out of bounds!\n";
+            return;
+        }
 
         // checking if there is an edge between vertices
         for (int i: adjacencyList[source])
