@@ -33,10 +33,11 @@ public:
     }
 
     void display() const {
-        for (int i: adjacencyList) {
-            cout << "Vertex " << i << " ⟶ ";
-            for (int j: adjacencyList[i])
-                cout << j << " ";
+        int iterator = 0;
+        for (vector<int> vec: adjacencyList) {
+            cout << "Vertex " << iterator << " --> ";
+            for (int vert: adjacencyList[iterator])
+                cout << vert << " ";
             cout << "\n";
         }
     }
