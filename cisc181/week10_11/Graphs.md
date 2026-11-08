@@ -286,16 +286,21 @@ E-F
 C-F
 ```
 
-Starting from `A`, complete a trace showing the queue and discovered set. Then identify the distance from `A` to every reachable vertex.
+Starting from `A`, complete a trace showing the queue and discovered set.
 
-|Step|Visited Vertex|Queue|Discovered Vertices|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+| Step | Visited Vertex | Queue          | Discovered Vertices |
+| ---- | -------------- | -------------- | ------------------- |
+| 0    | $\text{Empty}$ | $A$            | $A$                 |
+| 1    | $A$            | $B,D$          | $A,B,D$             |
+| 2    | $B$            | $D,C,E$        | $A,B,C,D,E$         |
+| 3    | $D$            | $C,E$          | $A,B,C,D,E$         |
+| 4    | $C$            | $E,F$          | $A,B,C,D,E,F$       |
+| 5    | $E$            | $F$            | $A,B,C,D,E,F$       |
+| 6    | $F$            | $\text{Empty}$ | $A,B,C,D,E,F$       |
+
+Identify the distance from `A` to every reachable vertex.
+
+`--text-blank`
 
 ## Part 8 — Directed Graphs
 
