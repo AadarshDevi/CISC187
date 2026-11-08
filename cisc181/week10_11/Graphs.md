@@ -118,3 +118,41 @@ D --2--> E
 
 ***Question:*** Explain why the path with the fewest edges is not necessarily the path with the lowest cost.
 ***Answer:*** Some paths can have a lot of edges, but their weights can be lower, or a short path can have larger weights. Some paths can have a combo of large and small weighted edges. So path length does not equal lowest cost.
+## Part 10 — Dijkstra's Shortest Path Algorithm
+
+Use the weighted graph and run Dijkstra's algorithm starting from `A`. But before doing so, initialize:
+1. Distance of `A` to `0`.
+2. All other distances to infinity.
+3. All predecessors to null.
+
+Original Graph:
+
+```
+A --4--> B
+A --2--> C
+B --5--> D
+C --1--> B
+C --8--> D
+B --3--> E
+D --2--> E
+```
+
+Initialized Graph:
+
+```
+--code-block-empty
+```
+
+Complete a table showing the important updates.
+
+|Current Vertex|Adjacent Vertex|Current Distance|Alternative Distance|Update?|Predecessor|
+|---|---|---|---|---|---|
+|||||||
+|||||||
+|||||||
+|||||||
+|||||||
+***Question:*** After the algorithm finishes:
+1. ***Give the shortest distance from `A` to every vertex.***
+2. ***Use predecessor information to reconstruct the shortest path from `A` to `E`.***
+3. ***Explain why predecessor values are needed if you want the actual path rather than only its total cost.***
