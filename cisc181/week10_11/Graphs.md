@@ -91,7 +91,7 @@ D -> E
 
 ***Questions:*** Consider the directed edges above.
 1. ***Which vertices are adjacent from `A`?*** `B, C`
-2. ***Is `A` adjacent from `B`? Explain.*** Yes, `A` is adjacent to `B` because there is an edge from `A` to `B`
-3. ***Give one directed path from `A` to `E`.***
-4. ***Identify whether a directed cycle exists.***
-5. ***Explain why adding an edge to a directed adjacency list differs from adding an undirected edge.***
+2. ***Is `A` adjacent from `B`? Explain.*** Yes, `A` is adjacent to `B` because there is an edge going from `A` to `B`. This is because in a directed graph, the edge points one way. If I go from A to B, I cannot go back from B to A because then i would need a new edge for it. 
+3. ***Give one directed path from `A` to `E`.*** $A\rightarrow B\rightarrow D\rightarrow E$
+4. ***Identify whether a directed cycle exists.*** Yes, there is a cycle in the graph: $B\rightarrow D\rightarrow C\rightarrow B$
+5. ***Explain why adding an edge to a directed adjacency list differs from adding an undirected edge.*** Adding an undirected edge allows us to traverse between 2 nodes back and forth. But adding a directed edge allows traversal in one direction, there is no going back. Think of an undirected edge as a two way road and a directed edge as a one way road.
