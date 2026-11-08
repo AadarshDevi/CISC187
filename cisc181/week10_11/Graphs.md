@@ -316,13 +316,13 @@ For each graph below, state whether Dijkstra's algorithm is appropriate and expl
 
 Complete the following table. Do not provide only final Big-O values. Explain why each complexity occurs.
 
-| Operation / Representation               | Big-O | Explanation |
-| ---------------------------------------- | ----- | ----------- |
-| Adjacency-list storage                   |       |             |
-| Adjacency-matrix storage                 |       |             |
-| Matrix adjacency check                   |       |             |
-| Dijkstra with list-based unvisited queue |       |             |
-| Dijkstra with binary-heap priority queue |       |             |
+| Operation / Representation               | Big-O    | Explanation                                                                                                                                                                                                  |
+| ---------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Adjacency-list storage                   | $O(V+E)$ | Each vertex has a list, meaning it is a list of lists. Each list holds the edges to other nodes. An edge would be repeated twice if the edges are undirected. So $O(V) + O(2E \text{ or}\space E) = O(V+E)$. |
+| Adjacency-matrix storage                 | $O(V^2)$ | Each vertex has a row and col of its own. If we have $V$ vertices, then we will store $V\times V$ items. Each item is a boolean, 1 for has edges and 0 for no edges between it and another node.             |
+| Matrix adjacency check                   | $O(1)$   | We have information, the indices of both vertices, with that we can point access the correct index and check for edges between them.                                                                         |
+| Dijkstra with list-based unvisited queue |          |                                                                                                                                                                                                              |
+| Dijkstra with binary-heap priority queue |          |                                                                                                                                                                                                              |
 
 ## Analysis and Reflection
 
