@@ -314,17 +314,15 @@ For each graph below, state whether Dijkstra's algorithm is appropriate and expl
 
 ## Part 12 — Complexity Analysis
 
-Complete the following table.
+Complete the following table. Do not provide only final Big-O values. Explain why each complexity occurs.
 
-|Operation / Representation|Big-O|Explanation|
-|---|---|---|
-|Adjacency-list storage|||
-|Adjacency-matrix storage|||
-|Matrix adjacency check|||
-|Dijkstra with list-based unvisited queue|||
-|Dijkstra with binary-heap priority queue|||
-
-Do not provide only final Big-O values. Explain why each complexity occurs.
+| Operation / Representation               | Big-O | Explanation |
+| ---------------------------------------- | ----- | ----------- |
+| Adjacency-list storage                   |       |             |
+| Adjacency-matrix storage                 |       |             |
+| Matrix adjacency check                   |       |             |
+| Dijkstra with list-based unvisited queue |       |             |
+| Dijkstra with binary-heap priority queue |       |             |
 
 ## Analysis and Reflection
 
