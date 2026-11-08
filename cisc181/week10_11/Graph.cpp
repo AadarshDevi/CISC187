@@ -99,6 +99,7 @@ public:
                 }
             }
         }
+        cout << "\n";
     }
 
     inline std::string visited(bool visited) const {
