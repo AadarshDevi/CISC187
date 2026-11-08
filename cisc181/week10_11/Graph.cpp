@@ -90,7 +90,7 @@ public:
         // crates a list to track if the node was visited/discovered
         vector<bool> discoveredSet(adjacencyList.size(), false);
 
-
+        // push starting vertex
         frontierQueue.push(start);
     }
 
