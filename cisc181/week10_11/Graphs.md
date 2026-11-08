@@ -306,11 +306,11 @@ Check [extra](#extra) for the entire calculations.
 
 For each graph below, state whether Dijkstra's algorithm is appropriate and explain why.
 
-|Graph|Use Dijkstra?|Reason|
-|---|---|---|
-|Weighted graph with only non-negative edge weights|||
-|Unweighted graph treated as all edges having weight 1|||
-|Directed graph containing a negative edge weight|||
+| Graph                                                 | Use Dijkstra? | Reason                                                                                                                                                                                                                     |
+| ----------------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Weighted graph with only non-negative edge weights    | Yes           | Weights are not negative so the algorithm can go through vertices and edges to return a shortest path and the algorithm cannot go wrong.                                                                                   |
+| Unweighted graph treated as all edges having weight 1 | Yes           | Because each edge is unweighted, we can assume each edge has a weight of `1`, this would give use many more options to find the shortest path. It will still work, it might take longer because each edge's weight is `1`. |
+| Directed graph containing a negative edge weight      | no            | When having negative weights, the algorithm might not be able to give the right shortest path, it could give a long path.                                                                                                  |
 
 ## Part 12 — Complexity Analysis
 
