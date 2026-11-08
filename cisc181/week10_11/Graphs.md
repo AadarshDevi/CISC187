@@ -122,7 +122,7 @@ Implement an undirected graph in C++ using an adjacency list. For this lab, vert
 
 Given Template:
 
-```
+```c++
 #include <iostream>
 #include <vector>
 #include <queue>
