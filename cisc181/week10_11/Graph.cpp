@@ -37,7 +37,8 @@ public:
 
         // checking if there is an edge between vertices
         for (int i: adjacencyList[source])
-            if (i == destination)
+            if (i == destination) {
+                cout << "Source and Destination have an edge.\n";
                 return;
 
         // no edge, add it
