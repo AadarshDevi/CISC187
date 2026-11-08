@@ -223,6 +223,55 @@ Breadth-First Search visits vertices by increasing distance from the starting ve
 6. Enqueue only vertices that have not already been discovered.
 7. Continue until the queue is empty.
 
+### Code: `bfs()`
+
+```c++
+void bfs(int start) const {  
+    // valid num: start  
+    if (start < 0 || start >= adjacencyList.size()) {  
+        cout << "Source vertex out of bounds!\n";  
+        return;  
+    }  
+  
+    // create lists to store child nodes  
+    queue<int> frontierQueue;  
+  
+    // creates a list to track if the node was visited/discovered; setting default val to false  
+    vector<bool> discoveredSet(adjacencyList.size(), false);  
+  
+    // push starting vertex  
+    frontierQueue.push(start);  
+  
+    cout << "Visited Vertex Order: ";  
+  
+    // int current vertex  
+    while (!frontierQueue.empty()) {  
+        // get the oldest item in the list  
+        int currentVertex = frontierQueue.front();  
+        frontierQueue.pop();  
+        //std::cout << "Current Vertex: " << currentVertex << " - ";  
+        cout << currentVertex << " ";  
+  
+        // we discovered the vertex  
+        discoveredSet[currentVertex] = true;  
+        //cout << "Visited ? " << visited(discoveredSet[currentVertex]) << "\n";  
+  
+        // loop through each edge in adjacentList        for (int vertex: adjacencyList[currentVertex]) {  
+            // node already not found  
+            if (!discoveredSet[vertex]) {  
+                frontierQueue.push(vertex); // add node  
+                discoveredSet[vertex] = true; // set visited=true  
+                //cout << "New Vertex Discovered: " << vertex << " - " << visited(discoveredSet[vertex]) << "\n";            }  
+        }  
+    }  
+    cout << "\n";  
+}  
+  
+inline std::string visited(bool visited) const {  
+    return visited ? "true" : "false";  
+}
+```
+
 ### BFS Trace
 
 Use the graph:
