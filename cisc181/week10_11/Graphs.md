@@ -5,10 +5,17 @@
 2. [Part 2 — Graphs vs. Trees](#part-2--graphs-vs-trees)
 3. [Part 3 — Adjacency List Representation](#part-3--adjacency-list-representation)
 4. [Part 4 — Adjacency Matrix Representation](#part-4--adjacency-matrix-representation)
-5. [Part 8 — Directed Graphs](#part-8--directed-graphs)
-6. [Part 9 — Weighted Graphs](#part-9--weighted-graphs)
-7. [Part 10 — Dijkstra's Shortest Path Algorithm](#part-10--dijkstras-shortest-path-algorithm)
-8. [Extra](#extra)
+5. Part 5
+6. Part 6
+7. Part 7
+8. [Part 8 — Directed Graphs](#part-8--directed-graphs)
+9. [Part 9 — Weighted Graphs](#part-9--weighted-graphs)
+10. [Part 10 — Dijkstra's Shortest Path Algorithm](#part-10--dijkstras-shortest-path-algorithm)
+11. Part 11
+12. Part 12
+13. Part 13
+14. [Analysis & Reflection](#analysis-&-reflection)
+15. [Extra](#extra)
    - [Part 10](#part-10)
 
 
