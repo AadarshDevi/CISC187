@@ -59,24 +59,6 @@ public:
         }
     }
 
-    /*
-    BFS(startV) {
-   Enqueue startV in frontierQueue
-   Add startV to discoveredSet
-
-   while ( frontierQueue is not empty ) {
-      currentV = Dequeue from frontierQueue
-      "Visit" currentV
-      for each vertex adjV adjacent to currentV {
-         if ( adjV is not in discoveredSet ) {
-            Enqueue adjV in frontierQueue
-            Add adjV to discoveredSet
-         }
-      }
-   }
-}
-     */
-
     void bfs(int start) const {
         // valid num: start
         if (start < 0 || start >= adjacencyList.size()) {
