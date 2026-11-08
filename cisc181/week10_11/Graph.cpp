@@ -130,5 +130,6 @@ int main() {
     graph.addEdge(2, 3);
     graph.addEdge(4, 2);
     graph.addEdge(4, 3);
+    graph.addEdge(1, 2);
     graph.display();
 }
