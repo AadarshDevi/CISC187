@@ -302,6 +302,16 @@ Check [extra](#extra) for the entire calculations.
 
 2. ***Use predecessor information to reconstruct the shortest path from `A` to `E`.*** $A\rightarrow C\rightarrow B\rightarrow E$.
 3. ***Explain why predecessor values are needed if you want the actual path rather than only its total cost.*** The total cost to get from `A` to `E` is only the distance. It does not say what path to take to get the least distance, that's what ***Dijkstra's Shortest Path Algorithm*** gives. We use predecessors to get the path that has the least distance.
+## Part 11 — When Should Dijkstra's Algorithm Be Used?
+
+For each graph below, state whether Dijkstra's algorithm is appropriate and explain why.
+
+|Graph|Use Dijkstra?|Reason|
+|---|---|---|
+|Weighted graph with only non-negative edge weights|||
+|Unweighted graph treated as all edges having weight 1|||
+|Directed graph containing a negative edge weight|||
+
 
 ## Analysis and Reflection
 
