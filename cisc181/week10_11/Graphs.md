@@ -118,9 +118,9 @@ Create the adjacency matrix for the same graph.
 
 ## Part 5 — Implement an Adjacency-List Graph
 
-Implement an undirected graph in C++ using an adjacency list.
+Implement an undirected graph in C++ using an adjacency list. For this lab, vertices may be represented using integer indices. You may use a structure similar to:
 
-You may use a structure similar to:
+Given Template:
 
 ```
 #include <iostream>
@@ -144,8 +144,6 @@ public:
     void dfs(int start) const;
 };
 ```
-
-For this lab, vertices may be represented using integer indices.
 
 ### Implement `addEdge()`
 
