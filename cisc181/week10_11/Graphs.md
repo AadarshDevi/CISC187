@@ -184,6 +184,22 @@ void addEdge(int source, int destination) {
 
 Display every vertex followed by its adjacent vertices.
 
+```c++
+void display() const {  
+    int iterator = 0;  
+    cout << "Vertices:\n";
+    
+    for (vector<int> vec: adjacencyList) {  
+        cout << "\t" << iterator << " --> ";
+        
+        for (int vert: adjacencyList[iterator])  
+            cout << vert << " ";  
+		
+        cout << "\n";  
+        iterator++;  
+    }  
+}
+```
 ## Part 8 — Directed Graphs
 
 ```
