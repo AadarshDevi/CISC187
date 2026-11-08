@@ -98,7 +98,10 @@ D -> E
 
 ## Part 9 — Weighted Graphs
 
-Consider the weighted graph:
+Consider the weighted graph below, Calculate the total cost of:
+1. `A -> B -> E`
+2. `A -> C -> B -> E`
+3. `A -> C -> D -> E`
 
 ```
 A --4-- B
@@ -110,12 +113,8 @@ B --3-- E
 D --2-- E
 ```
 
-Calculate the total cost of:
+***Question:*** Which of these paths has the lowest total weight? 
+***Answer:***
 
-1. `A -> B -> E`
-2. `A -> C -> B -> E`
-3. `A -> C -> D -> E`
-
-Which of these paths has the lowest total weight?
-
-Explain why the path with the fewest edges is not necessarily the path with the lowest cost.
+***Question:*** Explain why the path with the fewest edges is not necessarily the path with the lowest cost.
+***Answer:***
