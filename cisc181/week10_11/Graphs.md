@@ -123,13 +123,13 @@ Consider the weighted graph below, Calculate the total cost of:
 3. $A \rightarrow C \rightarrow D \rightarrow E=2+8+2=12$
 
 ```
-A --4--> B
-A --2--> C
-B --5--> D
-C --1--> B
-C --8--> D
-B --3--> E
-D --2--> E
+A --4-- B
+A --2-- C
+B --5-- D
+C --1-- B
+C --8-- D
+B --3-- E
+D --2-- E
 ```
 
 ***Question:*** Which of these paths has the lowest total weight? 
@@ -146,32 +146,72 @@ Use the weighted graph and run Dijkstra's algorithm starting from `A`. But befor
 
 Original Graph:
 
-```
-A --4--> B
-A --2--> C
-B --5--> D
-C --1--> B
-C --8--> D
-B --3--> E
-D --2--> E
-```
+| Starting Node | Next Node | Weight |
+| ------------- | --------- | ------ |
+| A             | B         | 4      |
+| A             | C         | 2      |
+| B             | D         | 5      |
+| C             | B         | 1      |
+| C             | D         | 8      |
+| B             | E         | 3      |
+| D             | E         | 2      |
+Initialization:
 
-Initialized Graph:
-
-```
---code-block-empty
-```
+| Starting Node | Distance |
+| ------------- | -------- |
+| A             | $0$      |
+| B             | $\infty$ |
+| C             | $\infty$ |
+| D             | $\infty$ |
+| E             | $\infty$ |
 
 Complete a table showing the important updates.
 
-|Current Vertex|Adjacent Vertex|Current Distance|Alternative Distance|Update?|Predecessor|
-|---|---|---|---|---|---|
-|||||||
-|||||||
-|||||||
-|||||||
-|||||||
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| A              | null            | 0                | 0                    | N/A     | null        |
+
+Now we check adjacent vertices of $A$.
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| A              | B               | $\infty$         | $0+4=4$              | Yes     | A           |
+| A              | C               | $\infty$         | $0+2=2$              | Yes     | A           |
+
+From all the edges of $A$, C has the least distance.
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| C              | ?               | 2                | ?                    | N/A     | A           |
+
+We check check the edges of $C$.
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| C              | B               | 4                | $2+1=3$              | Yes     | C           |
+| C              | D               | $\infty$         | $2+8=10$             | Yes     | C           |
+
+From this, B has the least distance.
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| B              | ?               | 3                | ?                    | N/A     | C           |
+
+Checking adjacent vertices of $B$.
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| B              | D               | 10               | $3+5=8$              | Yes     | B           |
+| B              | E               | $\infty$         | $3+3=6$              | Yes     | B           |
+
+Now we have reached $E$.
+
 ***Question:*** After the algorithm finishes:
 1. ***Give the shortest distance from `A` to every vertex.***
-2. ***Use predecessor information to reconstruct the shortest path from `A` to `E`.***
-3. ***Explain why predecessor values are needed if you want the actual path rather than only its total cost.***
+
+| Node              | B   | C   | D   | E   |
+| ----------------- | --- | --- | --- | --- |
+| Distance from $A$ | 3   | 2   | 8   | 6   |
+
+2. ***Use predecessor information to reconstruct the shortest path from `A` to `E`.*** $A\rightarrow C\rightarrow B\rightarrow E$.
+3. ***Explain why predecessor values are needed if you want the actual path rather than only its total cost.*** The total cost to get from `A` to `E` is only the distance. It does not say what path to take to get the least distance, that's what ***Dijkstra's Shortest Path Algorithm*** gives. We use predecessors to get the path that has the least distance.
