@@ -334,7 +334,7 @@ Complete the following table. Do not provide only final Big-O values. Explain wh
 5. ***Why already-discovered or visited vertices must be tracked.***
 6. ***Why BFS can determine shortest distance in an unweighted graph.***
 7. ***Why BFS does not automatically solve weighted shortest-path problems.***
-8. ***Why directed edges must not automatically be treated as bidirectional.***
+8. ***Why directed edges must not automatically be treated as bidirectional.*** A directed edge is an arrow from one vertex to another. We do not know if the other vertex has an edge to the vertex. If there is no edge, we will not be able to traverse the opposite way.
 9. ***Why Dijkstra's algorithm stores predecessors.*** The algorithm stores predecessors so we can build the path with the least weights. Without the path, we will only have the least weights which i not useful when alone.
 10. ***Why Dijkstra's algorithm should not be used when negative edge weights are present.*** If the weights are negative, the algorithm might not be able to get the shortest path.
 
