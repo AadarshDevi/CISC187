@@ -95,7 +95,7 @@ public:
                 if (!discoveredSet[vertex]) {
                     frontierQueue.push(vertex); // add node
                     discoveredSet[vertex] = true; // set visited=true
-                    cout << "New Vertex Discovered: " << vertex << " - " << visited(discoveredSet[vertex]) << "\n";
+                    //cout << "New Vertex Discovered: " << vertex << " - " << visited(discoveredSet[vertex]) << "\n";
                 }
             }
         }
