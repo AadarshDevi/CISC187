@@ -93,6 +93,7 @@ public:
         // push starting vertex
         frontierQueue.push(start);
 
+        // int current vertex
         while (!frontierQueue.empty()) {
         }
     }
