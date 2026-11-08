@@ -51,7 +51,7 @@ int main() {
     Graph graph(vertices);
     graph.addEdge(0, 1);
     graph.addEdge(2, 3);
-    graph.addEdge(5, 2);
-    graph.addEdge(0, 3);
+    graph.addEdge(4, 2);
+    graph.addEdge(4, 3);
     graph.display();
 }
