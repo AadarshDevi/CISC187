@@ -11,10 +11,10 @@
 8. [Part 8 — Directed Graphs](#part-8--directed-graphs)
 9. [Part 9 — Weighted Graphs](#part-9--weighted-graphs)
 10. [Part 10 — Dijkstra's Shortest Path Algorithm](#part-10--dijkstras-shortest-path-algorithm)
-11. Part 11
-12. Part 12
+11. [Part 11 — When Should Dijkstra's Algorithm Be Used?](#part-11--when-should-dijkstras-algorithm-be-used))
+12. // Part 12
 13. Part 13
-14. [Analysis & Reflection](#analysis-and-reflection)
+14. // [Analysis & Reflection](#analysis-and-reflection)
 15. [Extra](#extra)
 	   - [Part 10](#part-10)
 
