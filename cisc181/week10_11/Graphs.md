@@ -1,4 +1,16 @@
 # Week 10/11 - Graphs
+## Table of Contents
+
+1. [Part 1 — Graph Terminology](#part-1--graph-terminology)
+2. [Part 2 — Graphs vs. Trees](#part-2--graphs-vs-trees)
+3. [Part 3 — Adjacency List Representation](#part-3--adjacency-list-representation)
+4. [Part 4 — Adjacency Matrix Representation](#part-4--adjacency-matrix-representation)
+5. [Part 8 — Directed Graphs](#part-8--directed-graphs)
+6. [Part 9 — Weighted Graphs](#part-9--weighted-graphs)
+7. [Part 10 — Dijkstra's Shortest Path Algorithm](#part-10--dijkstras-shortest-path-algorithm)
+8. [Extra](#extra)
+   - [Part 10](#part-10)
+
 
 ## Part 1 — Graph Terminology
 
