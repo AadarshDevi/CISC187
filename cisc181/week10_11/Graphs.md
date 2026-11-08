@@ -200,6 +200,18 @@ void display() const {
     }  
 }
 ```
+
+#### Output
+
+```terminalOutput
+Vertices:
+        0 --> 1
+        1 --> 0
+        2 --> 3 4
+        3 --> 2 4
+        4 --> 2 3
+```
+
 ## Part 8 — Directed Graphs
 
 ```
