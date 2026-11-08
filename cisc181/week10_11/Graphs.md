@@ -212,6 +212,55 @@ Vertices:
         4 --> 2 3
 ```
 
+## Part 6 — Breadth-First Search
+
+Breadth-First Search visits vertices by increasing distance from the starting vertex. BFS uses a **queue** to maintain the frontier.
+
+Implement:
+
+```
+void bfs(int start) const;
+```
+
+Your BFS should:
+
+1. Enqueue the starting vertex.
+2. Mark the starting vertex as discovered.
+3. Repeatedly dequeue a vertex.
+4. Visit that vertex.
+5. Examine its adjacent vertices.
+6. Enqueue only vertices that have not already been discovered.
+7. Continue until the queue is empty.
+
+### BFS Trace
+
+Use the graph:
+
+```
+A-B
+A-D
+B-C
+B-E
+D-E
+E-F
+C-F
+```
+
+Assume adjacent vertices are processed alphabetically.
+
+Starting from `A`, complete a trace showing the queue and discovered set.
+
+|Step|Visited Vertex|Queue|Discovered Vertices|
+|---|---|---|---|
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+Then identify the distance from `A` to every reachable vertex.
+
 ## Part 8 — Directed Graphs
 
 ```
