@@ -39,6 +39,7 @@ public:
             for (int vert: adjacencyList[iterator])
                 cout << vert << " ";
             cout << "\n";
+            iterator++;
         }
     }
 
