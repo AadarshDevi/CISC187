@@ -75,6 +75,8 @@ public:
         // push starting vertex
         frontierQueue.push(start);
 
+        cout << "Visited Vertex Order: ";
+
         // int current vertex
         while (!frontierQueue.empty()) {
             // get the oldest item in the list
