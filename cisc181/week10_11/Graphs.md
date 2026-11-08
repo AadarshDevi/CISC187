@@ -149,11 +149,21 @@ public:
 
 Because the graph is undirected, adding the edge must update the adjacency lists of both vertices.
 
+```c++
+void addEdge(int source, int destination) {  
+    // src and dest same  
+    if (source == destination) return;  
+  
+    // checking if there is an edge between vertices  
+    for (int i: adjacencyList[source])  
+        if (i == destination)  
+            return;  
+  
+    // no edge, add it  
+    adjacencyList[source].push_back(destination);  
+    adjacencyList[destination].push_back(source);  
+}
 ```
-0 -- 1
-```
-
-must update the adjacency lists of both vertices.
 
 ### Implement `display()`
 
