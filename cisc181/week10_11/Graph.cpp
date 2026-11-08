@@ -95,6 +95,9 @@ public:
 
         // int current vertex
         while (!frontierQueue.empty()) {
+            // get the oldest item in the list
+            int currentVertex = frontierQueue.front();
+            frontierQueue.pop();
         }
     }
 
