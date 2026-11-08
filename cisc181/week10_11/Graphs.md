@@ -147,7 +147,7 @@ public:
 
 ### Implement `addEdge()`
 
-Because the graph is undirected, adding the edge:
+Because the graph is undirected, adding the edge must update the adjacency lists of both vertices.
 
 ```
 0 -- 1
