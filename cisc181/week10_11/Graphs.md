@@ -181,6 +181,29 @@ Complete a table showing the important updates.
 
 | Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
 | -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| A              | C               | $\infty$         | $0+2=2$              | Yes     | A           |
+| B              | E               | $\infty$         | $3+3=6$              | Yes     | B           |
+| C              | B               | 4                | $2+1=3$              | Yes     | C           |
+| B              | D               | 10               | $3+5=8$              | Yes     | B           |
+| B              | E               | $\infty$         | $3+3=6$              | Yes     | B           |
+Check [extra](#extra) for the entire calculations.
+
+***Question:*** After the algorithm finishes:
+1. ***Give the shortest distance from `A` to every vertex.***
+
+| Node              | B   | C   | D   | E   |
+| ----------------- | --- | --- | --- | --- |
+| Distance from $A$ | 3   | 2   | 8   | 6   |
+
+2. ***Use predecessor information to reconstruct the shortest path from `A` to `E`.*** $A\rightarrow C\rightarrow B\rightarrow E$.
+3. ***Explain why predecessor values are needed if you want the actual path rather than only its total cost.*** The total cost to get from `A` to `E` is only the distance. It does not say what path to take to get the least distance, that's what ***Dijkstra's Shortest Path Algorithm*** gives. We use predecessors to get the path that has the least distance.
+
+## Extra
+
+### Part 10
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
 | A              | null            | 0                | 0                    | N/A     | null        |
 
 Now we check adjacent vertices of $A$.
