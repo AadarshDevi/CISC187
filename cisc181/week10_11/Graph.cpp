@@ -49,6 +49,7 @@ public:
 
     void display() const {
         int iterator = 0;
+        cout << "Vertices:\n";
         for (vector<int> vec: adjacencyList) {
             cout << "Vertex " << iterator << " --> ";
             for (int vert: adjacencyList[iterator])
