@@ -132,4 +132,6 @@ int main() {
     graph.addEdge(4, 3);
     graph.addEdge(1, 2);
     graph.display();
+    cout << "\n";
+    graph.bfs(0);
 }
