@@ -430,6 +430,52 @@ Complete the following table. Do not provide only final Big-O values. Explain wh
 
 ## Extra
 
+### Part 6
+
+With the graph give:
+
+```
+A-B
+A-D
+B-C
+B-E
+D-E
+E-F
+C-F
+```
+
+We start with $A$.
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| A              | ?               | 0                | ?                    | No      | null        |
+| A              | B               | $\infty$         | $0+1=1$              | Yes     | A           |
+| A              | D               | $\infty$         | $0+1=1$              | Yes     | A           |
+
+Because $B$ and $D$ have the same distance, we'll take the first one, $B$.
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| B              | ?               | 1                | ?                    | No      | A           |
+| B              | C               | $\infty$         | $1+1=2$              | Yes     | B           |
+| B              | E               | $\infty$         | $1+1=2$              | Yes     | B           |
+
+Like $B$, $C$ and $E$ have the same distance, we'll take $C$.
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| A              | ?               | 0                | ?                    | No      | null        |
+| A              | B               | $\infty$         | $0+1=1$              | Yes     | A           |
+| A              | D               | $\infty$         | $0+1=1$              | Yes     | A           |
+
+
+| Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
+| -------------- | --------------- | ---------------- | -------------------- | ------- | ----------- |
+| A              | ?               | 0                | ?                    | No      | null        |
+| A              | B               | $\infty$         | $0+1=1$              | Yes     | A           |
+| A              | D               | $\infty$         | $0+1=1$              | Yes     | A           |
+
+
 ### Part 10
 
 | Current Vertex | Adjacent Vertex | Current Distance | Alternative Distance | Update? | Predecessor |
