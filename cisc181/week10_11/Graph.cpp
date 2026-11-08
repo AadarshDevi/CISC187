@@ -87,7 +87,7 @@ public:
 
             // we discovered the vertex
             discoveredSet[currentVertex] = true;
-            cout << "Visited ? " << visited(discoveredSet[currentVertex]) << "\n";
+            //cout << "Visited ? " << visited(discoveredSet[currentVertex]) << "\n";
 
             // loop through each edge in adjacentList
             for (int vertex: adjacencyList[currentVertex]) {
