@@ -59,7 +59,40 @@ public:
         }
     }
 
-    void bfs(int start) const;
+    /*
+    BFS(startV) {
+   Enqueue startV in frontierQueue
+   Add startV to discoveredSet
+
+   while ( frontierQueue is not empty ) {
+      currentV = Dequeue from frontierQueue
+      "Visit" currentV
+      for each vertex adjV adjacent to currentV {
+         if ( adjV is not in discoveredSet ) {
+            Enqueue adjV in frontierQueue
+            Add adjV to discoveredSet
+         }
+      }
+   }
+}
+     */
+
+    void bfs(int start) const {
+        // valid num: start
+        if (start < 0 || start >= adjacencyList.size()) {
+            cout << "Source vertex out of bounds!\n";
+            return;
+        }
+
+        // create lists to store child nodes
+        queue<int> frontierQueue;
+
+        // crates a list to track if the node was visited/discovered
+        vector<bool> discoveredSet(adjacencyList.size(), false);
+
+
+        frontierQueue.push(start);
+    }
 
     void dfs(int start) const;
 };
