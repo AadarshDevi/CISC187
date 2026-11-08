@@ -32,7 +32,14 @@ public:
         adjacencyList[destination].push_back(source);
     }
 
-    void display() const;
+    void display() const {
+        for (int i: adjacencyList) {
+            cout << "Vertex " << i << " ⟶ ";
+            for (int j: adjacencyList[i])
+                cout << j << " ";
+            cout << "\n";
+        }
+    }
 
     void bfs(int start) const;
 
