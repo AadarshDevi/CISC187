@@ -210,16 +210,16 @@ Check [extra](#extra) for the entire calculations.
 ## Analysis and Reflection
 
 ***Questions:***
-1. ***Why adjacency lists are often preferred for sparse graphs.*** In an adjacent list, 
-2. ***Why adjacency matrices provide fast adjacency checking.***
+1. ***Why adjacency lists are often preferred for sparse graphs.*** In an adjacent list, the only data stored is the adjacent edges. It does not store all the edges like a matrix. We can access the list for the node, and traverse it. We check it if the node we have is connected to the node.
+2. ***Why adjacency matrices provide fast adjacency checking.*** Unlike the list, the matrix has all combos of all the edges, so we can get the nodes indices and we can point access the edge.
 3. ***Why BFS uses a queue.***
 4. ***Why DFS uses a stack.***
 5. ***Why already-discovered or visited vertices must be tracked.***
 6. ***Why BFS can determine shortest distance in an unweighted graph.***
 7. ***Why BFS does not automatically solve weighted shortest-path problems.***
 8. ***Why directed edges must not automatically be treated as bidirectional.***
-9. ***Why Dijkstra's algorithm stores predecessors.***
-10. ***Why Dijkstra's algorithm should not be used when negative edge weights are present.***
+9. ***Why Dijkstra's algorithm stores predecessors.*** The algorithm stores predecessors so we can build the path with the least weights. Without the path, we will only have the least weights which i not useful when alone.
+10. ***Why Dijkstra's algorithm should not be used when negative edge weights are present.*** If the weights are negative, the algorithm might not be able to get the shortest path.
 
 ## Extra
 
