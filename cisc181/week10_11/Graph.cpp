@@ -102,6 +102,8 @@ public:
             // we discovered the vertex
             discoveredSet[currentVertex] = true;
 
+            // loop through each edge in adjacentList
+            for (int vertex: adjacencyList[currentVertex]) {
         }
     }
 
