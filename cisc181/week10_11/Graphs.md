@@ -16,8 +16,7 @@
 13. Part 13
 14. [Analysis & Reflection](#analysis-and-reflection)
 15. [Extra](#extra)
-   - [Part 10](#part-10)
-
+	   - [Part 10](#part-10)
 
 ## Part 1 — Graph Terminology
 
@@ -77,9 +76,9 @@ B ----> C
 |	    |
 v       v
 D ----> E
-  \   /
-	V
-	F
+        |
+	    v
+		F
 ```
 
 ***Question:*** Using the graph from Part 1, create its adjacency list.
@@ -89,7 +88,7 @@ D ----> E
 | A      | B, C              |
 | B      | A, C, D           |
 | C      | A, B, E           |
-| D      | B, E, F           |
+| D      | B, E              |
 | E      | C, D, F           |
 | F      | D, E              |
 
@@ -107,7 +106,7 @@ Create the adjacency matrix for the same graph.
 |  A  |     |  1  |  1  |     |     |     |
 |  B  |  1  |     |  1  |  1  |     |     |
 |  C  |  1  |  1  |     |     |  1  |     |
-|  D  |     |  1  |     |     |  1  |  1  |
+|  D  |     |  1  |     |     |  1  |     |
 |  E  |     |     |  1  |  1  |     |  1  |
 |  F  |     |     |     |  1  |  1  |     |
 
@@ -211,7 +210,7 @@ Check [extra](#extra) for the entire calculations.
 ## Analysis and Reflection
 
 ***Questions:***
-1. ***Why adjacency lists are often preferred for sparse graphs.***
+1. ***Why adjacency lists are often preferred for sparse graphs.*** In an adjacent list, 
 2. ***Why adjacency matrices provide fast adjacency checking.***
 3. ***Why BFS uses a queue.***
 4. ***Why DFS uses a stack.***
