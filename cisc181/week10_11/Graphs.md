@@ -274,7 +274,7 @@ inline std::string visited(bool visited) const {
 
 ### BFS Trace
 
-Use the graph:
+Use the graph below. Assume adjacent vertices are processed alphabetically.
 
 ```
 A-B
@@ -286,9 +286,7 @@ E-F
 C-F
 ```
 
-Assume adjacent vertices are processed alphabetically.
-
-Starting from `A`, complete a trace showing the queue and discovered set.
+Starting from `A`, complete a trace showing the queue and discovered set. Then identify the distance from `A` to every reachable vertex.
 
 |Step|Visited Vertex|Queue|Discovered Vertices|
 |---|---|---|---|
@@ -298,8 +296,6 @@ Starting from `A`, complete a trace showing the queue and discovered set.
 |||||
 |||||
 |||||
-
-Then identify the distance from `A` to every reachable vertex.
 
 ## Part 8 — Directed Graphs
 
