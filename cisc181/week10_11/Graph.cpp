@@ -98,6 +98,7 @@ public:
             // get the oldest item in the list
             int currentVertex = frontierQueue.front();
             frontierQueue.pop();
+            std::cout << "Current Vertex: " << currentVertex << "\n";
 
             // we discovered the vertex
             discoveredSet[currentVertex] = true;
