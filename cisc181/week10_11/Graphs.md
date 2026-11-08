@@ -188,6 +188,7 @@ Complete a table showing the important updates.
 | C              | B               | 4                | $2+1=3$              | Yes     | C           |
 | B              | D               | 10               | $3+5=8$              | Yes     | B           |
 | B              | E               | $\infty$         | $3+3=6$              | Yes     | B           |
+
 Check [extra](#extra) for the entire calculations.
 
 ***Question:*** After the algorithm finishes:
