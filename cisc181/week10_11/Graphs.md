@@ -77,3 +77,24 @@ D ----> E
 1. ***Why does each undirected edge appear twice in an adjacency-list representation?*** In an undirected graph, each node is connected to another node as a bidirectional edge. This means each node is connected to another node. Both the nodes need to create a connection to the other node. This is why there are duplicate edges. 
 2. ***Why is the total storage for an adjacency list commonly described as O(V + E)?*** $O(V)$ is the space needed for $N$ nodes. Next are the edges. $O(E)$ is the space needed for directed edges. It is also the same space needed for the undirected edges because $O(2E) = O(E)$. $2E$ is 2 edges between 2 nodes for an undirected edge. So if we add the sum for the total storage needed it boils down to $O(V) + O(E) = O(V+E)$.
 3. ***Why are adjacency lists especially useful for sparse graphs?*** In an adjunct list, the graph has undirected edges. This means the number of edges in the graph is less than the theoretical total number of edges in the graph.
+
+## Part 8 — Directed Graphs
+
+Consider the directed edges:
+
+```
+A -> B
+A -> C
+B -> D
+C -> B
+D -> C
+D -> E
+```
+
+Answer:
+
+1. Which vertices are adjacent from `A`?
+2. Is `A` adjacent from `B`? Explain.
+3. Give one directed path from `A` to `E`.
+4. Identify whether a directed cycle exists.
+5. Explain why adding an edge to a directed adjacency list differs from adding an undirected edge.
