@@ -105,6 +105,8 @@ public:
             // loop through each edge in adjacentList
             for (int vertex: adjacencyList[currentVertex]) {
                 if (!discoveredSet[vertex]) {
+                    frontierQueue.push(vertex);
+                    discoveredSet[vertex] = true;
                 }
             }
         }
