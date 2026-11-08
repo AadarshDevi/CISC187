@@ -110,14 +110,18 @@ public:
 };
 
 int main() {
-    constexpr int vertices = 5;
+    constexpr int vertices = 6; // indices 0-5, no unused slot
     Graph graph(vertices);
-    graph.addEdge(0, 1);
-    graph.addEdge(2, 3);
-    graph.addEdge(4, 2);
-    graph.addEdge(4, 3);
-    graph.addEdge(1, 2);
+
+    graph.addEdge(0, 1); // A-B
+    graph.addEdge(0, 3); // A-D
+    graph.addEdge(1, 2); // B-C
+    graph.addEdge(1, 4); // B-E
+    graph.addEdge(3, 4); // D-E
+    graph.addEdge(4, 5); // E-F
+    graph.addEdge(2, 5); // C-F
+
     graph.display();
     cout << "\n";
-    graph.bfs(0);
+    graph.bfs(0); // start at A
 }
