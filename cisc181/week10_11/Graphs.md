@@ -519,7 +519,23 @@ Complete the following table. Do not provide only final Big-O values. Explain wh
 | Dijkstra with list-based unvisited queue | $O(V^2)$           | Dijkstra's algorithm has to visit all $V$ vertices. Because it is searching for the shortest path, it has to traverse the list to find the next vertex. Because there are $V$ vertices in the list, It has to traverse $O(V)\times O(V)$ vertices. Other than traversing the same vertices, it has to use the vertices edges to find the next vertex, $O(E)$. With vertices and edges, it takes $O(V^2+E) = O(V^2)$. |
 | Dijkstra with binary-heap priority queue | $O((E+V) \log{V})$ | For binary heap, the time complexity for popping a value is $O(log{V})$. We are popping $V$ vertices bringing time to $O(Vlog{V})$. Then we have the edges, we have edges to pop, $O(log{V})$, for the vertices and we do it for $E$ edges giving us $O(Elog{V})$. With both vertices and edges, we get $O((V+E)log{V})$.                                                                                            |
 
+## Part 13 — Complete Program Test
 
+Create a graph with at least six vertices and enough edges to include:
+
+- A vertex with several adjacent vertices
+- At least one cycle
+- Multiple possible paths between two vertices
+
+Your program should:
+
+1. Construct the graph.
+2. Display the adjacency list.
+3. Run BFS from a selected starting vertex.
+4. Run DFS from the same starting vertex.
+5. Display both traversal orders.
+
+Explain any difference between the BFS and DFS traversal orders.
 
 ## Analysis and Reflection
 
