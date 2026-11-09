@@ -155,6 +155,7 @@ int main() {
     graph.addEdge(0, 3); // A-D
     graph.addEdge(1, 2); // B-C
     graph.addEdge(3, 4); // D-E
+    graph.addEdge(1, 4); // B-E
     graph.addEdge(4, 5); // E-F
     graph.addEdge(2, 5); // C-F
 
