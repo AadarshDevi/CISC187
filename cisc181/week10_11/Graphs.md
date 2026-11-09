@@ -521,7 +521,10 @@ Complete the following table. Do not provide only final Big-O values. Explain wh
 
 ## Part 13 — Complete Program Test
 
-Create a graph with at least six vertices and enough edges to include:
+***Question:*** Create a graph with at least six vertices and enough edges to include:
+1. ***A vertex with several adjacent vertices***: Vertex A
+2. ***At least one cycle***: $A\rightarrow B\rightarrow C$
+3. ***Multiple possible paths between two vertices***: Vertex A - B, C, D and Vertex B - A, C, E
 
 - A vertex with several adjacent vertices
 - At least one cycle
