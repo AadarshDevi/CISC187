@@ -57,6 +57,7 @@ public:
             cout << "\n";
             iterator++;
         }
+        cout << "\n";
     }
 
     void bfs(int start) const {
@@ -157,7 +158,6 @@ int main() {
     graph.addEdge(2, 5); // C-F
 
     graph.display();
-    cout << "\n";
     graph.bfs(0); // start at A
     graph.dfs(0); // start at A
 }
