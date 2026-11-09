@@ -523,11 +523,11 @@ Complete the following table. Do not provide only final Big-O values. Explain wh
 ***Questions:***
 1. ***Why adjacency lists are often preferred for sparse graphs.*** In an adjacent list, the only data stored is the adjacent edges. It does not store all the edges like a matrix. We can access the list for the node, and traverse it. We check it if the node we have is connected to the node.
 2. ***Why adjacency matrices provide fast adjacency checking.*** Unlike the list, the matrix has all combos of all the edges, so we can get the nodes indices and we can point access the edge.
-3. ***Why BFS uses a queue.***
-4. ***Why DFS uses a stack.***
+3. ***Why BFS uses a queue.*** A BFS is exploring the tree, so it is processing the information that is given first. After that information is processed, it then takes the next level of nodes and processes it. This is a behavior of a queue. The BFS is processing each level and then going to the next.
+4. ***Why DFS uses a stack.*** DFS is like a person in a maze. They go all the way to the of end path (route), then come back and follow the next few paths not explored. The first node added, will then become the last node to be processed by DFS.
 5. ***Why already-discovered or visited vertices must be tracked.***
-6. ***Why BFS can determine shortest distance in an unweighted graph.***
-7. ***Why BFS does not automatically solve weighted shortest-path problems.***
+6. ***Why BFS can determine shortest distance in an unweighted graph.*** The reason BFS can find the shortest path is because it analyzes every vertex it discovers. By doing it, it can reach the end of the graph while discovering new vertices. Because the weights are the same (1) in an unweighted graph, it has to traverse the entire graph to find it. The shortest path will have the least weight.
+7. ***Why BFS does not automatically solve weighted shortest-path problems.*** BFS calculates each edge's weights and use it to find paths that will have the least weights. A short path in a weighted graph will not mean that it will have the least weight, and vice versa.
 8. ***Why directed edges must not automatically be treated as bidirectional.*** A directed edge is an arrow from one vertex to another. We do not know if the other vertex has an edge to the vertex. If there is no edge, we will not be able to traverse the opposite way.
 9. ***Why Dijkstra's algorithm stores predecessors.*** The algorithm stores predecessors so we can build the path with the least weights. Without the path, we will only have the least weights which i not useful when alone.
 10. ***Why Dijkstra's algorithm should not be used when negative edge weights are present.*** If the weights are negative, the algorithm might not be able to get the shortest path.
