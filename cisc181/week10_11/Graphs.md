@@ -286,7 +286,7 @@ E-F
 C-F
 ```
 
-Starting from `A`, complete a trace showing the queue and discovered set.
+***Question:*** Starting from `A`, complete a trace showing the queue and discovered set.
 
 | Step | Visited Vertex | Queue          | Discovered Vertices |
 | ---- | -------------- | -------------- | ------------------- |
@@ -298,9 +298,17 @@ Starting from `A`, complete a trace showing the queue and discovered set.
 | 5    | $E$            | $F$            | $A,B,C,D,E,F$       |
 | 6    | $F$            | $\text{Empty}$ | $A,B,C,D,E,F$       |
 
-Identify the distance from `A` to every reachable vertex.
+***Question:*** Identify the distance from `A` to every reachable vertex.
+***Answer:*** Because the graph is not weighted, we will assume each edge has a weight of 1.
 
-`--text-blank`
+| Vertex | Distance from $A$ | Path                                       |
+| ------ | ----------------- | ------------------------------------------ |
+| $A$    | 0                 | $A$                                        |
+| $B$    | 1                 | $A\rightarrow B$                           |
+| $C$    | 2                 | $A\rightarrow B\rightarrow C$              |
+| $D$    | 1                 | $A\rightarrow D$                           |
+| $E$    | 2                 | $A\rightarrow B\rightarrow E$              |
+| $F$    | 4                 | $A\rightarrow B\rightarrow C\rightarrow F$ |
 
 ## Part 8 — Directed Graphs
 
