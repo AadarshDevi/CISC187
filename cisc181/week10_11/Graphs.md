@@ -323,7 +323,44 @@ Depth-First Search follows a path as deeply as possible before backtracking. The
 
 ### Code `dfs()`
 
-
+```c++
+void dfs(int start) const {  
+    // valid num: start  
+    if (start < 0 || start >= adjacencyList.size()) {  
+        cout << "Source vertex out of bounds!\n";  
+        return;  
+    }  
+  
+    // stack to hold vertices  
+    stack<int> vertex_stack;  
+  
+    // list for nodes visited  
+    vector<bool> discoveredSet(adjacencyList.size(), false);  
+  
+    // add start to stack  
+    vertex_stack.push(start);  
+  
+    cout << "Visited Vertex Order (DFS): ";  
+  
+    // loop through each item when stack is not empty  
+    while (!vertex_stack.empty()) {  
+        int currentVertex = vertex_stack.top();  
+        vertex_stack.pop();  
+  
+        if (!discoveredSet[currentVertex]) {  
+            discoveredSet[currentVertex] = true;  
+  
+            cout << currentVertex << " ";  
+  
+            // all adj vertices of node are added to stack  
+            for (int vertex: adjacencyList.at(currentVertex)) {  
+                vertex_stack.push(vertex);  
+            }  
+        }  
+    }  
+    cout << "\n";  
+}
+```
 
 ### DFS Trace
 
