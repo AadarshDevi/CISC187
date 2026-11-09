@@ -139,7 +139,6 @@ public:
                 for (int vertex: adjacencyList[currentVertex]) {
                     vertex_stack.push(vertex);
                 }
-
             }
         }
     }
