@@ -75,7 +75,7 @@ public:
         // push starting vertex
         frontierQueue.push(start);
 
-        cout << "Visited Vertex Order: ";
+        cout << "Visited Vertex Order (BFS): ";
 
         // int current vertex
         while (!frontierQueue.empty()) {
