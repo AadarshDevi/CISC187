@@ -122,6 +122,8 @@ public:
         // add start to stack
         vertex_stack.push(start);
 
+        cout << "Visited Vertex Order (DFS): ";
+
         // loop through each item when stack is not empty
         while (!vertex_stack.empty()) {
             int currentVertex = vertex_stack.top();
