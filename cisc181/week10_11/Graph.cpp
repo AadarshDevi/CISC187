@@ -131,6 +131,7 @@ public:
                 vertex_stack.push(currentVertex);
                 discoveredSet[currentVertex] = true;
 
+                // all adj vertices of node are added to stack
                 for (int vertex: adjacencyList[currentVertex]) {
                     vertex_stack.push(vertex);
                 }
