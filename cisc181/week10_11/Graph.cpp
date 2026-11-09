@@ -135,7 +135,7 @@ public:
                 cout << currentVertex << " ";
 
                 // all adj vertices of node are added to stack
-                for (int vertex: adjacencyList[currentVertex]) {
+                for (int vertex: adjacencyList.at(currentVertex)) {
                     vertex_stack.push(vertex);
                 }
             }
