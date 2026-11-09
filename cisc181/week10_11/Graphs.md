@@ -526,11 +526,20 @@ Complete the following table. Do not provide only final Big-O values. Explain wh
 2. ***At least one cycle***: $A\rightarrow B\rightarrow C$
 3. ***Multiple possible paths between two vertices***: Vertex A - B, C, D and Vertex B - A, C, E
 
-- A vertex with several adjacent vertices
-- At least one cycle
-- Multiple possible paths between two vertices
+***Answer:*** The graph used is unweighted and undirected.
 
-Your program should:
+```c++
+graph.addEdge(0, 1); // A-B  
+graph.addEdge(2, 5); // C-F  
+graph.addEdge(0, 2); // A-C  
+graph.addEdge(0, 3); // A-D  
+graph.addEdge(1, 2); // B-C  
+graph.addEdge(3, 4); // D-E  
+graph.addEdge(1, 4); // B-E  
+graph.addEdge(4, 5); // E-F
+```
+
+***Question:*** Your program should:
 
 1. Construct the graph.
 2. Display the adjacency list.
