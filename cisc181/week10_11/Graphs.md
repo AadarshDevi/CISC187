@@ -310,6 +310,40 @@ C-F
 | $E$    | 2                 | $A\rightarrow B\rightarrow E$              |
 | $F$    | 4                 | $A\rightarrow B\rightarrow C\rightarrow F$ |
 
+## Part 7 — Depth-First Search
+
+Depth-First Search follows a path as deeply as possible before backtracking. The lecture presents an iterative version using a **stack**.
+
+Implement:
+
+```
+void dfs(int start) const;
+```
+
+Your DFS should:
+
+1. Push the starting vertex onto the stack.
+2. Pop the top vertex.
+3. If it has not already been visited, visit it.
+4. Add it to the visited set.
+5. Push its adjacent vertices onto the stack.
+6. Continue until the stack is empty.
+
+### DFS Trace
+
+Use the same graph as Part 6. Assume adjacent vertices are considered alphabetically, but remember that stack behavior affects the actual pop order.
+
+|Step|Popped Vertex|Stack|Visited Vertices|
+|---|---|---|---|
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
+Explain why BFS and DFS can visit the same vertices in different orders.
+
 ## Part 8 — Directed Graphs
 
 ```
