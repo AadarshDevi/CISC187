@@ -130,6 +130,11 @@ public:
             if (!discoveredSet[currentVertex]) {
                 vertex_stack.push(currentVertex);
                 discoveredSet[currentVertex] = true;
+
+                for (int vertex: adjacencyList[currentVertex]) {
+                    vertex_stack.push(vertex);
+                }
+
             }
         }
     }
