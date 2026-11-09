@@ -382,25 +382,45 @@ I am using the following letters and their corresponding numbers
 | --- | --- | --- | --- | --- | --- |
 | 0   | 1   | 2   | 3   | 4   | 5   |
 
+The table as letters:
+
 | Step | Popped Vertex | Stack (Bottom --> Top) | Visited Vertices |
 | ---- | ------------- | ---------------------- | ---------------- |
 | 0    | $Empty$       | $A$                    | $Empty$          |
-| 1    | $A$           | $BD$                   | $A$              |
-| 2    | $D$           | $BAE$                  | $AD$             |
-| 3    | $E$           | $BABDF$                | $ADE$            |
-| 4    | $F$           | $BABDCE$               | $ADEF$           |
-| 5    | $E$           | $BABDC$                | $ADEF$           |
-| 6    | $C$           | $BABDBF$               | $ADEFC$          |
-| 7    | $F$           | $BABDB$                | $ADEFC$          |
-| 8    | $B$           | $BABDACE$              | $ADEFCB$         |
-| 9    | $E$           | $BABDAC$               | $ADEFCB$         |
-| 10   | $C$           | $BABDA$                | $ADEFCB$         |
-| 11   | $A$           | $BABD$                 | $ADEFCB$         |
-| 12   | $D$           | $BAB$                  | $ADEFCB$         |
-| 13   | $B$           | $BA$                   | $ADEFCB$         |
-| 14   | $A$           | $B$                    | $ADEFCB$         |
-| 15   | $B$           | $Empty$                | $ADEFCB$         |
+| 1    | $A$           | $B,D$                  | $A$              |
+| 2    | $D$           | $B,A,E$                | $A,D$            |
+| 3    | $E$           | $B,A,D,F$              | $A,D,E$          |
+| 4    | $F$           | $B,A,D,C,E$            | $A,D,E,F$        |
+| 5    | $E$           | $B,A,D,C$              | $A,D,E,F$        |
+| 6    | $C$           | $B,A,D,B,F$            | $A,D,E,F,C$      |
+| 7    | $F$           | $B,A,D,B$              | $A,D,E,F,C$      |
+| 8    | $B$           | $B,A,D,A,C,E$          | $A,D,E,F,C,B$    |
+| 9    | $E$           | $B,A,D,A,C$            | $A,D,E,F,C,B$    |
+| 10   | $C$           | $B,A,D,A$              | $A,D,E,F,C,B$    |
+| 11   | $A$           | $B,A,D$                | $A,D,E,F,C,B$    |
+| 12   | $D$           | $B,A$                  | $A,D,E,F,C,B$    |
+| 13   | $A$           | $B$                    | $A,D,E,F,C,B$    |
+| 14   | $B$           | $Empty$                | $A,D,E,F,C,B$    |
 
+The table as numbers
+
+| Step | Popped Vertex | Stack (Bottom --> Top) | Visited Vertices |
+| ---- | ------------- | ---------------------- | ---------------- |
+| 0    | Empty         | 0                      | Empty            |
+| 1    | 0             | 1, 3                   | 0                |
+| 2    | 3             | 1, 0, 4                | 0, 3             |
+| 3    | 4             | 1, 0, 3, 5             | 0, 3, 4          |
+| 4    | 5             | 1, 0, 3, 2, 4          | 0, 3, 4, 5       |
+| 5    | 4             | 1, 0, 3, 2             | 0, 3, 4, 5       |
+| 6    | 2             | 1, 0, 3, 1, 5          | 0, 3, 4, 5, 2    |
+| 7    | 5             | 1, 0, 3, 1             | 0, 3, 4, 5, 2    |
+| 8    | 1             | 1, 0, 3, 0, 2, 4       | 0, 3, 4, 5, 2, 1 |
+| 9    | 4             | 1, 0, 3, 0, 2          | 0, 3, 4, 5, 2, 1 |
+| 10   | 2             | 1, 0, 3, 0             | 0, 3, 4, 5, 2, 1 |
+| 11   | 0             | 1, 0, 3                | 0, 3, 4, 5, 2, 1 |
+| 12   | 3             | 1, 0                   | 0, 3, 4, 5, 2, 1 |
+| 13   | 0             | 1                      | 0, 3, 4, 5, 2, 1 |
+| 14   | 1             | 1                      | 0, 3, 4, 5, 2, 1 |
 
 Explain why BFS and DFS can visit the same vertices in different orders.
 
