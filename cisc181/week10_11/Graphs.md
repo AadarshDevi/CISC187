@@ -7,7 +7,7 @@
 4. [Part 4 — Adjacency Matrix Representation](#part-4--adjacency-matrix-representation)
 5. [Part 5 — Implement an Adjacency-List Graph](#part-5--implement-an-adjacency-list-graph)
 6. [Part 6 — Breadth-First Search](#part-6--breadth-first-search)
-7. Part 7
+7. [ Part 7 — Depth-First Search](#part-7--depth-first-search)
 8. [Part 8 — Directed Graphs](#part-8--directed-graphs)
 9. [Part 9 — Weighted Graphs](#part-9--weighted-graphs)
 10. [Part 10 — Dijkstra's Shortest Path Algorithm](#part-10--dijkstras-shortest-path-algorithm)
