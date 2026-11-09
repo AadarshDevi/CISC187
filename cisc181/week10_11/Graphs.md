@@ -314,12 +314,12 @@ C-F
 
 Depth-First Search follows a path as deeply as possible before backtracking. The lecture presents an iterative version using a **stack**. Implement `void dfs(int start) const;`. Your DFS should:
 
-1. ***Push the starting vertex onto the stack.***
-2. ***Pop the top vertex.***
-3. ***If it has not already been visited, visit it.***
-4. ***Add it to the visited set.***
-5. ***Push its adjacent vertices onto the stack.***
-6. ***Continue until the stack is empty.***
+1. [x] ***Push the starting vertex onto the stack.***
+2. [x] ***Pop the top vertex.***
+3. [x] ***If it has not already been visited, visit it.***
+4. [x] ***Add it to the visited set.***
+5. [x] ***Push its adjacent vertices onto the stack.***
+6. [x] ***Continue until the stack is empty.***
 
 ### Code `dfs()`
 
