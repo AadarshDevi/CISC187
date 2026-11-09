@@ -150,6 +150,8 @@ int main() {
     Graph graph(vertices);
 
     graph.addEdge(0, 1); // A-B
+    graph.addEdge(2, 5); // C-F
+    graph.addEdge(0, 2); // A-C
     graph.addEdge(0, 3); // A-D
     graph.addEdge(1, 2); // B-C
     graph.addEdge(1, 4); // B-E
