@@ -6,7 +6,7 @@
 3. [Part 3 — Adjacency List Representation](#part-3--adjacency-list-representation)
 4. [Part 4 — Adjacency Matrix Representation](#part-4--adjacency-matrix-representation)
 5. [Part 5 — Implement an Adjacency-List Graph](#part-5--implement-an-adjacency-list-graph)
-6. Part 6
+6. [Part 6 — Breadth-First Search](#part-6--breadth-first-search)
 7. Part 7
 8. [Part 8 — Directed Graphs](#part-8--directed-graphs)
 9. [Part 9 — Weighted Graphs](#part-9--weighted-graphs)
