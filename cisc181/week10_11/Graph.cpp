@@ -159,6 +159,6 @@ int main() {
     graph.addEdge(4, 5); // E-F
 
     graph.display();
-    graph.bfs(0); // start at A
-    graph.dfs(0); // start at A
+    graph.bfs(2); // start at C
+    graph.dfs(2); // start at C
 }
