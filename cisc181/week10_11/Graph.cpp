@@ -159,4 +159,5 @@ int main() {
     graph.display();
     cout << "\n";
     graph.bfs(0); // start at A
+    graph.dfs(0); // start at A
 }
