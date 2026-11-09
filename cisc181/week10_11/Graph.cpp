@@ -130,7 +130,6 @@ public:
             vertex_stack.pop();
 
             if (!discoveredSet[currentVertex]) {
-                vertex_stack.push(currentVertex);
                 discoveredSet[currentVertex] = true;
 
                 cout << currentVertex << " ";
