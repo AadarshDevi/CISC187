@@ -364,16 +364,43 @@ void dfs(int start) const {
 
 ### DFS Trace
 
-Use the same graph as Part 6. Assume adjacent vertices are considered alphabetically, but remember that stack behavior affects the actual pop order.
+Use the graph below. Assume adjacent vertices are considered alphabetically, but remember that stack behavior affects the actual pop order.
 
-|Step|Popped Vertex|Stack|Visited Vertices|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+```
+A-B
+A-D
+B-C
+B-E
+D-E
+E-F
+C-F
+```
+
+I am using the following letters and their corresponding numbers
+
+| A   | B   | C   | D   | E   | F   |
+| --- | --- | --- | --- | --- | --- |
+| 0   | 1   | 2   | 3   | 4   | 5   |
+
+| Step | Popped Vertex | Stack (Bottom --> Top) | Visited Vertices |
+| ---- | ------------- | ---------------------- | ---------------- |
+| 0    | $Empty$       | $A$                    | $Empty$          |
+| 1    | $A$           | $BD$                   | $A$              |
+| 2    | $D$           | $BAE$                  | $AD$             |
+| 3    | $E$           | $BABDF$                | $ADE$            |
+| 4    | $F$           | $BABDCE$               | $ADEF$           |
+| 5    | $E$           | $BABDC$                | $ADEF$           |
+| 6    | $C$           | $BABDBF$               | $ADEFC$          |
+| 7    | $F$           | $BABDB$                | $ADEFC$          |
+| 8    | $B$           | $BABDACE$              | $ADEFCB$         |
+| 9    | $E$           | $BABDAC$               | $ADEFCB$         |
+| 10   | $C$           | $BABDA$                | $ADEFCB$         |
+| 11   | $A$           | $BABD$                 | $ADEFCB$         |
+| 12   | $D$           | $BAB$                  | $ADEFCB$         |
+| 13   | $B$           | $BA$                   | $ADEFCB$         |
+| 14   | $A$           | $B$                    | $ADEFCB$         |
+| 15   | $B$           | $Empty$                | $ADEFCB$         |
+
 
 Explain why BFS and DFS can visit the same vertices in different orders.
 
