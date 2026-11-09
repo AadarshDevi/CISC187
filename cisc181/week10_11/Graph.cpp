@@ -129,8 +129,6 @@ public:
             int currentVertex = vertex_stack.top();
             vertex_stack.pop();
 
-            cout << currentVertex << " ";
-
             if (!discoveredSet[currentVertex]) {
                 vertex_stack.push(currentVertex);
                 discoveredSet[currentVertex] = true;
