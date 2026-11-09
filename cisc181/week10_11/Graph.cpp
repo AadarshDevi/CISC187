@@ -106,7 +106,25 @@ public:
         return visited ? "true" : "false";
     }
 
-    void dfs(int start) const;
+    void dfs(int start) const {
+        // valid num: start
+        if (start < 0 || start >= adjacencyList.size()) {
+            cout << "Source vertex out of bounds!\n";
+            return;
+        }
+
+        // stack to hold vertices
+        stack<int> vertex_stack;
+
+        // add start to stack
+        vertex_stack.push(start);
+
+        // loop through each item when stack is not empty
+        while (!vertex_stack.empty()) {
+            int currentVertex = vertex_stack.top();
+            vertex_stack.pop();
+        }
+    }
 };
 
 int main() {
