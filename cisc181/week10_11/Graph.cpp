@@ -116,6 +116,9 @@ public:
         // stack to hold vertices
         stack<int> vertex_stack;
 
+        // list for nodes visited
+        vector<bool> discoveredSet(adjacencyList.size(), false);
+
         // add start to stack
         vertex_stack.push(start);
 
