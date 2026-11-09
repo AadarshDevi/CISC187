@@ -547,7 +547,70 @@ graph.addEdge(4, 5); // E-F
 4. Run DFS from the same starting vertex.
 5. Display both traversal orders.
 
-Explain any difference between the BFS and DFS traversal orders.
+***Answer:***
+
+```c++
+int main() {  
+    constexpr int vertices = 6; // indices 0-5, no unused slot  
+    Graph graph(vertices);  
+  
+    graph.addEdge(0, 1); // A-B  
+    graph.addEdge(2, 5); // C-F  
+    graph.addEdge(0, 2); // A-C  
+    graph.addEdge(0, 3); // A-D  
+    graph.addEdge(1, 2); // B-C  
+    graph.addEdge(3, 4); // D-E  
+    graph.addEdge(1, 4); // B-E  
+    graph.addEdge(4, 5); // E-F  
+  
+    graph.display();  
+    graph.bfs(2); // start at C  
+    graph.dfs(2); // start at C  
+}
+```
+
+Actual Output:
+
+```terminalOutput
+Vertices:
+        0 --> 1 2 3
+        1 --> 0 2 4
+        2 --> 5 0 1
+        3 --> 0 4
+        4 --> 3 1 5
+        5 --> 2 4
+
+Visited Vertex Order (BFS): 2 5 0 1 4 3
+Visited Vertex Order (DFS): 2 1 4 5 3 0
+```
+
+Edited Output:
+
+```terminalOutput
+// 1. Already Done
+
+// 2. Adjacent List
+Vertices:
+        0 --> 1 2 3
+        1 --> 0 2 4
+        2 --> 5 0 1
+        3 --> 0 4
+        4 --> 3 1 5
+        5 --> 2 4
+
+// 3. BFS from Vertex C
+Visited Vertex Order (BFS): 2 5 0 1 4 3
+
+// 4. DFS from Vertex C
+Visited Vertex Order (DFS): 2 1 4 5 3 0
+
+// Already Done
+```
+
+
+***Question:*** Explain any difference between the BFS and DFS traversal orders.
+
+***Answer:*** BFS uses a queue, this makes the vertices visited first processed first. But in DFS, the new vertices added will be processed first.
 
 ## Analysis and Reflection
 
