@@ -157,7 +157,6 @@ int main() {
     graph.addEdge(3, 4); // D-E
     graph.addEdge(1, 4); // B-E
     graph.addEdge(4, 5); // E-F
-    graph.addEdge(2, 5); // C-F
 
     graph.display();
     graph.bfs(0); // start at A
