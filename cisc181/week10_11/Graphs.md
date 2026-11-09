@@ -402,7 +402,9 @@ The table as letters:
 | 13   | $A$           | $B$                    | $A,D,E,F,C,B$    |
 | 14   | $B$           | $Empty$                | $A,D,E,F,C,B$    |
 
-Explain why BFS and DFS can visit the same vertices in different orders.
+***Question:*** Explain why BFS and DFS can visit the same vertices in different orders.
+
+***Answer:*** `BFS` and `DFS` visit the same nodes multiple times but the way they traverse are different. In `BFS` A node's child nodes are added in a **queue** and then we talk the oldest item in the queue and add its child nodes, and so on. In a `DFS`, we add the child nodes in a **stack**, from there we take the top most item and add its child nodes. We do this till we run out of new nodes to add. The difference between a `BFS` and `DFS` is that the former uses a queue, the first node comes out `FIFO` while the latter use a stack, `FILO`. The data structure used to store the "discovered" vertices is why the traversal is different between them.
 
 ## Part 8 — Directed Graphs
 
