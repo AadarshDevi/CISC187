@@ -180,6 +180,42 @@ Then trace `sumTo(4)`, showing both recursive calls and returned values.
 | 6     | `4 + (3 + 3)`              |
 | 7     | `4 + 6`                    |
 | 8     | `10`                       |
+## Part 10 — Recursion vs. Iteration
 
+Compare a loop-based countdown with a recursive countdown.
+
+|Question|Response|
+|---|---|
+|Which version is easier for you to read?||
+|Which version uses the call stack?||
+|Is recursion automatically more efficient than iteration?||
+|Why might a loop still be preferable for a simple countdown?||
+
+## Part 11 — Recursive Structure: Filesystem Traversal
+
+Consider the following nested directory structure:
+
+```
+projects/
+    cpp/
+        graphs/
+        recursion/
+    python/
+        data/
+            raw/
+            processed/
+    notes/
+```
+
+Suppose you need to visit every directory regardless of how deeply nested it is.
+
+Answer:
+
+1. Why is recursion a natural approach to this problem?
+2. What could serve as the base case when processing a directory?
+3. What would the recursive case do?
+4. Why is it difficult to know in advance how many levels of nesting may exist?
+
+Write pseudocode or a short C++-style recursive function showing the general idea of traversing nested directories. The focus is on the recursive structure rather than operating-system-specific file APIs.
 
 ...
