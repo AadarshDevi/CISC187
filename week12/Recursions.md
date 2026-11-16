@@ -229,13 +229,12 @@ end_function
 
 ## Analysis and Reflection
 
-Briefly explain:
-
-- Why every useful recursive function needs a stopping condition.
-- Why simply having a base-case condition is not enough if the recursive step never reaches it.
-- What happens during the recursive calling phase.
-- What happens during the unwinding phase.
-- Why the call stack behaves naturally as a LIFO structure for recursion.
-- Why infinite recursion can cause stack overflow.
-- Why recursion is not automatically preferable to iteration.
-- Why recursion is useful for problems containing an unknown number of nested levels.
+***Questions:***
+1. ***Why every useful recursive function needs a stopping condition.*** If there is no stopping condition, the function will call itself forever. It cannot be stopped.
+2. ***Why simply having a base-case condition is not enough if the recursive step never reaches it.*** If there is a base condition that cannot be reached, it is same as not having it. There is no end.
+3. ***What happens during the recursive calling phase.*** The recursive call will be put it a stack. Till the base case is reached, the rest of the calls will be on hold, paused.
+4. ***What happens during the unwinding phase.*** During the unwinding phase, each call in the stack will be processed one by one, from top to bottom, till the stack becomes empty.
+5. ***Why the call stack behaves naturally as a LIFO structure for recursion.*** The call stack uses LIFO because when a function calls another function, the function cannot complete its process because it needs information from the other function (itself). So, each recursive call is waiting for the next recursive call to finish processing and return a value that cane be used.
+6. ***Why infinite recursion can cause stack overflow.*** A stack has a finite amount of memory. So this means, it cannot hold infinitely many recursive calls. The stack will run out of space. If we try to add more calls, the stack cannot add them. So, the stack overflows.
+7. ***Why recursion is not automatically preferable to iteration.*** In some cases, if we are doing simple counters, recursive functions can be more confusing and take up more system resources. If they are loop-based, it will be easier to write and debug when problems arise.
+8. ***Why recursion is useful for problems containing an unknown number of nested levels.*** When we have unknown level of nested levels, looping will not work because they use a predetermined no of levels. By using this, we lose a lot of information, and they cannot process each level. But on the other hand, the recursive function will be able to go through each level (all levels) and process them without having to worry about complex algorithms.
