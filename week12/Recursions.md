@@ -41,3 +41,28 @@ static void countdownRecursive(int num) {
 ```
 
 ## Part 3 — Trace the Countdown
+
+Assume the following recursive function:
+
+```
+void countdown(int number) {
+    cout << number << "\n";
+
+    if (number == 0) {
+        return;
+    }
+
+    countdown(number - 1);
+}
+```
+
+Trace `countdown(3)`.
+
+|Step|Function Call|Value Printed|Next Action|
+|---|---|---|---|
+|||||
+|||||
+|||||
+|||||
+
+Then explain why the base case prevents the function from continuing into negative numbers.
