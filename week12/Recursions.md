@@ -227,4 +227,15 @@ end_function
 
 ```
 
-...
+## Analysis and Reflection
+
+Briefly explain:
+
+- Why every useful recursive function needs a stopping condition.
+- Why simply having a base-case condition is not enough if the recursive step never reaches it.
+- What happens during the recursive calling phase.
+- What happens during the unwinding phase.
+- Why the call stack behaves naturally as a LIFO structure for recursion.
+- Why infinite recursion can cause stack overflow.
+- Why recursion is not automatically preferable to iteration.
+- Why recursion is useful for problems containing an unknown number of nested levels.
