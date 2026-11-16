@@ -62,3 +62,27 @@ void countdown(int number) {
 ***Question:*** Explain why the base case prevents the function from continuing into negative numbers.
 
 ***Answer:*** The base case there to stop `StackOverflow`. Lets say that the recursive func doesn't have a base case, the function will call itself infinitely. The call stack will add the new function call and it will go on and never stop. The `StackOverflowError` is the only way to stop infinite recursion.
+
+## Part 4 — Reading Recursive Code: Factorial
+
+Consider:
+
+```
+int factorial(int n) {
+    if (n == 1) {
+        return 1;
+    }
+
+    return n * factorial(n - 1);
+}
+```
+
+Answer:
+
+1. What is the base case?
+2. What is the recursive case?
+3. How does `n - 1` move the function toward the base case?
+4. What does `factorial(1)` return?
+5. Use that result to determine `factorial(2)`.
+6. Use the previous result to determine `factorial(3)`.
+7. Determine `factorial(4)`.
