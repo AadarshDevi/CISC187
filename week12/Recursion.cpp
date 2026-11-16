@@ -4,6 +4,10 @@
 
 #include <iostream>
 
+void countdown(int i);
+
+void countdownRecursive(int i);
+
 int main() {
 }
 
