@@ -85,16 +85,16 @@ int factorial(int n) {
 
 ## Part 5 — Expanding Recursive Calls
 
-Expand `factorial(4)` until the base case is reached.
-
-Complete the pattern:
+Expand `factorial(4)` until the base case is reached. Complete the pattern below. At what point does the recursive calling phase stop?
 
 ```
 factorial(4)
 = 4 * factorial(3)
-= ______________________________
-= ______________________________
-= ______________________________
+= 4 * (3 * factorial(2))
+= 4 * (3 * (2 * factorial(1)))
+= 4 * (3 * (2 * 1))
+= 4 * (3 * 2)
+= 4 * 6
+= 24
 ```
 
-At what point does the recursive calling phase stop?
