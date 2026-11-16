@@ -65,24 +65,21 @@ void countdown(int number) {
 
 ## Part 4 — Reading Recursive Code: Factorial
 
-Consider:
+Consider the following function. Then answer the questions below.
 
-```
+```c++
 int factorial(int n) {
-    if (n == 1) {
-        return 1;
-    }
-
+    if (n == 1) return 1;
     return n * factorial(n - 1);
 }
 ```
 
-Answer:
+***Question:***
+1. What is the base case? `1`
+2. What is the recursive case? `n * factorial(n - 1)`
+3. How does `n - 1` move the function toward the base case? This reduces the number so that it will not loop forever.
+4. What does `factorial(1)` return? `1`
+5. Use that result to determine `factorial(2)`. $2\times 1 = 2$
+6. Use the previous result to determine `factorial(3)`. $3\times 2\times 1 = 6$
+7. Determine `factorial(4)`. $4\times 3\times 2\times 1 = 24$
 
-1. What is the base case?
-2. What is the recursive case?
-3. How does `n - 1` move the function toward the base case?
-4. What does `factorial(1)` return?
-5. Use that result to determine `factorial(2)`.
-6. Use the previous result to determine `factorial(3)`.
-7. Determine `factorial(4)`.
