@@ -100,18 +100,16 @@ factorial(4)
 
 ## Part 6 — The Call Stack
 
-Trace the call stack for `factorial(4)`.
+Trace the call stack for `factorial(4)`. Show the order in which functions are **called**.
 
-Show the order in which functions are **called**:
+| Call Order | Function |
+| ---------- | -------- |
+|            |          |
+|            |          |
+|            |          |
+|            |          |
 
-|Call Order|Function|
-|---|---|
-|||
-|||
-|||
-|||
-
-Then show the order in which those functions **complete**:
+Show the order in which those functions **complete**. Explain why the completion order is the reverse of the call order.
 
 |Completion Order|Function|
 |---|---|
@@ -120,4 +118,4 @@ Then show the order in which those functions **complete**:
 |||
 |||
 
-Explain why the completion order is the reverse of the call order.
+...
