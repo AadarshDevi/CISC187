@@ -166,8 +166,24 @@ Write a recursive C++ function that calculates the sum of the integers from `1` 
 2. ***The recursive case***: `n + sumTo(n - 1)`
 3. ***How the recursive argument moves toward the base case*** For each number, we are adding the `n - 1` each recursive loop.
 
-Then trace `sumTo(4)`, showing both recursive calls and returned values.
+```c++
+static int sumTo(int num) {  
+    std::cout << num << "\n";  
+    if (num == 1) return 1;  
+    return num + sumTo(num - 1);  
+}
+```
 
+### Output
+
+```terminalOutput
+4
+3
+2
+1
+```
+
+Then trace `sumTo(4)`, showing both recursive calls and returned values.
 ### Trace
 
 | Order | Call Stack                 |
