@@ -144,10 +144,10 @@ void mystery(int n) {
 
 ***Question:*** Assume `mystery(5)` is called.
 
-1. Does this function contain a base case?
-2. Will the base case ever be reached?
-3. What is wrong with the recursive step?
-4. How would you correct it?
+1. ***Does this function contain a base case?*** Yes, `n == 0` is the base case.
+2. ***Will the base case ever be reached?*** no, the base case will never be reached.
+3. ***What is wrong with the recursive step?*** When recursion happens, `n` is incrementing so, the base case won't be reached.
+4. ***How would you correct it?*** To fix the recursion, we need to decrement `n` so we can reach the base case of `n == 0`.
 
 ### Example B
 
@@ -158,6 +158,6 @@ void mystery2(int n) {
 }
 ```
 
-***Question:*** Explain why this function eventually causes a stack overflow.
+***Question:*** Explain why this function eventually causes a stack overflow. The function will cause stack overflow because there is no base condition to stop the function from looping forever.
 
 ...
