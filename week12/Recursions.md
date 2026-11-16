@@ -131,5 +131,33 @@ Complete the return-value trace for `factorial(4)`. Then explain what it means f
 
 ***Answer:*** The value that is being passed back up is the value that was being calculated for the result using the value given. Each time the function calls itself, it is calculating another number that is needed for the final result. So by going back up, we are giving multiple
 
+## Part 8 — Debugging Recursive Functions
+
+### Example A
+
+```c++
+void mystery(int n) {
+    if (n == 0) return;
+    mystery(n + 1);
+}
+```
+
+***Question:*** Assume `mystery(5)` is called.
+
+1. Does this function contain a base case?
+2. Will the base case ever be reached?
+3. What is wrong with the recursive step?
+4. How would you correct it?
+
+### Example B
+
+```c++
+void mystery2(int n) {
+    cout << n << "\n";
+    mystery2(n - 1);
+}
+```
+
+***Question:*** Explain why this function eventually causes a stack overflow.
 
 ...
