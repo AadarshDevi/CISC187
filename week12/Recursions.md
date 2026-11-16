@@ -102,20 +102,20 @@ factorial(4)
 
 Trace the call stack for `factorial(4)`. Show the order in which functions are **called**.
 
-| Call Order | Function |
-| ---------- | -------- |
-|            |          |
-|            |          |
-|            |          |
-|            |          |
+| Call Order | Function       |
+| ---------- | -------------- |
+| 1          | `factorial(4)` |
+| 2          | `factorial(3)` |
+| 3          | `factorial(2)` |
+| 4          | `factorial(1)` |
 
 Show the order in which those functions **complete**. Explain why the completion order is the reverse of the call order.
 
-|Completion Order|Function|
-|---|---|
-|||
-|||
-|||
-|||
+| Completion Order | Function            |
+| ---------------- | ------------------- |
+| 1                | `4 * (3 * (2 * 1))` |
+| 2                | `4 * (3 * 2)`       |
+| 3                | `4 * 6`             |
+| 4                | `24`                |
 
 ...
