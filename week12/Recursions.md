@@ -120,15 +120,16 @@ Show the order in which those functions **complete**. Explain why the completion
 
 ## Part 7 — Passing Values Up the Call Stack
 
-Complete the return-value trace for `factorial(4)`.
+Complete the return-value trace for `factorial(4)`. Then explain what it means for a value to be passed back up through the call stack.
 
-|Function|Expression|Returned Value|
-|---|---|---|
-|factorial(1)|||
-|factorial(2)|||
-|factorial(3)|||
-|factorial(4)|||
+| Function     | Expression      | Returned Value |
+| ------------ | --------------- | -------------- |
+| factorial(1) | `1`             | `1`            |
+| factorial(2) | `2 * 1`         | `2`            |
+| factorial(3) | `3 * 2 * 1`     | `6`            |
+| factorial(4) | `4 * 3 * 2 * 1` | `24`           |
 
-Explain what it means for a value to be passed back up through the call stack.
+***Answer:***
+
 
 ...
