@@ -159,5 +159,27 @@ void mystery2(int n) {
 ```
 
 ***Question:*** Explain why this function eventually causes a stack overflow. The function will cause stack overflow because there is no base condition to stop the function from looping forever.
+## Part 9 — Write a Recursive Function
+
+Write a recursive C++ function that calculates the sum of the integers from `1` through `n`. For example: `sumTo(5)` represents `5 + 4 + 3 + 2 + 1`. Before coding, state:
+1. ***The base case***: `n == 1`
+2. ***The recursive case***: `n + sumTo(n - 1)`
+3. ***How the recursive argument moves toward the base case*** For each number, we are adding the `n - 1` each recursive loop.
+
+Then trace `sumTo(4)`, showing both recursive calls and returned values.
+
+### Trace
+
+| Order | Call Stack                 |
+| ----- | -------------------------- |
+| 1     | `sumTo(4)`                 |
+| 2     | `4 + sumTo(3)`             |
+| 3     | `4 + (3 + sumTo(2))`       |
+| 4     | `4 + (3 + (2 + sumTo(1)))` |
+| 5     | `4 + (3 + (2 + 1))`        |
+| 6     | `4 + (3 + 3)`              |
+| 7     | `4 + 6`                    |
+| 8     | `10`                       |
+
 
 ...
