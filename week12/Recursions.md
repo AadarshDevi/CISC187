@@ -184,12 +184,12 @@ Then trace `sumTo(4)`, showing both recursive calls and returned values.
 
 Compare a loop-based countdown with a recursive countdown.
 
-|Question|Response|
-|---|---|
-|Which version is easier for you to read?||
-|Which version uses the call stack?||
-|Is recursion automatically more efficient than iteration?||
-|Why might a loop still be preferable for a simple countdown?||
+| Question                                                     | Response                                                                                                                       |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Which version is easier for you to read?                     | loop-based because the call stack is on a single level. And it is a loop which is straight forward.                            |
+| Which version uses the call stack?                           | Recursive countdown uses the call stack because each recursive call is an unfinished operation.                                |
+| Is recursion automatically more efficient than iteration?    | No, because the call stack has to do more work managing recursion. Recursion takes more resources than a loop based countdown. |
+| Why might a loop still be preferable for a simple countdown? | For a simple countdown, a loop-based function is prefered because it is easier and straight forward.                           |
 
 ## Part 11 — Recursive Structure: Filesystem Traversal
 
