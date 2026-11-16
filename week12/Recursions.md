@@ -16,33 +16,28 @@ void example() {
 
 ## Part 2 — From Loop to Recursion
 
-Write an iterative C++ function that prints a countdown from a positive integer to `0`.
+Write an iterative C++ function that prints a countdown from a positive integer to `0`. Then rewrite the function using recursion instead of a loop. Before writing the recursive version, identify:
 
-Example:
+| Question                                      | Your Response                                                                                                                                                                                                                 |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| What is the base case?                        | The best case is `0`, the countdown reaches `0`.                                                                                                                                                                              |
+| What is the recursive case?                   | `countdownRecursive(num - 1)` is the recursive case. We reduce the num by 1 so we don't end up in an infinite loop.                                                                                                           |
+| How does each call move toward the base case? | In the iterative function, the loop reduces the value and it loops till the number hits 0. In the recursive function, it will call itself after it decrements the number. This will help move the recursion to the base case. |
 
-```
-countdown(5)
-```
-
-should produce:
-
-```
-5
-4
-3
-2
-1
-0
+```c++
+static void countdown(int num) {  
+    for (int i = num; i >= 0; i--) {  
+        std::cout << i << "\n";  
+    }  
+}
 ```
 
-Then rewrite the function using recursion instead of a loop.
-
-Before writing the recursive version, identify:
-
-|Question|Your Response|
-|---|---|
-|What is the base case?||
-|What is the recursive case?||
-|How does each call move toward the base case?||
+```c++
+static void countdownRecursive(int num) {  
+    if (num == 0) return;  
+    std::cout << num << "\n";  
+    countdownRecursive(num - 1);  
+}
+```
 
 ## Part 3 — Trace the Countdown
