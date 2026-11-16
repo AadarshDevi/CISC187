@@ -9,6 +9,9 @@ void countdown(int i);
 void countdownRecursive(int i);
 
 int main() {
+    int i = 5;
+    countdown(i);
+    countdownRecursive(i);
 }
 
 void countdown(int i);
