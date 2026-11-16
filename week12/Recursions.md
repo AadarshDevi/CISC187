@@ -92,9 +92,32 @@ factorial(4)
 = 4 * factorial(3)
 = 4 * (3 * factorial(2))
 = 4 * (3 * (2 * factorial(1)))
-= 4 * (3 * (2 * 1))
+= 4 * (3 * (2 * 1))  // base case = 1
 = 4 * (3 * 2)
 = 4 * 6
 = 24
 ```
 
+## Part 6 — The Call Stack
+
+Trace the call stack for `factorial(4)`.
+
+Show the order in which functions are **called**:
+
+|Call Order|Function|
+|---|---|
+|||
+|||
+|||
+|||
+
+Then show the order in which those functions **complete**:
+
+|Completion Order|Function|
+|---|---|
+|||
+|||
+|||
+|||
+
+Explain why the completion order is the reverse of the call order.
