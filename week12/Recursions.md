@@ -42,27 +42,23 @@ static void countdownRecursive(int num) {
 
 ## Part 3 — Trace the Countdown
 
-Assume the following recursive function:
+Assume the following recursive function below. Trace `countdown(3)` on the table below.
 
-```
+```c++
 void countdown(int number) {
     cout << number << "\n";
-
-    if (number == 0) {
-        return;
-    }
-
+    if (number == 0) return;
     countdown(number - 1);
 }
 ```
 
-Trace `countdown(3)`.
+| Step | Function Call  | Value Printed | Next Action    |
+| ---- | -------------- | ------------- | -------------- |
+| 1    | `countdown(3)` | `3`           | `countdown(2)` |
+| 2    | `countdown(2)` | `2`           | `countdown(1)` |
+| 3    | `countdown(1)` | `1`           | `countdown(0)` |
+| 4    | `countdown(0)` | `0`           | `return`       |
 
-|Step|Function Call|Value Printed|Next Action|
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
+***Question:*** Explain why the base case prevents the function from continuing into negative numbers.
 
-Then explain why the base case prevents the function from continuing into negative numbers.
+***Answer:*** The base case there to stop `StackOverflow`. Lets say that the recursive func doesn't have a base case, the function will call itself infinitely. The call stack will add the new function call and it will go on and never stop. The `StackOverflowError` is the only way to stop infinite recursion.
