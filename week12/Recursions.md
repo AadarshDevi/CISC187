@@ -118,4 +118,17 @@ Show the order in which those functions **complete**. Explain why the completion
 | 3                | `4 * 6`             |
 | 4                | `24`                |
 
+## Part 7 — Passing Values Up the Call Stack
+
+Complete the return-value trace for `factorial(4)`.
+
+|Function|Expression|Returned Value|
+|---|---|---|
+|factorial(1)|||
+|factorial(2)|||
+|factorial(3)|||
+|factorial(4)|||
+
+Explain what it means for a value to be passed back up through the call stack.
+
 ...
