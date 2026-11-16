@@ -8,10 +8,10 @@ void countdown(int i);
 
 void countdownRecursive(int i);
 
+int sumTo(int i);
+
 int main() {
-    int i = 5;
-    countdown(i);
-    countdownRecursive(i);
+    sumTo(4);
 }
 
 static void countdownRecursive(int num) {
@@ -27,6 +27,7 @@ static void countdown(int num) {
 }
 
 static int sumTo(int num) {
+    std::cout << num << "\n";
     if (num == 1) return 1;
     return num + sumTo(num - 1);
 }
