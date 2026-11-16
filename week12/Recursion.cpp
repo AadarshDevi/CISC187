@@ -14,8 +14,6 @@ int main() {
     countdownRecursive(i);
 }
 
-void countdown(int i);
-
 static void countdownRecursive(int num) {
     if (num == 0) return;
     std::cout << num << "\n";
@@ -24,6 +22,6 @@ static void countdownRecursive(int num) {
 
 static void countdown(int num) {
     for (int i = num; i >= 0; i--) {
-        std::cout << i < "\n";
+        std::cout << i << "\n";
     }
 }
