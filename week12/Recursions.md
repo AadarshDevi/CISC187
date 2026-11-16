@@ -189,11 +189,9 @@ Compare a loop-based countdown with a recursive countdown.
 | Which version is easier for you to read?                     | loop-based because the call stack is on a single level. And it is a loop which is straight forward.                            |
 | Which version uses the call stack?                           | Recursive countdown uses the call stack because each recursive call is an unfinished operation.                                |
 | Is recursion automatically more efficient than iteration?    | No, because the call stack has to do more work managing recursion. Recursion takes more resources than a loop based countdown. |
-| Why might a loop still be preferable for a simple countdown? | For a simple countdown, a loop-based function is prefered because it is easier and straight forward.                           |
+| Why might a loop still be preferable for a simple countdown? | For a simple countdown, a loop-based function is preffered because it is easier and straight forward.                          |
 
 ## Part 11 — Recursive Structure: Filesystem Traversal
-
-Consider the following nested directory structure:
 
 ```
 projects/
@@ -207,15 +205,26 @@ projects/
     notes/
 ```
 
-Suppose you need to visit every directory regardless of how deeply nested it is.
-
-Answer:
-
-1. Why is recursion a natural approach to this problem?
-2. What could serve as the base case when processing a directory?
-3. What would the recursive case do?
-4. Why is it difficult to know in advance how many levels of nesting may exist?
+Consider the following nested directory structure above. Suppose you need to visit every directory regardless of how deeply nested it is.
+1. ***Why is recursion a natural approach to this problem?*** Because each folder has sub folders, using a loop will be more tedious. By using recursion, we are able to iterate through a list of folders.
+2. ***What could serve as the base case when processing a directory?*** A base case could be that the length of the list of folders is 0.
+3. ***What would the recursive case do?*** recursive case would go through each folder in a list and return once there are no folders left to search.
+4. ***Why is it difficult to know in advance how many levels of nesting may exist?*** Many folders can have varying level of subfolders. If we known the levels, nested loops can be used, but because we do not know how many levels there are, it would be least preferred. Other than that, all folders might not have the same no of levels in them.
 
 Write pseudocode or a short C++-style recursive function showing the general idea of traversing nested directories. The focus is on the recursive structure rather than operating-system-specific file APIs.
+
+```psuedocode
+void recursiveFolderSearch(folder):
+
+	for subfolder in folder.subfolder_list:
+	
+		print(subfolder.name)
+		recursiveFolderSearch(folder)
+		
+	end_for
+	
+end_function
+
+```
 
 ...
