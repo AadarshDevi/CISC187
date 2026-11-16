@@ -83,3 +83,18 @@ int factorial(int n) {
 6. Use the previous result to determine `factorial(3)`. $3\times 2\times 1 = 6$
 7. Determine `factorial(4)`. $4\times 3\times 2\times 1 = 24$
 
+## Part 5 — Expanding Recursive Calls
+
+Expand `factorial(4)` until the base case is reached.
+
+Complete the pattern:
+
+```
+factorial(4)
+= 4 * factorial(3)
+= ______________________________
+= ______________________________
+= ______________________________
+```
+
+At what point does the recursive calling phase stop?
